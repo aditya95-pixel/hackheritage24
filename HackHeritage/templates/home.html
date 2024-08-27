@@ -6,24 +6,41 @@
     <title>Studies Recommendation</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        *{
+            font-family:'Poppins', sans-serif;
+        }
         .mynav {
-            border-radius: 10px;
-            box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1); /* Increased shadow for mynav */
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+             /* Increased shadow for mynav */
             background: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
-            color: white;
+            color: azure;
             padding: 10px;
             width: 100%;
+            backdrop-filter:blur(30px);
         }
 
         .container {
             margin-top: 50px;
             border-radius: 15px;
+            border:3.5px solid azure;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for container */
             padding: 30px;
-            background-color: rgba(255, 255, 255, 0.7);
+            height:350px;
+            position: auto;
+            transform: translateX(0) translateY(-5%);
+            /*background-color: rgba(255, 255, 255, 0.7);*/
+            background:transparent;
+            backdrop-filter:blur(30px);
             text-align: center;
+            color:white;
         }
-
+        .btn.btn-primary{
+            background-color:black;
+            border:solid black;
+            margin:10px;
+        }
         .bg-image {
             background-size: cover;
             background-position: center;
@@ -34,12 +51,13 @@
 </head>
 <body>
     <div class="bg-image" id="bgImage">
-        <div class="mynav shadow-sm" style="background:transparent; color:white;font-weight:bold; padding:10px;width:100%;">
+        <div class="mynav shadow-sm" style="background-color:white;backdrop-filter:blur(30px);color:black;font-weight:bold;box-shadow: 0 10px 15px black;padding:10px;width:100%;">
             <h1 class="text-center">Education Recommendation System</h1>
         </div>
 
         <div class="container mt-5">
-            <h1>Welcome to our Best Studies Recommendation System</h1>
+            <h2>Welcome to our Best Studies Recommendation System</h2>
+            <br/>
             <p>This recommendation system aims to assist university students in selecting the most suitable studies and courses based on their academic performance, interests, and career aspirations.</p>
             <p>Click the button below to get recommendations:</p>
             <a href="/recommend" class="btn btn-primary">Get Recommendations</a>
