@@ -3,26 +3,32 @@
 <head>
     <title>Register</title>
     <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        *{
+            font-family:'Poppins' ,sans-serif;
+        }
         body {
-            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-image: url('/static/img_2.png'); 
+            background-image: url('/static/img_1.png'); 
             background-size: cover; /* Cover the entire page */
             background-position: center; /* Center the image */
             background-repeat: no-repeat; /* No repeat */
         }
         form {
-            background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            backdrop-filter: blur(2px); /* Apply blur to the background */
+            color:white;
+            background-color:transparent; 
+            border:solid white;/* White with 80% opacity */
+            position: relative;
+            padding: 25px 25px 25px;
+            border-radius: 8%;
+            box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            backdrop-filter: blur(15px); /* Apply blur to the background */
             -webkit-backdrop-filter: blur(10px); /* Safari support */
         }
         h2 {
@@ -32,6 +38,7 @@
         label {
             display: block;
             margin: 10px 0 5px;
+            font-weight: bold;
         }
         input[type="text"], input[type="password"] {
             width: 90%;
@@ -39,26 +46,32 @@
             margin:5px;
             margin-bottom: 10px;
             border-radius: 4px;
-            border: 1px solid #ccc;
+            background-color: transparent;
+            border: 2px solid #ccc;
+            color:white;
         }
         button {
-            width: 100%;
-            padding: 10px;
-            background-color: #5cb85c;
-            color: white;
+            width: 98%;
+            margin:5px;
+            padding: 15px 15px 15px 15px;
+            background-color:black;
+            color:white;
+            font-weight: bold;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
         button:hover {
-            background-color: #4cae4c;
+            background-color: white;
+            color:black;
+            transition: 0.5s;
         }
         p {
             text-align: center;
             margin-top: 15px;
         }
         a {
-            color: #007bff;
+            color: rgb(204, 255, 0);
             text-decoration: none;
         }
         a:hover {
