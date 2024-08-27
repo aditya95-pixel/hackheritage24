@@ -4,8 +4,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import pickle
 import numpy as np
 import sqlite3
+from decouple import config
 app = Flask(__name__)
-app.secret_key = "abcd1234"
+app.secret_key = config("app.secret_key")
 def init_sqlite_db():
     conn = sqlite3.connect('database.db')
     print("Opened database successfully")
