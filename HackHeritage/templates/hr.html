@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Resource Management</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming the CSS is saved as styles.css -->
+    <style>
+        /* Your provided CSS template here */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(237, 206, 165);
+            color: black;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('/static/img_15.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            background-color: transparent;
+            color: black;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        h1, h2 {
+            color: black;
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .sub-branch {
+            background-color: transparent;
+            border: solid black;
+            backdrop-filter: blur(25px);
+            padding: 10px;
+            color: black;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .sub-branch h3 {
+            color: black;
+            text-align: center;
+        }
+        .engg {
+            color: black;
+        }
+        .engg:hover {
+            color: red;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            .sub-branch ul {
+                padding-left: 0;
+            }
+            .sub-branch ul li {
+                margin-bottom: 10px;
+            }
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 5px;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+            .sub-branch {
+                padding: 5px;
+            }
+            .sub-branch ul li {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Human Resource Management</h1>
+    </header>
+    <div class="container">
+        <section class="sub-branch">
+            <h2>Introduction to Human Resource Management</h2>
+            <p>Human Resource Management (HRM) is a strategic approach to managing people in an organization. It involves recruiting, hiring, training, and retaining employees while aligning these activities with the company's overall objectives.</p>
+        </section>
+        <section class="sub-branch">
+            <h2>Key Functions of HRM</h2>
+            <ul>
+                <li><h3>Recruitment and Staffing</h3>
+                    <p>Attracting and selecting the best candidates for job positions.</p>
+                </li>
+                <li><h3>Training and Development</h3>
+                    <p>Enhancing the skills and knowledge of employees to improve performance and career growth.</p>
+                </li>
+                <li><h3>Performance Management</h3>
+                    <p>Evaluating employee performance and providing feedback to foster growth and productivity.</p>
+                </li>
+                <li><h3>Compensation and Benefits</h3>
+                    <p>Designing and managing salary structures and benefits packages to motivate and retain employees.</p>
+                </li>
+                <li><h3>Employee Relations</h3>
+                    <p>Maintaining positive relationships between employees and management and resolving workplace conflicts.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="sub-branch">
+            <h2>Importance of HRM</h2>
+            <p>Effective HRM is crucial for any organization as it helps in maximizing employee productivity, ensuring legal compliance, fostering a positive work culture, and supporting organizational growth and stability.</p>
+        </section>
+    </div>
+</body>
+</html>

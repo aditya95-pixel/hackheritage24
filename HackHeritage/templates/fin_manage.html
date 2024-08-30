@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Management</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming the CSS is saved as styles.css -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(237, 206, 165);
+            color: black;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('/static/img_15.jpg'); /* Make sure the path to the image is correct */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            background-color: transparent;
+            color: black;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        h1, h2 {
+            color: black;
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .sub-branch {
+            background-color: transparent;
+            border: solid black;
+            backdrop-filter: blur(25px);
+            padding: 10px;
+            color: black;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .sub-branch h3 {
+            color: black;
+            text-align: center;
+        }
+        .engg {
+            color: black;
+        }
+        .engg:hover {
+            color: red;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            .sub-branch ul {
+                padding-left: 0;
+            }
+            .sub-branch ul li {
+                margin-bottom: 10px;
+            }
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 5px;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+            .sub-branch {
+                padding: 5px;
+            }
+            .sub-branch ul li {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Financial Management</h1>
+    </header>
+    <div class="container">
+        <section class="sub-branch">
+            <h2>Introduction to Financial Management</h2>
+            <p>Financial Management involves planning, organizing, directing, and controlling the financial activities of an organization. It includes managing finances to achieve organizational goals and maximize value for stakeholders. Effective financial management ensures that resources are used efficiently and financial goals are met.</p>
+        </section>
+        <section class="sub-branch">
+            <h2>Key Functions of Financial Management</h2>
+            <ul>
+                <li><h3>Financial Planning</h3>
+                    <p>Developing long-term and short-term financial plans to achieve organizational goals. This includes budgeting, forecasting, and financial modeling.</p>
+                </li>
+                <li><h3>Investment Management</h3>
+                    <p>Deciding where to allocate resources to generate the highest return on investment while managing risks and ensuring liquidity.</p>
+                </li>
+                <li><h3>Risk Management</h3>
+                    <p>Identifying, analyzing, and mitigating financial risks to protect the organization from potential losses and ensure financial stability.</p>
+                </li>
+                <li><h3>Financial Reporting</h3>
+                    <p>Preparing and analyzing financial statements and reports to provide insights into the financial health of the organization for stakeholders and regulatory compliance.</p>
+                </li>
+                <li><h3>Cash Flow Management</h3>
+                    <p>Managing the inflow and outflow of cash to ensure that the organization can meet its obligations and invest in opportunities without disruption.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="sub-branch">
+            <h2>Importance of Financial Management</h2>
+            <p>Effective Financial Management is essential for the success and sustainability of any organization. It helps in making informed financial decisions, ensuring efficient use of resources, maintaining financial stability, and achieving strategic objectives. Proper financial management enhances the ability to respond to financial challenges and seize growth opportunities.</p>
+        </section>
+    </div>
+</body>
+</html>
