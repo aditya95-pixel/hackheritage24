@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        *{
+            font-family:'Poppins' ,sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('/static/img_1.png'); 
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* No repeat */
+        }
+        form {
+            color:white;
+            background-color:transparent; 
+            border:solid white;/* White with 80% opacity */
+            position: relative;
+            padding: 25px 25px;
+            border-radius: 8%;
+            box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            backdrop-filter: blur(15px); /* Apply blur to the background */
+            -webkit-backdrop-filter: blur(10px); /* Safari support */
+        }
+        h1 {
+            color:black;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin:5px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            background-color: transparent;
+            border: 2px solid #ccc;
+            color:white;
+        }
+        button {
+            width: 98%;
+            margin:5px;
+            padding: 15px;
+            background-color:black;
+            color:white;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: white;
+            color:black;
+            transition: 0.5s;
+        }
+        p {
+            text-align: center;
+            margin-top: 15px;
+        }
+        a {
+            color: rgb(204, 255, 0);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            color: red;
+            list-style-type: none;
+            padding: 0;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            form {
+                padding: 20px;
+                border-radius: 8%;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+            input[type="text"], input[type="password"] {
+                padding: 8px;
+                margin-bottom: 8px;
+            }
+            button {
+                padding: 12px;
+            }
+        }
+        @media (max-width: 480px) {
+            form {
+                padding: 15px;
+                border-radius: 8%;
+            }
+            h1 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+            input[type="text"], input[type="password"] {
+                padding: 6px;
+                margin-bottom: 6px;
+            }
+            button {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="{{ url_for('login') }}">
+        <h1>Login</h1>
+        <label>Username</label>
+        <input type="text" name="username" required><br>
+        <label>Password</label>
+        <input type="password" name="password" required><br>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a>.</p>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </form>
+</body>
+</html>
