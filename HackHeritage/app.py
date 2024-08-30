@@ -188,6 +188,21 @@ def audit():
 @app.route('/tax')
 def tax():
     return render_template('tax.html')
+@app.route('/hr')
+def hr():
+    return render_template('hr.html')
+@app.route('/operations_manage')
+def operations_manage():
+    return render_template('operations_manage.html')
+@app.route('/fin_manage')
+def fin_manage():
+    return render_template('fin_manage.html')
+@app.route('/market_manage')
+def market_manage():
+    return render_template('market_manage.html')
+@app.route('/strat_manage')
+def strat_manage():
+    return render_template('strat_manage.html')
 @app.route('/pred', methods=['POST','GET'])
 def pred():
     if request.method == 'POST':
