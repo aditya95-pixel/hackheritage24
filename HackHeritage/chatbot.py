@@ -13,18 +13,29 @@ def stream_data(response):
         yield word + " "
         time.sleep(0.02)
 
-# Function to generate response using Gemini 1.5
-def generate(query):
+# Function to generate response using Gemini 1.5 Flash
+def generate_response(prompt, context):
     model = genai.GenerativeModel('gemini-1.5-flash')
-    response = model.generate_content(query)
+    # Combine context with the prompt
+    full_prompt = context + "\nUser: " + prompt
+    response = model.generate_content(full_prompt)
     return response.text
+
+# Configure the Streamlit page
 st.set_page_config(page_title="Chatbot", page_icon="🤖", layout="centered")
 
 st.title("🤖 AI Chatbot")
+
 # Initialize or retrieve chat history from session state
-# Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
+
+# Create a string to hold chat context
+context = ""
+for message in st.session_state.messages:
+    role = message["role"]
+    content = message["content"]
+    context += f"{role.capitalize()}: {content}\n"
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
@@ -39,16 +50,18 @@ if prompt := st.chat_input("What is your question?"):
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    # Display assistant response in chat message container
+    # Generate and display assistant response
+    response_text = generate_response(prompt, context)
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         full_response = ""
-        for response in stream_data(generate(prompt)):
-            full_response += response
+        for response_chunk in stream_data(response_text):
+            full_response += response_chunk
             message_placeholder.markdown(full_response + "▌")
         message_placeholder.markdown(full_response)
+        
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": full_response})
-# Streamlit app layout and styling
 
-
+    # Update context with the latest messages
+    context += f"User: {prompt}\nAssistant: {full_response}\n"
