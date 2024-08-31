@@ -233,6 +233,66 @@ def fin_plan():
 @app.route('/risk_manage')
 def risk_manage():
     return render_template('risk_manage.html')
+@app.route('/phil')
+def phil():
+    return render_template('Philosophy.html')
+@app.route('/lit')
+def lit():
+    return render_template('literature.html')
+@app.route('/language')
+def language():
+    return render_template('language.html')
+@app.route('/cult')
+def cult():
+    return render_template('Cultural_Studies.html')
+@app.route('/anthr')
+def anthr():
+    return render_template('anthr.html')
+@app.route('/geo')
+def geo():
+    return render_template('geo.html')
+@app.route('/psy')
+def psy():
+    return render_template('psy.html')
+@app.route('/socio')
+def socio():
+    return render_template('socio.html')
+@app.route('/pol_sc')
+def pol_sc():
+    return  render_template('pol_sc.html')
+@app.route('/theater')
+def theater():
+    return render_template('theater.html')
+@app.route('/music')
+def music():
+    return render_template('music.html')
+@app.route('/dance')
+def dance():
+    return render_template('dance.html')
+@app.route('/film')
+def film():
+    return render_template('film.html')
+@app.route('/drama')
+def drama():
+    return render_template('drama.html')
+@app.route('/paint')
+def paint():
+    return render_template('paint.html')
+@app.route('/sculpt')
+def sculpt():
+    return render_template('sculpt.html')
+@app.route('/graphic_des')
+def graphic_des():
+    return render_template('graphic_des.html')
+@app.route('/photo')
+def photo():
+    return render_template('photo.html')
+@app.route('/illus')
+def illus():
+    return render_template('illus.html')
+@app.route('/history')
+def history():
+    return render_template('history.html')
 @app.route('/pred', methods=['POST','GET'])
 def pred():
     if request.method == 'POST':
