@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Literature</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(237, 206, 165);
+            color: white;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('/static/img_8.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            background-color: transparent;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        h1, h2 {
+            color: white;
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .sub-branch {
+            background-color: transparent;
+            border: solid white;
+            backdrop-filter: blur(25px);
+            padding: 10px;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .sub-branch h3 {
+            color: white;
+            text-align: center;
+        }
+        .engg {
+            color: white;
+        }
+        .engg:hover {
+            color: red;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            .sub-branch ul {
+                padding-left: 0;
+            }
+            .sub-branch ul li {
+                margin-bottom: 10px;
+            }
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 5px;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+            .sub-branch {
+                padding: 5px;
+            }
+            .sub-branch ul li {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The World of Literature</h1>
+        <p>A Journey through the Written Word</p>
+    </header>
+
+    <div class="container">
+        <h2>Genres of Literature</h2>
+
+        <div class="sub-branch">
+            <h3>Fiction</h3>
+            <p>Fiction literature includes stories that are created from the imagination, often involving invented characters and events. Famous works of fiction include novels, short stories, and novellas.</p>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Poetry</h3>
+            <p>Poetry is a form of literary expression that uses rhythmic and often figurative language. It typically relies on meter, rhyme, and evocative word choice to convey emotions and ideas.</p>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Drama</h3>
+            <p>Drama literature focuses on plays and theatrical works. It is written with the intention of being performed, and it includes famous works ranging from tragedies to comedies.</p>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Non-Fiction</h3>
+            <p>Non-fiction literature is based on factual information and real events. This genre includes biographies, essays, journals, and historical works.</p>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Folklore and Mythology</h3>
+            <p>Folklore and mythology encompass traditional stories, customs, and legends passed down through generations. These stories often explain natural phenomena or cultural beliefs.</p>
+        </div>
+    </div>
+</body>
+</html>
