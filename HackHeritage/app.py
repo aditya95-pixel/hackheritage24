@@ -203,6 +203,36 @@ def market_manage():
 @app.route('/strat_manage')
 def strat_manage():
     return render_template('strat_manage.html')
+@app.route('/microeco')
+def microeco():
+    return render_template('microeco.html')
+@app.route('/macroeco')
+def macroeco():
+    return render_template('macroeco.html')
+@app.route('/deveco')
+def deveco():
+    return render_template('deveco.html')
+@app.route('/inteco')
+def inteco():
+    return render_template('inteco.html')
+@app.route('/behaveeco')
+def behaveeco():
+    return render_template('behaveeco.html')
+@app.route('/corporate_fin')
+def corporate_fin():
+    return render_template('corporate_fin.html')
+@app.route('/invest_bank')
+def invest_bank():
+    return render_template('invest_bank.html')
+@app.route('/per_fin')
+def per_fin():
+    return render_template('per_fin.html')
+@app.route('/fin_plan')
+def fin_plan():
+    return render_template('fin_plan.html')
+@app.route('/risk_manage')
+def risk_manage():
+    return render_template('risk_manage.html')
 @app.route('/pred', methods=['POST','GET'])
 def pred():
     if request.method == 'POST':
