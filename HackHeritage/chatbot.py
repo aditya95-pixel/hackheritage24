@@ -25,6 +25,7 @@ def generate_response(prompt, context):
 
 # Function to convert text to speech and play it
 def text_to_speech(text):
+    text=text.replace("*", "")
     tts = gTTS(text=text, lang='en')
     tts.save("response.mp3")
     return "response.mp3"
