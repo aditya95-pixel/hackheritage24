@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Tree for Class 10 Student</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            transition: all 0.5s;
+        }
+
+        .tree li {
+            display: inline-block;
+            vertical-align: top;
+            list-style-type: none;
+            position: relative;
+            padding: 4px 2px 0 2px; /* Further reduced padding for smaller nodes */
+            text-align: center;
+        }
+
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 2px solid #2e8b57;
+            width: 50%;
+            height: 10px; /* Line height */
+        }
+
+        .tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid #2e8b57;
+        }
+
+        .tree li:only-child::after, .tree li:only-child::before {
+            display: none;
+        }
+
+        .tree li:only-child {
+            padding-top: 0;
+        }
+
+        .tree li:first-child::before, .tree li:last-child::after {
+            border: 0 none;
+        }
+
+        .tree li:last-child::before {
+            border-right: 2px solid #2e8b57;
+        }
+
+        .tree li:first-child::after {
+            border-radius: 5px;
+        }
+
+        .tree li a {
+            border: 2px solid #2e8b57;
+            padding: 4px 2px; /* Further reduced padding for smaller nodes */
+            text-decoration: none;
+            color: #333;
+            background-color: #e0f7fa;
+            display: inline-block;
+            border-radius: 5px;
+            transition: all 0.5s;
+            font-size: 10px; /* Further reduced font size */
+        }
+
+        .tree li a:hover {
+            background-color: #b2ebf2;
+            border: 2px solid #2e8b57;
+        }
+
+        .tree li a.sub-branch {
+            background-color: #e6ee9c;
+        }
+
+        .tree li a.sub-branch:hover {
+            background-color: #dce775;
+        }
+
+        .tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid #2e8b57;
+            width: 0;
+            height: 10px; /* Line height */
+        }
+
+        .tree ul ul {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tree">
+        <ul>
+            <li>
+                <a href="#">Career Paths</a>
+                <ul>
+                    <li>
+                        <a href="#">Science Stream</a>
+                        <ul>
+                            <li><a class="sub-branch" href="#">Engineering</a></li>
+                            <li><a class="sub-branch" href="#">Medical</a></li>
+                            <li><a class="sub-branch" href="#">Research & Academia</a></li>
+                            <li><a class="sub-branch" href="#">Technology</a></li>
+                            <li><a class="sub-branch" href="#">Architecture</a></li>
+                            <li><a class="sub-branch" href="#">Forensic Science</a></li>
+                            <li><a class="sub-branch" href="#">Biotechnology</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Commerce Stream</a>
+                        <ul>
+                            <li><a class="sub-branch" href="#">Business & Management</a></li>
+                            <li><a class="sub-branch" href="#">Finance</a></li>
+                            <li><a class="sub-branch" href="#">Marketing</a></li>
+                            <li><a class="sub-branch" href="#">Human Resources</a></li>
+                            <li><a class="sub-branch" href="#">Law</a></li>
+                            <li><a class="sub-branch" href="#">E-Commerce</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Arts Stream</a>
+                        <ul>
+                            <li><a class="sub-branch" href="#">Humanities & Social Sciences</a></li>
+                            <li><a class="sub-branch" href="#">Media & Communication</a></li>
+                            <li><a class="sub-branch" href="#">Fine Arts</a></li>
+                            <li><a class="sub-branch" href="#">Literature & Languages</a></li>
+                            <li><a class="sub-branch" href="#">Education</a></li>
+                            <li><a class="sub-branch" href="#">Law</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
