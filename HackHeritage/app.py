@@ -293,6 +293,9 @@ def illus():
 @app.route('/history')
 def history():
     return render_template('history.html')
+@app.route('/mind_map')
+def mind_map():
+    return render_template('mind_map.html')
 @app.route('/pred', methods=['POST','GET'])
 def pred():
     if request.method == 'POST':
