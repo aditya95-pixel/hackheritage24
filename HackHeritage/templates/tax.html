@@ -5,78 +5,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taxation Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #EDE7E3;
+            color: #333;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_6.jpg');
+            background-image: url('https://source.unsplash.com/1600x900/?finance,tax');
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
+            background-attachment: fixed;
         }
+
         header {
-            background-color: transparent;
-            color: black;
-            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+            border-bottom: 2px solid #FFB74D;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #D84315;
+        }
+
         .container {
             max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 15px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
         }
-        h1, h2 {
-            color: black;
-        }
+
         h2 {
             text-align: center;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
+
         p {
             margin: 15px 0;
+            font-size: 1.1rem;
+            color: #555;
         }
+
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: black;
+            background-color: #FFF3E0;
+            border: 1px solid #FFB74D;
+            padding: 20px;
+            color: #333;
             border-radius: 10px;
-            margin-bottom: 20px;
-            position: relative;
+            margin-bottom: 30px;
+            transition: transform 0.2s ease, box-shadow 0.1s ease;
         }
+
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
         .sub-branch h3 {
-            color: black;
+            font-size: 1.5rem;
+            color: #D84315;
             text-align: center;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
+
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .career-item, .responsibility-item, .skill-item {
+            position: relative;
+            padding-left: 15px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .career-item:before, .responsibility-item:before, .skill-item:before {
+            content: '>';
+            color: #FF7043;
+            position: absolute;
+            left: 0;
+            
+            font-size: 1.3rem;
+        }
+
+        .career-item:hover, .responsibility-item:hover, .skill-item:hover {
+            color: #D84315;
+        }
+
+        .career-details, .responsibility-details, .skill-details {
+            display: none;
+            position: absolute;
+            left: 15px;
+            top: 25px;
+            background-color: #f2dab3;
+            color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+            width: 250px;
+            z-index: 1;
+        }
+
+        .career-item:hover .career-details,
+        .responsibility-item:hover .responsibility-details,
+        .skill-item:hover .skill-details {
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 15px;
             }
-            .sub-branch ul {
-                padding-left: 0;
+
+            header h1 {
+                font-size: 2rem;
             }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .sub-branch {
+                padding: 15px;
+            }
+
+            .career-details, .responsibility-details, .skill-details {
+                width: 200px;
+                top: 30px;
+                left: 0;
             }
         }
+
         @media (max-width: 576px) {
             .container {
-                padding: 0 5px;
+                padding: 10px;
             }
+
+            header h1 {
+                font-size: 1.75rem;
+            }
+
             h2 {
                 font-size: 1.25rem;
             }
+
             .sub-branch {
-                padding: 5px;
+                padding: 10px;
             }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+
+            .career-details, .responsibility-details, .skill-details {
+                width: 200px;
+                top: 30px;
+                left: 0;
             }
         }
     </style>
@@ -92,27 +189,54 @@
         <div class="sub-branch">
             <h3>Key Responsibilities</h3>
             <ul>
-                <li>Preparing tax returns</li>
-                <li>Advising on tax strategies</li>
-                <li>Ensuring compliance with tax regulations</li>
+                <li class="responsibility-item">
+                    Preparing tax returns
+                    <span class="responsibility-details">Gather and assess financial records, apply tax laws, and ensure timely and accurate submission of tax returns.</span>
+                </li>
+                <li class="responsibility-item">
+                    Advising on tax strategies
+                    <span class="responsibility-details">Develop strategies to reduce tax liability, optimize financial decisions, and ensure compliance with changing tax laws.</span>
+                </li>
+                <li class="responsibility-item">
+                    Ensuring compliance with tax regulations
+                    <span class="responsibility-details">Monitor changes in tax legislation, advise on the implications, and ensure that all activities adhere to tax laws.</span>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Career Opportunities</h3>
             <ul>
-                <li>Tax Accountant</li>
-                <li>Tax Consultant</li>
-                <li>Tax Advisor</li>
+                <li class="career-item">
+                    Tax Accountant
+                    <span class="career-details">Responsible for preparing tax returns, ensuring compliance with tax laws, and advising on tax-saving strategies.</span>
+                </li>
+                <li class="career-item">
+                    Tax Consultant
+                    <span class="career-details">Provides expert advice on tax planning, tax laws, and strategies to minimize tax liabilities for clients.</span>
+                </li>
+                <li class="career-item">
+                    Tax Advisor
+                    <span class="career-details">Offers strategic advice on complex tax issues, assists with audits, and helps clients navigate tax regulations.</span>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Skills Required</h3>
             <ul>
-                <li>Knowledge of tax laws</li>
-                <li>Analytical skills</li>
-                <li>Attention to detail</li>
+                <li class="skill-item">
+                    Knowledge of tax laws
+                    <span class="skill-details">Deep understanding of federal, state, and local tax laws and regulations, as well as the ability to apply them effectively.</span>
+                </li>
+                <li class="skill-item">
+                    Analytical skills
+                    <span class="skill-details">Ability to analyze complex financial data, identify tax-saving opportunities, and develop effective tax strategies.</span>
+                </li>
+                <li class="skill-item">
+                    Attention to detail
+                    <span class="skill-details">Meticulous approach to reviewing financial documents, ensuring accuracy in tax filings, and compliance with regulations.</span>
+                </li>
             </ul>
         </div>
     </div>
