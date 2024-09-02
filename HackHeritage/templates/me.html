@@ -6,81 +6,166 @@
     <title>Mechanical Engineering Career Guidance</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: azure;
             color: white;
             margin: 0;
             padding: 0;
-            background-image: url('/static/img_10.jpg');
+            background-image: url('https://snu.edu.in/site/assets/files/10461/close-up-metallic-equipment-part-turning-factory-generated-by-ai.1600x0.webp');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
+
         header {
-            background-color: transparent;
-            color: white;
+            background-color: rgba(218, 165, 32, 0.498);
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            color: rgb(255, 255, 255);
             padding: 15px 0;
             text-align: center;
+            box-shadow: 0 0 8px 1px rgb(255, 255, 255);
         }
+
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             background-color: transparent;
             border-radius: 8px;
-            backdrop-filter: blur(50px);
-            border: solid white;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 8px 1px rgb(0, 0, 0);
         }
+
         h1, h2 {
             color: white;
         }
+
         p {
             margin: 10px 0;
             line-height: 1.6;
         }
+
         .sub-section {
-            background-color: transparent;
-            border: solid white;
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 8px 1px rgb(182, 182, 182);
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
             backdrop-filter: blur(60px);
+            position: relative;
         }
+
         .sub-section h3 {
             color: white;
         }
+
         ul {
             padding-left: 20px;
         }
+
+        .sub-section ul li {
+            position: relative;
+            padding-left: 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .sub-section ul li:before {
+            content: '>';
+            color: white;
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+            line-height: 1.5;
+        }
+
+        .sub-section ul li:hover {
+            color: rgb(250, 74, 74); /* Light Yellow */
+        }
+
+        .sub-section ul li:hover:before {
+            color: rgb(246, 47, 47); /* Light Yellow */
+        }
+
+        .sub-section ul li .popup-box {
+            display: none;
+            position: absolute;
+            left: 120px;
+            top: -140px; /* Positioned below the hover line */
+            background-color: rgb(249, 199, 62); /* Light Yellow */
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+            width: 200px;
+            z-index: 1; /* Ensure it's above other elements */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .sub-section ul li:hover .popup-box {
+            display: block;
+            opacity: 1;
+            transform: translateY(0); /* No vertical movement */
+        }
+
+        .sub-section ul li .popup-content {
+            display: none; /* Hide the content */
+        }
+
+        .sub-section ul li:hover .popup-content {
+            display: none; /* Ensure content is hidden on hover */
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
             }
+
             ul {
                 padding-left: 15px;
             }
+
             .sub-section {
                 padding: 10px;
             }
+
+            .popup-box {
+                width: 200px;
+                top: 40px; /* Adjusted for smaller screens */
+            }
         }
+
         @media (max-width: 576px) {
             .container {
                 padding: 10px;
             }
+
             ul {
                 padding-left: 10px;
             }
+
             .sub-section {
                 padding: 8px;
             }
+
             h2 {
                 font-size: 1.5rem;
             }
+
             .sub-section h3 {
                 font-size: 1.25rem;
             }
+
+            .popup-box {
+                width: 180px;
+                top: 40px; /* Adjusted for smaller screens */
+            }
         }
+
     </style>
 </head>
 <body>
@@ -95,9 +180,21 @@
             <h3>Educational Path</h3>
             <p>To build a successful career in Mechanical Engineering, consider the following educational steps:</p>
             <ul>
-                <li><strong>Undergraduate Degree:</strong> Obtain a Bachelor’s degree in Mechanical Engineering or a related field.</li>
-                <li><strong>Advanced Degrees (Optional):</strong> Pursue a Master’s or Ph.D. to specialize in areas like Thermal Systems, Robotics, or Materials Science.</li>
-                <li><strong>Certifications:</strong> Gain industry certifications in areas like HVAC design, CAD software, or project management.</li>
+                <li>
+                    <strong>Undergraduate Degree:</strong>
+                    <span class="popup-content">Obtain a Bachelor’s degree in Mechanical Engineering or a related field to start your career.</span>
+                    <span class="popup-box">Obtain a Bachelor’s degree in Mechanical Engineering or a related field to start your career.</span>
+                </li>
+                <li>
+                    <strong>Advanced Degrees (Optional):</strong>
+                    <span class="popup-content">Pursue a Master’s or Ph.D. to specialize in areas like Thermal Systems, Robotics, or Materials Science.</span>
+                    <span class="popup-box">Pursue a Master’s or Ph.D. to specialize in areas like Thermal Systems, Robotics, or Materials Science.</span>
+                </li>
+                <li>
+                    <strong>Certifications:</strong>
+                    <span class="popup-content">Gain industry certifications in areas like HVAC design, CAD software, or project management.</span>
+                    <span class="popup-box">Gain industry certifications in areas like HVAC design, CAD software, or project management.</span>
+                </li>
             </ul>
         </div>
 
@@ -105,11 +202,31 @@
             <h3>Key Skills and Qualities</h3>
             <p>Mechanical Engineers should develop the following skills and qualities:</p>
             <ul>
-                <li><strong>Analytical Skills:</strong> Ability to analyze complex systems and problems to design efficient solutions.</li>
-                <li><strong>Technical Proficiency:</strong> Expertise in CAD software, simulation tools, and manufacturing processes.</li>
-                <li><strong>Creativity:</strong> Innovative thinking to develop new technologies and improve existing systems.</li>
-                <li><strong>Attention to Detail:</strong> Precision in design and analysis to ensure the reliability and safety of mechanical systems.</li>
-                <li><strong>Team Collaboration:</strong> Ability to work effectively with engineers, designers, and other stakeholders.</li>
+                <li>
+                    <strong>Analytical Skills:</strong>
+                    <span class="popup-content">Ability to analyze complex systems and problems to design efficient solutions.</span>
+                    <span class="popup-box">Ability to analyze complex systems and problems to design efficient solutions.</span>
+                </li>
+                <li>
+                    <strong>Technical Proficiency:</strong>
+                    <span class="popup-content">Expertise in CAD software, simulation tools, and manufacturing processes.</span>
+                    <span class="popup-box">Expertise in CAD software, simulation tools, and manufacturing processes.</span>
+                </li>
+                <li>
+                    <strong>Creativity:</strong>
+                    <span class="popup-content">Innovative thinking to develop new technologies and improve existing systems.</span>
+                    <span class="popup-box">Innovative thinking to develop new technologies and improve existing systems.</span>
+                </li>
+                <li>
+                    <strong>Attention to Detail:</strong>
+                    <span class="popup-content">Precision in design and analysis to ensure the reliability and safety of mechanical systems.</span>
+                    <span class="popup-box">Precision in design and analysis to ensure the reliability and safety of mechanical systems.</span>
+                </li>
+                <li>
+                    <strong>Team Collaboration:</strong>
+                    <span class="popup-content">Ability to work effectively with engineers, designers, and other stakeholders.</span>
+                    <span class="popup-box">Ability to work effectively with engineers, designers, and other stakeholders.</span>
+                </li>
             </ul>
         </div>
 
@@ -117,23 +234,58 @@
             <h3>Career Opportunities</h3>
             <p>Mechanical Engineering graduates have a wide range of career options, including:</p>
             <ul>
-                <li><strong>Design Engineer:</strong> Create and develop mechanical systems and products using CAD software.</li>
-                <li><strong>Manufacturing Engineer:</strong> Oversee the production process and ensure the efficient use of materials and resources.</li>
-                <li><strong>Thermal Engineer:</strong> Focus on heat transfer, energy systems, and HVAC design.</li>
-                <li><strong>Robotics Engineer:</strong> Design and build robotic systems for manufacturing, healthcare, and other applications.</li>
-                <li><strong>Materials Engineer:</strong> Select and test materials for strength, durability, and performance in various applications.</li>
+                <li>
+                    <strong>Design Engineer:</strong>
+                    <span class="popup-content">Create and develop mechanical systems and products using CAD software.</span>
+                    <span class="popup-box">Create and develop mechanical systems and products using CAD software.</span>
+                </li>
+                <li>
+                    <strong>Manufacturing Engineer:</strong>
+                    <span class="popup-content">Oversee the production process, ensuring efficiency and quality control.</span>
+                    <span class="popup-box">Oversee the production process, ensuring efficiency and quality control.</span>
+                </li>
+                <li>
+                    <strong>HVAC Engineer:</strong>
+                    <span class="popup-content">Design and manage heating, ventilation, and air conditioning systems for buildings.</span>
+                    <span class="popup-box">Design and manage heating, ventilation, and air conditioning systems for buildings.</span>
+                </li>
+                <li>
+                    <strong>Automotive Engineer:</strong>
+                    <span class="popup-content">Develop and improve automotive components and systems.</span>
+                    <span class="popup-box">Develop and improve automotive components and systems.</span>
+                </li>
+                <li>
+                    <strong>Project Manager:</strong>
+                    <span class="popup-content">Lead engineering projects, managing resources, timelines, and budgets.</span>
+                    <span class="popup-box">Lead engineering projects, managing resources, timelines, and budgets.</span>
+                </li>
             </ul>
         </div>
 
         <div class="sub-section">
-            <h3>Work Environment</h3>
-            <p>Mechanical Engineers can work in various environments, including:</p>
+            <h3>Professional Development</h3>
+            <p>Continue to grow your career through professional development:</p>
             <ul>
-                <li>Engineering and design firms</li>
-                <li>Manufacturing and production facilities</li>
-                <li>Aerospace and automotive industries</li>
-                <li>Energy and utilities companies</li>
-                <li>Research and development labs</li>
+                <li>
+                    <strong>Networking:</strong>
+                    <span class="popup-content">Join professional organizations like ASME to connect with peers and stay updated.</span>
+                    <span class="popup-box">Join professional organizations like ASME to connect with peers and stay updated.</span>
+                </li>
+                <li>
+                    <strong>Continuing Education:</strong>
+                    <span class="popup-content">Attend workshops, conferences, and courses to stay current with industry trends.</span>
+                    <span class="popup-box">Attend workshops, conferences, and courses to stay current with industry trends.</span>
+                </li>
+                <li>
+                    <strong>Mentorship:</strong>
+                    <span class="popup-content">Seek mentors to guide your career development and provide industry insights.</span>
+                    <span class="popup-box">Seek mentors to guide your career development and provide industry insights.</span>
+                </li>
+                <li>
+                    <strong>Leadership Skills:</strong>
+                    <span class="popup-content">Develop leadership skills to advance into management and executive roles.</span>
+                    <span class="popup-box">Develop leadership skills to advance into management and executive roles.</span>
+                </li>
             </ul>
         </div>
     </div>

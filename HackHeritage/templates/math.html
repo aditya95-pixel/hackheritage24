@@ -8,31 +8,36 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
+            background-color: rgb(0, 0, 0);
             color: white;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_5.jpg');
+            background-image: url('https://img.freepik.com/free-vector/mathematical-geometric-background-vector-gradient-blue-education-remix_53876-114100.jpg?t=st=1725267041~exp=1725270641~hmac=fe97bdaf579142ba0a642e134dcd42e7b0206bf53db80c7d6832571546a5e14f&w=1800');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
+            background-color: rgba(3, 3, 98, 0.337);
             color: white;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            box-shadow: 0 0 8px 1px whitesmoke;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px whitesmoke;
+            background-color: #b8cbf650;
         }
         h1, h2 {
-            color: white;
+            color: rgb(255, 255, 255);
         }
         h2 {
             text-align: center;
@@ -42,23 +47,67 @@
         }
         .sub-branch {
             background-color: transparent;
-            border: solid white;
+            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
             backdrop-filter: blur(25px);
             padding: 10px;
             color: white;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: white;
+            color: rgb(0, 21, 107);
             text-align: center;
         }
-        .engg {
-            color: white;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #40bdf8;
+        }
+        .sub-branch ul li:hover {
+            background-color: #40bdf8;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff0505;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 40%;
+            top: -60px; /* Position above the list item */
+            transform: translateX(-50%);
+            background-color: #030563;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -69,6 +118,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px; /* Adjusted for smaller screens */
             }
         }
         @media (max-width: 576px) {
@@ -83,6 +136,10 @@
             }
             .sub-branch ul li {
                 font-size: 0.875rem;
+            }
+            .tooltip {
+                width: 300px;
+                top: -70px; /* Adjusted for smaller screens */
             }
         }
     </style>
@@ -99,9 +156,18 @@
             <h3>Algebra and Number Theory</h3>
             <p>Research in Algebra and Number Theory involves exploring mathematical structures and properties of numbers, with applications in cryptography and coding theory. Careers in this area include roles in academia, industry, and government.</p>
             <ul>
-                <li>Mathematician: Conducting research in algebraic structures and number theory.</li>
-                <li>Cryptographer: Applying algebraic techniques to develop secure communication systems.</li>
-                <li>Data Scientist: Utilizing number theory for advanced data analysis and algorithm development.</li>
+                <li>
+                    Mathematician
+                    <div class="tooltip">Conducting research in algebraic structures and number theory.</div>
+                </li>
+                <li>
+                    Cryptographer
+                    <div class="tooltip">Applying algebraic techniques to develop secure communication systems.</div>
+                </li>
+                <li>
+                    Data Scientist
+                    <div class="tooltip">Utilizing number theory for advanced data analysis and algorithm development.</div>
+                </li>
             </ul>
         </div>
 
@@ -109,9 +175,18 @@
             <h3>Calculus and Analysis</h3>
             <p>Calculus and Analysis research focuses on understanding changes and solving complex problems in physics, engineering, and economics. This area provides a strong foundation for careers in academia, research, and applied mathematics.</p>
             <ul>
-                <li>Analyst: Using calculus and analysis to solve practical problems in various industries.</li>
-                <li>Academic Researcher: Conducting theoretical research in analysis and its applications.</li>
-                <li>Operations Research Specialist: Applying calculus to optimize business processes and decision-making.</li>
+                <li>
+                    Analyst
+                    <div class="tooltip">Using calculus and analysis to solve practical problems in various industries.</div>
+                </li>
+                <li>
+                    Academic Researcher
+                    <div class="tooltip">Conducting theoretical research in analysis and its applications.</div>
+                </li>
+                <li>
+                    Operations Research Specialist
+                    <div class="tooltip">Applying calculus to optimize business processes and decision-making.</div>
+                </li>
             </ul>
         </div>
 
@@ -119,9 +194,18 @@
             <h3>Geometry and Topology</h3>
             <p>Geometry and Topology research explores the properties of space and forms, with applications in computer graphics, robotics, and theoretical physics. Careers in this area include roles in technology, engineering, and research institutions.</p>
             <ul>
-                <li>Geometric Modeler: Designing and analyzing complex shapes and structures in technology.</li>
-                <li>Robotics Engineer: Applying geometric and topological concepts to robot design and navigation.</li>
-                <li>Theoretical Physicist: Using geometry and topology to explore fundamental physical theories.</li>
+                <li>
+                    Geometric Modeler
+                    <div class="tooltip">Designing and analyzing complex shapes and structures in technology.</div>
+                </li>
+                <li>
+                    Robotics Engineer
+                    <div class="tooltip">Applying geometric and topological concepts to robot design and navigation.</div>
+                </li>
+                <li>
+                    Theoretical Physicist
+                    <div class="tooltip">Using geometry and topology to explore fundamental physical theories.</div>
+                </li>
             </ul>
         </div>
 
@@ -129,9 +213,18 @@
             <h3>Probability and Statistics</h3>
             <p>Probability and Statistics research provides tools for modeling uncertainty and making data-driven decisions. Careers in this area span data science, actuarial science, and financial analysis.</p>
             <ul>
-                <li>Data Scientist: Analyzing and interpreting complex data sets to inform business strategies.</li>
-                <li>Actuary: Using statistical methods to assess risk and uncertainty in insurance and finance.</li>
-                <li>Quantitative Analyst: Applying statistical techniques to develop financial models and predictions.</li>
+                <li>
+                    Data Scientist
+                    <div class="tooltip">Analyzing and interpreting complex data sets to inform business strategies.</div>
+                </li>
+                <li>
+                    Actuary
+                    <div class="tooltip">Using statistical methods to assess risk and uncertainty in insurance and finance.</div>
+                </li>
+                <li>
+                    Quantitative Analyst
+                    <div class="tooltip">Applying statistical techniques to develop financial models and predictions.</div>
+                </li>
             </ul>
         </div>
     </div>

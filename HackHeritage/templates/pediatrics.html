@@ -8,75 +8,154 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: white;
+
+            color: #000000;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_5.jpg');
+            background-image: url('https://media.istockphoto.com/id/1094454572/vector/stethoscope-sign.jpg?s=612x612&w=0&k=20&c=PBRxXsbmAp9nZcoj9tunCtjve-LTyZiCHuAZEPppYlE=');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
-            color: white;
+            background-color: #787ef3;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-bottom: solid 4px rgba(6, 6, 6, 0.892);
+            box-shadow: 0 0 10px 1px rgb(0, 0, 0);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff; /* Deep Blue */
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 15px;
-        }
-        h1, h2 {
-            color: white;
+            background-color:rgba(128, 128, 128, 0.356); /* Bright Yellow */
+            border-radius: 15px;
+            box-shadow: 0px 0 14px 1px rgb(52, 52, 52);
         }
         h2 {
             text-align: center;
+            font-size: 2rem;
+            color: #006064; /* Deep Blue */
+            margin-bottom: 20px;
+            font-weight: 600;
         }
         p {
             margin: 15px 0;
+            font-size: 1.1rem;
+            color: #4E342E; /* Brown */
         }
         .sub-branch {
-            background-color: transparent;
-            border: solid white;
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: white;
+            background-color: rgba(88, 255, 227, 0.171); /* Light Yellow */
+            border: 1px solid #FFAB40; /* Bright Orange */
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            color: #000000;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
         }
         .sub-branch h3 {
-            color: white;
+            color: #006064; /* Deep Blue */
             text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #80D8FF; /* Light Blue */
+        }
+        .sub-branch ul li:hover {
+            background-color: #80D8FF; /* Light Blue */
+            color: #000000;
+        }
+        .sub-branch ul li::before {
+            content: '•';
+            color: #FF5722; /* Deep Orange */
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 50%;
+            bottom: 110%;
+            transform: translateX(-50%);
+            background-color: #006064; /* Deep Blue */
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 200px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
+        }
+        @keyframes pediatrics-animation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .sub-branch {
+            animation: pediatrics-animation 1s infinite;
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 15px;
             }
-            .sub-branch ul {
-                padding-left: 0;
+            header h1 {
+                font-size: 2rem;
             }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+            h2 {
+                font-size: 1.5rem;
+            }
+            .sub-branch {
+                padding: 15px;
             }
         }
         @media (max-width: 576px) {
             .container {
-                padding: 0 5px;
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 1.75rem;
             }
             h2 {
                 font-size: 1.25rem;
             }
             .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+                padding: 10px;
             }
         }
     </style>
@@ -93,9 +172,18 @@
             <h3>Neonatology</h3>
             <p>Neonatology is a subspecialty of pediatrics that focuses on the medical care of newborns, particularly those who are ill or premature. It involves managing conditions such as:</p>
             <ul>
-                <li>Respiratory distress syndrome</li>
-                <li>Premature birth</li>
-                <li>Congenital disorders</li>
+                <li>
+                    Respiratory distress syndrome
+                    <div class="tooltip">Respiratory distress syndrome is a condition in newborns where the lungs are not fully developed, causing difficulty in breathing.</div>
+                </li>
+                <li>
+                    Premature birth
+                    <div class="tooltip">Premature birth refers to babies born before 37 weeks of gestation, which may lead to various health issues due to underdeveloped organs.</div>
+                </li>
+                <li>
+                    Congenital disorders
+                    <div class="tooltip">Congenital disorders are conditions present at birth, including heart defects, cleft lip/palate, and genetic abnormalities.</div>
+                </li>
             </ul>
         </div>
 
@@ -103,9 +191,18 @@
             <h3>Pediatric Oncology</h3>
             <p>Pediatric oncology deals with the diagnosis and treatment of cancers in children. This includes conditions like:</p>
             <ul>
-                <li>Leukemia</li>
-                <li>Brain tumors</li>
-                <li>Neuroblastoma</li>
+                <li>
+                    Leukemia
+                    <div class="tooltip">Leukemia is a type of cancer that affects the blood and bone marrow, causing abnormal blood cell production.</div>
+                </li>
+                <li>
+                    Brain tumors
+                    <div class="tooltip">Brain tumors in children can affect brain function and may require surgery, radiation, or chemotherapy.</div>
+                </li>
+                <li>
+                    Neuroblastoma
+                    <div class="tooltip">Neuroblastoma is a cancer that develops from immature nerve cells and is most common in children under 5 years old.</div>
+                </li>
             </ul>
         </div>
 
@@ -113,9 +210,18 @@
             <h3>Pediatric Cardiology</h3>
             <p>Pediatric cardiology involves diagnosing and treating heart conditions in children, such as:</p>
             <ul>
-                <li>Congenital heart defects</li>
-                <li>Arrhythmias</li>
-                <li>Heart murmurs</li>
+                <li>
+                    Congenital heart defects
+                    <div class="tooltip">Congenital heart defects are structural problems with the heart present at birth, such as holes between the heart chambers.</div>
+                </li>
+                <li>
+                    Arrhythmias
+                    <div class="tooltip">Arrhythmias are irregular heartbeats that can lead to symptoms like dizziness or fainting and may need treatment to correct.</div>
+                </li>
+                <li>
+                    Heart murmurs
+                    <div class="tooltip">Heart murmurs are unusual sounds heard during a heartbeat, which can be benign or indicate underlying heart conditions.</div>
+                </li>
             </ul>
         </div>
 
@@ -123,9 +229,18 @@
             <h3>Pediatric Neurology</h3>
             <p>Pediatric neurology focuses on treating neurological disorders in children, including:</p>
             <ul>
-                <li>Epilepsy</li>
-                <li>Cerebral palsy</li>
-                <li>Developmental delays</li>
+                <li>
+                    Epilepsy
+                    <div class="tooltip">Epilepsy is a neurological disorder characterized by recurrent seizures, which may require medication for control.</div>
+                </li>
+                <li>
+                    Cerebral palsy
+                    <div class="tooltip">Cerebral palsy is a group of disorders affecting movement and muscle tone due to brain damage occurring before or at birth.</div>
+                </li>
+                <li>
+                    Developmental delays
+                    <div class="tooltip">Developmental delays refer to when a child does not reach developmental milestones at the expected age, affecting cognitive, motor, or social skills.</div>
+                </li>
             </ul>
         </div>
     </div>

@@ -5,80 +5,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surgery</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: azure;
-            color: white;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-image: url('/static/img_14.jpg');
+            line-height: 1.6;
+            background-image: url('https://scopeblog.stanford.edu/wp-content/uploads/2021/10/AdobeStock_254314831-scaled-1152x578-2.jpeg');
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
+            background-attachment: fixed;
         }
+
         header {
-            background-color: transparent;
-            color: white;
-            padding: 15px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 20px 0;
             text-align: center;
+            border-bottom: 2px solid #FFB74D;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #D84315;
+        }
+
         .container {
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 40px auto;
             padding: 20px;
             background-color: transparent;
-            border-radius: 8px;
-            backdrop-filter: blur(50px);
-            border: solid white;
+            backdrop-filter: blur(2px);
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
         }
-        h1, h2 {
-            color: white;
-        }
-        p {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-        .sub-section {
-            background-color: transparent;
-            border: solid white;
-            padding: 15px;
-            border-radius: 10px;
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #ffffff;
             margin-bottom: 20px;
-            backdrop-filter: blur(50px);
+            font-weight: 600;
         }
+
+        p {
+            margin: 15px 0;
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+
+        .sub-section {
+            background-color: #FFF3E0;
+            border: 1px solid #FFB74D;
+            padding: 20px;
+            color: #333;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            transition: transform 0.2s ease, box-shadow 0.1s ease;
+        }
+
+        .sub-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
         .sub-section h3 {
-            color: white;
+            font-size: 1.5rem;
+            color: #D84315;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
+
+        .general-surgery {
+            background-color: #ff8c006c;
+            border: 1px solid #FF6F00;
+        }
+
+        .cardiothoracic-surgery {
+            background-color: #1e8fff92;
+            border: 1px solid #1c85eea4;
+        }
+
+        .neurosurgery {
+            background-color: #32cd32b6;
+            border: 1px solid #28A745;
+        }
+
+        .orthopedic-surgery {
+            background-color: #7d91f6cb;
+            border: 1px solid #E6007E;
+        }
+
         ul {
-            padding-left: 20px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
+
+        .procedure-item {
+            position: relative;
+            padding-left: 15px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .procedure-item:before {
+            content: '>';
+            color: #fe4108;
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+        }
+
+        .procedure-item:hover {
+            color: #D84315;
+        }
+
+        .procedure-details {
+            display: none;
+            position: absolute;
+            left: 15px;
+            top: 25px;
+            background-color: #f2dab3;
+            color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+            width: 250px;
+            z-index: 1;
+        }
+
+        .procedure-item:hover .procedure-details {
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
             }
-            ul {
-                padding-left: 15px;
-            }
+
             .sub-section {
-                padding: 10px;
+                padding: 15px;
+            }
+
+            .procedure-details {
+                width: 200px;
+                top: 30px;
             }
         }
+
         @media (max-width: 576px) {
             .container {
                 padding: 10px;
             }
-            ul {
-                padding-left: 10px;
-            }
+
             .sub-section {
-                padding: 8px;
+                padding: 10px;
             }
-            h2 {
-                font-size: 1.5rem;
-            }
-            .sub-section h3 {
-                font-size: 1.25rem;
+
+            .procedure-details {
+                width: 200px;
+                top: 30px;
+                left: 0;
             }
         }
     </style>
@@ -91,45 +186,97 @@
         <h2>Overview</h2>
         <p>The Surgery department is a critical field in medicine that focuses on the diagnosis, treatment, and rehabilitation of patients through surgical procedures. Surgeons work across various specialties to perform operations that can save lives, improve health, and enhance the quality of life.</p>
         
-        <div class="sub-section">
+        <div class="sub-section general-surgery">
             <h3>General Surgery</h3>
             <p>General Surgery involves a broad range of surgical procedures, often focusing on the abdominal organs, including the stomach, liver, pancreas, and intestines.</p>
             <ul>
-                <li>Appendectomy</li>
-                <li>Cholecystectomy</li>
-                <li>Hernia Repair</li>
-                <li>Gastrointestinal Surgery</li>
+                <li class="procedure-item">
+                    Appendectomy
+                    <span class="procedure-details">A surgical procedure to remove the appendix when it is infected or inflamed.</span>
+                </li>
+                <li class="procedure-item">
+                    Cholecystectomy
+                    <span class="procedure-details">Surgical removal of the gallbladder, often due to gallstones causing pain or infection.</span>
+                </li>
+                <li class="procedure-item">
+                    Hernia Repair
+                    <span class="procedure-details">Surgical correction of a hernia, where an organ or tissue protrudes through a weak spot in the muscle.</span>
+                </li>
+                <li class="procedure-item">
+                    Gastrointestinal Surgery
+                    <span class="procedure-details">Surgery to treat conditions affecting the gastrointestinal tract, including the stomach and intestines.</span>
+                </li>
             </ul>
         </div>
 
-        <div class="sub-section">
+        <div class="sub-section cardiothoracic-surgery">
             <h3>Cardiothoracic Surgery</h3>
             <p>Cardiothoracic Surgery focuses on surgical treatment of diseases affecting organs inside the thorax (the chest), primarily the heart, lungs, and esophagus.</p>
             <ul>
-                <li>Coronary Artery Bypass Surgery</li>
-                <li>Heart Valve Repair/Replacement</li>
-                <li>Lung Cancer Surgery</li>
-                <li>Thoracic Aortic Aneurysm Repair</li>
+                <li class="procedure-item">
+                    Coronary Artery Bypass Surgery
+                    <span class="procedure-details">A procedure that improves blood flow to the heart by bypassing blocked or narrowed coronary arteries.</span>
+                </li>
+                <li class="procedure-item">
+                    Heart Valve Repair/Replacement
+                    <span class="procedure-details">Surgery to repair or replace a damaged heart valve to restore normal blood flow through the heart.</span>
+                </li>
+                <li class="procedure-item">
+                    Lung Cancer Surgery
+                    <span class="procedure-details">Removal of cancerous tissue from the lungs, often as part of a treatment plan for lung cancer.</span>
+                </li>
+                <li class="procedure-item">
+                    Thoracic Aortic Aneurysm Repair
+                    <span class="procedure-details">Surgery to repair a weakened area in the wall of the thoracic aorta to prevent rupture.</span>
+                </li>
             </ul>
         </div>
 
-        <div class="sub-section">
+        <div class="sub-section neurosurgery">
             <h3>Neurosurgery</h3>
             <p>Neurosurgery is the medical specialty concerned with the prevention, diagnosis, and treatment of disorders that affect the nervous system, including the brain, spinal cord, and peripheral nerves.</p>
             <ul>
-                <li>Brain Tumor Surgery</li>
-                <li>Spinal Fusion</li>
-                <li>Craniotomy</li>
-                <li>Peripheral Nerve Surgery</li>
+                <li class="procedure-item">
+                    Brain Tumor Surgery
+                    <span class="procedure-details">Surgical removal of tumors from the brain, which can be benign or malignant.</span>
+                </li>
+                <li class="procedure-item">
+                    Spinal Fusion
+                    <span class="procedure-details">A surgical procedure to join two or more vertebrae in the spine to eliminate motion and reduce pain.</span>
+                </li>
+                <li class="procedure-item">
+                    Craniotomy
+                    <span class="procedure-details">A surgical operation where a bone flap is temporarily removed from the skull to access the brain.</span>
+                </li>
+                <li class="procedure-item">
+                    Peripheral Nerve Surgery
+                    <span class="procedure-details">Surgery to treat conditions affecting the peripheral nerves, such as carpal tunnel syndrome.</span>
+                </li>
             </ul>
         </div>
 
-        <div class="sub-section">
+        <div class="sub-section orthopedic-surgery">
             <h3>Orthopedic Surgery</h3>
-            <p>Orthopedic Surgery deals with conditions involving the musculoskeletal system. Surgeons use both surgical and non-surgical means to treat musculoskeletal trauma, spine diseases, sports injuries, and degenerative diseases.</p>
+            <p>Orthopedic Surgery deals with conditions involving the musculoskeletal system, including bones, joints, ligaments, tendons, and muscles.</p>
             <ul>
-                <li>Joint Replacement</li>
-                <li>Arthroscopy</li>
-                <li>Fracture Repair</li>
-                <li>Spinal Surgery</li>
-     
+                <li class="procedure-item">
+                    Joint Replacement
+                    <span class="procedure-details">Surgical replacement of a damaged or diseased joint with an artificial one.</span>
+                </li>
+                <li class="procedure-item">
+                    Arthroscopy
+                    <span class="procedure-details">A minimally invasive surgical procedure used to diagnose and treat joint problems.</span>
+                </li>
+                <li class="procedure-item">
+                    Spinal Surgery
+                    <span class="procedure-details">Surgical procedures to treat spinal disorders, including herniated discs and scoliosis.</span>
+                </li>
+                <li class="procedure-item">
+                    Fracture Repair
+                    <span class="procedure-details">Surgical intervention to fix broken bones and restore their normal alignment and function.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -8,32 +8,37 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: azure;
-            color: white;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             margin: 0;
             padding: 0;
-            background-image: url('/static/img_13.jpeg');
+            background-image: url('https://static.vecteezy.com/system/resources/previews/030/464/247/non_2x/abstract-integration-circuit-board-blends-with-chip-processor-creating-a-technology-focused-background-vertical-mobile-wallpaper-ai-generated-free-photo.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
+            background-color: rgba(0, 0, 0, 0.514);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 0 8px 2px whitesmoke;
             color: white;
             padding: 15px 0;
             text-align: center;
         }
         .container {
             max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: transparent;
-            border-radius: 8px;
-            backdrop-filter: blur(50px);
-            border: solid white;
+            margin: 40px auto;
+            padding: 50px;
+            background-color: rgba(255, 250, 240, 0.224);
+            border-radius: 10px;
+            color: black;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 8px 2px whitesmoke;
         }
-        h1, h2 {
-            color: white;
+        h2 {
+            color: rgb(0, 0, 0);
         }
         p {
             margin: 10px 0;
@@ -46,39 +51,62 @@
             border-radius: 10px;
             margin-bottom: 20px;
             backdrop-filter: blur(50px);
+            position: relative;
         }
         .sub-section h3 {
             color: white;
+            position: relative; /* For positioning the popup box */
         }
-        ul {
+        .sub-section ul {
             padding-left: 20px;
+            list-style: none;
+        }
+        .sub-section ul li {
+            position: relative;
+            padding-left: 20px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .sub-section h3:hover{
+            color: red;
+        }
+        .sub-section h3:hover + ul .popup-box {
+            display: block;
+            opacity: 1;
+            transform: translateY(0); /* Smooth vertical movement */
+        }
+        .popup-box {
+            display: none;
+            position: absolute;
+            left: 60%;
+            top: -250px; /* Position the popup box below the text */
+            background-color: rgb(249, 199, 62); /* Light Yellow */
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+            width: 300px;
+            z-index: 1; /* Ensure it's above other elements */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(10px); /* Initial position for smooth transition */
+            opacity: 0; /* Initially hidden */
         }
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
             }
-            ul {
-                padding-left: 15px;
-            }
-            .sub-section {
-                padding: 10px;
+            .popup-box {
+                width: 250px;
+                top: -250px; /* Adjusted for smaller screens */
             }
         }
         @media (max-width: 576px) {
             .container {
                 padding: 10px;
             }
-            ul {
-                padding-left: 10px;
-            }
-            .sub-section {
-                padding: 8px;
-            }
-            h2 {
-                font-size: 1.5rem;
-            }
-            .sub-section h3 {
-                font-size: 1.25rem;
+            .popup-box {
+                width: 180px;
+                top: -250px; /* Adjusted for smaller screens */
             }
         }
     </style>
@@ -93,27 +121,57 @@
         
         <div class="sub-section">
             <h3>Telecommunications Engineer</h3>
-            <p>Telecommunications engineers design and oversee the installation of telecommunications equipment and facilities. They are essential in maintaining and expanding communication networks.</p>
+            <ul>
+                <li>
+                    <div class="popup-box">
+                        <p>Telecommunications engineers design and oversee the installation of telecommunications equipment and facilities. They are essential in maintaining and expanding communication networks.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-section">
             <h3>Embedded Systems Engineer</h3>
-            <p>Embedded Systems Engineers work on developing integrated hardware and software solutions for specific applications. This role is vital in sectors like automotive, healthcare, and consumer electronics.</p>
+            <ul>
+                <li>
+                    <div class="popup-box">
+                        <p>Embedded Systems Engineers work on developing integrated hardware and software solutions for specific applications. This role is vital in sectors like automotive, healthcare, and consumer electronics.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-section">
             <h3>Signal Processing Engineer</h3>
-            <p>Signal Processing Engineers specialize in enhancing the quality and efficiency of communication systems. They work in areas such as audio and video processing, telecommunications, and biomedical engineering.</p>
+            <ul>
+                <li>
+                    <div class="popup-box">
+                        <p>Signal Processing Engineers specialize in enhancing the quality and efficiency of communication systems. They work in areas such as audio and video processing, telecommunications, and biomedical engineering.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-section">
             <h3>Network Engineer</h3>
-            <p>Network Engineers are responsible for designing, implementing, and managing network systems. They play a key role in ensuring efficient data transmission and network security.</p>
+            <ul>
+                <li>
+                    <div class="popup-box">
+                        <p>Network Engineers are responsible for designing, implementing, and managing network systems. They play a key role in ensuring efficient data transmission and network security.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-section">
             <h3>Research and Development Engineer</h3>
-            <p>R&D Engineers in ECE work on innovative projects, developing new technologies and products. This role is crucial in pushing the boundaries of what's possible in communication and electronic systems.</p>
+            <ul>
+                <li>
+                    <div class="popup-box">
+                        <p>R&D Engineers in ECE work on innovative projects, developing new technologies and products. This role is crucial in pushing the boundaries of what's possible in communication and electronic systems.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </body>

@@ -4,86 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strategic Management</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assuming the CSS is saved as styles.css -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #000000;
+            color: #333;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_15.jpg'); /* Make sure the path to the image is correct */
+            background-image: url('https://img.freepik.com/premium-photo/corporate-management-strategy-solution-branding-digital-picture-ai-generated-art_853163-10287.jpg'); /* Ensure the path is correct */
+
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
+
         header {
-            background-color: transparent;
-            color: black;
-            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.45);
+            color: #ffffff;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+            box-shadow: 0px 0px 9px 2px rgba(255, 255, 255, 0.4);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
         .container {
             max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 15px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.347);
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px rgb(252, 252, 252);
         }
-        h1, h2 {
-            color: black;
-        }
+
         h2 {
             text-align: center;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
+
         p {
             margin: 15px 0;
+            font-size: 1.1rem;
+            color: #555;
         }
+
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: black;
+            background-color: #fff3e090;
+            box-shadow: 0 0 8px 1px rgb(156, 156, 156);
+            padding: 30px;
+            margin: 10px;
+            color: #333;
             border-radius: 10px;
-            margin-bottom: 20px;
-            position: relative;
+            margin-bottom: 30px;
+            transition: transform 0.2s ease, box-shadow 0.1s ease;
         }
+
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
         .sub-branch h3 {
-            color: black;
+            font-size: 1.5rem;
+            color: #D84315;
             text-align: center;
+            margin-bottom: 15px;
+
         }
-        .engg {
-            color: black;
+
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+
+        .sub-branch li {
+            position: relative;
+            padding: auto;
+            margin-bottom: auto;
+            background-color: #FFFFFF;
+            border: 1px solid #FFB74D;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
         }
+
+        .sub-branch li:hover {
+            background-color: #FFB74D;
+            color: #FFFFFF;
+        }
+
+        .sub-branch li:hover .details {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .details {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -100px; /* Hide below the item initially */
+            background-color: #FF7043;
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+            width: calc(100% - 20px);
+            transition: opacity 0.3s ease, visibility 0.3s ease, bottom 0.3s ease;
+        }
+
+        .sub-branch li:hover .details {
+            bottom: 100%; /* Move it to the position visible above the item */
+        }
+
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 15px;
             }
-            .sub-branch ul {
-                padding-left: 0;
+
+            header h1 {
+                font-size: 2rem;
             }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .sub-branch {
+                padding: 15px;
             }
         }
+
         @media (max-width: 576px) {
             .container {
-                padding: 0 5px;
+                padding: 10px;
             }
+
+            header h1 {
+                font-size: 1.75rem;
+            }
+
             h2 {
                 font-size: 1.25rem;
             }
+
             .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+                padding: 10px;
             }
         }
     </style>
@@ -100,20 +182,30 @@
         <section class="sub-branch">
             <h2>Key Functions of Strategic Management</h2>
             <ul>
-                <li><h3>Strategic Planning</h3>
+                <li>
+                    <h3>Strategic Planning</h3>
                     <p>Defining the organization's vision, mission, and goals. Developing strategies to achieve these goals based on internal strengths and weaknesses, and external opportunities and threats.</p>
+                    <span class="details">Defining the vision, mission, and goals for the organization. Developing strategies based on internal and external analysis.</span>
                 </li>
-                <li><h3>Strategy Implementation</h3>
+                <li>
+                    <h3>Strategy Implementation</h3>
                     <p>Executing the strategies by allocating resources, setting up structures, and ensuring that all parts of the organization are aligned with strategic objectives.</p>
+                    <span class="details">Executing strategies by allocating resources, setting up structures, and ensuring alignment with objectives.</span>
                 </li>
-                <li><h3>Strategy Evaluation</h3>
+                <li>
+                    <h3>Strategy Evaluation</h3>
                     <p>Monitoring and assessing the effectiveness of the implemented strategies. Making adjustments as needed to respond to changes in the internal and external environment.</p>
+                    <span class="details">Monitoring and assessing strategies' effectiveness. Adjusting as necessary based on environmental changes.</span>
                 </li>
-                <li><h3>Competitive Analysis</h3>
+                <li>
+                    <h3>Competitive Analysis</h3>
                     <p>Analyzing competitors to understand their strategies, strengths, and weaknesses. Using this information to refine one's own strategic approach.</p>
+                    <span class="details">Analyzing competitors to understand their strategies and weaknesses to refine one's own approach.</span>
                 </li>
-                <li><h3>Resource Management</h3>
+                <li>
+                    <h3>Resource Management</h3>
                     <p>Managing resources effectively to support strategic objectives. This includes financial, human, and physical resources.</p>
+                    <span class="details">Managing resources including financial, human, and physical to support strategic objectives.</span>
                 </li>
             </ul>
         </section>

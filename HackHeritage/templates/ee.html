@@ -8,29 +8,36 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: azure;
-            color: white;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             margin: 0;
             padding: 0;
-            background-image: url('/static/img_12.jpeg');
+            background-image: url('https://t4.ftcdn.net/jpg/02/73/14/83/240_F_273148317_YmBx5JLlEYj547Vo2htOc8KYQSNz55VT.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
+            background-color: rgba(2, 2, 103, 0.787);
             color: white;
-            padding: 15px 0;
+            padding: 5px;
+            margin-bottom: 29px;
             text-align: center;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom: solid 1px whitesmoke;
+            box-shadow: 0 0 8px 1px whitesmoke;
         }
         .container {
             max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
+            margin: 5px;
+            padding: 5px;
             background-color: transparent;
             border-radius: 8px;
-            backdrop-filter: blur(50px);
+            backdrop-filter: blur(4px);
             border: solid white;
+            box-shadow: 0 0 8px 1px whitesmoke;
         }
         h1, h2 {
             color: white;
@@ -40,18 +47,44 @@
             line-height: 1.6;
         }
         .sub-section {
-            background-color: transparent;
-            border: solid white;
+            background-color: rgba(0, 63, 209, 0.334);
+            color: aqua;
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
-            backdrop-filter: blur(50px);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 8px 1px whitesmoke;
+            position: relative;
         }
         .sub-section h3 {
-            color: white;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            position: relative;
         }
-        ul {
-            padding-left: 20px;
+        .sub-section h3:hover{
+            color: rgb(255, 0, 0);
+
+        }
+        .sub-section p {
+            display: none;
+            position: absolute;
+            left: 10%;
+            top: -170px; /* Position the content box below the text */
+            background-color: rgb(2, 20, 63);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+            width: 90px;
+            z-index: 1; /* Ensure it's above other elements */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(10px); /* Initial position for smooth transition */
+            opacity: 0; /* Initially hidden */
+        }
+        .sub-section h3:hover + p {
+            display: block;
+            opacity: 1;
+            transform: translateY(0); /* Smooth vertical movement */
         }
         @media (max-width: 768px) {
             .container {
@@ -62,6 +95,9 @@
             }
             .sub-section {
                 padding: 10px;
+            }
+            .sub-section p {
+                width: 90%;
             }
         }
         @media (max-width: 576px) {
@@ -79,6 +115,9 @@
             }
             .sub-section h3 {
                 font-size: 1.25rem;
+            }
+            .sub-section p {
+                width: 80%;
             }
         }
     </style>

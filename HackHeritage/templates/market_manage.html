@@ -4,62 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketing Management</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assuming the CSS is saved as styles.css -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-image: url('/static/img_15.jpg'); /* Make sure the path to the image is correct */
+            padding: 10px;
+            line-height: 1.4;
+            background-image: url('https://t4.ftcdn.net/jpg/07/68/65/95/240_F_768659517_BQD3YiZOkYdTs6wNKByhvmkpwtdzBKWA.jpg'); /* Make sure the path to the image is correct */
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
-            color: black;
-            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.684);
+            color: rgb(255, 255, 255);
+            border-bottom: solid 2px whitesmoke;
+            box-shadow: 0 0 8px 1px rgb(255, 255, 255);
+            padding: 5px;
+            margin-bottom: 50px;
+            margin-top: 0px;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
         }
         .container {
+            
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 15px;
         }
-        h1, h2 {
-            color: black;
+        h2 {
+            color: rgb(41, 0, 130);
+        }
+        h3 {
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+        h3:hover {
+            color: rgb(255, 0, 0);
+            background-color: aqua;
+            transition: .3s;
+            border-radius: 10px;
+            padding-left: 5px;
+        }
+        h1 {
+            color: rgb(255, 255, 255);
         }
         h2 {
             text-align: center;
         }
         p {
             margin: 15px 0;
+            color: rgb(145, 227, 252);
         }
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
+            background-color: rgba(128, 128, 128, 0.503);
+            box-shadow: 0 0 8px 1px rgb(0, 0, 0);
+            backdrop-filter: blur(5px);
             padding: 10px;
-            color: black;
+            color: rgb(0, 0, 0);
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
         }
-        .sub-branch h3 {
-            color: black;
-            text-align: center;
+        .sub-branch ul {
+            list-style: none;
+            padding: 0;
         }
-        .engg {
-            color: black;
+        .sub-branch ul li {
+            margin-bottom: 15px;
+            position: relative;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li p {
+            display: none;
+            position: absolute;
+            left: 30%;
+            top: -200px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+            width: 200px;
+            z-index: 1;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(10px);
+            opacity: 0;
+        }
+        .sub-branch ul li h3:hover + p {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
         }
         @media (max-width: 768px) {
             .container {
@@ -100,19 +139,24 @@
         <section class="sub-branch">
             <h2>Key Functions of Marketing Management</h2>
             <ul>
-                <li><h3>Market Research</h3>
+                <li>
+                    <h3>Market Research</h3>
                     <p>Gathering and analyzing data about market trends, customer preferences, and competitive landscape to make informed decisions.</p>
                 </li>
-                <li><h3>Product Management</h3>
+                <li>
+                    <h3>Product Management</h3>
                     <p>Developing and managing products to meet market demands, including product design, positioning, and lifecycle management.</p>
                 </li>
-                <li><h3>Promotional Strategies</h3>
+                <li>
+                    <h3>Promotional Strategies</h3>
                     <p>Creating and executing marketing campaigns to promote products or services through various channels such as advertising, public relations, and social media.</p>
                 </li>
-                <li><h3>Sales Management</h3>
+                <li>
+                    <h3>Sales Management</h3>
                     <p>Developing and implementing sales strategies to drive revenue growth, including sales forecasting, budgeting, and team management.</p>
                 </li>
-                <li><h3>Customer Relationship Management</h3>
+                <li>
+                    <h3>Customer Relationship Management</h3>
                     <p>Building and maintaining strong relationships with customers to enhance satisfaction, loyalty, and repeat business.</p>
                 </li>
             </ul>

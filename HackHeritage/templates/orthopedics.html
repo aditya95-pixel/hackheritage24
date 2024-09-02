@@ -8,81 +8,146 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: white;
+            background-color: #000000; /* Light Blue background */
+            color: #000000;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_5.jpg');
+            background-image: url('https://img.pristyncare.com/disease-icons%2FSpine-Surgery.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
-            color: white;
+            background-color: #80d9ffdc; /* Light Blue */
+            color: #000000;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            box-shadow: 0px 0px 9px 2px rgba(241, 241, 241, 0.897);        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000000; /* Deep Blue */
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 15px;
-        }
-        h1, h2 {
-            color: white;
+            background-color: rgba(83, 254, 151, 0.339); /* Bright Yellow */
+            border-radius: 10px;
         }
         h2 {
             text-align: center;
+            font-size: 2rem;
+            color: #f9f9f9; /* Deep Blue */
+            margin-bottom: 20px;
+            font-weight: 600;
         }
         p {
             margin: 15px 0;
+            font-size: 1.1rem;
+            color: #ffffff; /* Brown */
         }
         .sub-branch {
-            background-color: transparent;
-            border: solid white;
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: white;
+            background-color: rgba(255, 238, 88, 0.225); /* Light Yellow */
+            box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            color: #000000;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
         }
         .sub-branch h3 {
-            color: white;
+            color: #003366; /* Deep Blue */
             text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
-        .engg {
-            color: white;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #80D8FF; /* Light Blue */
+        }
+        .sub-branch ul li:hover {
+            background-color: #80D8FF; /* Light Blue */
+            color: #000000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #FF5722; /* Deep Orange */
+            font-size: 1.3rem;
+            margin-right: 10px;
+        }
+        .popup-content {
+            display: none;
+            position: absolute;
+            top: -150px;
+            left: 20%;
+            background-color: #FFEB3B; /* Bright Yellow */
+            border: 1px solid #FFAB40; /* Bright Orange */
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 250px;
+            z-index: 10000;
+            color: #000000;
+        }
+        .sub-branch ul li:hover .popup-content {
+            display: block;
+        }
+        /* @keyframes orthopedics-animation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        } */
+        .sub-branch {
+            animation: orthopedics-animation 1s infinite;
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 15px;
             }
-            .sub-branch ul {
-                padding-left: 0;
+            header h1 {
+                font-size: 2rem;
             }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+            h2 {
+                font-size: 1.5rem;
+            }
+            .sub-branch {
+                padding: 15px;
             }
         }
         @media (max-width: 576px) {
             .container {
-                padding: 0 5px;
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 1.75rem;
             }
             h2 {
                 font-size: 1.25rem;
             }
             .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+                padding: 10px;
             }
         }
     </style>
@@ -99,11 +164,36 @@
             <h3>Educational Path</h3>
             <p>To become an orthopedic surgeon, you must complete a series of educational steps:</p>
             <ul>
-                <li><strong>Undergraduate Degree:</strong> A pre-medical or science-related bachelor's degree.</li>
-                <li><strong>Medical School:</strong> Earn an MD or DO degree from an accredited medical school.</li>
-                <li><strong>Residency:</strong> Complete a 5-year residency in orthopedic surgery.</li>
-                <li><strong>Fellowship (Optional):</strong> Pursue a fellowship in a subspecialty, such as sports medicine or spine surgery.</li>
-                <li><strong>Licensing and Certification:</strong> Obtain a medical license and board certification in orthopedic surgery.</li>
+                <li>
+                    <strong>Undergraduate Degree:</strong> A pre-medical or science-related bachelor's degree.
+                    <div class="popup-content">
+                        Pre-medical or science-related bachelor's degree to lay the foundation for medical education.
+                    </div>
+                </li>
+                <li>
+                    <strong>Medical School:</strong> Earn an MD or DO degree from an accredited medical school.
+                    <div class="popup-content">
+                        MD or DO degree from an accredited medical school, essential for practicing medicine.
+                    </div>
+                </li>
+                <li>
+                    <strong>Residency:</strong> Complete a 5-year residency in orthopedic surgery.
+                    <div class="popup-content">
+                        A 5-year residency in orthopedic surgery to gain specialized training.
+                    </div>
+                </li>
+                <li>
+                    <strong>Fellowship (Optional):</strong> Pursue a fellowship in a subspecialty, such as sports medicine or spine surgery.
+                    <div class="popup-content">
+                        Optional fellowship in subspecialties like sports medicine or spine surgery for advanced expertise.
+                    </div>
+                </li>
+                <li>
+                    <strong>Licensing and Certification:</strong> Obtain a medical license and board certification in orthopedic surgery.
+                    <div class="popup-content">
+                        Obtain medical licensing and board certification to practice as an orthopedic surgeon.
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -111,11 +201,36 @@
             <h3>Key Skills and Qualities</h3>
             <p>Successful orthopedic surgeons possess a range of skills and qualities:</p>
             <ul>
-                <li><strong>Manual Dexterity:</strong> Precision in handling surgical instruments.</li>
-                <li><strong>Problem-Solving:</strong> Ability to diagnose and treat complex musculoskeletal conditions.</li>
-                <li><strong>Empathy:</strong> Compassionate care for patients recovering from injuries or surgeries.</li>
-                <li><strong>Physical Stamina:</strong> Ability to endure long hours in surgery.</li>
-                <li><strong>Lifelong Learning:</strong> Commitment to staying updated with the latest advancements in orthopedic medicine.</li>
+                <li>
+                    <strong>Manual Dexterity:</strong> Precision in handling surgical instruments.
+                    <div class="popup-content">
+                        Precision in handling surgical instruments is crucial for successful surgeries.
+                    </div>
+                </li>
+                <li>
+                    <strong>Problem-Solving:</strong> Ability to diagnose and treat complex musculoskeletal conditions.
+                    <div class="popup-content">
+                        Ability to diagnose and treat complex conditions is essential for effective patient care.
+                    </div>
+                </li>
+                <li>
+                    <strong>Empathy:</strong> Compassionate care for patients recovering from injuries or surgeries.
+                    <div class="popup-content">
+                        Compassionate care to support patients through their recovery process.
+                    </div>
+                </li>
+                <li>
+                    <strong>Physical Stamina:</strong> Ability to endure long hours in surgery.
+                    <div class="popup-content">
+                        Physical stamina to endure long hours in surgery and handle demanding procedures.
+                    </div>
+                </li>
+                <li>
+                    <strong>Lifelong Learning:</strong> Commitment to staying updated with the latest advancements in orthopedic medicine.
+                    <div class="popup-content">
+                        Commitment to lifelong learning to stay abreast of advancements and best practices.
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -123,11 +238,36 @@
             <h3>Career Opportunities</h3>
             <p>Orthopedics offers a variety of career paths:</p>
             <ul>
-                <li><strong>Orthopedic Surgeon:</strong> Perform surgeries to treat musculoskeletal conditions.</li>
-                <li><strong>Sports Medicine Specialist:</strong> Focus on treating sports-related injuries and enhancing athletic performance.</li>
-                <li><strong>Pediatric Orthopedist:</strong> Specialize in orthopedic care for children.</li>
-                <li><strong>Spine Surgeon:</strong> Treat conditions affecting the spine, such as scoliosis and degenerative disc disease.</li>
-                <li><strong>Researcher or Educator:</strong> Contribute to the advancement of orthopedic knowledge and training future surgeons.</li>
+                <li>
+                    <strong>Orthopedic Surgeon:</strong> Perform surgeries to treat musculoskeletal conditions.
+                    <div class="popup-content">
+                        Perform surgeries to address various musculoskeletal conditions.
+                    </div>
+                </li>
+                <li>
+                    <strong>Sports Medicine Specialist:</strong> Focus on treating sports-related injuries and enhancing athletic performance.
+                    <div class="popup-content">
+                        Treat sports-related injuries and enhance athletic performance.
+                    </div>
+                </li>
+                <li>
+                    <strong>Pediatric Orthopedist:</strong> Specialize in orthopedic care for children.
+                    <div class="popup-content">
+                        Specialize in providing orthopedic care specifically for children.
+                    </div>
+                </li>
+                <li>
+                    <strong>Spine Surgeon:</strong> Treat conditions affecting the spine, such as scoliosis and degenerative disc disease.
+                    <div class="popup-content">
+                        Focus on treating spine-related conditions like scoliosis and degenerative disc disease.
+                    </div>
+                </li>
+                <li>
+                    <strong>Researcher or Educator:</strong> Contribute to the advancement of orthopedic knowledge and training future surgeons.
+                    <div class="popup-content">
+                        Engage in research or education to advance orthopedic knowledge and train future surgeons.
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -135,11 +275,36 @@
             <h3>Work Environment</h3>
             <p>Orthopedic surgeons work in a variety of settings, including:</p>
             <ul>
-                <li>Hospitals and trauma centers</li>
-                <li>Private practices</li>
-                <li>Specialty clinics</li>
-                <li>Academic institutions</li>
-                <li>Sports medicine facilities</li>
+                <li>
+                    Hospitals and trauma centers
+                    <div class="popup-content">
+                        Work in hospitals and trauma centers providing emergency and routine orthopedic care.
+                    </div>
+                </li>
+                <li>
+                    Private practices
+                    <div class="popup-content">
+                        Operate within private practices offering specialized orthopedic services.
+                    </div>
+                </li>
+                <li>
+                    Specialty clinics
+                    <div class="popup-content">
+                        Work in specialty clinics focusing on specific orthopedic issues.
+                    </div>
+                </li>
+                <li>
+                    Academic institutions
+                    <div class="popup-content">
+                        Engage in teaching and research at academic institutions.
+                    </div>
+                </li>
+                <li>
+                    Sports medicine facilities
+                    <div class="popup-content">
+                        Provide care and rehabilitation at sports medicine facilities.
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

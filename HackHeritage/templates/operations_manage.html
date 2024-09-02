@@ -4,86 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operations Management</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assuming the CSS is saved as styles.css -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #000000;
+            color: #333;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_15.jpg'); /* Make sure the path to the image is correct */
+            background-image: url('https://img.freepik.com/free-photo/business-achievement-progress-develpoment-cogwheel-concept_53876-64990.jpg?size=626&ext=jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
+
         header {
-            background-color: transparent;
-            color: black;
-            padding: 10px 0;
+            background-color: rgba(0, 51, 102, 0.8); /* Deep Blue */
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+            border-bottom: 2px solid #FFB74D; /* Bright Yellow */
+            box-shadow: 0 0 8px 1px rgb(255, 255, 255);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #FFB74D; /* Bright Yellow */
+        }
+
         .container {
             max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 15px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(5, 19, 172, 0.358);
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px rgb(0, 0, 0);
         }
-        h1, h2 {
-            color: black;
-        }
+
         h2 {
             text-align: center;
+            font-size: 2rem;
+            color: #000000; /* Deep Blue */
+            margin-bottom: 20px;
+            font-weight: 600;
         }
+
         p {
             margin: 15px 0;
+            font-size: 1.1rem;
+            color: #ffffff;
         }
+
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: black;
+            background-color: rgba(250, 164, 6, 0.643); /* Light Orange */
+            border: 1px solid #FF7043; /* Deep Orange */
+            padding: 20px;
+            color: #ffffff;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
         .sub-branch h3 {
-            color: black;
+            font-size: 1.5rem;
+            color: #FF7043; /* Deep Orange */
             text-align: center;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
-        .engg {
-            color: black;
+
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #FFB74D; /* Bright Yellow */
         }
+
+        .sub-branch ul li:hover {
+            background-color: #FFB74D; /* Bright Yellow */
+            color: #003366; /* Deep Blue */
+        }
+
+        .sub-branch ul li::before {
+            content: '•';
+            color: #FF7043; /* Deep Orange */
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            top: -90px;
+            left: 80%;
+            transform: translateX(-50%);
+            background-color: #003366; /* Deep Blue */
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
+        }
+
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 15px;
             }
-            .sub-branch ul {
-                padding-left: 0;
+
+            header h1 {
+                font-size: 2rem;
             }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .sub-branch {
+                padding: 15px;
+            }
+
+            .tooltip {
+                width: 200px;
+                bottom: -10px;
             }
         }
+
         @media (max-width: 576px) {
             .container {
-                padding: 0 5px;
+                padding: 10px;
             }
+
+            header h1 {
+                font-size: 1.75rem;
+            }
+
             h2 {
                 font-size: 1.25rem;
             }
+
             .sub-branch {
-                padding: 5px;
+                padding: 10px;
             }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+
+            .tooltip {
+                width: 200px;
+                bottom: -10px;
             }
         }
     </style>
@@ -100,20 +196,25 @@
         <section class="sub-branch">
             <h2>Key Functions of Operations Management</h2>
             <ul>
-                <li><h3>Production Planning</h3>
-                    <p>Designing and managing the process of creating goods and services efficiently.</p>
+                <li>
+                    Production Planning
+                    <div class="tooltip">Designing and managing the process of creating goods and services efficiently.</div>
                 </li>
-                <li><h3>Quality Management</h3>
-                    <p>Ensuring that the products or services meet specific quality standards and customer expectations.</p>
+                <li>
+                    Quality Management
+                    <div class="tooltip">Ensuring that the products or services meet specific quality standards and customer expectations.</div>
                 </li>
-                <li><h3>Supply Chain Management</h3>
-                    <p>Overseeing the entire supply chain from raw materials to final product delivery to optimize performance and reduce costs.</p>
+                <li>
+                    Supply Chain Management
+                    <div class="tooltip">Overseeing the entire supply chain from raw materials to final product delivery to optimize performance and reduce costs.</div>
                 </li>
-                <li><h3>Inventory Management</h3>
-                    <p>Controlling inventory levels to balance supply and demand, minimizing costs while meeting customer requirements.</p>
+                <li>
+                    Inventory Management
+                    <div class="tooltip">Controlling inventory levels to balance supply and demand, minimizing costs while meeting customer requirements.</div>
                 </li>
-                <li><h3>Process Improvement</h3>
-                    <p>Identifying and implementing strategies to improve efficiency and effectiveness in production and operations.</p>
+                <li>
+                    Process Improvement
+                    <div class="tooltip">Identifying and implementing strategies to improve efficiency and effectiveness in production and operations.</div>
                 </li>
             </ul>
         </section>

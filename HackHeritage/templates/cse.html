@@ -12,46 +12,91 @@
             color: white;
             margin: 0;
             padding: 0;
-            background-image: url('/static/img_9.jpg');
+            background-image: url('https://www.accurate.in/blog/wp-content/uploads/2021/06/ai.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
+            background-color: rgba(0, 64, 85, 0.714);
             color: white;
-            padding: 15px 0;
+            padding: 5px 0;
             text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 0 8px 1px white;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             background-color: transparent;
-            border-radius: 8px;
-            backdrop-filter: blur(50px);
-            border: solid white;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 8px 1px white;
         }
         h1, h2 {
-            color: white;
+            color: rgb(255, 255, 255);
         }
         p {
             margin: 10px 0;
             line-height: 1.6;
         }
         .sub-section {
-            background-color: transparent;
-            border: solid white;
+            background-color: rgba(8, 66, 159, 0.475);
+            box-shadow: 0 0 8px 1px white;
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
             backdrop-filter: blur(50px);
+            position: relative;
         }
         .sub-section h3 {
-            color: white;
+            color: rgb(0, 0, 0);
         }
         ul {
             padding-left: 20px;
+            list-style: none;
+        }
+        .sub-section ul li {
+            position: relative;
+            padding-left: 20px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .sub-section ul li:before {
+            content: '>';
+            color: rgb(255, 0, 0);
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+            line-height: 1.5;
+        }
+        .sub-section ul li:hover {
+            color: rgb(255, 0, 0);
+            background-color: #ffffff;
+        }
+        .popup-box {
+            display: none;
+            position: absolute;
+            left: 40%;
+            top: -200px; /* Adjusted to move popup box upwards */
+            background-color: rgb(13, 0, 111); /* Light Yellow */
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+            width: 300px;
+            z-index: 1; /* Ensure it's above other elements */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(10px); /* Initial position for smooth transition */
+            opacity: 0; /* Initially hidden */
+        }
+        .sub-section ul li:hover .popup-box {
+            display: block;
+            opacity: 1;
+            transform: translateY(0); /* Smooth vertical movement */
         }
         @media (max-width: 768px) {
             .container {
@@ -62,6 +107,10 @@
             }
             .sub-section {
                 padding: 10px;
+            }
+            .popup-box {
+                width: 250px;
+                top: -200px; /* Adjusted for smaller screens */
             }
         }
         @media (max-width: 576px) {
@@ -80,6 +129,10 @@
             .sub-section h3 {
                 font-size: 1.25rem;
             }
+            .popup-box {
+                width: 180px;
+                top: -200px; /* Adjusted for smaller screens */
+            }
         }
     </style>
 </head>
@@ -95,9 +148,24 @@
             <h3>Educational Path</h3>
             <p>To build a career in CSE, follow these educational steps:</p>
             <ul>
-                <li><strong>Undergraduate Degree:</strong> Earn a Bachelor’s degree in Computer Science, Information Technology, or related fields.</li>
-                <li><strong>Advanced Degrees (Optional):</strong> Pursue a Master’s or Ph.D. in specialized areas like Data Science, AI, or Cybersecurity.</li>
-                <li><strong>Certifications:</strong> Obtain industry-recognized certifications in programming languages, cloud computing, or network security.</li>
+                <li>
+                    <strong>Undergraduate Degree:</strong> 
+                    <div class="popup-box">
+                        <p>Completing an undergraduate degree provides foundational knowledge in computer science and engineering principles, preparing you for various roles in the tech industry.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Advanced Degrees (Optional):</strong> 
+                    <div class="popup-box">
+                        <p>Advanced degrees offer deeper specialization and research opportunities in cutting-edge fields like artificial intelligence, data science, and cybersecurity, often leading to more advanced career roles.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Certifications:</strong> 
+                    <div class="popup-box">
+                        <p>Certifications can enhance your qualifications and demonstrate expertise in specific areas of technology, improving job prospects and career advancement.</p>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -105,11 +173,36 @@
             <h3>Key Skills and Qualities</h3>
             <p>Successful professionals in CSE possess the following skills and qualities:</p>
             <ul>
-                <li><strong>Programming:</strong> Proficiency in languages such as Python, Java, C++, and JavaScript.</li>
-                <li><strong>Problem-Solving:</strong> Ability to solve complex technical challenges with innovative solutions.</li>
-                <li><strong>Continuous Learning:</strong> Commitment to keeping up with rapidly evolving technologies and tools.</li>
-                <li><strong>Teamwork:</strong> Ability to collaborate effectively with cross-functional teams.</li>
-                <li><strong>Attention to Detail:</strong> Precision in coding and system design to avoid errors.</li>
+                <li>
+                    <strong>Programming:</strong> 
+                    <div class="popup-box">
+                        <p>Strong programming skills are essential for developing software, applications, and systems, and for solving complex technical problems.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Problem-Solving:</strong> 
+                    <div class="popup-box">
+                        <p>Effective problem-solving skills help in troubleshooting issues, designing effective solutions, and optimizing performance.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Continuous Learning:</strong> 
+                    <div class="popup-box">
+                        <p>Staying updated with the latest technologies and tools is crucial for maintaining relevance in the ever-evolving tech industry.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Teamwork:</strong>
+                    <div class="popup-box">
+                        <p>Collaboration with diverse teams helps in successful project completion and fosters innovation through shared knowledge and skills.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Attention to Detail:</strong> 
+                    <div class="popup-box">
+                        <p>Attention to detail ensures high-quality code and system designs, minimizing errors and improving overall system reliability.</p>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -117,11 +210,36 @@
             <h3>Career Opportunities</h3>
             <p>CSE graduates have diverse career options, including:</p>
             <ul>
-                <li><strong>Software Developer:</strong> Design and build software applications, ranging from web to mobile to enterprise-level systems.</li>
-                <li><strong>Data Scientist:</strong> Analyze and interpret complex data to inform business decisions and predict future trends.</li>
-                <li><strong>Network Engineer:</strong> Design, implement, and manage computer networks and ensure their security.</li>
-                <li><strong>AI/ML Engineer:</strong> Develop intelligent systems and machine learning models to solve real-world problems.</li>
-                <li><strong>Cybersecurity Specialist:</strong> Protect organizations from cyber threats by designing secure systems and protocols.</li>
+                <li>
+                    <strong>Software Developer:</strong> 
+                    <div class="popup-box">
+                        <p>Software developers create and maintain applications and systems for various platforms, including web, mobile, and enterprise solutions.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Data Scientist:</strong> 
+                    <div class="popup-box">
+                        <p>Data scientists use statistical analysis and machine learning techniques to extract valuable insights from data and guide strategic decisions.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Network Engineer:</strong> 
+                    <div class="popup-box">
+                        <p>Network engineers are responsible for the design, configuration, and management of network systems, ensuring secure and efficient communication.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>AI/ML Engineer:</strong> 
+                    <div class="popup-box">
+                        <p>AI/ML engineers work on creating and deploying machine learning models and intelligent systems to address various real-world challenges.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Cybersecurity Specialist:</strong> 
+                    <div class="popup-box">
+                        <p>Cybersecurity specialists focus on safeguarding systems and data from cyber threats by implementing robust security measures and protocols.</p>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -129,11 +247,36 @@
             <h3>Work Environment</h3>
             <p>CSE professionals can work in a variety of environments, including:</p>
             <ul>
-                <li>Tech companies and startups</li>
-                <li>Financial institutions</li>
-                <li>Healthcare organizations</li>
-                <li>Research and academic institutions</li>
-                <li>Government agencies</li>
+                <li>
+                    <strong>Tech Companies and Startups:</strong> 
+                    <div class="popup-box">
+                        <p>Tech companies and startups offer exciting opportunities to work on cutting-edge technologies, often with a focus on innovation and rapid development.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Financial Institutions:</strong> 
+                    <div class="popup-box">
+                        <p>Financial institutions provide roles focused on developing secure and efficient technology solutions for various financial operations.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Healthcare Organizations:</strong> 
+                    <div class="popup-box">
+                        <p>Healthcare organizations leverage technology to enhance patient care, streamline operations, and support medical research and data management.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Research and Academic Institutions:</strong> 
+                    <div class="popup-box">
+                        <p>Research and academic institutions offer opportunities to work on cutting-edge research, contribute to technological advancements, and teach future professionals.</p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Government Agencies:</strong> 
+                    <div class="popup-box">
+                        <p>Government agencies offer roles focused on public sector technology solutions, including cybersecurity, data management, and the implementation of technology in various government functions.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
