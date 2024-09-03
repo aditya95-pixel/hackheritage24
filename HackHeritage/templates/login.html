@@ -1,144 +1,329 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXabDCoFeWz8ld/5hym7HZ+NJDlA+5eYc9DjvZxG0uCQojot9E7Of+U7OIBpZpJ3FltGKEuA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-        *{
-            font-family:'Poppins' ,sans-serif;
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        body {
-            background-color: #f4f4f4;
+
+        /* Body and Background */
+        body, html {
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-image: url('/static/img_1.png'); 
-            background-size: cover; /* Cover the entire page */
-            background-position: center; /* Center the image */
-            background-repeat: no-repeat; /* No repeat */
-        }
-        form {
-            color:white;
-            background-color:transparent; 
-            border:solid white;/* White with 80% opacity */
+            background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #d48c07);
+            background-size: cover;
+            animation: gradientBG 15s ease infinite;
+            overflow: hidden;
             position: relative;
-            padding: 25px 25px;
-            border-radius: 8%;
-            box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.1);
-            width: 350px;
-            backdrop-filter: blur(15px); /* Apply blur to the background */
-            -webkit-backdrop-filter: blur(10px); /* Safari support */
         }
-        h1 {
-            color:black;
-            text-align: center;
-            margin-bottom: 20px;
+
+        /* Gradient Background Animation */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        label {
+
+        /* Floating Particles */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .particles i {
+            position: absolute;
+            border-radius: 3px;
             display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.444);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.482);
+            animation: float 20s linear infinite;
+            bottom: -150px;
         }
-        input[type="text"], input[type="password"] {
-            width: 90%;
-            padding: 10px;
-            margin:5px;
-            margin-bottom: 10px;
-            border-radius: 4px;
-            background-color: transparent;
-            border: 2px solid #ccc;
-            color:white;
+
+        .particles i:nth-child(1) {
+            left: 10%;
+            animation-duration: 10s;
+            animation-delay: 0s;
+            width: 10px;
+            height: 10px;
         }
-        button {
-            width: 98%;
-            margin:5px;
-            padding: 15px;
-            background-color:black;
-            color:white;
-            font-weight: bold;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+
+        .particles i:nth-child(2) {
+            left: 20%;
+            animation-duration: 18s;
+            animation-delay: 2s;
+            width: 15px;
+            height: 15px;
         }
-        button:hover {
-            background-color: white;
-            color:black;
-            transition: 0.5s;
+
+        .particles i:nth-child(3) {
+            left: 25%;
+            animation-duration: 12s;
+            animation-delay: 4s;
         }
-        p {
+
+        .particles i:nth-child(4) {
+            left: 40%;
+            animation-duration: 20s;
+            animation-delay: 0s;
+            width: 25px;
+            height: 25px;
+        }
+
+        .particles i:nth-child(5) {
+            left: 70%;
+            animation-duration: 17s;
+            animation-delay: 3s;
+            width: 12px;
+            height: 12px;
+        }
+
+        .particles i:nth-child(6) {
+            left: 80%;
+            animation-duration: 22s;
+            animation-delay: 5s;
+            width: 40px;
+            height: 40px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-2000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Login Container */
+        .login-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
             text-align: center;
-            margin-top: 15px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease forwards;
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.3s ease;
         }
-        a {
-            color: rgb(204, 255, 0);
+
+        .login-container:hover {
+            box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .login-container h2 {
+            margin-bottom: 40px;
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+        }
+
+        /* Input Fields */
+        .input-field {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 15px 20px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-field input:focus,
+        .input-field input:valid {
+            border-bottom-color: #fff;
+        }
+
+        .input-field label {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            transform: translateY(-50%);
+            font-size: 1rem;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-field input:focus + label,
+        .input-field input:valid + label {
+            top: 0%;
+            transform: translateY(-100%);
+            font-size: 0.8rem;
+            color: #fff;
+        }
+        .extra-links{
+            display: inline-flex;
+        }
+        /* Login Button */
+        .login-btn {
+            width: 100%;
+            padding: 15px 0;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #1a2a6c, #b21f1f, #ff7c02);
+            background-size: 200% 200%;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.7s ease;
+            box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .login-btn:hover {
+            background-position: right;
+            transform: translateY(-5px);
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Additional Links */
+        .login-container .extra-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .login-container .extra-links a {
+            color: rgba(255, 255, 255, 0.723);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .login-container .extra-links a:hover {
+            color: #ff0000;
+            /* transform: translateY(-10px) ;      */
         }
-        ul {
-            color: red;
-            list-style-type: none;
-            padding: 0;
+
+        /* Social Login */
+        .social-container {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
+
+        .social-container a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-container a:hover {
+            transform: scale(1.2);
+            color: #fdbb2d;
+        }
+
         /* Responsive Design */
-        @media (max-width: 768px) {
-            form {
-                padding: 20px;
-                border-radius: 8%;
-                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        @media (max-width: 500px) {
+            .login-container {
+                padding: 40px 30px;
             }
-            h1 {
+            .login-container h2 {
                 font-size: 1.5rem;
-                margin-bottom: 15px;
+                margin-bottom: 30px;
             }
-            input[type="text"], input[type="password"] {
-                padding: 8px;
-                margin-bottom: 8px;
+            .input-field input,
+            .input-field label {
+                font-size: 0.9rem;
             }
-            button {
-                padding: 12px;
+            .login-btn {
+                padding: 12px 0;
+                font-size: 0.9rem;
             }
-        }
-        @media (max-width: 480px) {
-            form {
-                padding: 15px;
-                border-radius: 8%;
-            }
-            h1 {
+            .social-container a {
                 font-size: 1.2rem;
-                margin-bottom: 10px;
-            }
-            input[type="text"], input[type="password"] {
-                padding: 6px;
-                margin-bottom: 6px;
-            }
-            button {
-                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <form method="POST" action="{{ url_for('login') }}">
-        <h1>Login</h1>
-        <label>Username</label>
-        <input type="text" name="username" required><br>
-        <label>Password</label>
-        <input type="password" name="password" required><br>
-        <button type="submit">Login</button>
-        <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a>.</p>
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                <ul>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-                </ul>
-            {% endif %}
-        {% endwith %}
-    </form>
+    <!-- Floating Particles -->
+    <div class="particles">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-container">
+        <h2>Welcome</h2>
+        <form action="#" method="POST">
+            <div class="input-field">
+                <input type="text" id="username" name="username" required autocomplete="off">
+                <label for="username">Username</label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="password" name="password" required autocomplete="off">
+                <label for="password">Password</label>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div class="extra-links">
+            <div class="signup">
+            <a href="#">Forgot Password?</a>
+                <p>Don't have an account: <a href="#">Sign Up</a></p>
+                <a href="#">Register</a>
+            </div>
+    </div>
+        <div class="social-container">
+            <a href="#" title="Login with Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Login with Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Login with Google"><i class="fab fa-google"></i></a>
+        </div>
+    </div>
 </body>
 </html>

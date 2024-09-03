@@ -4,103 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studies Recommendation</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXabDCoFeWz8ld/5hym7HZ+NJDlA+5eYc9DjvZxG0uCQojot9E7Of+U7OIBpZpJ3FltGKEuA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        /* Reset Styles */
         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Background */
+        body, html {
+            height: 100%;
             font-family: 'Poppins', sans-serif;
-        }
-        .mynav {
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            background: transparent; /* Semi-transparent background color */
-            backdrop-filter: none;
-            color: azure;
-            padding: 10px;
-            width: 100%;
-        }
-        .container {
-            margin-top: 50px;
-            border-radius: 15px;
-            border: 3.5px solid azure;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for container */
-            padding: 30px;
-            position: relative;
-            background: transparent;
-            backdrop-filter: blur(30px);
-            text-align: center;
-            color: white;
-        }
-        .btn.btn-primary {
-            background-color: black;
-            border: solid black;
-            margin: 10px;
-        }
-        .btn.btn-primary:hover {
-            background-color:white;
-            border: solid white;
-            color:black;
-            margin: 10px;
-            transition: 0.5s;
-        }
-        .bg-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #d38d0a);
             background-size: cover;
-            background-position: center;
-            height: 100vh;
-            transition: background-image 2s ease-in-out;
+            animation: gradientBG 15s ease infinite;
+            overflow: hidden;
             position: relative;
         }
-        @media (max-width: 768px) {
-            .container {
-                margin-top: 20px;
-                padding: 20px;
+
+        /* Gradient Background Animation */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .particles i {
+            position: absolute;
+            border-radius: 3px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.444);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.482);
+            animation: float 20s linear infinite;
+            bottom: -150px;
+        }
+
+        .particles i:nth-child(1) {
+            left: 10%;
+            animation-duration: 10s;
+            animation-delay: 0s;
+            width: 10px;
+            height: 10px;
+        }
+
+        .particles i:nth-child(2) {
+            left: 20%;
+            animation-duration: 18s;
+            animation-delay: 2s;
+            width: 15px;
+            height: 15px;
+        }
+
+        .particles i:nth-child(3) {
+            left: 25%;
+            animation-duration: 12s;
+            animation-delay: 4s;
+        }
+
+        .particles i:nth-child(4) {
+            left: 40%;
+            animation-duration: 20s;
+            animation-delay: 0s;
+            width: 25px;
+            height: 25px;
+        }
+
+        .particles i:nth-child(5) {
+            left: 70%;
+            animation-duration: 17s;
+            animation-delay: 3s;
+            width: 12px;
+            height: 12px;
+        }
+
+        .particles i:nth-child(6) {
+            left: 80%;
+            animation-duration: 22s;
+            animation-delay: 5s;
+            width: 40px;
+            height: 40px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
             }
-            .btn.btn-primary {
-                width: 100%;
-                margin: 5px 0;
+            100% {
+                transform: translateY(-2000px) rotate(720deg);
+                opacity: 0;
             }
         }
-        @media (max-width: 576px) {
+
+        /* Container */
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px 40px;
+            margin: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease forwards;
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container h2 {
+            margin-bottom: 40px;
+            font-size: 1.5rem;
+            letter-spacing: 1.5px;
+        }
+
+        /* Button Styles */
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            width: 250px;
+            padding: 15px 0;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #1a2a6c, #b21f1f, #ef7f00);
+            background-size: 200% 200%;
+            color: #ffffff;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.7s ease;
+            box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            margin: 10px 0;
+        }
+
+        .btn:hover {
+            background-position: right;
+            transform: translateY(-5px);
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+            color: black;
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 500px) {
             .container {
-                margin-top: 15px;
-                padding: 15px;
+                padding: 40px 30px;
             }
-            .btn.btn-primary {
-                padding: 10px;
-                font-size: 14px;
+            .container h2 {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
             }
-            .mynav h1 {
-                font-size: 1.5rem;
+            .btn {
+                padding: 12px 0;
+                font-size: 0.9rem;
+            }
+            .btn-container {
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="bg-image" id="bgImage">
-        <div class="mynav shadow-sm">
-            <h1 class="text-center">Education Recommendation System</h1>
-        </div>
+    <!-- Floating Particles -->
+    <div class="particles">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
 
-        <div class="container mt-5">
-            <h2>Welcome to our Best Studies Recommendation System</h2>
-            <br/>
-            <p>This recommendation system aims to assist university students in selecting the most suitable studies and courses based on their academic performance, interests, and career aspirations.</p>
-            <p>Click the button below to get recommendations:</p>
-            <a href="/recommend" class="btn btn-primary">Get Recommendations</a>
-            <a href="/career_graph" class="btn btn-primary">Career Path</a>
-            <a href="/mind_map" class="btn btn-primary">Career Mind Map</a>
-            <a href="http://localhost:8501" class="btn btn-primary">Chatbot for Counselling</a>
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Welcome to our Best Studies Recommendation System</h2>
+        <p>This recommendation system aims to assist university students in selecting the most suitable studies and courses based on their academic performance, interests, and career aspirations.</p>
+        <p>Click the button below to get recommendations:</p>
+        <div class="btn-container">
+            <a href="/recommend" class="btn">Get Recommendations</a>
+            <a href="/career_graph" class="btn">Career Path</a>
+            <a href="http://localhost:8501" class="btn">Chatbot for Counselling</a>
         </div>
     </div>
 
     <script>
-        const images = ["static/img.png", "static/img_1.png", "static/img_2.png"]; // Update image paths
+        const images = ["static/img.png", "static/img_1.png", "static/img_2.png"];
         let currentIndex = 0;
 
         function changeBackground() {
-            document.getElementById('bgImage').style.backgroundImage = `url('${images[currentIndex]}')`;
+            document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
             currentIndex = (currentIndex + 1) % images.length;
-            setTimeout(changeBackground, 4000); // Change every 4 seconds
+            setTimeout(changeBackground, 4000);
         }
 
         changeBackground();
