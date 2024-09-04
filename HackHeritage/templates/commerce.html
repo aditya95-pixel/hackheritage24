@@ -17,14 +17,18 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
+            background-color: rgba(240, 248, 255, 0.51);
             color: black;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 15px 1px black;
+
         }
         .container {
             max-width: 1200px;
@@ -41,14 +45,15 @@
             margin: 15px 0;
         }
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
+            background-color: rgba(255, 255, 255, 0.452);
+            /* border: solid black; */
+            backdrop-filter: blur(10px);
             padding: 10px;
             color: black;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            box-shadow: 0px 0px 15px 1px black;
         }
         .sub-branch h3 {
             color: black;
