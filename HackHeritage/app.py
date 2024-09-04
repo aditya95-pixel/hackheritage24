@@ -296,6 +296,9 @@ def history():
 @app.route('/mind_map')
 def mind_map():
     return render_template('mind_map.html')
+@app.route('/instruct')
+def instruct():
+    return render_template('instructor.html')
 @app.route('/pred', methods=['POST','GET'])
 def pred():
     if request.method == 'POST':
