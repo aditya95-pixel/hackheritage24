@@ -13,6 +13,6 @@
 - UI using Streamlit
 - Voice Enabled with the help of speech_recognition and gtts
 ### Recommendation System
-- Machine Learning Model used CatBoostClassifier
+- Machine Learning Model used RandomForestClassifier
 - Dataset from Kaggle
 
