@@ -3,63 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Path in Macroeconomics</title>
+    <title>Macroeconomics Career Path Guidance</title>
     <style>
-        /* Your provided CSS template here */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: rgb(0, 0, 0);
+            color: white;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_6.jpg');
+            background-image: url('https://img-c.udemycdn.com/course/480x270/4419142_dc62_2.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
-            color: black;
+            background-color: rgba(98, 24, 3, 0.145);
+            color: white;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            box-shadow: 0 0 8px 1px rgb(121, 34, 34);
+            backdrop-filter: blur(8px);
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px rgb(78, 7, 7);
+            background-color: #b8cbf650;
+            backdrop-filter: blur(4px);
         }
         h1, h2 {
-            color: black;
+            color: rgb(255, 55, 0);
         }
         h2 {
             text-align: center;
         }
         p {
             margin: 15px 0;
+            color:black;
+            font-weight: bold;
         }
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
+            background-color: rgba(240, 255, 255, 0.229);
+            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
+            backdrop-filter: blur(35px);
             padding: 10px;
             color: black;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px green;
         }
         .sub-branch h3 {
-            color: black;
+            color: green;
             text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid greenyellow;
+            font-weight: bold;
+        }
+        .sub-branch ul li:hover {
+            background-color: greenyellow;
+            color: rgb(243, 0, 0);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff0505;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 70%;
+            top: -60px; /* Position above the list item */
+            transform: translateX(-50%);
+            background-color:greenyellow;
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -70,6 +126,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px; /* Adjusted for smaller screens */
             }
         }
         @media (max-width: 576px) {
@@ -85,27 +145,96 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px; /* Adjusted for smaller screens */
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Macroeconomics Career Path</h1>
+        <h1>Macroeconomics Career Path Guidance</h1>
     </header>
     <div class="container">
+        <h2>Career Opportunities in Macroeconomics</h2>
+        <p>Macroeconomics focuses on large-scale economic factors, such as national productivity and interest rates. Below are some key areas in macroeconomics and the associated career opportunities:</p>
+        
         <div class="sub-branch">
-            <h2>About Macroeconomics</h2>
-            <p>Macroeconomics studies the behavior of an economy as a whole, focusing on aggregate measures like GDP, unemployment rates, and inflation. It analyzes economic policies, the business cycle, and long-term economic growth.</p>
-            <h2>Career Opportunities</h2>
+            <h3>Government and Policy Making</h3>
+            <p>Working in government departments or advisory roles, macroeconomists help shape national economic policies. Opportunities in this area are available in ministries, central banks, and policy think tanks.</p>
             <ul>
-                <li>Economist</li>
-                <li>Policy Advisor</li>
-                <li>Government Analyst</li>
-                <li>Central Bank Analyst</li>
-                <li>International Economist</li>
+                <li>
+                    Economic Policy Analyst
+                    <div class="tooltip">Analyzing economic data and trends to recommend policies that enhance growth and stability.</div>
+                </li>
+                <li>
+                    Central Bank Economist
+                    <div class="tooltip">Working within the central bank to develop monetary policies and monitor economic conditions.</div>
+                </li>
+                <li>
+                    Public Finance Consultant
+                    <div class="tooltip">Advising governments on fiscal policy, taxation, and expenditure.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>International Economics</h3>
+            <p>International economics focuses on trade policies, exchange rates, and global economic relations. Professionals in this field work with international organizations, financial institutions, and multinational corporations.</p>
+            <ul>
+                <li>
+                    International Trade Analyst
+                    <div class="tooltip">Researching and advising on international trade agreements, tariffs, and import/export regulations.</div>
+                </li>
+                <li>
+                    Global Economic Advisor
+                    <div class="tooltip">Providing insights on global economic trends, trade policies, and geopolitical risks.</div>
+                </li>
+                <li>
+                    IMF or World Bank Economist
+                    <div class="tooltip">Developing strategies to tackle global economic issues like poverty, development, and inequality.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Financial Markets and Institutions</h3>
+            <p>Macroeconomists are also employed in financial markets to analyze trends and develop investment strategies. Opportunities in this sector exist in investment banks, financial consulting firms, and hedge funds.</p>
+            <ul>
+                <li>
+                    Financial Market Analyst
+                    <div class="tooltip">Tracking economic indicators and providing investment advice based on macroeconomic trends.</div>
+                </li>
+                <li>
+                    Portfolio Manager
+                    <div class="tooltip">Managing investment portfolios by analyzing market data and trends.</div>
+                </li>
+                <li>
+                    Risk Management Consultant
+                    <div class="tooltip">Advising companies on how to mitigate economic risks related to fluctuations in markets and currencies.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Academic and Research Roles</h3>
+            <p>In academia and research, macroeconomists work on developing economic theories and models to better understand the economy. Positions are available in universities, research institutions, and think tanks.</p>
+            <ul>
+                <li>
+                    Research Economist
+                    <div class="tooltip">Conducting macroeconomic research to create models for understanding economic phenomena.</div>
+                </li>
+                <li>
+                    University Professor
+                    <div class="tooltip">Teaching macroeconomics at the university level while conducting academic research.</div>
+                </li>
+                <li>
+                    Economic Consultant
+                    <div class="tooltip">Advising governments and companies based on research findings in macroeconomics.</div>
+                </li>
             </ul>
         </div>
     </div>
 </body>
 </html>
-
