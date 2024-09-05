@@ -8,51 +8,109 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: rgb(0, 0, 0);
+            color: white;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_6.jpg');
+            background-image: url('https://www.superprof.co.in/blog/wp-content/uploads/2018/10/image3-2.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
-            color: black;
+            background-color: rgba(3, 38, 98, 0.567);
+            color: white;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            box-shadow: 0 0 8px 1px whitesmoke;
+            backdrop-filter: blur(10px);
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px whitesmoke;
+            background-color: #b8cbf650;
         }
-        h1, h2 {
-            color: black;
+        h1 {
+            color: rgb(255, 255, 255);
         }
         h2 {
+            color:orangered;
             text-align: center;
         }
         p {
             margin: 15px 0;
+            font-weight: bold;
         }
         .sub-branch {
             background-color: transparent;
-            border: solid black;
+            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
             backdrop-filter: blur(25px);
             padding: 10px;
-            color: black;
+            color: white;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: rgb(255, 72, 0);
             text-align: center;
+        }
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #40bdf8;
+        }
+        .sub-branch ul li:hover {
+            background-color: #f8a840e8;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff0505;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 85%;
+            top: -60px;
+            transform: translateX(-50%);
+            background-color: #ff3c01;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -63,6 +121,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -78,6 +140,10 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px;
+            }
         }
     </style>
 </head>
@@ -86,33 +152,82 @@
         <h1>Cost Accounting Career Path Guidance</h1>
     </header>
     <div class="container">
-        <h2>Explore a Career in Cost Accounting</h2>
-        <p>Cost Accounting involves analyzing and controlling costs associated with business operations. It helps organizations manage their expenses and improve profitability through detailed cost analysis.</p>
+        <h2>Career Opportunities in Cost Accounting</h2>
+        <p>Cost Accounting focuses on recording, analyzing, and managing the costs associated with business operations. It provides essential information for decision-making and cost control. Here are some key areas and related career opportunities:</p>
         
         <div class="sub-branch">
-            <h3>Key Responsibilities</h3>
+            <h3>Cost Analysis</h3>
+            <p>Cost analysis involves assessing the cost structure of a business to identify areas for cost savings. Careers in this area include roles in industries, consulting, and finance.</p>
             <ul>
-                <li>Tracking and analyzing costs</li>
-                <li>Preparing cost reports</li>
-                <li>Budgeting and forecasting</li>
+                <li>
+                    Cost Analyst
+                    <div class="tooltip">Analyzing company cost structures to recommend efficiency improvements.</div>
+                </li>
+                <li>
+                    Budget Analyst
+                    <div class="tooltip">Helping organizations plan and manage their budgets.</div>
+                </li>
+                <li>
+                    Financial Consultant
+                    <div class="tooltip">Advising clients on cost management strategies.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Career Opportunities</h3>
+            <h3>Cost Control and Reduction</h3>
+            <p>Cost control focuses on monitoring and managing costs to improve profitability. This area offers careers in manufacturing, project management, and strategic planning.</p>
             <ul>
-                <li>Cost Accountant</li>
-                <li>Cost Analyst</li>
-                <li>Controller</li>
+                <li>
+                    Cost Controller
+                    <div class="tooltip">Ensuring that a company's costs stay within its budget.</div>
+                </li>
+                <li>
+                    Project Manager
+                    <div class="tooltip">Managing project budgets and ensuring cost efficiency.</div>
+                </li>
+                <li>
+                    Operations Manager
+                    <div class="tooltip">Overseeing business operations and optimizing cost control measures.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Skills Required</h3>
+            <h3>Cost Auditing</h3>
+            <p>Cost auditing involves verifying the accuracy of cost records and ensuring compliance with standards. Careers in this field include roles in auditing firms, government, and corporate finance.</p>
             <ul>
-                <li>Analytical skills</li>
-                <li>Attention to detail</li>
-                <li>Proficiency in cost management software</li>
+                <li>
+                    Cost Auditor
+                    <div class="tooltip">Reviewing cost records to ensure compliance with regulations.</div>
+                </li>
+                <li>
+                    Internal Auditor
+                    <div class="tooltip">Conducting internal audits to ensure cost efficiency and control.</div>
+                </li>
+                <li>
+                    Compliance Officer
+                    <div class="tooltip">Ensuring that companies adhere to financial regulations.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Cost Accounting Systems</h3>
+            <p>Cost accounting systems track costs throughout the production process. This area opens up careers in technology, accounting, and business operations.</p>
+            <ul>
+                <li>
+                    Systems Analyst
+                    <div class="tooltip">Designing cost accounting systems for effective cost tracking.</div>
+                </li>
+                <li>
+                    Accounting Manager
+                    <div class="tooltip">Overseeing cost accounting systems and ensuring data accuracy.</div>
+                </li>
+                <li>
+                    IT Consultant
+                    <div class="tooltip">Advising on the implementation of cost accounting software and systems.</div>
+                </li>
             </ul>
         </div>
     </div>

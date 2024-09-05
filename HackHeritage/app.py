@@ -109,6 +109,9 @@ def logout():
     session.pop('username', None)
     flash("You have been logged out.")
     return redirect(url_for('login'))
+@app.route('/high')
+def high():
+    return render_template('highpayingjobs.html')
 @app.route('/vocat')
 def vocat():
     return render_template('vocat.html')

@@ -8,51 +8,109 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: rgb(0, 0, 0);
+            color: white;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_6.jpg');
+            background-image: url('https://media.licdn.com/dms/image/D4D12AQHzhnR0bhloPw/article-cover_image-shrink_720_1280/0/1704722726564?e=2147483647&v=beta&t=QBtcb8zep4SdoAlivcQneLmrcOSH7VYhLnZ456oMdY0');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
+            background-color: rgba(98, 77, 3, 0.633);
             color: black;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            box-shadow: 0 0 8px 1px whitesmoke;
+            backdrop-filter: blur(10px);
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px whitesmoke;
+            background-color: #b8cbf650;
         }
         h1, h2 {
-            color: black;
+            color: black
         }
         h2 {
             text-align: center;
         }
         p {
             margin: 15px 0;
+            color:black;
+            font-weight: bold;
         }
         .sub-branch {
             background-color: transparent;
-            border: solid black;
+            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
             backdrop-filter: blur(25px);
             padding: 10px;
             color: black;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: rgb(0, 21, 107);
             text-align: center;
+        }
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #40bdf8;
+        }
+        .sub-branch ul li:hover {
+            background-color: #40bdf8;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff0505;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 85%;
+            top: -60px; /* Position above the list item */
+            transform: translateX(-50%);
+            background-color: #030563;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -63,6 +121,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px; /* Adjusted for smaller screens */
             }
         }
         @media (max-width: 576px) {
@@ -78,6 +140,10 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px; /* Adjusted for smaller screens */
+            }
         }
     </style>
 </head>
@@ -86,33 +152,82 @@
         <h1>Financial Accounting Career Path Guidance</h1>
     </header>
     <div class="container">
-        <h2>Explore a Career in Financial Accounting</h2>
-        <p>Financial Accounting focuses on the preparation, analysis, and reporting of financial statements for external stakeholders. It provides insight into the financial health of organizations, guiding investment and operational decisions.</p>
+        <h2>Career Opportunities in Financial Accounting</h2>
+        <p>Financial Accounting plays a vital role in recording, summarizing, and presenting financial data. Here are key areas in financial accounting and the related career opportunities:</p>
         
         <div class="sub-branch">
-            <h3>Key Responsibilities</h3>
+            <h3>Auditing</h3>
+            <p>Auditing involves examining financial records and ensuring accuracy and compliance with regulations. Careers in this area include roles in auditing firms, corporations, and government agencies.</p>
             <ul>
-                <li>Preparing financial statements</li>
-                <li>Ensuring compliance with accounting standards</li>
-                <li>Analyzing financial data</li>
+                <li>
+                    Internal Auditor
+                    <div class="tooltip">Assessing internal controls and risk management processes within organizations.</div>
+                </li>
+                <li>
+                    External Auditor
+                    <div class="tooltip">Examining financial statements to ensure their accuracy and fairness.</div>
+                </li>
+                <li>
+                    Compliance Officer
+                    <div class="tooltip">Ensuring companies adhere to financial regulations and standards.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Career Opportunities</h3>
+            <h3>Financial Reporting</h3>
+            <p>Financial Reporting focuses on preparing and presenting financial statements in line with regulatory standards. This area provides opportunities in both private and public sectors.</p>
             <ul>
-                <li>Financial Accountant</li>
-                <li>Chief Financial Officer (CFO)</li>
-                <li>Financial Analyst</li>
+                <li>
+                    Financial Accountant
+                    <div class="tooltip">Preparing financial reports such as balance sheets, income statements, and cash flows.</div>
+                </li>
+                <li>
+                    Management Accountant
+                    <div class="tooltip">Providing financial insights and reports to assist management in decision-making.</div>
+                </li>
+                <li>
+                    Tax Accountant
+                    <div class="tooltip">Preparing and filing tax reports while ensuring compliance with tax laws.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Skills Required</h3>
+            <h3>Cost Accounting</h3>
+            <p>Cost Accounting involves tracking and analyzing production costs and operational efficiency. Careers in this field include roles in manufacturing and corporate finance departments.</p>
             <ul>
-                <li>Strong analytical skills</li>
-                <li>Attention to detail</li>
-                <li>Knowledge of financial regulations</li>
+                <li>
+                    Cost Analyst
+                    <div class="tooltip">Monitoring and evaluating the costs of products and services.</div>
+                </li>
+                <li>
+                    Budget Analyst
+                    <div class="tooltip">Analyzing and preparing budget reports to guide financial planning.</div>
+                </li>
+                <li>
+                    Financial Analyst
+                    <div class="tooltip">Providing insights on cost management to enhance business profitability.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Taxation</h3>
+            <p>Taxation focuses on compliance with tax regulations and strategic tax planning. Careers in taxation can be found in accounting firms, corporations, and government agencies.</p>
+            <ul>
+                <li>
+                    Tax Consultant
+                    <div class="tooltip">Advising clients on tax planning and compliance strategies.</div>
+                </li>
+                <li>
+                    Corporate Tax Analyst
+                    <div class="tooltip">Managing and optimizing corporate tax obligations and compliance.</div>
+                </li>
+                <li>
+                    Tax Examiner
+                    <div class="tooltip">Ensuring compliance with tax laws by examining financial documents.</div>
+                </li>
             </ul>
         </div>
     </div>

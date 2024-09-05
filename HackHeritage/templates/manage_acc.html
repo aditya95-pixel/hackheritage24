@@ -8,31 +8,37 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: rgb(0, 0, 0);
+            color: white;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_6.jpg');
+            background-image: url('https://prisisi.com/wp-content/uploads/2020/11/Management-Accouting.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
-            color: black;
+            background-color: rgba(3, 3, 98, 0.337);
+            backdrop-filter: blur(8px);
+            color: white;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            box-shadow: 0 0 8px 1px whitesmoke;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px whitesmoke;
+            background-color: #b8cbf650;
         }
         h1, h2 {
-            color: black;
+            color: rgb(255, 255, 255);
         }
         h2 {
             text-align: center;
@@ -42,17 +48,67 @@
         }
         .sub-branch {
             background-color: transparent;
-            border: solid black;
+            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
             backdrop-filter: blur(25px);
             padding: 10px;
-            color: black;
+            color: white;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: rgb(4, 75, 30);
             text-align: center;
+        }
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #40bdf8;
+        }
+        .sub-branch ul li:hover {
+            background-color: #40bdf8;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff0505;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 85%;
+            top: -60px;
+            transform: translateX(-50%);
+            background-color: #065826;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -63,6 +119,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -78,6 +138,10 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px;
+            }
         }
     </style>
 </head>
@@ -86,33 +150,82 @@
         <h1>Management Accounting Career Path Guidance</h1>
     </header>
     <div class="container">
-        <h2>Explore a Career in Management Accounting</h2>
-        <p>Management Accounting focuses on providing financial information and analysis to managers for decision-making and performance evaluation. It plays a crucial role in internal financial planning and control.</p>
+        <h2>Career Opportunities in Management Accounting</h2>
+        <p>Management accounting provides vital insights into business operations by focusing on cost analysis, financial management, and strategic decision-making. Here are some key areas and related career opportunities in management accounting:</p>
         
         <div class="sub-branch">
-            <h3>Key Responsibilities</h3>
+            <h3>Cost Analysis</h3>
+            <p>Cost analysis involves determining the actual costs associated with producing goods or services and advising businesses on cost-efficient strategies. Careers in this area are integral to business management and financial decision-making.</p>
             <ul>
-                <li>Preparing internal financial reports</li>
-                <li>Analyzing financial performance</li>
-                <li>Supporting strategic planning</li>
+                <li>
+                    Cost Accountant
+                    <div class="tooltip">Specializing in analyzing and controlling costs to improve profitability.</div>
+                </li>
+                <li>
+                    Budget Analyst
+                    <div class="tooltip">Developing budgets and providing recommendations for cost-saving measures.</div>
+                </li>
+                <li>
+                    Financial Analyst
+                    <div class="tooltip">Providing cost-related insights to guide investment and operational decisions.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Career Opportunities</h3>
+            <h3>Strategic Planning</h3>
+            <p>Strategic planning in management accounting focuses on long-term business strategies, assessing risk, and making high-level decisions to guide company direction. Careers in this field offer leadership roles in business and finance.</p>
             <ul>
-                <li>Management Accountant</li>
-                <li>Financial Manager</li>
-                <li>Business Analyst</li>
+                <li>
+                    Management Consultant
+                    <div class="tooltip">Advising businesses on strategic decisions for growth and efficiency.</div>
+                </li>
+                <li>
+                    Business Analyst
+                    <div class="tooltip">Analyzing business operations and recommending strategic improvements.</div>
+                </li>
+                <li>
+                    CFO (Chief Financial Officer)
+                    <div class="tooltip">Leading financial strategy and decision-making at the executive level.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Skills Required</h3>
+            <h3>Financial Reporting</h3>
+            <p>Management accountants play a crucial role in financial reporting by preparing detailed reports that help organizations track their financial performance and make informed decisions.</p>
             <ul>
-                <li>Strong analytical skills</li>
-                <li>Knowledge of management accounting principles</li>
-                <li>Proficiency in financial software</li>
+                <li>
+                    Management Accountant
+                    <div class="tooltip">Creating financial reports that provide insights for business decisions.</div>
+                </li>
+                <li>
+                    Internal Auditor
+                    <div class="tooltip">Reviewing financial reports to ensure accuracy and compliance.</div>
+                </li>
+                <li>
+                    Controller
+                    <div class="tooltip">Overseeing all accounting operations, including financial reporting.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Performance Measurement</h3>
+            <p>Performance measurement in management accounting focuses on evaluating company performance and setting benchmarks for future success. Careers in this area involve assessing the efficiency and profitability of business processes.</p>
+            <ul>
+                <li>
+                    Performance Analyst
+                    <div class="tooltip">Evaluating business performance to ensure operational effectiveness.</div>
+                </li>
+                <li>
+                    Corporate Planner
+                    <div class="tooltip">Setting performance goals and helping businesses meet financial objectives.</div>
+                </li>
+                <li>
+                    Risk Manager
+                    <div class="tooltip">Assessing and mitigating risks that impact business performance.</div>
+                </li>
             </ul>
         </div>
     </div>
