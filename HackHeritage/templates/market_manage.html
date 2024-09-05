@@ -3,102 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Management</title>
+    <title>Marketing Management Career Path Guidance</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
             background-color: rgb(0, 0, 0);
-            color: rgb(255, 255, 255);
+            color: white;
             margin: 0;
-            padding: 10px;
-            line-height: 1.4;
-            background-image: url('https://t4.ftcdn.net/jpg/07/68/65/95/240_F_768659517_BQD3YiZOkYdTs6wNKByhvmkpwtdzBKWA.jpg'); /* Make sure the path to the image is correct */
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('https://lh5.googleusercontent.com/2QI3TdnA0CdY3-7stL7wog64RRqxxaJUYcT5ojweV2WQj3vFOT0nC0DbqsMIFhULGDWYIP1bxUvwqOCO91v7NrCmGjXKWf_F4aELYoaKDpkQ6jMZVNeNEEwnk4pOAhNaYK1vNEFM38aMynjEslEUlfr5nbhlFc0vAalTzW-6QZeoXDhALPIMKYhZ9sfagVCbdJr_Aw'); /* Replace with a relevant image */
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.684);
-            color: rgb(255, 255, 255);
-            border-bottom: solid 2px whitesmoke;
-            box-shadow: 0 0 8px 1px rgb(255, 255, 255);
-            padding: 5px;
-            margin-bottom: 50px;
-            margin-top: 0px;
+            background-color: rgba(240, 255, 255, 0.495);
+            color: white;
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            box-shadow: 0 0 8px 1px orange;
+            backdrop-filter: blur(8px);
         }
         .container {
-            
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px whitesmoke;
+            background-color: #b8cbf66e;
+            backdrop-filter: blur(4px);
         }
-        h2 {
-            color: rgb(41, 0, 130);
-        }
-        h3 {
-            color: rgb(255, 255, 255);
-            cursor: pointer;
-        }
-        h3:hover {
-            color: rgb(255, 0, 0);
-            background-color: aqua;
-            transition: .3s;
-            border-radius: 10px;
-            padding-left: 5px;
-        }
-        h1 {
-            color: rgb(255, 255, 255);
+        h1, h2 {
+            color: rgb(0, 21, 107);
         }
         h2 {
             text-align: center;
         }
         p {
             margin: 15px 0;
-            color: rgb(145, 227, 252);
+            color:black;
+            font-weight: bold;
         }
         .sub-branch {
-            background-color: rgba(128, 128, 128, 0.503);
+            background-color: transparent;
             box-shadow: 0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(25px);
             padding: 10px;
-            color: rgb(0, 0, 0);
+            color: black;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px orange;
+        }
+        .sub-branch h3 {
+            color: rgb(0, 21, 107);
+            text-align: center;
         }
         .sub-branch ul {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         .sub-branch ul li {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
             position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid rgb(0, 21, 107);
+            font-weight: bold;
         }
-        .sub-branch ul li p {
+        .sub-branch ul li:hover {
+            background-color: rgb(0, 21, 107);
+            color: rgb(243, 97, 0);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff0505;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
             display: none;
             position: absolute;
-            left: 30%;
-            top: -200px;
-            background-color: rgb(0, 0, 0);
-            color: rgb(255, 255, 255);
+            left: 70%;
+            top: -60px;
+            transform: translateX(-50%);
+            background-color: rgb(0, 21, 107);
+            color: azure;
+            font-weight: bold;
             padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-            width: 200px;
-            z-index: 1;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            transform: translateY(10px);
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
             opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
-        .sub-branch ul li h3:hover + p {
+        .sub-branch ul li:hover .tooltip {
             display: block;
             opacity: 1;
-            transform: translateY(0);
         }
         @media (max-width: 768px) {
             .container {
@@ -109,6 +126,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -124,47 +145,96 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Marketing Management</h1>
+        <h1>Marketing Management Career Path Guidance</h1>
     </header>
     <div class="container">
-        <section class="sub-branch">
-            <h2>Introduction to Marketing Management</h2>
-            <p>Marketing Management involves planning, executing, and overseeing marketing strategies to achieve business goals. It encompasses market research, product development, promotional activities, and sales strategies to understand and meet customer needs effectively.</p>
-        </section>
-        <section class="sub-branch">
-            <h2>Key Functions of Marketing Management</h2>
+        <h2>Career Opportunities in Marketing Management</h2>
+        <p>Marketing Management offers diverse career paths in industries such as advertising, digital marketing, market research, and brand management. Explore some of the key areas and associated roles below:</p>
+        
+        <div class="sub-branch">
+            <h3>Digital Marketing</h3>
+            <p>Digital Marketing focuses on online strategies such as SEO, social media, and content marketing to promote products or services.</p>
             <ul>
                 <li>
-                    <h3>Market Research</h3>
-                    <p>Gathering and analyzing data about market trends, customer preferences, and competitive landscape to make informed decisions.</p>
+                    SEO Specialist
+                    <div class="tooltip">Optimizing websites to rank higher in search engine results.</div>
                 </li>
                 <li>
-                    <h3>Product Management</h3>
-                    <p>Developing and managing products to meet market demands, including product design, positioning, and lifecycle management.</p>
+                    Social Media Manager
+                    <div class="tooltip">Managing brand presence and engagement on social media platforms.</div>
                 </li>
                 <li>
-                    <h3>Promotional Strategies</h3>
-                    <p>Creating and executing marketing campaigns to promote products or services through various channels such as advertising, public relations, and social media.</p>
-                </li>
-                <li>
-                    <h3>Sales Management</h3>
-                    <p>Developing and implementing sales strategies to drive revenue growth, including sales forecasting, budgeting, and team management.</p>
-                </li>
-                <li>
-                    <h3>Customer Relationship Management</h3>
-                    <p>Building and maintaining strong relationships with customers to enhance satisfaction, loyalty, and repeat business.</p>
+                    Content Strategist
+                    <div class="tooltip">Developing content strategies that align with marketing goals.</div>
                 </li>
             </ul>
-        </section>
-        <section class="sub-branch">
-            <h2>Importance of Marketing Management</h2>
-            <p>Effective Marketing Management is crucial for business success as it helps in understanding customer needs, differentiating products, creating strong brand identities, and driving sales. By aligning marketing strategies with business objectives, companies can achieve a competitive edge and ensure long-term growth.</p>
-        </section>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Market Research</h3>
+            <p>Market Research involves gathering and analyzing consumer data to help companies make informed business decisions.</p>
+            <ul>
+                <li>
+                    Market Analyst
+                    <div class="tooltip">Analyzing market trends and consumer behavior.</div>
+                </li>
+                <li>
+                    Research Executive
+                    <div class="tooltip">Conducting surveys and focus groups to gather consumer insights.</div>
+                </li>
+                <li>
+                    Data Analyst
+                    <div class="tooltip">Interpreting large datasets to inform marketing strategies.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Brand Management</h3>
+            <p>Brand Management focuses on building and maintaining the public image of a brand.</p>
+            <ul>
+                <li>
+                    Brand Manager
+                    <div class="tooltip">Developing strategies to enhance brand visibility and reputation.</div>
+                </li>
+                <li>
+                    Product Manager
+                    <div class="tooltip">Overseeing product development and marketing strategies.</div>
+                </li>
+                <li>
+                    Advertising Manager
+                    <div class="tooltip">Creating advertising campaigns to promote products and services.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Sales and Distribution</h3>
+            <p>Sales and Distribution ensure that products reach customers efficiently, while managing client relationships.</p>
+            <ul>
+                <li>
+                    Sales Manager
+                    <div class="tooltip">Leading sales teams to meet revenue targets.</div>
+                </li>
+                <li>
+                    Distribution Manager
+                    <div class="tooltip">Overseeing the distribution process to ensure timely product delivery.</div>
+                </li>
+                <li>
+                    Key Account Manager
+                    <div class="tooltip">Managing relationships with key clients and ensuring customer satisfaction.</div>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
