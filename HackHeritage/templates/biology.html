@@ -8,7 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
+            background-color: rgb(0, 0, 0);
             color: black;
             margin: 0;
             padding: 0;
@@ -26,52 +26,86 @@
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            box-shadow:0px 0px 15px 1px black;
+            box-shadow: 0px 0px 15px 1px rgb(255, 255, 255);
         }
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
+            height: 700px;
             margin: 20px auto;
+            background-color: #ffffff57;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 1px black;
             padding: 0 15px;
+
         }
-        h1{
-            color:white;
+        h1 {
+            color: white;
         }
         h2 {
             text-align: center;
-            color:black;
+            color: black;
         }
         p {
             margin: 15px 0;
         }
-        .sub-branch {
+        .topic {
             background-color: rgba(5, 5, 119, 0.533);
-            box-shadow:0px 0px 15px 1px black;
-            backdrop-filter: blur(0px);
+            box-shadow: 0px 0px 15px 1px black;
             padding: 10px;
+            margin-top: 40px ;
             color: white;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
-        }
-        .sub-branch h3 {
-            color: black;
+            overflow: visible; /* Ensure popup box is not clipped */
+            cursor: pointer;
             text-align: center;
         }
-        .engg {
+        .popup-box {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+            border-radius: 8px;
+            width: 40%;
+            text-align: left;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
             color: black;
+            z-index: 10; /* Higher z-index to ensure popup is above other elements */
         }
-        .engg:hover {
-            color: red;
+        .popup-box h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .popup-box p {
+            font-size: 0.9rem;
+            color: #000000;
+        }
+        .topic:hover .popup-box {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(10px); /* Add translateY for smoother appearance */
+        }
+        /* Hover effect for topics */
+        .topic:hover {
+            background-color: rgba(5, 5, 119, 0.7);
+            box-shadow: 0px 10px 20px rgb(245, 245, 245);
+            transition: all 0.3s ease;
+            /* transform: translateY(5px); */
         }
         @media (max-width: 768px) {
             .container {
                 padding: 0 10px;
             }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+            .popup-box {
+                width: 90%;
+                top: 110%;
             }
         }
         @media (max-width: 576px) {
@@ -81,11 +115,9 @@
             h2 {
                 font-size: 1.25rem;
             }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+            .popup-box {
+                width: 95%;
+                top: 110%;
             }
         }
     </style>
@@ -97,45 +129,61 @@
     <div class="container">
         <h2>Career Opportunities in Biology Research</h2>
         <p>Biology research offers a wide range of career paths in various sectors. Below are key research areas and the career opportunities they provide:</p>
-        
-        <div class="sub-branch">
+
+        <!-- Topic 1 -->
+        <div class="topic">
             <h3>Cell Biology Research</h3>
-            <p>Cell biology research involves studying the fundamental unit of life—cells. Careers in this field include academic research, biotechnology, and medical research.</p>
-            <ul>
-                <li>Cell Biologist: Investigating cellular processes and their implications for health and disease.</li>
-                <li>Biotechnology Specialist: Developing cellular-based technologies for medical and industrial applications.</li>
-                <li>Pharmaceutical Researcher: Working on drug development and testing focusing on cellular mechanisms.</li>
-            </ul>
+            <div class="popup-box">
+                <h4>Cell Biology Research Overview</h4>
+                <p>Cell biology research involves studying the fundamental unit of life—cells. Careers in this field include academic research, biotechnology, and medical research.</p>
+                <ul>
+                    <li>Cell Biologist: Investigating cellular processes and their implications for health and disease.</li>
+                    <li>Biotechnology Specialist: Developing cellular-based technologies for medical and industrial applications.</li>
+                    <li>Pharmaceutical Researcher: Working on drug development and testing focusing on cellular mechanisms.</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="sub-branch">
+        <!-- Topic 2 -->
+        <div class="topic">
             <h3>Genetics Research</h3>
-            <p>Genetics research explores the role of genes in health and disease. Career opportunities include roles in genetic counseling, research institutions, and biotech companies.</p>
-            <ul>
-                <li>Genetic Counselor: Providing guidance on genetic disorders and inherited conditions.</li>
-                <li>Genomic Researcher: Conducting studies on gene function and genetic variations.</li>
-                <li>Biotechnologist: Applying genetic knowledge to develop new biotechnological products and therapies.</li>
-            </ul>
+            <div class="popup-box">
+                <h4>Genetics Research Overview</h4>
+                <p>Genetics research explores the role of genes in health and disease. Career opportunities include roles in genetic counseling, research institutions, and biotech companies.</p>
+                <ul>
+                    <li>Genetic Counselor: Providing guidance on genetic disorders and inherited conditions.</li>
+                    <li>Genomic Researcher: Conducting studies on gene function and genetic variations.</li>
+                    <li>Biotechnologist: Applying genetic knowledge to develop new biotechnological products and therapies.</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="sub-branch">
+        <!-- Topic 3 -->
+        <div class="topic">
             <h3>Ecology Research</h3>
-            <p>Ecology research focuses on the interactions between organisms and their environments. Careers in this field often involve environmental conservation, wildlife management, and research.</p>
-            <ul>
-                <li>Ecologist: Studying ecosystems and developing strategies for conservation and sustainability.</li>
-                <li>Environmental Consultant: Advising on environmental impact and mitigation strategies.</li>
-                <li>Wildlife Biologist: Researching animal behavior and ecology to aid in wildlife conservation.</li>
-            </ul>
+            <div class="popup-box">
+                <h4>Ecology Research Overview</h4>
+                <p>Ecology research focuses on the interactions between organisms and their environments. Careers in this field often involve environmental conservation, wildlife management, and research.</p>
+                <ul>
+                    <li>Ecologist: Studying ecosystems and developing strategies for conservation and sustainability.</li>
+                    <li>Environmental Consultant: Advising on environmental impact and mitigation strategies.</li>
+                    <li>Wildlife Biologist: Researching animal behavior and ecology to aid in wildlife conservation.</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="sub-branch">
+        <!-- Topic 4 -->
+        <div class="topic">
             <h3>Evolutionary Biology Research</h3>
-            <p>Evolutionary biology research examines how species evolve over time. Career paths include academic positions, research institutions, and roles in evolutionary development studies.</p>
-            <ul>
-                <li>Evolutionary Biologist: Investigating the processes of evolution and species adaptation.</li>
-                <li>Bioinformatics Specialist: Using computational tools to analyze evolutionary data.</li>
-                <li>Research Scientist: Conducting studies on evolutionary mechanisms and their applications.</li>
-            </ul>
+            <div class="popup-box">
+                <h4>Evolutionary Biology Research Overview</h4>
+                <p>Evolutionary biology research examines how species evolve over time. Career paths include academic positions, research institutions, and roles in evolutionary development studies.</p>
+                <ul>
+                    <li>Evolutionary Biologist: Investigating the processes of evolution and species adaptation.</li>
+                    <li>Bioinformatics Specialist: Using computational tools to analyze evolutionary data.</li>
+                    <li>Research Scientist: Conducting studies on evolutionary mechanisms and their applications.</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

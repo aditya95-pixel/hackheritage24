@@ -8,25 +8,27 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
+            background-color: rgb(0, 0, 0);
             color: white;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_5.jpg');
+            background-image: url('https://www.imperial.ac.uk/ImageCropToolT4/imageTool/uploaded-images/newseventsimage_1537198485721_mainnews2012_x1.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: transparent;
+            background-color: rgba(0, 0, 0, 0.519);
             color: white;
-            padding: 10px 0;
+            padding: 10px auto;
+            max-width: 1200px;
+            margin: 10px auto;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            box-shadow:0px 0px 15px 1px white;
+            box-shadow: 0px 0px 15px 1px white;
         }
         .container {
             max-width: 1200px;
@@ -44,33 +46,72 @@
         }
         .sub-branch {
             background-color: transparent;
-            box-shadow:0px 0px 15px 1px white;
-            backdrop-filter: blur(5px);
+            box-shadow: 0px 0px 15px 1px rgb(147, 221, 243);
+            backdrop-filter: blur(3px);
             padding: 10px;
             color: white;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            cursor: pointer;
         }
-        .sub-branch h3 {
+        .sub-branch:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        .popup-box {
+            position: absolute;
+            left: 50%;
+            top: -200px;
+            /* bottom: -10px; */
+            transform: translateX(-50%);
+            background-color: rgb(0, 0, 0);
+            padding: 15px;
+            border-radius: 10px;
+            width: 150px auto;
+            /* height: 250px ; */
+            text-align: left;
+            box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
             color: white;
-            text-align: center;
+            z-index: 10;
         }
-        .engg {
-            color: white;
+        .popup-box h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #f7f7f7;
         }
-        .engg:hover {
-            color: red;
+        .popup-box p {
+            font-size: 0.9rem;
+            color: #ffffff;
+        }
+        .popup-box li {
+            font-size: 0.9rem;
+            color: #ff0000;
+        }
+        .sub-branch:hover .popup-box {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(10px);
+            /* color: rgb(105, 0, 0); */
+        }
+        .sub-branch:hover{
+            color: #8b0000;
+            /* opacity: 1; */
+            /* visibility: visible; */
+            /* transform: translateX(-50%) translateY(10px); */
+            /* color: rgb(105, 0, 0); */
         }
         @media (max-width: 768px) {
             .container {
                 padding: 0 10px;
             }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+            .popup-box {
+                width: 90%;
+                top: -300px;
             }
         }
         @media (max-width: 576px) {
@@ -80,11 +121,9 @@
             h2 {
                 font-size: 1.25rem;
             }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+            .popup-box {
+                width: 95%;
+                top: -300px;
             }
         }
     </style>
@@ -99,42 +138,54 @@
         
         <div class="sub-branch">
             <h3>Organic Chemistry Research</h3>
-            <p>Organic chemistry research focuses on the structure, properties, and reactions of organic compounds. Careers in this field are often found in academic institutions, pharmaceutical companies, and chemical industries.</p>
-            <ul>
-                <li>Synthesis and Development: Creating new organic compounds and materials.</li>
-                <li>Medicinal Chemistry: Researching new drugs and therapeutic agents.</li>
-                <li>Environmental Chemistry: Studying the impact of organic compounds on the environment.</li>
-            </ul>
+            <div class="popup-box">
+                <h4>Organic Chemistry Overview</h4>
+                <p>Organic chemistry focuses on the study of carbon-based compounds, with applications in pharmaceuticals, agriculture, and materials science.</p>
+                <ul>
+                    <li>Drug design and discovery</li>
+                    <li>Development of new materials</li>
+                    <li>Sustainable agriculture</li>
+                </ul>
+            </div>
         </div>
 
         <div class="sub-branch">
             <h3>Inorganic Chemistry Research</h3>
-            <p>Inorganic chemistry research involves studying metals, minerals, and organometallic compounds. This research has applications in materials science, catalysis, and industrial processes.</p>
-            <ul>
-                <li>Materials Science: Developing new materials with unique properties.</li>
-                <li>Catalysis: Creating catalysts to enhance chemical reactions.</li>
-                <li>Bioinorganic Chemistry: Exploring the role of metals in biological systems.</li>
-            </ul>
+            <div class="popup-box">
+                <h4>Inorganic Chemistry Overview</h4>
+                <p>Inorganic chemistry involves the study of metals, minerals, and non-organic compounds, with applications in catalysis, material science, and energy production.</p>
+                <ul>
+                    <li>Advanced materials development</li>
+                    <li>Industrial catalysis</li>
+                    <li>Energy storage and conversion</li>
+                </ul>
+            </div>
         </div>
 
         <div class="sub-branch">
             <h3>Physical Chemistry Research</h3>
-            <p>Physical chemistry research examines the physical properties of molecules and the energy changes during reactions. This field is crucial for developing new technologies and understanding fundamental chemical processes.</p>
-            <ul>
-                <li>Surface Chemistry: Investigating the properties of surfaces and interfaces.</li>
-                <li>Quantum Chemistry: Applying quantum mechanics to understand chemical systems.</li>
-                <li>Thermodynamics: Studying energy changes and heat transfer in chemical reactions.</li>
-            </ul>
+            <div class="popup-box">
+                <h4>Physical Chemistry Overview</h4>
+                <p>Physical chemistry studies the behavior of molecules and atoms in chemical reactions and processes, often applying physics principles.</p>
+                <ul>
+                    <li>Quantum mechanics in chemistry</li>
+                    <li>Surface science and nanotechnology</li>
+                    <li>Thermodynamics and reaction kinetics</li>
+                </ul>
+            </div>
         </div>
 
         <div class="sub-branch">
             <h3>Analytical Chemistry Research</h3>
-            <p>Analytical chemistry research focuses on developing techniques to separate, identify, and quantify chemical substances. Careers in this area are prevalent in quality control, forensic science, and environmental monitoring.</p>
-            <ul>
-                <li>Instrumentation Development: Creating advanced analytical tools and techniques.</li>
-                <li>Forensic Analysis: Applying analytical methods to criminal investigations.</li>
-                <li>Environmental Monitoring: Analyzing pollutants and contaminants in the environment.</li>
-            </ul>
+            <div class="popup-box">
+                <h4>Analytical Chemistry Overview</h4>
+                <p>Analytical chemistry focuses on identifying, quantifying, and analyzing materials, with applications in forensic science, environmental monitoring, and quality control.</p>
+                <ul>
+                    <li>Development of analytical techniques</li>
+                    <li>Environmental pollution monitoring</li>
+                    <li>Forensic investigations</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

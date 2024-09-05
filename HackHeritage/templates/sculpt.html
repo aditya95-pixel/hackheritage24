@@ -6,102 +6,172 @@
     <title>Career Path in Sculpture</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-                body {
-                    font-family: 'Poppins', sans-serif;
-                    background-color: rgb(237, 206, 165);
-                    color: white;
-                    margin: 0;
-                    padding: 0;
-                    line-height: 1.6;
-                    background-image: url('/static/img_8.jpg');
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: center;
-                }
-                header {
-                    background-color: transparent;
-                    color: white;
-                    padding: 10px 0;
-                    text-align: center;
-                    border-bottom-left-radius: 15px;
-                    border-bottom-right-radius: 15px;
-                }
-                .container {
-                    max-width: 1200px;
-                    margin: 20px auto;
-                    padding: 0 15px;
-                }
-                h1, h2 {
-                    color: white;
-                }
-                h2 {
-                    text-align: center;
-                }
-                p {
-                    margin: 15px 0;
-                }
-                .sub-branch {
-                    background-color: transparent;
-                    border: solid white;
-                    backdrop-filter: blur(25px);
-                    padding: 10px;
-                    color: white;
-                    border-radius: 10px;
-                    margin-bottom: 20px;
-                    position: relative;
-                }
-                .sub-branch h3 {
-                    color: white;
-                    text-align: center;
-                }
-                .engg {
-                    color: white;
-                }
-                .engg:hover {
-                    color: red;
-                }
-                @media (max-width: 768px) {
-                    .container {
-                        padding: 0 10px;
-                    }
-                    .sub-branch ul {
-                        padding-left: 0;
-                    }
-                    .sub-branch ul li {
-                        margin-bottom: 10px;
-                    }
-                }
-                @media (max-width: 576px) {
-                    .container {
-                        padding: 0 5px;
-                    }
-                    h2 {
-                        font-size: 1.25rem;
-                    }
-                    .sub-branch {
-                        padding: 5px;
-                    }
-                    .sub-branch ul li {
-                        font-size: 0.875rem;
-                    }
-                }
-            </style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(237, 206, 165);
+            color: white;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('https://study.com/cimages/multimages/16/laocoon_pio-clementino_inv1059-1064-1067.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0px 0px 15px 1px black;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.138);
+            border-radius: 8px;
+            backdrop-filter: blur(2px);
+            box-shadow: 0px 0px 15px 1px black;
+        }
+        h2 {
+            color: rgb(0, 0, 0);
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .sub-branch {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: solid 1px white;
+            backdrop-filter: blur(4px);
+            padding: 20px;
+            color: rgb(100, 249, 117);
+            font-size: 6px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .sub-branch h2 {
+            color: white;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            padding: 10px;
+            border-left: 4px solid #40bdf8;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        ul li:hover {
+            background-color: #40bdf8;
+            color: #000;
+        }
+        ul li::before {
+            content: '>';
+            color: #ff0505;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: -60px; /* Position above the list item */
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            ul li {
+                font-size: 0.875rem;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px; /* Adjusted for smaller screens */
+            }
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 10px;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+            .sub-branch {
+                padding: 10px;
+            }
+            ul li {
+                font-size: 0.75rem;
+            }
+            .tooltip {
+                width: 180px;
+                top: -70px; /* Adjusted for smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Sculpture Career Path</h1>
     </header>
     <div class="container">
+        <h2>About Sculpture</h2>
+        <p>Sculpture is an artistic practice that involves creating three-dimensional works of art using materials like clay, stone, metal, or wood. Sculptors bring ideas to life in physical forms, often producing pieces for public spaces, galleries, and private collections.</p>
         <div class="sub-branch">
-            <h2>About Sculpture</h2>
-            <p>Sculpture is an artistic practice that involves creating three-dimensional works of art using materials like clay, stone, metal, or wood. Sculptors bring ideas to life in physical forms, often producing pieces for public spaces, galleries, and private collections.</p>
             <h2>Career Opportunities</h2>
             <ul>
-                <li>Fine Sculptor</li>
-                <li>Art Conservator</li>
-                <li>Public Artist</li>
-                <li>Exhibition Designer</li>
-                <li>Art Educator</li>
+                <li>
+                    Fine Sculptor
+                    <div class="tooltip">Creates original sculptures, often displayed in galleries or public spaces.</div>
+                </li>
+                <li>
+                    Art Conservator
+                    <div class="tooltip">Specializes in preserving and restoring sculptures to their original condition.</div>
+                </li>
+                <li>
+                    Public Artist
+                    <div class="tooltip">Designs and creates sculptures for public installations and community projects.</div>
+                </li>
+                <li>
+                    Exhibition Designer
+                    <div class="tooltip">Designs the layout and presentation of sculptures in exhibitions and galleries.</div>
+                </li>
+                <li>
+                    Art Educator
+                    <div class="tooltip">Teaches sculpture techniques and art theory to students at various levels.</div>
+                </li>
             </ul>
         </div>
     </div>

@@ -9,31 +9,40 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
+            background-color: rgb(0, 0, 0);
             color: black;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_6.jpg');
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSzOqdU7Ars1jOOi_YTXi35LoH_oyPf4NcTA&s');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
-            color: black;
-            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.791);
+            color: white;
+            padding: 20px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            box-shadow: 0px 0px 15px 1px black;
+        }
+        header h1 {
+            margin: 0;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.323);
+            border-radius: 8px;
+            backdrop-filter: blur(2px);
+            box-shadow: 0px 0px 15px 1px black;
         }
-        h1, h2 {
-            color: black;
+        h2 {
+            color: rgb(255, 255, 255);
         }
         h2 {
             text-align: center;
@@ -42,48 +51,96 @@
             margin: 15px 0;
         }
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: black;
+            background-color: rgba(0, 0, 0, 0.4);
+            border: solid 1px black;
+            backdrop-filter: blur(3px);
+            padding: 20px;
+            color: white;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: white;
             text-align: center;
         }
-        .engg {
-            color: black;
+        ul {
+            list-style-type: none;
+            padding-left: 0;
         }
-        .engg:hover {
-            color: red;
+        ul li {
+            padding: 10px;
+            border-left: 4px solid #40bdf8;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+        }
+        ul li:hover {
+            background-color: #40bdf8;
+            color: #000;
+        }
+        ul li::before {
+            content: '>';
+            color: #ff0505;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: -60px; /* Position above the list item */
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 15px;
             }
-            .sub-branch ul {
-                padding-left: 0;
+            ul li {
+                font-size: 0.875rem;
             }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+            .tooltip {
+                width: 200px;
+                top: -50px; /* Adjusted for smaller screens */
             }
         }
         @media (max-width: 576px) {
             .container {
-                padding: 0 5px;
+                padding: 10px;
             }
             h2 {
                 font-size: 1.25rem;
             }
             .sub-branch {
-                padding: 5px;
+                padding: 10px;
             }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+            ul li {
+                font-size: 0.75rem;
+            }
+            .tooltip {
+                width: 180px;
+                top: -70px; /* Adjusted for smaller screens */
             }
         }
     </style>
@@ -103,30 +160,78 @@
         <div class="sub-branch">
             <h3>1. Key Steps in Risk Management</h3>
             <ul>
-                <li><span class="engg">Identify Risks:</span> Recognize potential risks that could affect the organization.</li>
-                <li><span class="engg">Assess Risks:</span> Analyze the likelihood and impact of each identified risk.</li>
-                <li><span class="engg">Prioritize Risks:</span> Rank risks based on their potential impact and likelihood to focus on the most significant ones.</li>
-                <li><span class="engg">Mitigate Risks:</span> Develop strategies to minimize or eliminate the impact of the risks.</li>
+                <li>
+                    <span class="engg">Identify Risks:</span>
+                    Recognize potential risks that could affect the organization.
+                    <div class="tooltip">The process of identifying factors that could pose risks to an organization.</div>
+                </li>
+                <li>
+                    <span class="engg">Assess Risks:</span>
+                    Analyze the likelihood and impact of each identified risk.
+                    <div class="tooltip">Evaluating the likelihood and potential consequences of identified risks.</div>
+                </li>
+                <li>
+                    <span class="engg">Prioritize Risks:</span>
+                    Rank risks based on their potential impact and likelihood to focus on the most significant ones.
+                    <div class="tooltip">Ranking risks helps in focusing efforts on the most significant risks first.</div>
+                </li>
+                <li>
+                    <span class="engg">Mitigate Risks:</span>
+                    Develop strategies to minimize or eliminate the impact of the risks.
+                    <div class="tooltip">Taking actions to reduce the impact or likelihood of a risk occurring.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>2. Types of Risk Management Strategies</h3>
             <ul>
-                <li><span class="engg">Avoidance:</span> Eliminating the activities or situations that expose the organization to risk.</li>
-                <li><span class="engg">Reduction:</span> Implementing measures to reduce the likelihood or impact of a risk.</li>
-                <li><span class="engg">Transfer:</span> Shifting the risk to a third party, such as through insurance.</li>
-                <li><span class="engg">Acceptance:</span> Acknowledging the risk and preparing for its potential impact.</li>
+                <li>
+                    <span class="engg">Avoidance:</span>
+                    Eliminating the activities or situations that expose the organization to risk.
+                    <div class="tooltip">Completely avoiding actions that create risks.</div>
+                </li>
+                <li>
+                    <span class="engg">Reduction:</span>
+                    Implementing measures to reduce the likelihood or impact of a risk.
+                    <div class="tooltip">Taking actions to reduce the potential consequences or likelihood of risks.</div>
+                </li>
+                <li>
+                    <span class="engg">Transfer:</span>
+                    Shifting the risk to a third party, such as through insurance.
+                    <div class="tooltip">Transferring responsibility for managing risk to a third party.</div>
+                </li>
+                <li>
+                    <span class="engg">Acceptance:</span>
+                    Acknowledging the risk and preparing for its potential impact.
+                    <div class="tooltip">Accepting the risk and creating a plan for dealing with it.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>3. Tools and Techniques for Risk Management</h3>
             <ul>
-                <li><span class="engg">Risk Assessment Matrix:</span> A visual tool for evaluating risks based on their likelihood and impact.</li>
-                <li><span class="engg">SWOT Analysis:</span> Assessing Strengths, Weaknesses, Opportunities, and Threats to understand potential risks.</li>
-                <li><span class="engg">Risk Registers:</span> A document that lists identified risks, their analysis, and mitigation measures.</li>
-                <li><span class="engg">Scenario Planning:</span> Preparing for various potential future scenarios and their associated risks.</li>
+                <li>
+                    <span class="engg">Risk Assessment Matrix:</span>
+                    A visual tool for evaluating risks based on their likelihood and impact.
+                    <div class="tooltip">A matrix that evaluates risks using a grid format.</div>
+                </li>
+                <li>
+                    <span class="engg">SWOT Analysis:</span>
+                    Assessing Strengths, Weaknesses, Opportunities, and Threats to understand potential risks.
+                    <div class="tooltip">A framework for identifying risks and opportunities.</div>
+                </li>
+                <li>
+                    <span class="engg">Risk Registers:</span>
+                    A document that lists identified risks, their analysis, and mitigation measures.
+                    <div class="tooltip">A detailed list of risks and associated action plans.</div>
+                </li>
+                <li>
+                    <span class="engg">Scenario Planning:</span>
+                    Preparing for various potential future scenarios and their associated risks.
+                    <div class="tooltip">Planning for different future scenarios to be better prepared.</div>
+                </li>
             </ul>
         </div>
 

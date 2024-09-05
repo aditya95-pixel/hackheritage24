@@ -6,106 +6,188 @@
     <title>Career Path in Photography</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-                body {
-                    font-family: 'Poppins', sans-serif;
-                    background-color: rgb(237, 206, 165);
-                    color: white;
-                    margin: 0;
-                    padding: 0;
-                    line-height: 1.6;
-                    background-image: url('/static/img_8.jpg');
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: center;
-                }
-                header {
-                    background-color: transparent;
-                    color: white;
-                    padding: 10px 0;
-                    text-align: center;
-                    border-bottom-left-radius: 15px;
-                    border-bottom-right-radius: 15px;
-                }
-                .container {
-                    max-width: 1200px;
-                    margin: 20px auto;
-                    padding: 0 15px;
-                }
-                h1, h2 {
-                    color: white;
-                }
-                h2 {
-                    text-align: center;
-                }
-                p {
-                    margin: 15px 0;
-                }
-                .sub-branch {
-                    background-color: transparent;
-                    border: solid white;
-                    backdrop-filter: blur(25px);
-                    padding: 10px;
-                    color: white;
-                    border-radius: 10px;
-                    margin-bottom: 20px;
-                    position: relative;
-                }
-                .sub-branch h3 {
-                    color: white;
-                    text-align: center;
-                }
-                .engg {
-                    color: white;
-                }
-                .engg:hover {
-                    color: red;
-                }
-                @media (max-width: 768px) {
-                    .container {
-                        padding: 0 10px;
-                    }
-                    .sub-branch ul {
-                        padding-left: 0;
-                    }
-                    .sub-branch ul li {
-                        margin-bottom: 10px;
-                    }
-                }
-                @media (max-width: 576px) {
-                    .container {
-                        padding: 0 5px;
-                    }
-                    h2 {
-                        font-size: 1.25rem;
-                    }
-                    .sub-branch {
-                        padding: 5px;
-                    }
-                    .sub-branch ul li {
-                        font-size: 0.875rem;
-                    }
-                }
-            </style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('https://cdn.mos.cms.futurecdn.net/gvQ9NhQP8wbbM32jXy4V3j.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0px 0px 15px 1px black;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 15px 1px black;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.471);
+        }
+        h2 {
+            color: white;
+            text-align: center;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .about-section {
+            background-color: rgba(255, 255, 255, 0.214);
+            backdrop-filter: blur(2px);
+            padding: 15px;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .sub-branch {
+            background-color: rgba(255, 255, 255, 0.214);
+            backdrop-filter: blur(2px);
+            padding: 15px;
+            color: rgb(0, 245, 171);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .sub-branch h3 {
+            color: white;
+            text-align: center;
+        }
+        .sub-branch ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sub-branch ul li {
+            position: relative;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: rgb(255, 0, 0);
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+            line-height: 1.5;
+        }
+        .sub-branch ul li:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: rgb(255, 0, 0);
+        }
+        .popup-box {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            width: 250px;
+            text-align: left;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .sub-branch ul li:hover .popup-box {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(10px);
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .sub-branch ul li {
+                padding: 8px;
+            }
+            .popup-box {
+                width: 200px;
+            }
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 10px;
+            }
+            .sub-branch {
+                padding: 10px;
+            }
+            .sub-branch ul li {
+                font-size: 0.875rem;
+            }
+            .popup-box {
+                width: 180px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Photography Career Path</h1>
     </header>
     <div class="container">
-        <div class="sub-branch">
+        <div class="about-section">
             <h2>About Photography</h2>
             <p>Photography is the art and practice of capturing images using cameras. Photographers use technical skills and artistic vision to produce pictures for a variety of purposes, including commercial, artistic, and personal use.</p>
-            <h2>Career Opportunities</h2>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Career Opportunities</h3>
             <ul>
-                <li>Professional Photographer</li>
-                <li>Photojournalist</li>
-                <li>Commercial Photographer</li>
-                <li>Event Photographer</li>
-                <li>Photo Editor</li>
+                <li>
+                    Professional Photographer
+                    <div class="popup-box">
+                        <h4>Professional Photographer</h4>
+                        <p>Professional photographers capture high-quality images for various purposes, including portraits, events, and commercial projects. They often specialize in specific types of photography.</p>
+                    </div>
+                </li>
+                <li>
+                    Photojournalist
+                    <div class="popup-box">
+                        <h4>Photojournalist</h4>
+                        <p>Photojournalists capture images to tell stories and report on news events. They work for newspapers, magazines, and media organizations, focusing on documenting real-life events.</p>
+                    </div>
+                </li>
+                <li>
+                    Commercial Photographer
+                    <div class="popup-box">
+                        <h4>Commercial Photographer</h4>
+                        <p>Commercial photographers work on advertising campaigns, product photography, and corporate events, creating images that promote products and services.</p>
+                    </div>
+                </li>
+                <li>
+                    Event Photographer
+                    <div class="popup-box">
+                        <h4>Event Photographer</h4>
+                        <p>Event photographers specialize in capturing moments from various events, including weddings, parties, and corporate functions. They focus on candid and posed shots to document the event.</p>
+                    </div>
+                </li>
+                <li>
+                    Photo Editor
+                    <div class="popup-box">
+                        <h4>Photo Editor</h4>
+                        <p>Photo editors review and edit photos to enhance their quality. They work with photographers and clients to ensure that images meet specific standards and requirements.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
 </body>
 </html>
-
-

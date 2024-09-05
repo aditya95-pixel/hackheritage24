@@ -8,7 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
+            background-color: rgb(0, 0, 0);
             color: black;
             margin: 0;
             padding: 0;
@@ -20,20 +20,29 @@
             background-attachment: fixed;
         }
         header {
-            background-color: transparent;
-            color:black;
+            background-color: rgba(0, 0, 0, 0.617);
+            color: rgb(255, 255, 255);
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 15px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-        }
-        h1, h2 {
+            padding: 20px;
+            box-shadow: 0px 0px 15px 3px rgb(0, 0, 0);
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
             color: black;
+        }
+        h2 {
+            color: rgb(0, 0, 0);
+        }
+        h4 {
+            color: rgb(36, 236, 40);
         }
         h2 {
             text-align: center;
@@ -42,10 +51,9 @@
             margin: 15px 0;
         }
         .sub-branch {
-            background-color: transparent;
-            box-shadow: 0px 0px 15px 1px black;
-            backdrop-filter: blur(5px);
-            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.323);
+            backdrop-filter: blur(1px);
+            padding: 15px;
             color: black;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -55,42 +63,87 @@
             color: black;
             text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style: none;
+            padding: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch li{
+            color: rgb(141, 59, 0);
+        }
+        .sub-branch ul li {
+            position: relative;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: rgb(255, 0, 0);
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+            line-height: 1.5;
+        }
+        .sub-branch ul li:hover {
+            background-color: rgba(1, 224, 249, 0.8);
+            color: rgb(255, 0, 0);
+        }
+        .popup-box {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: -225px;
+            transform: translateX(-50%);
+            background-color: rgb(0, 26, 255);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            width: 250px;
+            text-align: left;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .sub-branch ul li:hover .popup-box {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(10px);
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
-            }
-            .sub-branch ul {
-                padding-left: 0;
+                padding: 15px;
             }
             .sub-branch ul li {
-                margin-bottom: 10px;
+                padding: 8px;
+            }
+            .popup-box {
+                width: 200px;
             }
         }
         @media (max-width: 576px) {
             .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
+                padding: 10px;
             }
             .sub-branch {
-                padding: 5px;
+                padding: 10px;
             }
             .sub-branch ul li {
                 font-size: 0.875rem;
+            }
+            .popup-box {
+                width: 180px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Gynecology</h1>
+        <h1>Gynecology Department</h1>
     </header>
     <div class="container">
         <h2>Overview</h2>
@@ -100,10 +153,34 @@
             <h3>Prenatal Care</h3>
             <p>Prenatal care involves regular check-ups and tests to ensure a healthy pregnancy and identify any potential complications early. Key areas include:</p>
             <ul>
-                <li>Ultrasound Monitoring</li>
-                <li>Genetic Testing</li>
-                <li>Nutrition and Lifestyle Guidance</li>
-                <li>Labor and Delivery Planning</li>
+                <li>
+                    Ultrasound Monitoring
+                    <div class="popup-box">
+                        <h4>Ultrasound Monitoring</h4>
+                        <p>Ultrasound monitoring helps track the development of the fetus and detect any potential issues during pregnancy.</p>
+                    </div>
+                </li>
+                <li>
+                    Genetic Testing
+                    <div class="popup-box">
+                        <h4>Genetic Testing</h4>
+                        <p>Genetic testing screens for genetic disorders that might affect the baby and helps in making informed decisions.</p>
+                    </div>
+                </li>
+                <li>
+                    Nutrition and Lifestyle Guidance
+                    <div class="popup-box">
+                        <h4>Nutrition and Lifestyle Guidance</h4>
+                        <p>Guidance on maintaining a healthy diet and lifestyle to support a healthy pregnancy.</p>
+                    </div>
+                </li>
+                <li>
+                    Labor and Delivery Planning
+                    <div class="popup-box">
+                        <h4>Labor and Delivery Planning</h4>
+                        <p>Planning for labor and delivery includes discussing preferences and preparing for childbirth.</p>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -111,10 +188,34 @@
             <h3>Menstrual Health</h3>
             <p>Menstrual health management is crucial for the overall well-being of women. This includes addressing menstrual disorders, providing education, and promoting access to menstrual products. Key areas include:</p>
             <ul>
-                <li>Menstrual Disorders (e.g., PCOS, Menorrhagia)</li>
-                <li>Menstrual Hygiene Management</li>
-                <li>Hormonal Therapies</li>
-                <li>Menopause Management</li>
+                <li>
+                    Menstrual Disorders
+                    <div class="popup-box">
+                        <h4>Menstrual Disorders</h4>
+                        <p>Managing disorders like PCOS and Menorrhagia, which can affect menstrual regularity and health.</p>
+                    </div>
+                </li>
+                <li>
+                    Menstrual Hygiene Management
+                    <div class="popup-box">
+                        <h4>Menstrual Hygiene Management</h4>
+                        <p>Providing education and resources for maintaining menstrual hygiene.</p>
+                    </div>
+                </li>
+                <li>
+                    Hormonal Therapies
+                    <div class="popup-box">
+                        <h4>Hormonal Therapies</h4>
+                        <p>Using hormonal treatments to manage menstrual irregularities and disorders.</p>
+                    </div>
+                </li>
+                <li>
+                    Menopause Management
+                    <div class="popup-box">
+                        <h4>Menopause Management</h4>
+                        <p>Support and treatment options for managing symptoms of menopause.</p>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -122,10 +223,34 @@
             <h3>Gynecologic Oncology</h3>
             <p>Gynecologic oncology specializes in diagnosing and treating cancers of the female reproductive system. Key areas include:</p>
             <ul>
-                <li>Cervical Cancer</li>
-                <li>Ovarian Cancer</li>
-                <li>Uterine Cancer</li>
-                <li>Vulvar and Vaginal Cancer</li>
+                <li>
+                    Cervical Cancer
+                    <div class="popup-box">
+                        <h4>Cervical Cancer</h4>
+                        <p>Diagnosis and treatment of cancer affecting the cervix.</p>
+                    </div>
+                </li>
+                <li>
+                    Ovarian Cancer
+                    <div class="popup-box">
+                        <h4>Ovarian Cancer</h4>
+                        <p>Diagnosis and treatment of cancer affecting the ovaries.</p>
+                    </div>
+                </li>
+                <li>
+                    Uterine Cancer
+                    <div class="popup-box">
+                        <h4>Uterine Cancer</h4>
+                        <p>Diagnosis and treatment of cancer affecting the uterus.</p>
+                    </div>
+                </li>
+                <li>
+                    Vulvar and Vaginal Cancer
+                    <div class="popup-box">
+                        <h4>Vulvar and Vaginal Cancer</h4>
+                        <p>Diagnosis and treatment of cancers affecting the vulva and vagina.</p>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -133,10 +258,34 @@
             <h3>Reproductive Health</h3>
             <p>Reproductive health services include contraception, fertility treatments, and sexual health education. Key areas include:</p>
             <ul>
-                <li>Contraception and Family Planning</li>
-                <li>Fertility Treatments (IVF, IUI)</li>
-                <li>Sexually Transmitted Infections (STI) Management</li>
-                <li>Sexual Health Education</li>
+                <li>
+                    Contraception and Family Planning
+                    <div class="popup-box">
+                        <h4>Contraception and Family Planning</h4>
+                        <p>Providing options for contraception and planning for family growth.</p>
+                    </div>
+                </li>
+                <li>
+                    Fertility Treatments
+                    <div class="popup-box">
+                        <h4>Fertility Treatments</h4>
+                        <p>Treatments like IVF and IUI to assist with conception.</p>
+                    </div>
+                </li>
+                <li>
+                    Sexually Transmitted Infections (STI) Management
+                    <div class="popup-box">
+                        <h4>Sexually Transmitted Infections (STI) Management</h4>
+                        <p>Diagnosis and treatment of STIs, and education on prevention.</p>
+                    </div>
+                </li>
+                <li>
+                    Sexual Health Education
+                    <div class="popup-box">
+                        <h4>Sexual Health Education</h4>
+                        <p>Education on sexual health and safe practices.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

@@ -9,19 +9,20 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: rgb(0, 0, 0);
+            color: rgb(249, 249, 249);
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('/static/img_6.jpg');
+            background-image: url('https://navi.com/blog/wp-content/uploads/2022/06/personal-finance.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
-            color: black;
+            background-color: rgba(255, 255, 255, 0.584);
+            color: rgb(253, 253, 253);
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
@@ -31,45 +32,100 @@
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 15px;
+            background-color: #ffffff5b;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
         }
-        h1, h2 {
-            color: black;
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: rgb(255, 255, 255);
         }
         h2 {
             text-align: center;
+        }
+        .sub-branch h3{
+            color: black;
         }
         p {
             margin: 15px 0;
         }
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
+            background-color: rgba(255, 255, 255, 0.515);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(2px);
             padding: 10px;
-            color: black;
+            color: rgb(73, 197, 69);
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
         }
         .sub-branch h3 {
-            color: black;
+            color: rgb(255, 255, 255);
             text-align: center;
         }
-        .engg {
-            color: black;
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
-        .engg:hover {
-            color: red;
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #FF5733;
+        }
+        ul li:hover {
+            background-color: #FF5733;
+            color: white;
+        }
+        ul li::before {
+            content: '>';
+            color: #FF5733;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 40%;
+            top: -60px;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
                 padding: 0 10px;
             }
-            .sub-branch ul {
+            ul {
                 padding-left: 0;
             }
-            .sub-branch ul li {
+            ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -79,11 +135,12 @@
             h2 {
                 font-size: 1.25rem;
             }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
+            ul li {
                 font-size: 0.875rem;
+            }
+            .tooltip {
+                width: 300px;
+                top: -70px;
             }
         }
     </style>
@@ -103,27 +160,54 @@
         <div class="sub-branch">
             <h3>1. Key Components of Personal Finance</h3>
             <ul>
-                <li><span class="engg">Budgeting:</span> Planning how to allocate your income towards expenses, savings, and investments.</li>
-                <li><span class="engg">Saving:</span> Setting aside a portion of your income for future needs or emergencies.</li>
-                <li><span class="engg">Investing:</span> Growing your wealth by purchasing assets such as stocks, bonds, or real estate.</li>
+                <li>
+                    <span class="engg">Budgeting:</span> 
+                    <div class="tooltip">Planning how to allocate your income towards expenses, savings, and investments.</div>
+                </li>
+                <li>
+                    <span class="engg">Saving:</span> 
+                    <div class="tooltip">Setting aside a portion of your income for future needs or emergencies.</div>
+                </li>
+                <li>
+                    <span class="engg">Investing:</span> 
+                    <div class="tooltip">Growing your wealth by purchasing assets such as stocks, bonds, or real estate.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>2. Personal Finance Strategies</h3>
             <ul>
-                <li><span class="engg">Debt Management:</span> Strategies to reduce and manage debt, including credit card debt and loans.</li>
-                <li><span class="engg">Retirement Planning:</span> Planning for financial independence after retirement through savings and investments.</li>
-                <li><span class="engg">Insurance:</span> Protecting yourself and your assets from unforeseen events through various insurance policies.</li>
+                <li>
+                    <span class="engg">Debt Management:</span> 
+                    <div class="tooltip">Strategies to reduce and manage debt, including credit card debt and loans.</div>
+                </li>
+                <li>
+                    <span class="engg">Retirement Planning:</span> 
+                    <div class="tooltip">Planning for financial independence after retirement through savings and investments.</div>
+                </li>
+                <li>
+                    <span class="engg">Insurance:</span> 
+                    <div class="tooltip">Protecting yourself and your assets from unforeseen events through various insurance policies.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>3. Financial Planning Tips</h3>
             <ul>
-                <li><span class="engg">Create an Emergency Fund:</span> Save at least three to six months' worth of expenses for unexpected events.</li>
-                <li><span class="engg">Set Financial Goals:</span> Define short-term, medium-term, and long-term financial goals to guide your spending and savings.</li>
-                <li><span class="engg">Diversify Investments:</span> Spread your investments across different asset classes to minimize risk.</li>
+                <li>
+                    <span class="engg">Create an Emergency Fund:</span> 
+                    <div class="tooltip">Save at least three to six months' worth of expenses for unexpected events.</div>
+                </li>
+                <li>
+                    <span class="engg">Set Financial Goals:</span> 
+                    <div class="tooltip">Define short-term, medium-term, and long-term financial goals to guide your spending and savings.</div>
+                </li>
+                <li>
+                    <span class="engg">Diversify Investments:</span> 
+                    <div class="tooltip">Spread your investments across different asset classes to minimize risk.</div>
+                </li>
             </ul>
         </div>
 

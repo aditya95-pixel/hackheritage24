@@ -8,32 +8,38 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: azure;
-            color: black;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             margin: 0;
             padding: 0;
-            background-image: url('/static/img_11.jpeg');
+            background-image: url('https://dc-mkt-prod.cloud.bosch.tech/us/media/industries/civil_engineering/images_2/backdrop_combined_images-2_copy_960x432.jpg');
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color:transparent;
-            color: white;
-            padding: 15px 0;
+            background-color:rgba(0, 0, 0, 0.642);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom: solid 1px white;
+            /* color: white; */
+            padding: 10px 0;
             text-align: center;
+            box-shadow: 0 0 15px 1px whitesmoke;
         }
         .container {
+            min-height: 760px;
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background-color: transparent;
+            background-color: rgba(245, 245, 245, 0.267);
             border-radius: 8px;
             backdrop-filter: blur(5px);
             box-shadow: 0px 0px 15px 1px black;
         }
         h1 {
-            color: black;
+            color: rgb(255, 255, 255);
         }
         h2 {
             color: black;
@@ -43,15 +49,75 @@
             line-height: 1.6;
         }
         .sub-section {
-            background-color: transparent;
+            /* background-color: ; */
             box-shadow: 0px 0px 15px 1px black;
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
-            backdrop-filter: blur(50px);
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: visible;
+            cursor: pointer;
+            text-align: center;
         }
-        .sub-section h3 {
+        .sub-section:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+            color: rgb(142, 4, 4);
+            transition: all 0.3s ease;
+        }
+        .popup-box {
+            position: absolute;
+            left: 50%;
+            top: -290px;
+            transform: translateX(-50%);
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+            border-radius: 8px;
+            width: 80%;
+            text-align: left;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
             color: black;
+            z-index: 10;
+        }
+        .popup-box h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .popup-box p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .sub-section:hover .popup-box {
+            opacity: 1;
+            visibility: visible;
+            color: red;
+            transform: translateX(-50%) translateY(10px);
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            .popup-box {
+                width: 90%;
+                top: -290px;
+            }
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 5px;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+            .popup-box {
+                width: 95%;
+                top: -290px;
+            }
         }
     </style>
 </head>
@@ -65,27 +131,67 @@
         
         <div class="sub-section">
             <h3>Structural Engineer</h3>
-            <p>Structural Engineers design and analyze buildings, bridges, and other structures to ensure they are safe and capable of withstanding various forces. This role is critical in the construction of resilient infrastructure.</p>
+            <div class="popup-box">
+                <h4>Structural Engineering Overview</h4>
+                <p>Structural Engineers design and analyze buildings, bridges, and other structures to ensure they are safe and capable of withstanding various forces.</p>
+                <ul>
+                    <li>Designing resilient structures</li>
+                    <li>Ensuring safety and durability</li>
+                    <li>Collaborating with architects and builders</li>
+                </ul>
+            </div>
         </div>
 
         <div class="sub-section">
             <h3>Geotechnical Engineer</h3>
-            <p>Geotechnical Engineers focus on the interaction between structures and the earth. They are essential in designing foundations, tunnels, and other projects where soil and rock stability is crucial.</p>
+            <div class="popup-box">
+                <h4>Geotechnical Engineering Overview</h4>
+                <p>Geotechnical Engineers focus on the interaction between structures and the earth, ensuring the stability of foundations and tunnels.</p>
+                <ul>
+                    <li>Analyzing soil and rock conditions</li>
+                    <li>Designing foundations for buildings and bridges</li>
+                    <li>Working on land reclamation and erosion control</li>
+                </ul>
+            </div>
         </div>
 
         <div class="sub-section">
             <h3>Transportation Engineer</h3>
-            <p>Transportation Engineers plan, design, and manage transportation systems, including roads, highways, and public transit. They ensure that these systems are safe, efficient, and environmentally friendly.</p>
+            <div class="popup-box">
+                <h4>Transportation Engineering Overview</h4>
+                <p>Transportation Engineers design and manage transportation systems such as roads, highways, and public transit networks.</p>
+                <ul>
+                    <li>Planning safe and efficient transportation routes</li>
+                    <li>Designing highways, airports, and railways</li>
+                    <li>Managing traffic flow and public transport systems</li>
+                </ul>
+            </div>
         </div>
 
         <div class="sub-section">
             <h3>Environmental Engineer</h3>
-            <p>Environmental Engineers develop solutions to environmental challenges, such as pollution control, waste management, and water treatment. They play a vital role in creating sustainable and eco-friendly infrastructure.</p>
+            <div class="popup-box">
+                <h4>Environmental Engineering Overview</h4>
+                <p>Environmental Engineers work on projects that improve environmental health, such as water treatment and pollution control.</p>
+                <ul>
+                    <li>Designing waste management systems</li>
+                    <li>Ensuring clean water supply</li>
+                    <li>Developing eco-friendly infrastructure</li>
+                </ul>
+            </div>
         </div>
 
         <div class="sub-section">
             <h3>Construction Manager</h3>
-            <p>Construction Managers oversee construction projects from start to finish, ensuring that they are completed on time, within budget, and to quality standards. This role is crucial in coordinating the various aspects of a construction project.</p>
+            <div class="popup-box">
+                <h4>Construction Management Overview</h4>
+                <p>Construction Managers oversee the entire building process, ensuring the project is completed on time and within budget.</p>
+                <ul>
+                    <li>Coordinating construction activities</li>
+                    <li>Managing project budgets and timelines</li>
+                    <li>Ensuring quality and safety standards</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

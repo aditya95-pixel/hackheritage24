@@ -9,36 +9,36 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
+            background-color: rgb(0, 0, 0);
             color: black;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
+            background-image: url('https://cssh.northeastern.edu/philosophy/wp-content/uploads/sites/11/2020/03/philosophy.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.601);
-            color: white;
-            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.6);
+            color: rgb(0, 0, 0);
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-bottom:10px;
             box-shadow: 0px 0px 15px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-            box-shadow: 0px 0px 15px 1px black;
-            border-radius: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px 1px rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.28);
         }
-        h2 {
-            color: black;
+        h1 {
+            color: rgb(0, 0, 0);
         }
         h2 {
             text-align: center;
@@ -47,24 +47,69 @@
             margin: 15px 0;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            box-shadow: 0px 0px 15px 1px black;
-            backdrop-filter: blur(0px);
+            background-color: transparent;
+            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
+            backdrop-filter: blur(2px);
             padding: 10px;
-            color: black;
+            color: white;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: rgb(0, 0, 0);
             text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            color: aqua;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #40bdf8;
+        }
+        .sub-branch ul li:hover {
+            background-color: #40bdf8;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff0505;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: -60px;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -73,8 +118,9 @@
             .sub-branch ul {
                 padding-left: 0;
             }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -87,8 +133,9 @@
             .sub-branch {
                 padding: 5px;
             }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
     </style>
@@ -104,27 +151,77 @@
 
         <div class="sub-branch">
             <h3>Metaphysics</h3>
-            <p>Metaphysics is the branch of philosophy that explores the nature of reality, existence, and the universe. It delves into questions such as: What is existence? What is the nature of objects and their properties?</p>
+            <p>Metaphysics explores the nature of reality, existence, and the universe. Questions include: What is existence? What is the nature of objects?</p>
+            <ul>
+                <li>
+                    Nature of Reality
+                    <div class="tooltip">Exploring the fundamental structure of existence.</div>
+                </li>
+                <li>
+                    Time and Space
+                    <div class="tooltip">Understanding the concepts of time and space.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Epistemology</h3>
-            <p>Epistemology is the study of knowledge and belief. It investigates the nature of knowledge, the rationality of belief, and what distinguishes justified belief from opinion.</p>
+            <p>Epistemology investigates the nature of knowledge and belief. It explores what distinguishes justified belief from opinion.</p>
+            <ul>
+                <li>
+                    Justified Belief
+                    <div class="tooltip">Understanding the basis of knowledge and belief.</div>
+                </li>
+                <li>
+                    Rationality
+                    <div class="tooltip">Exploring the nature of rational thinking.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Ethics</h3>
-            <p>Ethics, also known as moral philosophy, involves systematizing, defending, and recommending concepts of right and wrong behavior. It explores questions of how one ought to act and live.</p>
+            <p>Ethics deals with questions of morality, examining concepts of right and wrong behavior.</p>
+            <ul>
+                <li>
+                    Moral Philosophy
+                    <div class="tooltip">Debating ethical actions and behaviors.</div>
+                </li>
+                <li>
+                    Ethical Theories
+                    <div class="tooltip">Exploring frameworks of morality.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Logic</h3>
-            <p>Logic is the systematic study of the principles of valid inference and correct reasoning. It includes the evaluation of arguments and the development of criteria to assess the validity of reasoning.</p>
+            <p>Logic is the study of valid inference and correct reasoning, essential for evaluating arguments.</p>
+            <ul>
+                <li>
+                    Argumentation
+                    <div class="tooltip">Learning to structure valid arguments.</div>
+                </li>
+                <li>
+                    Logical Fallacies
+                    <div class="tooltip">Identifying flaws in reasoning.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Aesthetics</h3>
-            <p>Aesthetics is the branch of philosophy that deals with the nature and appreciation of art, beauty, and taste. It seeks to understand how art is experienced and what makes something beautiful.</p>
+            <p>Aesthetics examines art, beauty, and taste. It seeks to understand how we perceive and evaluate art.</p>
+            <ul>
+                <li>
+                    Philosophy of Art
+                    <div class="tooltip">Investigating the nature and impact of art.</div>
+                </li>
+                <li>
+                    Beauty and Taste
+                    <div class="tooltip">Understanding the criteria for what is considered beautiful.</div>
+                </li>
+            </ul>
         </div>
     </div>
 </body>

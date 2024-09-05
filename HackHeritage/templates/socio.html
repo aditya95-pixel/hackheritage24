@@ -8,25 +8,25 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
+            background-image: url('https://img.freepik.com/premium-photo/sociology-concept-represented-through-colorful-engaging-infographic-design_997534-45757.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.601);
+            background-color: rgba(0, 0, 0, 0.6);
             color: white;
-            padding: 5px;
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-bottom:10px;
+            margin-bottom: 10px;
             box-shadow: 0px 0px 15px 1px black;
         }
         .container {
@@ -35,59 +35,105 @@
             padding: 20px;
             box-shadow: 0px 0px 15px 1px black;
             border-radius: 10px;
-            position: center;
+            background-color: rgba(0, 0, 0, 0.296);
         }
-        h2 {
+        h2, h3 {
             color: black;
-        }
-        h2 {
             text-align: center;
         }
         p {
             margin: 15px 0;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            backdrop-filter: blur(0px);
-            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.457);
+            backdrop-filter: blur(2px);
+            padding: 15px;
+            color: rgb(2, 80, 15);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .about-section{
+            background-color: rgba(255, 255, 255, 0.457);
+            backdrop-filter: blur(2px);
+            padding: 15px;
             color: black;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
         }
         .sub-branch h3 {
             color: black;
-            text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style: none;
+            padding: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            position: relative;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: rgb(255, 0, 0);
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+            line-height: 1.5;
+        }
+        .sub-branch ul li:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: rgb(255, 0, 0);
+        }
+        .popup-box {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: -250px;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            width: 250px;
+            text-align: left;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .sub-branch ul li:hover .popup-box {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(10px);
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
-            }
-            .sub-branch ul {
-                padding-left: 0;
+                padding: 15px;
             }
             .sub-branch ul li {
-                margin-bottom: 10px;
+                padding: 8px;
+            }
+            .popup-box {
+                width: 200px;
             }
         }
         @media (max-width: 576px) {
             .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
+                padding: 10px;
             }
             .sub-branch {
-                padding: 5px;
+                padding: 10px;
             }
             .sub-branch ul li {
                 font-size: 0.875rem;
+            }
+            .popup-box {
+                width: 180px;
             }
         }
     </style>
@@ -97,16 +143,49 @@
         <h1>Sociology Career Path</h1>
     </header>
     <div class="container">
-        <div class="sub-branch">
+        <div class="about-section">
             <h2>About Sociology</h2>
             <p>Sociology is the study of society, social relationships, and social institutions. It explores the structure of groups, organizations, and societies, and how people interact within these contexts.</p>
-            <h2>Career Opportunities</h2>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Career Opportunities</h3>
             <ul>
-                <li>Sociologist</li>
-                <li>Social Researcher</li>
-                <li>Community Development Worker</li>
-                <li>Policy Analyst</li>
-                <li>Human Resources Specialist</li>
+                <li>
+                    Sociologist
+                    <div class="popup-box">
+                        <h4>Sociologist</h4>
+                        <p>Sociologists study social behavior, interactions, and culture. They conduct research to understand social issues and develop policies to address them.</p>
+                    </div>
+                </li>
+                <li>
+                    Social Researcher
+                    <div class="popup-box">
+                        <h4>Social Researcher</h4>
+                        <p>Social researchers collect and analyze data about social issues and trends to inform policy-making and improve social programs.</p>
+                    </div>
+                </li>
+                <li>
+                    Community Development Worker
+                    <div class="popup-box">
+                        <h4>Community Development Worker</h4>
+                        <p>Community development workers help improve the quality of life in communities by working on various projects and programs to address local needs.</p>
+                    </div>
+                </li>
+                <li>
+                    Policy Analyst
+                    <div class="popup-box">
+                        <h4>Policy Analyst</h4>
+                        <p>Policy analysts research and evaluate policies and programs, providing recommendations to improve or develop new policies.</p>
+                    </div>
+                </li>
+                <li>
+                    Human Resources Specialist
+                    <div class="popup-box">
+                        <h4>Human Resources Specialist</h4>
+                        <p>HR specialists manage recruitment, employee relations, and organizational development to ensure a productive and compliant workplace.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

@@ -8,36 +8,36 @@
        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: rgb(0, 0, 0);
+            color: white;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
+            background-image: url('https://www.nct.ac.in/assets/images/history/2.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.601);
+            background-color: rgba(0, 0, 0, 0.694);
             color: white;
-            padding: 5px;
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-bottom:10px;
-            box-shadow: 0px 0px 15px 1px black;
+            box-shadow: 0 0 8px 1px whitesmoke;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-            box-shadow: 0px 0px 15px 1px black;
-            border-radius: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px rgb(245, 245, 245);
+            background-color: rgba(243, 165, 10, 0.537);
         }
-        h2 {
-            color: black;
+        h1, h2 {
+            color: rgb(255, 255, 255);
         }
         h2 {
             text-align: center;
@@ -46,24 +46,73 @@
             margin: 15px 0;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            box-shadow: 0px 0px 15px 1px black;
-            backdrop-filter: blur(0px);
+            background-color: transparent;
+            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
+            backdrop-filter: blur(1px);
             padding: 10px;
-            color: black;
+            color: rgb(255, 255, 255);
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch li {
+            color: rgb(29, 172, 0);
+            border-radius: 10px;
+
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: rgb(57, 42, 0);
             text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #40bdf8;
+        }
+        .sub-branch ul li:hover {
+            background-color: #40bdf8;
+            color: #7a0000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #1aff05;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: -60px; /* Position above the list item */
+            transform: translateX(-50%);
+            background-color: #030563;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -74,6 +123,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px; /* Adjusted for smaller screens */
             }
         }
         @media (max-width: 576px) {
@@ -88,6 +141,10 @@
             }
             .sub-branch ul li {
                 font-size: 0.875rem;
+            }
+            .tooltip {
+                width: 300px;
+                top: -70px; /* Adjusted for smaller screens */
             }
         }
     </style>
@@ -108,17 +165,35 @@
                 A career in history can be incredibly rewarding, offering opportunities to work in academia, research, museums, cultural preservation, and more. Here's a breakdown of potential career paths:
             </p>
             <ul>
-                <li><strong>Historian:</strong> Historians research, analyze, and interpret historical data from various sources. They often work in academic institutions, publishing their findings in books, articles, and reports.</li>
-                <li><strong>Archaeologist:</strong> Archaeologists excavate and study artifacts to understand past human cultures. They often work in the field, conducting digs, and in museums, curating exhibits.</li>
-                <li><strong>Museum Curator:</strong> Museum curators manage collections of artifacts and artworks, organizing exhibitions and educational programs. They work in museums, galleries, and cultural institutions.</li>
-                <li><strong>Archivist:</strong> Archivists are responsible for preserving historical documents and records, ensuring their availability for future generations. They work in libraries, government agencies, and private institutions.</li>
-                <li><strong>History Teacher/Professor:</strong> Educators in history teach students at various levels, from high school to university. They also conduct research and publish scholarly works.</li>
-                <li><strong>Heritage Manager:</strong> Heritage managers work to preserve historical sites and monuments, often collaborating with government bodies and NGOs to ensure the protection of cultural heritage.</li>
-                <li><strong>Historical Consultant:</strong> Historical consultants provide expertise to filmmakers, authors, and other creators, ensuring historical accuracy in media productions.</li>
+                <li>
+                    Historian
+                    <div class="tooltip">Historians research, analyze, and interpret historical data from various sources.</div>
+                </li>
+                <li>
+                    Archaeologist
+                    <div class="tooltip">Archaeologists excavate and study artifacts to understand past human cultures.</div>
+                </li>
+                <li>
+                    Museum Curator
+                    <div class="tooltip">Museum curators manage collections of artifacts and artworks, organizing exhibitions and educational programs.</div>
+                </li>
+                <li>
+                    Archivist
+                    <div class="tooltip">Archivists are responsible for preserving historical documents and records.</div>
+                </li>
+                <li>
+                    History Teacher/Professor
+                    <div class="tooltip">Educators in history teach students at various levels and conduct research.</div>
+                </li>
+                <li>
+                    Heritage Manager
+                    <div class="tooltip">Heritage managers work to preserve historical sites and monuments.</div>
+                </li>
+                <li>
+                    Historical Consultant
+                    <div class="tooltip">Historical consultants provide expertise to ensure historical accuracy in media productions.</div>
+                </li>
             </ul>
-            <p>
-                Each of these careers requires a strong foundation in historical knowledge, analytical skills, and often, advanced degrees. Whether you're passionate about teaching, preserving history, or conducting research, there are diverse opportunities available in this field.
-            </p>
         </div>
 
         <div class="sub-branch">

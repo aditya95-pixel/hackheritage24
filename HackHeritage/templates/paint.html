@@ -6,102 +6,173 @@
     <title>Career Path in Painting</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-                body {
-                    font-family: 'Poppins', sans-serif;
-                    background-color: rgb(237, 206, 165);
-                    color: white;
-                    margin: 0;
-                    padding: 0;
-                    line-height: 1.6;
-                    background-image: url('/static/img_8.jpg');
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: center;
-                }
-                header {
-                    background-color: transparent;
-                    color: white;
-                    padding: 10px 0;
-                    text-align: center;
-                    border-bottom-left-radius: 15px;
-                    border-bottom-right-radius: 15px;
-                }
-                .container {
-                    max-width: 1200px;
-                    margin: 20px auto;
-                    padding: 0 15px;
-                }
-                h1, h2 {
-                    color: white;
-                }
-                h2 {
-                    text-align: center;
-                }
-                p {
-                    margin: 15px 0;
-                }
-                .sub-branch {
-                    background-color: transparent;
-                    border: solid white;
-                    backdrop-filter: blur(25px);
-                    padding: 10px;
-                    color: white;
-                    border-radius: 10px;
-                    margin-bottom: 20px;
-                    position: relative;
-                }
-                .sub-branch h3 {
-                    color: white;
-                    text-align: center;
-                }
-                .engg {
-                    color: white;
-                }
-                .engg:hover {
-                    color: red;
-                }
-                @media (max-width: 768px) {
-                    .container {
-                        padding: 0 10px;
-                    }
-                    .sub-branch ul {
-                        padding-left: 0;
-                    }
-                    .sub-branch ul li {
-                        margin-bottom: 10px;
-                    }
-                }
-                @media (max-width: 576px) {
-                    .container {
-                        padding: 0 5px;
-                    }
-                    h2 {
-                        font-size: 1.25rem;
-                    }
-                    .sub-branch {
-                        padding: 5px;
-                    }
-                    .sub-branch ul li {
-                        font-size: 0.875rem;
-                    }
-                }
-            </style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkP5f23j_3SqoG01NlYbtxEvHENvrCru6RbEYfEab-mcygIdNvIq55kClWEFh75rd9m9Q&usqp=CAU');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.69);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0px 0px 15px 1px black;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.223);
+            border-radius: 8px;
+            backdrop-filter: blur(2px);
+            box-shadow: 0px 0px 15px 1px black;
+        }
+        h1{
+            color: white;
+        }
+        h2 {
+            text-align: center;
+            color: black;
+        }
+        p {
+            margin: 15px 0;
+            color: rgb(0, 5, 100);
+        }
+        .sub-branch {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: solid 1px white;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .sub-branch h2 {
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            padding: 10px;
+            border-left: 4px solid #40bdf8;
+            margin-bottom: 10px;
+            cursor: pointer;
+            color: aquamarine;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        ul li:hover {
+            background-color: #40bdf8;
+            color: #000;
+        }
+        ul li::before {
+            content: '>';
+            color: #ff0505;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 20%;
+            top: -20px; /* Position above the list item */
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            ul li {
+                font-size: 0.875rem;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px; /* Adjusted for smaller screens */
+            }
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 10px;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+            .sub-branch {
+                padding: 10px;
+            }
+            ul li {
+                font-size: 0.75rem;
+            }
+            .tooltip {
+                width: 180px;
+                top: -50px; /* Adjusted for smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Painting Career Path</h1>
     </header>
     <div class="container">
-        <div class="sub-branch">
-            <h2>About Painting</h2>
+        <h2>About Painting</h2>
             <p>Painting is a visual art form where artists express their ideas and emotions through the use of color, texture, and form on a canvas or other surfaces. It is a highly creative field with a broad range of styles and techniques.</p>
+        <div class="sub-branch">
             <h2>Career Opportunities</h2>
             <ul>
-                <li>Fine Artist</li>
-                <li>Art Restorer</li>
-                <li>Art Instructor</li>
-                <li>Illustrator</li>
-                <li>Gallery Manager</li>
+                <li>
+                    Fine Artist
+                    <div class="tooltip">Creates original works of art, often displayed in galleries or exhibitions.</div>
+                </li>
+                <li>
+                    Art Restorer
+                    <div class="tooltip">Specializes in preserving and restoring artworks to their original condition.</div>
+                </li>
+                <li>
+                    Art Instructor
+                    <div class="tooltip">Teaches painting techniques and art theory to students of all levels.</div>
+                </li>
+                <li>
+                    Illustrator
+                    <div class="tooltip">Produces visual representations for books, magazines, and other media.</div>
+                </li>
+                <li>
+                    Gallery Manager
+                    <div class="tooltip">Oversees the operation and curation of art galleries and exhibitions.</div>
+                </li>
             </ul>
         </div>
     </div>

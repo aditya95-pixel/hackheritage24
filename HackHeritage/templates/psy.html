@@ -8,107 +8,144 @@
        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: rgb(0, 0, 0);
+            background-image: url('https://thumbs.dreamstime.com/b/psychology-concept-human-head-silhouette-psychotherapy-mental-disorder-treatment-psychology-concept-human-head-silhouette-314438656.jpg');
+            color: rgb(230, 230, 230);
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
-            background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
+            background-repeat: no-repeat;
             background-attachment: fixed;
         }
-        header {
-            background-color: rgba(0, 0, 0, 0.601);
-            color: white;
-            padding: 5px;
+        .header{
+            background-color:rgba(0, 0, 0, 0.469);
+        }
+        h2{
+            text-align: center ;
+            background-color:rgba(128, 128, 128, 0.503);
+        }
+        
+        h1{
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            margin-bottom:10px;
-            box-shadow: 0px 0px 15px 1px black;
+            color: #ffffff;
         }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            box-shadow: 0px 0px 15px 1px black;
-            border-radius: 10px;
-            position: center;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
-        h2 {
-            color: black;
-        }
-        h2 {
-            text-align: center;
-        }
-        p {
-            margin: 15px 0;
-        }
-        .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            backdrop-filter: blur(0px);
-            padding: 10px;
-            color: black;
-            border-radius: 10px;
-            margin-bottom: 20px;
+
+        li {
+            background-color: #f5d2a1;
+            margin: 10px;
+            padding: 15px;
+            font-size: 18px;
+            color: #333;
+            border-radius: 8px;
             position: relative;
+            transition: background-color 0.3s ease;
         }
-        .sub-branch h3 {
-            color: black;
-            text-align: center;
+
+        li:hover {
+            background-color: #d9a679;
+            cursor: pointer;
         }
-        .engg {
-            color: black;
+
+        .popup-box {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            text-align: left;
+            font-size: 14px;
         }
-        .engg:hover {
-            color: red;
+
+        li:hover .popup-box {
+            display: block;
         }
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 10px;
-            }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
-            }
+        
+        /* Backdrop effect for the popup */
+        .popup-box::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
         }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
-            }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Psychology Career Path</h1>
-    </header>
-    <div class="container">
-        <div class="sub-branch">
-            <h2>About Psychology</h2>
-            <p>Psychology is the scientific study of the mind and behavior. It explores how people think, feel, and behave, and applies this understanding to various fields such as mental health, education, business, and sports.</p>
-            <h2>Career Opportunities</h2>
+    <div>
+        <div class="header">
+            <h1>Career Path in Psychology</h1>
+        </div>
+        <div class="container">
+            
+            <h2>Explore Various Fields in Psychology</h2>
             <ul>
-                <li>Clinical Psychologist</li>
-                <li>Counseling Psychologist</li>
-                <li>School Psychologist</li>
-                <li>Industrial-Organizational Psychologist</li>
-                <li>Forensic Psychologist</li>
+                <li>
+                    Clinical Psychology
+                    <div class="popup-box">
+                        Clinical psychologists diagnose and treat mental, emotional, and behavioral disorders. They use psychological techniques to help patients manage conditions like anxiety, depression, and more.
+                    </div>
+                </li>
+                <li>
+                    Cognitive Psychology
+                    <div class="popup-box">
+                        Cognitive psychologists study how people understand, think, and remember information. They focus on mental processes such as perception, memory, reasoning, and problem-solving.
+                    </div>
+                </li>
+                <li>
+                    Developmental Psychology
+                    <div class="popup-box">
+                        Developmental psychologists study the psychological development of individuals throughout their lives. This can include children, adolescents, adults, and the elderly.
+                    </div>
+                </li>
+                <li>
+                    Forensic Psychology
+                    <div class="popup-box">
+                        Forensic psychologists apply psychological principles to legal matters, often working in criminal justice or law enforcement settings.
+                    </div>
+                </li>
+                <li>
+                    Health Psychology
+                    <div class="popup-box">
+                        Health psychologists study the psychological and behavioral processes in health, illness, and healthcare. They work to promote healthy living and improve patient outcomes.
+                    </div>
+                </li>
+                <li>
+                    Industrial-Organizational Psychology
+                    <div class="popup-box">
+                        Industrial-organizational psychologists apply psychological principles to workplace environments, focusing on improving productivity, employee well-being, and organizational success.
+                    </div>
+                </li>
+                <li>
+                    Neuropsychology
+                    <div class="popup-box">
+                        Neuropsychologists study the relationship between the brain and behavior, often working with patients who have experienced brain injuries or neurological disorders.
+                    </div>
+                </li>
             </ul>
         </div>
-    </div>
+
+
+
 </body>
 </html>

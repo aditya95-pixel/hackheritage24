@@ -8,75 +8,113 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: azure;
+            color: white;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('/static/img_6.jpg');
+            background-image: url('https://www.thebusinessconcept.com/wp-content/uploads/2024/02/Internal-Auditing.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         header {
-            background-color: transparent;
-            color: black;
+            background-color: rgba(0, 64, 85, 0.714);
+            color: white;
             padding: 10px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 0 8px 1px white;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 8px 1px white;
         }
-        h1, h2 {
-            color: black;
-        }
-        h2 {
-            text-align: center;
+        h2, h3 {
+            color: white;
         }
         p {
-            margin: 15px 0;
+            margin: 10px 0;
+            line-height: 1.6;
         }
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: black;
+            background-color: rgba(0, 26, 255, 0.265);
+            box-shadow: 0 0 8px 1px white;
+            padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
+            backdrop-filter: blur(2px);
             position: relative;
         }
         .sub-branch h3 {
-            color: black;
-            text-align: center;
+            color: white;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sub-branch ul li {
+            position: relative;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .sub-branch ul li:hover {
+            color: rgb(255, 102, 0);
+            background-color: rgba(255, 255, 255, 0.501);
+        }
+        .popup-box {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: -200px; /* Adjusted to position popup box above the list item */
+            transform: translateX(-50%);
+            background-color: rgb(13, 0, 111);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: left;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+        .sub-branch ul li:hover .popup-box {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-10px); /* Smooth transition for the popup */
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 15px;
             }
-            .sub-branch ul {
-                padding-left: 0;
+            .sub-branch {
+                padding: 10px;
             }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+            .popup-box {
+                width: 300px;
+                top: -120px; /* Adjusted for smaller screens */
             }
         }
         @media (max-width: 576px) {
             .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
+                padding: 10px;
             }
             .sub-branch {
-                padding: 5px;
+                padding: 8px;
             }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+            .popup-box {
+                width: 300px;
+                top: -200px; /* Adjusted for smaller screens */
             }
         }
     </style>
@@ -92,27 +130,72 @@
         <div class="sub-branch">
             <h3>Key Responsibilities</h3>
             <ul>
-                <li>Conducting audits</li>
-                <li>Reviewing financial statements</li>
-                <li>Identifying compliance issues</li>
+                <li>Conducting audits
+                    <div class="popup-box">
+                        <h4>Conducting Audits</h4>
+                        <p>Auditors assess financial statements and records to ensure accuracy and compliance with regulations. This process helps identify discrepancies and potential fraud.</p>
+                    </div>
+                </li>
+                <li>Reviewing financial statements
+                    <div class="popup-box">
+                        <h4>Reviewing Financial Statements</h4>
+                        <p>Review involves analyzing financial reports for accuracy, completeness, and compliance with accounting standards. This ensures reliable financial reporting.</p>
+                    </div>
+                </li>
+                <li>Identifying compliance issues
+                    <div class="popup-box">
+                        <h4>Identifying Compliance Issues</h4>
+                        <p>Auditors examine processes to ensure adherence to legal and regulatory requirements. Identifying issues helps organizations rectify non-compliance and avoid legal consequences.</p>
+                    </div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Career Opportunities</h3>
             <ul>
-                <li>Auditor</li>
-                <li>Internal Auditor</li>
-                <li>Compliance Officer</li>
+                <li>Auditor
+                    <div class="popup-box">
+                        <h4>Auditor</h4>
+                        <p>Auditors perform detailed examinations of financial records to ensure accuracy and compliance. They play a key role in financial transparency and risk management.</p>
+                    </div>
+                </li>
+                <li>Internal Auditor
+                    <div class="popup-box">
+                        <h4>Internal Auditor</h4>
+                        <p>Internal auditors evaluate and improve internal controls, processes, and risk management. They help organizations operate more efficiently and effectively.</p>
+                    </div>
+                </li>
+                <li>Compliance Officer
+                    <div class="popup-box">
+                        <h4>Compliance Officer</h4>
+                        <p>Compliance officers ensure that organizations adhere to laws, regulations, and internal policies. They help prevent violations and promote ethical conduct.</p>
+                    </div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Skills Required</h3>
             <ul>
-                <li>Attention to detail</li>
-                <li>Analytical skills</li>
-                <li>Knowledge of auditing standards</li>
+                <li>Attention to detail
+                    <div class="popup-box">
+                        <h4>Attention to Detail</h4>
+                        <p>Attention to detail is crucial for auditors to identify discrepancies, errors, and irregularities in financial records. Precision ensures accurate reporting and compliance.</p>
+                    </div>
+                </li>
+                <li>Analytical skills
+                    <div class="popup-box">
+                        <h4>Analytical Skills</h4>
+                        <p>Analytical skills are essential for interpreting financial data, identifying trends, and making informed decisions. Auditors use these skills to assess financial health and risk.</p>
+                    </div>
+                </li>
+                <li>Knowledge of auditing standards
+                    <div class="popup-box">
+                        <h4>Knowledge of Auditing Standards</h4>
+                        <p>Understanding auditing standards is critical for ensuring that audits are conducted in accordance with regulatory requirements and best practices.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

@@ -8,12 +8,12 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
+            background-color: rgb(0, 0, 0);
             color: black;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
+            background-image: url('https://www.grace.edu/wp-content/uploads/2018/02/History-Political-Science-scaled-e1629830887842.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -22,12 +22,11 @@
         header {
             background-color: rgba(0, 0, 0, 0.601);
             color: white;
-            padding: 5px;
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-bottom:10px;
-            box-shadow: 0px 0px 15px 1px black;
+            box-shadow: 0 0 8px 1px black;
         }
         .container {
             max-width: 1200px;
@@ -35,45 +34,79 @@
             padding: 20px;
             box-shadow: 0px 0px 15px 1px black;
             border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.318);
+            backdrop-filter: blur(2px);
             position: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         h2 {
             color: black;
-        }
-        h2 {
             text-align: center;
         }
         p {
             margin: 15px 0;
         }
-        .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            backdrop-filter: blur(0px);
-            padding: 10px;
-            color: black;
-            border-radius: 10px;
-            margin-bottom: 20px;
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
             position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #FF5733;
         }
-        .sub-branch h3 {
-            color: black;
+        ul li:hover {
+            background-color: #FF5733;
+            color: white;
+        }
+        ul li::before {
+            content: '>';
+            color: #33ff41;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 40%;
+            top: -60px;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
             text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
-        .engg {
-            color: black;
-        }
-        .engg:hover {
-            color: red;
+        ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
                 padding: 0 10px;
             }
-            .sub-branch ul {
+            ul {
                 padding-left: 0;
             }
-            .sub-branch ul li {
+            ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -83,11 +116,12 @@
             h2 {
                 font-size: 1.25rem;
             }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
+            ul li {
                 font-size: 0.875rem;
+            }
+            .tooltip {
+                width: 300px;
+                top: -70px;
             }
         }
     </style>
@@ -102,14 +136,28 @@
             <p>Political Science is the study of government systems, political activity, and political behavior. It examines the theory and practice of politics, the analysis of political systems, and the behavior of political entities.</p>
             <h2>Career Opportunities</h2>
             <ul>
-                <li>Political Analyst</li>
-                <li>Policy Advisor</li>
-                <li>Legislative Assistant</li>
-                <li>Public Relations Specialist</li>
-                <li>Campaign Manager</li>
+                <li>
+                    Political Analyst
+                    <div class="tooltip">Analyzing political systems and trends.</div>
+                </li>
+                <li>
+                    Policy Advisor
+                    <div class="tooltip">Advising governments on policy formulation.</div>
+                </li>
+                <li>
+                    Legislative Assistant
+                    <div class="tooltip">Assisting lawmakers in drafting and evaluating legislation.</div>
+                </li>
+                <li>
+                    Public Relations Specialist
+                    <div class="tooltip">Managing public communications for political entities.</div>
+                </li>
+                <li>
+                    Campaign Manager
+                    <div class="tooltip">Leading political campaigns for elections.</div>
+                </li>
             </ul>
         </div>
     </div>
 </body>
 </html>
-
