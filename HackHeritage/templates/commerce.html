@@ -8,62 +8,81 @@
        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: rgb(255, 255, 255);
+            background-color: #000000;
+            color: #ffffff;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://static.javatpoint.com/commerce/images/what-is-commerce4.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(240, 248, 255, 0.51);
+            background-color: #ff9900;
             color: black;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            backdrop-filter: blur(3px);
             box-shadow: 0px 0px 15px 1px black;
-
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 15px;
         }
-        h1, h2 {
-            color: black;
-        }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
+            color: #e6e6e6;
             margin: 15px 0;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.452);
-            /* border: solid black; */
-            backdrop-filter: blur(3px);
-            padding: 10px;
-            color: black;
+            background-color: #1a1a1a;
+            padding: 20px;
+            color: #ffffff;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
-            box-shadow: 0px 0px 15px 1px black;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #ff9900;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: black;
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 10px;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style-type: none;
+            padding-left: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            background-color: #333333;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #ff9900;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 0 15px 1px rgba(255, 153, 0, 0.6);
+            font-weight: bold;
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000000;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
         }
         @media (max-width: 768px) {
             .container {
@@ -98,53 +117,53 @@
     </header>
     <div class="container">
         <h2>Overview</h2>
-        <p>The Commerce stream is a popular choice for students interested in the business, trade, finance, and economy. It opens up numerous career opportunities in various fields such as accounting, business management, economics, and finance.</p>
+        <p>The Commerce stream is a popular choice for students interested in business, trade, finance, and the economy. It opens up numerous career opportunities in accounting, business management, and economics.</p>
         
         <div class="sub-branch">
             <h3>Accounting</h3>
-            <p>Accounting involves recording, classifying, and summarizing financial transactions to provide information that is useful in making business decisions. Major areas include:</p>
+            <p>Accounting involves recording, classifying, and summarizing financial transactions to provide useful business decision information. Major areas include:</p>
             <ul>
-                <li><a href="/fin_acc" class="engg">Financial Accounting</a></li>
-                <li><a href="/cost_acc" class="engg">Cost Accounting</a></li>
-                <li><a href="/manage_acc" class="engg">Management Accounting</a></li>
-                <li><a href="/audit" class="engg">Auditing</a></li>
-                <li><a href="/tax" class="engg">Taxation</a></li>
+                <li><a href="/fin_acc">Financial Accounting</a></li>
+                <li><a href="/cost_acc">Cost Accounting</a></li>
+                <li><a href="/manage_acc">Management Accounting</a></li>
+                <li><a href="/audit">Auditing</a></li>
+                <li><a href="/tax">Taxation</a></li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Business Management</h3>
-            <p>Business Management involves planning, organizing, directing, and controlling the operations of a business to achieve organizational goals. Key areas include:</p>
+            <p>Business management involves planning, organizing, and controlling the operations of a business to achieve goals. Key areas include:</p>
             <ul>
-                <li><a href="/hr" class="engg">Human Resource Management</a></li>
-                <li><a href="/operations_manage" class="engg">Operations Management</a></li>
-                <li><a href="/market_manage" class="engg">Marketing Management</a></li>
-                <li><a href="/fin_manage" class="engg">Financial Management</a></li>
-                <li><a href="/strat_manage" class="engg">Strategic Management</a></li>
+                <li><a href="/hr">Human Resource Management</a></li>
+                <li><a href="/operations_manage">Operations Management</a></li>
+                <li><a href="/market_manage">Marketing Management</a></li>
+                <li><a href="/fin_manage">Financial Management</a></li>
+                <li><a href="/strat_manage">Strategic Management</a></li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Economics</h3>
-            <p>Economics is the study of how individuals, businesses, governments, and societies make choices about allocating resources. It includes areas such as:</p>
+            <p>Economics is the study of how individuals and businesses make choices about resources. It includes:</p>
             <ul>
-                <li><a href="/microeco" class="engg">Microeconomics</a></li>
-                <li><a href="/macroeco" class="engg">Macroeconomics</a></li>
-                <li><a href="/deveco" class="engg">Development Economics</a></li>
-                <li><a href="/inteco" class="engg">International Economics</a></li>
-                <li><a href="/behaveeco" class="engg">Behavioral Economics</a></li>
+                <li><a href="/microeco">Microeconomics</a></li>
+                <li><a href="/macroeco">Macroeconomics</a></li>
+                <li><a href="/deveco">Development Economics</a></li>
+                <li><a href="/inteco">International Economics</a></li>
+                <li><a href="/behaveeco">Behavioral Economics</a></li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Finance</h3>
-            <p>Finance is concerned with the management of money, investments, and other financial instruments. Major areas include:</p>
+            <p>Finance focuses on the management of money and investments. Major areas include:</p>
             <ul>
-                <li><a href="/corporate_fin" class="engg">Corporate Finance</a></li>
-                <li><a href="/invest_bank" class="engg">Investment Banking</a></li>
-                <li><a href="/per_fin" class="engg">Personal Finance</a></li>
-                <li><a href="/fin_plan" class="engg">Financial Planning</a></li>
-                <li><a href="/risk_manage" class="engg">Risk Management</a></li>
+                <li><a href="/corporate_fin">Corporate Finance</a></li>
+                <li><a href="/invest_bank">Investment Banking</a></li>
+                <li><a href="/per_fin">Personal Finance</a></li>
+                <li><a href="/fin_plan">Financial Planning</a></li>
+                <li><a href="/risk_manage">Risk Management</a></li>
             </ul>
         </div>
     </div>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses for School Students</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #ff9900;
+            color: black;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0px 0px 15px 1px black;
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        h2 {
+            color: #ff9900;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #e6e6e6;
+            margin: 15px 0;
+        }
+        .course-section {
+            background-color: #1a1a1a;
+            padding: 20px;
+            color: #ffffff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #ff9900;
+        }
+        .course-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
+        }
+        .course-section h3 {
+            color: #ff9900;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .course-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .course-section ul li {
+            background-color: #333333;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #ff9900;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 0 15px 1px rgba(255, 153, 0, 0.6);
+            font-weight: bold;
+        }
+        .course-section ul li:hover {
+            background-color: #ff9900;
+            color: #000000;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            .course-section ul {
+                padding-left: 0;
+            }
+            .course-section ul li {
+                margin-bottom: 10px;
+            }
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 5px;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+            .course-section {
+                padding: 5px;
+            }
+            .course-section ul li {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Courses for School Students</h1>
+    </header>
+    <div class="container">
+        <h2>Available Courses</h2>
+        <p>Here are some useful online courses for school students to help them enhance their knowledge in different subjects.</p>
+        
+        <div class="course-section">
+            <h3>Science</h3>
+            <p>Explore a wide range of science courses tailored for school students:</p>
+            <ul>
+                <li><a href="https://www.khanacademy.org/science" target="_self">Khan Academy - Science</a></li>
+                <li><a href="https://www.coursera.org/browse/physical-science-and-engineering" target="_self">Coursera - Physical Science & Engineering</a></li>
+                <li><a href="https://www.edx.org/learn/science" target="_self">edX - Science Courses</a></li>
+                <!-- <li><a href="https://www.futurelearn.com/subjects/science-engineering-and-maths-courses/science" target="_self">FutureLearn - Science Courses</a></li> -->
+            </ul>
+        </div>
+
+        <div class="course-section">
+            <h3>Mathematics</h3>
+            <p>Find math courses designed to improve problem-solving skills and logical thinking:</p>
+            <ul>
+                <li><a href="https://www.khanacademy.org/math" target="_self">Khan Academy - Mathematics</a></li>
+                <li><a href="https://www.coursera.org/browse/data-science/probability-and-statistics" target="_self">Coursera - Mathematics</a></li>
+                <li><a href="https://www.edx.org/learn/math" target="_self">edX - Mathematics</a></li>
+                <!-- <li><a href="https://www.futurelearn.com/subjects/science-engineering-and-maths-courses/mathematics" target="_self">FutureLearn - Mathematics</a></li> -->
+            </ul>
+        </div>
+
+        <div class="course-section">
+            <h3>Languages</h3>
+            <p>Enhance your language skills with these comprehensive language courses:</p>
+            <ul>
+                <li><a href="https://www.duolingo.com/" target="_self">Duolingo - Language Learning</a></li>
+                <li><a href="https://www.khanacademy.org/humanities" target="_self">Khan Academy - Humanities & Language</a></li>
+                <li><a href="https://www.coursera.org/browse/language-learning" target="_self">Coursera - Language Learning</a></li>
+                <!-- <li><a href="https://www.futurelearn.com/subjects/languages-and-cultures-courses" target="_self">FutureLearn - Language & Culture</a></li> -->
+            </ul>
+        </div>
+
+        <div class="course-section">
+            <h3>Technology</h3>
+            <p>Stay updated with the latest in technology and computer science:</p>
+            <ul>
+                <li><a href="https://www.khanacademy.org/computing" target="_self">Khan Academy - Computing</a></li>
+                <li><a href="https://www.coursera.org/browse/computer-science" target="_self">Coursera - Computer Science</a></li>
+                <li><a href="https://www.edx.org/learn/computer-science" target="_self">edX - Computer Science</a></li>
+                <!-- <li><a href="https://www.futurelearn.com/subjects/it-and-computer-science-courses" target="_self">FutureLearn - IT & Computer Science</a></li> -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

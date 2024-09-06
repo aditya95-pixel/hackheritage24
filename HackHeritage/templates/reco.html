@@ -37,9 +37,6 @@
         .form-group {
             margin-bottom: 15px;
         }
-        /* recomendation{
-
-        } */
         label {
             display: block;
             margin-bottom: 5px;
@@ -66,7 +63,7 @@
         }
         .results h3 {
             text-align: center;
-            color:white
+            color:white;
         }
         .career-list {
             list-style: none;
@@ -74,7 +71,7 @@
         }
         .career-list li {
             background-color: rgb(18, 16, 16);
-            color: white;
+            color: #ff9900;
             padding: 10px;
             margin-bottom: 5px;
             border-radius: 4px;
@@ -116,22 +113,22 @@
         // Career recommendation based on selected interest
         switch(interest) {
             case 'science':
-                recommendations = ['Biologist', 'Chemist', 'Physicist', 'Environmental Scientist', 'Doctor'];
+                recommendations = ['Biologist', 'Chemist', 'Physicist', 'Environmental Scientist', 'Doctor', 'Microbiologist', 'Geneticist', 'Astronomer'];
                 break;
             case 'math':
-                recommendations = ['Mathematician', 'Statistician', 'Data Analyst', 'Economist', 'Engineer'];
+                recommendations = ['Mathematician', 'Statistician', 'Data Analyst', 'Economist', 'Engineer', 'Actuary', 'Operations Research Analyst', 'Cryptographer'];
                 break;
             case 'art':
-                recommendations = ['Graphic Designer', 'Animator', 'Fashion Designer', 'Architect', 'Art Director'];
+                recommendations = ['Graphic Designer', 'Animator', 'Fashion Designer', 'Architect', 'Art Director', 'Photographer', 'Interior Designer', 'Illustrator'];
                 break;
             case 'technology':
-                recommendations = ['Software Developer', 'Web Developer', 'Data Scientist', 'Cybersecurity Expert', 'AI Engineer'];
+                recommendations = ['Software Developer', 'Web Developer', 'Data Scientist', 'Cybersecurity Expert', 'AI Engineer', 'Network Administrator', 'Robotics Engineer', 'Cloud Architect'];
                 break;
             case 'literature':
-                recommendations = ['Journalist', 'Author', 'Editor', 'Content Writer', 'Librarian'];
+                recommendations = ['Journalist', 'Author', 'Editor', 'Content Writer', 'Librarian', 'Translator', 'Public Relations Specialist', 'Copywriter'];
                 break;
             case 'business':
-                recommendations = ['Entrepreneur', 'Marketing Manager', 'Financial Analyst', 'Human Resources Manager', 'Consultant'];
+                recommendations = ['Entrepreneur', 'Marketing Manager', 'Financial Analyst', 'Human Resources Manager', 'Consultant', 'Project Manager', 'Investment Banker', 'Sales Manager'];
                 break;
             default:
                 recommendations = ['Please select an interest to get recommendations.'];

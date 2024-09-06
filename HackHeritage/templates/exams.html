@@ -8,109 +8,81 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: black;
+            background-color: #000000;
+            color: #ffffff;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://jaro-website.s3.ap-south-1.amazonaws.com/2024/05/ENTRANCE_EXAMS_1_88a7b36a45.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(3, 3, 98, 0.337);
-            color: white;
+            background-color: #ff9900;
+            color: black;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
+            box-shadow: 0px 0px 15px 1px black;
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 5px 15px;
-            border-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            background-color: #b8cbf650;
-            backdrop-filter: blur(4px);
+            padding: 0 15px;
         }
         h2 {
-            color:black;
-        }
-        h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
+            color: #e6e6e6;
             margin: 15px 0;
-            text-align: center;
         }
         .sub-branch {
-            background-color: transparent;
-            box-shadow: 0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(10px);
-            padding: 10px;
-            color: black;
+            background-color: #1a1a1a;
+            padding: 20px;
+            color: #ffffff;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #ff9900;
         }
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: black;
-            text-shadow:5px 0px rgba(255, 255, 255, 0.441);
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 10px;
         }
         .sub-branch ul {
             list-style-type: none;
-            padding: 0;
-            margin: 0;
+            padding-left: 0;
         }
         .sub-branch ul li {
-            margin-bottom: 10px;
-            cursor: pointer;
-            position: relative;
+            background-color: #333333;
             padding: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #ff9900;
+            cursor: pointer;
             transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid #40bdf8;
+            box-shadow: 0 0 15px 1px rgba(255, 153, 0, 0.6);
+            font-weight: bold;
         }
         .sub-branch ul li:hover {
-            background-color: #40bdf8;
-            color: #000;
+            background-color: #ff9900;
+            color: #000000;
+            text-decoration: underline;
+            font-weight: bold;
         }
-        .sub-branch ul li::before {
-            content: '>';
-            color: #ff0505;
-            font-size: 1.4rem;
-            margin-right: 10px;
-        }
-        .tooltip {
-            display: none;
-            position: absolute;
-            left: 50%;
-            top: -80px;
-            transform: translateX(-50%);
-            background-color: #030563;
-            color: #ffffff;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            width: 250px;
-            text-align: center;
-            font-size: 0.875rem;
-            z-index: 100;
-            opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .sub-branch ul li:hover .tooltip {
-            display: block;
-            opacity: 1;
+        a {
+            color: inherit;
+            text-decoration: none;
         }
         @media (max-width: 768px) {
             .container {
@@ -121,10 +93,6 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
-            }
-            .tooltip {
-                width: 200px;
-                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -140,10 +108,6 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
-            .tooltip {
-                width: 300px;
-                top: -70px;
-            }
         }
     </style>
 </head>
@@ -158,54 +122,27 @@
         <div class="sub-branch">
             <h3>Science Stream</h3>
             <ul>
-                <li>
-                    JEE Main & Advanced
-                    <div class="tooltip">For admission to premier engineering institutes like IITs and NITs.</div>
-                </li>
-                <li>
-                    NEET
-                    <div class="tooltip">For admission to medical courses like MBBS and BDS.</div>
-                </li>
-                <li>
-                    IISER Aptitude Test
-                    <div class="tooltip">For admission to the Indian Institutes of Science Education and Research (IISERs).</div>
-                </li>
+                <li><a href="https://jeemain.nta.ac.in/">JEE Main & Advanced</a></li>
+                <li><a href="https://neet.nta.nic.in/">NEET</a></li>
+                <li><a href="https://iiseradmission.in/examination/iat.html">IISER Aptitude Test</a></li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Commerce Stream</h3>
             <ul>
-                <li>
-                    CA Foundation
-                    <div class="tooltip">Chartered Accountancy entry-level exam in India.</div>
-                </li>
-                <li>
-                    CS Executive Entrance Test (CSEET)
-                    <div class="tooltip">For those aspiring to become Company Secretaries.</div>
-                </li>
-                <li>
-                    CMA Foundation
-                    <div class="tooltip">For entry into Cost Management Accountancy.</div>
-                </li>
+                <li><a href="https://www.icai.org/">CA Foundation</a></li>
+                <li><a href="https://www.icsi.edu/students/cseet/">CS Executive Entrance Test (CSEET)</a></li>
+                <li><a href="https://icmai.in/studentswebsite/Admission.php">CMA Foundation</a></li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Arts Stream</h3>
             <ul>
-                <li>
-                    NID Entrance Exam
-                    <div class="tooltip">For admission to National Institute of Design programs.</div>
-                </li>
-                <li>
-                    NIFT Entrance Exam
-                    <div class="tooltip">For admission to National Institute of Fashion Technology programs.</div>
-                </li>
-                <li>
-                    CLAT
-                    <div class="tooltip">For admission to undergraduate law courses in NLUs.</div>
-                </li>
+                <li><a href="https://admissions.nid.edu/NIDA2025/Default.aspx">NID Entrance Exam</a></li>
+                <li><a href="https://exams.nta.ac.in/NIFT/">NIFT Entrance Exam</a></li>
+                <li><a href="https://consortiumofnlus.ac.in/">CLAT</a></li>
             </ul>
         </div>
     </div>

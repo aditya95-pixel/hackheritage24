@@ -8,89 +8,80 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: #000000;
+            color: #ffffff;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://img.freepik.com/free-photo/background-technical-drawing_1360-59.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(98, 3, 3, 0.337);
-            color: white;
+            background-color: #ff9900;
+            color: black;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
+            box-shadow: 0px 0px 15px 1px black;
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 5px 15px;
-            border-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            background-color: #b8cbf650;
-        }
-        h1, h2 {
-            color: rgb(255, 255, 255);
+            padding: 0 15px;
         }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
+            color: #e6e6e6;
             margin: 15px 0;
         }
         .sub-branch {
-            background-color: transparent;
-            box-shadow: 0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: white;
+            background-color: #1a1a1a;
+            padding: 20px;
+            color: #ffffff;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #ff9900;
         }
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: rgb(107, 21, 0);
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 10px;
         }
         .sub-branch ul {
             list-style-type: none;
-            padding: 0;
-            margin: 0;
+            padding-left: 0;
         }
         .sub-branch ul li {
+            background-color: #333333;
+            padding: 10px;
             margin-bottom: 10px;
+            border-left: 4px solid #ff9900;
             cursor: pointer;
             position: relative;
-            padding: 10px;
             transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid #f84040;
+            box-shadow: 0 0 15px 1px rgba(255, 153, 0, 0.6);
         }
         .sub-branch ul li:hover {
-            background-color: #f84040;
-            color: #000;
-        }
-        .sub-branch ul li::before {
-            content: '>';
-            color: #0505ff;
-            font-size: 1.4rem;
-            margin-right: 10px;
+            background-color: #ff9900;
+            color: #000000;
         }
         .tooltip {
             display: none;
             position: absolute;
-            left: 40%;
+            left: 50%;
             top: -60px;
             transform: translateX(-50%);
             background-color: #630303;
