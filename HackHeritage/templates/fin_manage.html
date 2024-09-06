@@ -8,54 +8,52 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://media.geeksforgeeks.org/wp-content/uploads/20230615110137/Finance-Landing-page-copy.webp');
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(3, 3, 98, 0.337);
-            color: white;
+            background-color: #333;
+            color: orange;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            backdrop-filter: blur(8px);
+            box-shadow: 0 0 8px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 5px 15px;
             border-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            background-color: #b8cbf650;
-            backdrop-filter: blur(4px);
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
         }
         h1 {
-            color: rgb(0, 21, 107);
+            color: orange;
         }
         h2 {
-            color:rgb(9, 50, 89);
+            color: orange;
+            background-color: #333;
             text-align: center;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
         }
         p {
             margin: 15px 0;
-            color: black;
             font-weight: bold;
+            color: #b3b3b3;
         }
         .sub-branch {
-            background-color: transparent;
-            box-shadow: 0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(25px);
+            background-color: #333;
+            box-shadow: 0 0 8px 1px #000;
             padding: 10px;
-            color: black;
+            color: orange;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
@@ -63,10 +61,10 @@
         }
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px black;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: rgb(0, 21, 107);
+            color: orange;
             text-align: center;
         }
         .sub-branch ul {
@@ -80,18 +78,18 @@
             position: relative;
             padding: 10px;
             transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid #00ffd9;
+            border-left: 4px solid #ff9900;
             font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
         }
         .sub-branch ul li:hover {
-            background-color: #00ffd9;
-            color: rgb(5, 59, 109);
-            font-weight: bold;
-            text-decoration: underline;
+            background-color: #ff9900;
+            color: #000;
         }
         .sub-branch ul li::before {
             content: '>';
-            color: #ff0505;
+            color: #ff9900;
             font-size: 1.4rem;
             margin-right: 10px;
         }
@@ -99,11 +97,10 @@
             display: none;
             position: absolute;
             left: 70%;
-            top: -60px; /* Position above the list item */
+            top: -60px; 
             transform: translateX(-50%);
-            background-color: #00ffd9;
+            background-color: #ff9900;
             color: black;
-            font-weight: bold;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -130,7 +127,7 @@
             }
             .tooltip {
                 width: 200px;
-                top: -50px; /* Adjusted for smaller screens */
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -148,7 +145,7 @@
             }
             .tooltip {
                 width: 300px;
-                top: -70px; /* Adjusted for smaller screens */
+                top: -70px;
             }
         }
     </style>
@@ -159,80 +156,80 @@
     </header>
     <div class="container">
         <h2>Career Opportunities in Financial Management</h2>
-        <p>Financial Management is a broad field offering career opportunities in both private and public sectors. Below are some key areas of financial management and the associated career options:</p>
+        <p>A career in financial management involves overseeing financial operations, managing assets, and ensuring fiscal stability. Professionals in this field play key roles in investment management, risk assessment, and financial reporting. Here are some key areas and related career opportunities:</p>
         
         <div class="sub-branch">
             <h3>Corporate Finance</h3>
-            <p>Corporate Finance deals with managing a company’s financial operations, including capital raising, budgeting, and financial planning. Careers in this area include roles in investment banking, financial management, and consulting firms.</p>
+            <p>Careers in corporate finance focus on managing the financial actions of a company, including capital structure, budgeting, and investment strategies.</p>
             <ul>
                 <li>
-                    Financial Manager
-                    <div class="tooltip">Responsible for managing an organization’s financial health and operations.</div>
+                    Financial Analyst
+                    <div class="tooltip">Evaluating financial data to provide investment and budgeting advice for business decisions.</div>
                 </li>
                 <li>
-                    Corporate Finance Analyst
-                    <div class="tooltip">Analyzing corporate financials to guide investment and budgeting decisions.</div>
+                    Chief Financial Officer (CFO)
+                    <div class="tooltip">Overseeing a company's overall financial activities and strategies to ensure financial stability.</div>
                 </li>
                 <li>
-                    Financial Planner
-                    <div class="tooltip">Helping organizations design financial strategies for long-term growth.</div>
+                    Treasurer
+                    <div class="tooltip">Managing a company's finances, investments, and capital markets to optimize liquidity and profitability.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Investment Management</h3>
-            <p>Investment Management focuses on managing assets and securities for both individuals and institutions. This field offers opportunities in mutual funds, hedge funds, pension funds, and asset management firms.</p>
+            <p>Careers in investment management involve managing and growing assets through strategic investments in stocks, bonds, and other financial instruments.</p>
             <ul>
                 <li>
                     Portfolio Manager
-                    <div class="tooltip">Managing investment portfolios to maximize returns for clients or firms.</div>
+                    <div class="tooltip">Overseeing investment portfolios and making decisions to achieve client financial goals.</div>
                 </li>
                 <li>
-                    Investment Analyst
-                    <div class="tooltip">Conducting research and analysis to support investment decisions.</div>
+                    Investment Banker
+                    <div class="tooltip">Advising companies on mergers, acquisitions, and capital-raising strategies.</div>
                 </li>
                 <li>
-                    Wealth Manager
-                    <div class="tooltip">Helping clients build long-term wealth through effective investment strategies.</div>
+                    Financial Planner
+                    <div class="tooltip">Helping individuals and organizations create plans to manage their financial goals.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Risk Management</h3>
-            <p>Risk Management involves identifying and mitigating financial risks that a business might face. Professionals in this area work in insurance companies, consultancy firms, and banks.</p>
+            <p>Careers in risk management focus on identifying, analyzing, and mitigating risks that may impact an organization’s financial health.</p>
             <ul>
                 <li>
-                    Risk Analyst
-                    <div class="tooltip">Evaluating potential risks to a company’s financial position and operations.</div>
+                    Risk Manager
+                    <div class="tooltip">Identifying potential risks to a company’s financial stability and implementing mitigation strategies.</div>
                 </li>
                 <li>
-                    Credit Risk Manager
-                    <div class="tooltip">Assessing the risk of lending money and advising on credit policies.</div>
+                    Compliance Officer
+                    <div class="tooltip">Ensuring that a company adheres to legal standards and regulatory requirements in its financial practices.</div>
                 </li>
                 <li>
-                    Insurance Analyst
-                    <div class="tooltip">Analyzing risks and advising on insurance products to mitigate them.</div>
+                    Insurance Underwriter
+                    <div class="tooltip">Evaluating risks and determining the terms and conditions of insurance policies.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Financial Consulting</h3>
-            <p>Financial Consulting offers services to companies and individuals in financial planning, restructuring, and mergers and acquisitions. This field provides opportunities in consulting firms, private equity, and venture capital.</p>
+            <h3>Accounting and Auditing</h3>
+            <p>Careers in accounting and auditing focus on managing financial records, ensuring accuracy, and providing transparency for stakeholders.</p>
             <ul>
                 <li>
-                    Financial Consultant
-                    <div class="tooltip">Advising clients on financial strategies, investment, and tax planning.</div>
+                    Certified Public Accountant (CPA)
+                    <div class="tooltip">Providing financial services including auditing, tax preparation, and consulting for businesses and individuals.</div>
                 </li>
                 <li>
-                    Mergers & Acquisitions Specialist
-                    <div class="tooltip">Providing expertise in corporate mergers, acquisitions, and restructuring.</div>
+                    Auditor
+                    <div class="tooltip">Examining financial records to ensure compliance with laws and regulations and detecting any discrepancies.</div>
                 </li>
                 <li>
-                    Private Equity Analyst
-                    <div class="tooltip">Assessing and managing private investments in high-growth companies.</div>
+                    Controller
+                    <div class="tooltip">Managing all accounting operations, including the production of financial reports and ensuring compliance.</div>
                 </li>
             </ul>
         </div>

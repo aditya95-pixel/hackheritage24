@@ -15,6 +15,15 @@
             padding: 0;
             box-sizing: border-box;
         }
+        p {
+            background-color: #ffffff83;
+            border-radius: 10px 50px 10px 50px;
+            padding: 5px;
+            margin: 10px;
+        }
+        h2 {
+            background: linear-gradient(45deg,black,gray);
+        }
 
         /* Body and Background */
         body, html {
@@ -23,19 +32,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #d38d0a);
+            
             background-size: cover;
-            animation: gradientBG 15s ease infinite;
             overflow: hidden;
             position: relative;
             background-image: url('/static/img_2.png');
-        }
-
-        /* Gradient Background Animation */
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            background-attachment: fixed;
         }
 
         /* Floating Particles */
@@ -51,60 +53,14 @@
 
         .particles i {
             position: absolute;
-            border-radius: 3px;
+            border-radius: 50% 10% 50% 10%/10% 50% 10% 50%;
             display: block;
             width: 20px;
             height: 20px;
-            background: rgba(255, 255, 255, 0.444);
+            background: rgba(255, 255, 255, 0.863);
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.482);
             animation: float 20s linear infinite;
             bottom: -150px;
-        }
-
-        .particles i:nth-child(1) {
-            left: 10%;
-            animation-duration: 10s;
-            animation-delay: 0s;
-            width: 10px;
-            height: 10px;
-        }
-
-        .particles i:nth-child(2) {
-            left: 20%;
-            animation-duration: 18s;
-            animation-delay: 2s;
-            width: 15px;
-            height: 15px;
-        }
-
-        .particles i:nth-child(3) {
-            left: 25%;
-            animation-duration: 12s;
-            animation-delay: 4s;
-        }
-
-        .particles i:nth-child(4) {
-            left: 40%;
-            animation-duration: 20s;
-            animation-delay: 0s;
-            width: 25px;
-            height: 25px;
-        }
-
-        .particles i:nth-child(5) {
-            left: 70%;
-            animation-duration: 17s;
-            animation-delay: 3s;
-            width: 12px;
-            height: 12px;
-        }
-
-        .particles i:nth-child(6) {
-            left: 80%;
-            animation-duration: 22s;
-            animation-delay: 5s;
-            width: 40px;
-            height: 40px;
         }
 
         @keyframes float {
@@ -121,38 +77,30 @@
         /* Container */
         .container {
             background: rgba(255, 255, 255, 0.1);
-            padding: 50px 40px;
-            margin: 40px;
+            padding: 30px 20px;
+            margin: 30px;
+            max-width: 1000px;
             border-radius: 12px;
             box-shadow: 0px 5px 25px black;
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(2px);
             text-align: center;
+            font-weight: bold;
             color: black;
-            font-size: 1.5rem;
+            font-size: 1rem;
             position: relative;
             overflow: hidden;
-            animation: fadeInUp 1s ease forwards;
-            transform: translateY(50px);
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .container:hover {
-            box-shadow: 0px 20px 35px black;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            overflow-y: auto; /* Enable vertical scroll */
+            max-height: 90vh; /* Constrain the height to 90% of the viewport */
         }
 
         .container h2 {
             margin-bottom: 40px;
-            font-size: 2rem;
+            font-size: 1.5rem;
             letter-spacing: 1.5px;
-            color:black;
+            color: rgb(255, 255, 255);
+            border-radius: 20px 10px 20px 10px;
+            border-bottom: solid 4px white;
+            border-right: solid 4px white;
         }
 
         /* Button Styles */
@@ -165,16 +113,22 @@
         }
 
         .btn {
-            width: 250px;
-            padding: 15px 0;
+            width: 400px;
+            min-height: 50px;
+            padding-top: 15px;
+            margin-left: 25px;
+            margin-right: 25px;
+            display: grid;
             border: none;
-            border-radius: 25px;
-            background: linear-gradient(45deg, #1a2a6c, #b21f1f, #ef7f00);
+            border-radius: 20px 10px 20px 10px;
+            background: linear-gradient(45deg,black,white);
             background-size: 200% 200%;
             color: #ffffff;
-            font-size: 1rem;
+            font-size: 0.8rem;
             cursor: pointer;
             text-transform: uppercase;
+            text-align: center;
+            font-weight: bold;
             letter-spacing: 1px;
             transition: all 0.7s ease;
             box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
@@ -233,24 +187,13 @@
         <p>This recommendation system aims to assist university students in selecting the most suitable studies and courses based on their academic performance, interests, and career aspirations.</p>
         <p>Click the button below to get recommendations:</p>
         <div class="btn-container">
-            <a href="/recommend" class="btn">Get Recommendations</a>
+            <a href="/recommend" class="btn">Get Recommendations based on class 10 marks</a>
+            <a href="/reco" class="btn">Get Recommendations based on your interests</a>
             <a href="/career_graph" class="btn">Career Path</a>
             <a href="/high" class="btn">High paying Jobs</a>
+            <a href="/exams" class="btn">Important Entrance Exams</a>
             <a href="http://localhost:8501" class="btn">Chatbot for Counselling</a>
         </div>
     </div>
-
-    <script>
-        const images = ["static/img.png", "static/img_1.png", "static/img_2.png"];
-        let currentIndex = 0;
-
-        function changeBackground() {
-            document.body.style.backgroundImage = url('${images[currentIndex]}');
-            currentIndex = (currentIndex + 1) % images.length;
-            setTimeout(changeBackground, 4000);
-        }
-
-        changeBackground();
-    </script>
 </body>
 </html>

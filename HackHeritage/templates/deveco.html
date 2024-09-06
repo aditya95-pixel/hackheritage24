@@ -3,106 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Path in Development Economics</title>
+    <title>Development Economics Career Path Guidance</title>
     <style>
-        /* Your provided CSS template here */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('/static/img_6.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
         }
         header {
-            background-color: transparent;
-            color: black;
-            padding: 10px 0;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-        }
-        h1, h2 {
-            color: black;
+            padding: 20px;
         }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: black;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: black;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+        .sub-branch p {
+            color: #e6e6e6;
+        }
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sub-branch ul li {
+            background-color: #333333;
+            padding: 10px;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000000;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: #ff9900;
+            color: #000000;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
             text-align: center;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .engg {
-            color: black;
-        }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 10px;
             }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+            .tooltip {
+                width: 150px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Development Economics Career Path</h1>
+        <h1>Development Economics Career Path Guidance</h1>
     </header>
     <div class="container">
+        <h2>Career Opportunities in Development Economics</h2>
+        <p>Explore the areas of Development Economics and the career opportunities they offer:</p>
+        
         <div class="sub-branch">
-            <h2>About Development Economics</h2>
-            <p>Development Economics focuses on improving fiscal, economic, and social conditions in developing countries. It involves studying poverty, inequality, and the role of international aid and institutions in fostering development.</p>
-            <h2>Career Opportunities</h2>
+            <h3>Economic Policy and Research</h3>
+            <p>Conducting research and formulating policies to address economic challenges in developing countries.</p>
             <ul>
-                <li>Development Economist</li>
-                <li>NGO Specialist</li>
-                <li>International Aid Worker</li>
-                <li>Policy Analyst</li>
-                <li>Consultant</li>
+                <li>
+                    Development Economist
+                    <div class="tooltip">Analyzing economic issues and creating policies aimed at fostering economic growth and development.</div>
+                </li>
+                <li>
+                    Economic Policy Analyst
+                    <div class="tooltip">Evaluating economic policies to determine their effects on social and economic development.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>International Development</h3>
+            <p>Working with international organizations to promote economic development and reduce poverty in developing nations.</p>
+            <ul>
+                <li>
+                    International Aid Worker
+                    <div class="tooltip">Supporting economic growth initiatives through aid programs and capacity building in developing countries.</div>
+                </li>
+                <li>
+                    Program Officer
+                    <div class="tooltip">Managing development projects, monitoring progress, and ensuring the effective use of resources.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Non-Profit and NGOs</h3>
+            <p>Working with non-profit organizations to address economic disparities and improve living conditions in underdeveloped regions.</p>
+            <ul>
+                <li>
+                    NGO Manager
+                    <div class="tooltip">Overseeing operations and strategies in non-profit organizations focused on development and economic welfare.</div>
+                </li>
+                <li>
+                    Policy Advocate
+                    <div class="tooltip">Working to influence policy changes that promote social and economic equity in developing regions.</div>
+                </li>
             </ul>
         </div>
     </div>

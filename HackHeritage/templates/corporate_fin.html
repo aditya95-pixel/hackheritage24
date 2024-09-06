@@ -2,136 +2,154 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporate Financing</title>
+    <title>Corporate Finance Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('/static/img_6.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
         }
         header {
-            background-color: transparent;
-            color: black;
-            padding: 10px 0;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-        }
-        h1, h2 {
-            color: black;
+            padding: 20px;
         }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: black;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: black;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+        .sub-branch p {
+            color: #e6e6e6;
+        }
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sub-branch ul li {
+            background-color: #333333;
+            padding: 10px;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000000;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: #ff9900;
+            color: #000000;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            width: 200px;
             text-align: center;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .engg {
-            color: black;
-        }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 10px;
             }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+            .tooltip {
+                width: 150px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Corporate Financing</h1>
-        <p>Explore the Different Aspects of Corporate Financing</p>
+        <h1>Corporate Finance Career Path Guidance</h1>
     </header>
-
     <div class="container">
-        <h2>Introduction to Corporate Financing</h2>
-        <p>
-            Corporate financing deals with the financial activities related to running a corporation, with a division or department set up to oversee the financial actions. Corporate financing involves balancing risk and profitability, while attempting to maximize an entity's wealth and the value of its stock, and managing the financial risks of the business.
-        </p>
-
+        <h2>Career Opportunities in Corporate Finance</h2>
+        <p>Explore key areas in corporate finance and associated career opportunities:</p>
+        
         <div class="sub-branch">
-            <h3>1. Types of Corporate Financing</h3>
+            <h3>Financial Planning and Analysis (FP&A)</h3>
+            <p>FP&A professionals help companies plan, budget, and forecast financial performance.</p>
             <ul>
-                <li><span class="engg">Debt Financing:</span> Borrowing funds from external sources, usually in the form of bonds or loans.</li>
-                <li><span class="engg">Equity Financing:</span> Issuing shares of the company to raise capital.</li>
-                <li><span class="engg">Mezzanine Financing:</span> A hybrid between debt and equity financing that gives lenders the right to convert to equity if the loan is not paid back in time.</li>
+                <li>
+                    Financial Analyst
+                    <div class="tooltip">Analyzing financial data and trends to support corporate strategy and decision-making.</div>
+                </li>
+                <li>
+                    Budget Analyst
+                    <div class="tooltip">Managing company budgets to ensure effective allocation of resources.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>2. Corporate Financial Strategies</h3>
+            <h3>Mergers and Acquisitions (M&A)</h3>
+            <p>M&A professionals help companies grow through mergers, acquisitions, and divestitures.</p>
             <ul>
-                <li><span class="engg">Capital Structure:</span> Determining the optimal mix of debt, equity, and internal financing.</li>
-                <li><span class="engg">Dividend Policy:</span> Decisions related to the payout of earnings to shareholders.</li>
-                <li><span class="engg">Investment Strategies:</span> Focusing on long-term capital investments that maximize shareholder value.</li>
+                <li>
+                    M&A Analyst
+                    <div class="tooltip">Researching and analyzing potential merger and acquisition opportunities.</div>
+                </li>
+                <li>
+                    Valuation Analyst
+                    <div class="tooltip">Performing valuations to support M&A transactions and strategic decisions.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>3. Risk Management in Corporate Financing</h3>
+            <h3>Corporate Strategy</h3>
+            <p>Corporate strategists identify and implement growth initiatives for long-term business success.</p>
             <ul>
-                <li><span class="engg">Interest Rate Risk:</span> Managing the potential impact of fluctuating interest rates on the company's financials.</li>
-                <li><span class="engg">Credit Risk:</span> Evaluating the risk of default from debtors.</li>
-                <li><span class="engg">Market Risk:</span> Assessing the risks associated with changes in market conditions.</li>
+                <li>
+                    Strategy Consultant
+                    <div class="tooltip">Advising companies on strategic planning and market entry initiatives.</div>
+                </li>
+                <li>
+                    Corporate Development Analyst
+                    <div class="tooltip">Identifying and assessing new business opportunities and partnerships.</div>
+                </li>
             </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>4. Conclusion</h3>
-            <p>
-                Corporate financing is a vital aspect of managing a corporation's financial resources to ensure growth, profitability, and sustainability. Understanding the different methods of financing, strategies, and risk management techniques can help corporations make informed financial decisions.
-            </p>
         </div>
     </div>
 </body>

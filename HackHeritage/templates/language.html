@@ -3,68 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The World of Languages</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <title>Language Career Path Guidance</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.601);
-            color: white;
-            padding: 5px;
+            background-color: #333;
+            color: orange;
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-bottom:10px;
-            box-shadow: 0px 0px 15px 1px black;
+            box-shadow: 0 0 8px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-            box-shadow: 0px 0px 15px 1px black;
-            border-radius: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
+        }
+        h1 {
+            color: orange;
         }
         h2 {
-            color: black;
-        }
-        h2 {
+            color: orange;
+            background-color: #333;
             text-align: center;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
         }
         p {
             margin: 15px 0;
+            font-weight: bold;
+            color: #b3b3b3;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            box-shadow: 0px 0px 15px 1px black;
-            backdrop-filter: blur(0px);
+            background-color: #333;
+            box-shadow:  0 0 8px 1px #000;
             padding: 10px;
-            color: black;
+            color: orange;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: orange;
             text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #ff9900;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff9900;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 70%;
+            top: -60px; 
+            transform: translateX(-50%);
+            background-color: #ff9900;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -75,6 +124,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -90,42 +143,64 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>The World of Languages</h1>
-        <p>Exploring the Diversity of Human Communication</p>
+        <h1>Language Career Path Guidance</h1>
     </header>
-
     <div class="container">
-        <h2>Major Language Families</h2>
-
+        <h2>Career Opportunities in Language</h2>
+        <p>A career in languages opens up diverse opportunities for those passionate about communication, translation, and teaching. Careers in this field involve mastering language skills and applying them in various professional contexts. Here are some key areas and related career opportunities:</p>
+        
         <div class="sub-branch">
-            <h3>Indo-European Languages</h3>
-            <p>The Indo-European family is one of the largest and most widespread language families. It includes languages like English, Spanish, Hindi, and Russian.</p>
+            <h3>Translation and Interpretation</h3>
+            <p>Careers in translation and interpretation focus on converting written or spoken content from one language to another. This field requires high proficiency in multiple languages and attention to detail.</p>
+            <ul>
+                <li>
+                    Translator
+                    <div class="tooltip">Converting written documents from one language to another while maintaining meaning and context.</div>
+                </li>
+                <li>
+                    Interpreter
+                    <div class="tooltip">Facilitating spoken communication between individuals who speak different languages in real-time.</div>
+                </li>
+                <li>
+                    Localization Specialist
+                    <div class="tooltip">Adapting content for different cultures and regions, ensuring it is relevant and appropriate for the target audience.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Sino-Tibetan Languages</h3>
-            <p>Sino-Tibetan languages are spoken by over a billion people, mainly in East and Southeast Asia. Notable languages in this family include Mandarin Chinese, Burmese, and Tibetan.</p>
+            <h3>Language Education</h3>
+            <p>Careers in language education involve teaching languages to students of various ages and backgrounds. This field focuses on developing language skills and fostering communication abilities.</p>
+            <ul>
+                <li>
+                    Language Teacher
+                    <div class="tooltip">Teaching language skills to students in educational settings, from elementary schools to universities.</div>
+                </li>
+                <li>
+                    ESL Instructor
+                    <div class="tooltip">Teaching English as a Second Language to non-native speakers, helping them improve their English skills.</div>
+                </li>
+                <li>
+                    Language Program Coordinator
+                    <div class="tooltip">Designing and managing language programs and curriculums for educational institutions or language schools.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Afro-Asiatic Languages</h3>
-            <p>The Afro-Asiatic language family is native to parts of the Middle East, North Africa, and the Horn of Africa. It includes languages such as Arabic, Hebrew, and Amharic.</p>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Niger-Congo Languages</h3>
-            <p>The Niger-Congo family is one of the largest language families in Africa, with languages like Swahili, Yoruba, and Zulu spoken by millions.</p>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Austronesian Languages</h3>
-            <p>The Austronesian languages are spoken in parts of Southeast Asia, the Pacific Islands, and Madagascar. Examples include Tagalog, Maori, and Hawaiian.</p>
-        </div>
-    </div>
-</body>
-</html>
+            <h3>Corporate and International Relations</h3>
+            <p>Careers in corporate and international relations involve using language skills in business settings. This includes facilitating communication in multinational companies and handling international affairs.</p>
+            <ul>
+                <li>
+                    International Relations Specialist
+                    <div class="tooltip">Managing and fostering relationships between organizations and governments across different countries.</div>
+              

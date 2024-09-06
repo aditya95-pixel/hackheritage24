@@ -2,136 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Planning</title>
+    <title>Financial Planning Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('/static/img_6.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
         }
         header {
-            background-color: transparent;
-            color: black;
-            padding: 10px 0;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-        }
-        h1, h2 {
-            color: black;
+            padding: 20px;
         }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: transparent;
-            border: solid black;
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: black;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: black;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+        .sub-branch p {
+            color: #e6e6e6;
+        }
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sub-branch ul li {
+            background-color: #333333;
+            padding: 10px;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000000;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: #ff9900;
+            color: #000000;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
             text-align: center;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .engg {
-            color: black;
-        }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 10px;
             }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
+            .tooltip {
+                width: 150px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Financial Planning</h1>
-        <p>Your Guide to Strategic Financial Planning for a Secure Future</p>
+        <h1>Financial Planning Career Path Guidance</h1>
     </header>
-
     <div class="container">
-        <h2>Introduction to Financial Planning</h2>
-        <p>
-            Financial planning is the process of setting, planning, achieving, and reviewing your life goals through the proper management of your finances. It involves creating a strategy to manage your income, expenses, investments, and savings to achieve your financial goals.
-        </p>
-
+        <h2>Career Opportunities in Financial Planning</h2>
+        <p>Explore key areas in financial planning and associated career opportunities:</p>
+        
         <div class="sub-branch">
-            <h3>1. Key Steps in Financial Planning</h3>
+            <h3>Personal Financial Planning</h3>
+            <p>Helping individuals manage their finances, investments, and future goals.</p>
             <ul>
-                <li><span class="engg">Assess Your Current Financial Situation:</span> Evaluate your income, expenses, assets, and liabilities.</li>
-                <li><span class="engg">Set Financial Goals:</span> Define clear and achievable short-term, medium-term, and long-term financial goals.</li>
-                <li><span class="engg">Create a Budget:</span> Develop a budget that aligns with your financial goals and helps manage your expenses.</li>
+                <li>
+                    Financial Planner
+                    <div class="tooltip">Creating financial plans for individuals, covering budgeting, savings, and investments.</div>
+                </li>
+                <li>
+                    Wealth Manager
+                    <div class="tooltip">Offering advice and strategies to manage and grow clients' wealth.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>2. Strategies for Effective Financial Planning</h3>
+            <h3>Retirement Planning</h3>
+            <p>Ensuring individuals have the necessary funds to enjoy a comfortable retirement.</p>
             <ul>
-                <li><span class="engg">Invest Wisely:</span> Choose investment options that match your risk tolerance and financial goals.</li>
-                <li><span class="engg">Risk Management:</span> Protect your finances with insurance policies such as health, life, and property insurance.</li>
-                <li><span class="engg">Retirement Planning:</span> Plan early for retirement by investing in retirement accounts and other long-term investments.</li>
+                <li>
+                    Retirement Advisor
+                    <div class="tooltip">Helping clients save and invest for their retirement needs.</div>
+                </li>
+                <li>
+                    Pension Consultant
+                    <div class="tooltip">Designing and managing pension plans and retirement strategies.</div>
+                </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>3. Financial Planning Tools</h3>
+            <h3>Estate Planning</h3>
+            <p>Helping clients plan for asset distribution and manage estate taxes after death.</p>
             <ul>
-                <li><span class="engg">Budgeting Tools:</span> Use apps and software to track income and expenses.</li>
-                <li><span class="engg">Investment Calculators:</span> Plan investments using online calculators to estimate returns.</li>
-                <li><span class="engg">Financial Advisors:</span> Consult professionals for personalized financial planning and advice.</li>
+                <li>
+                    Estate Planner
+                    <div class="tooltip">Creating strategies for managing clients' estates and minimizing taxes.</div>
+                </li>
+                <li>
+                    Trust Advisor
+                    <div class="tooltip">Managing trusts and advising clients on inheritance matters.</div>
+                </li>
             </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>4. Conclusion</h3>
-            <p>
-                Financial planning is an ongoing process that helps you make informed decisions about your money, ensuring you meet your life goals. By setting goals, managing risks, investing wisely, and regularly reviewing your plans, you can achieve financial security and peace of mind.
-            </p>
         </div>
     </div>
 </body>

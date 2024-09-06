@@ -5,113 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Behavioral Economics Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('https://icsblog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2022/11/28154204/M4C-BlogHeaderUpdates_BehavioralEconomics_V3a.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(98, 24, 3, 0.145);
-            color: white;
-            padding: 10px 0;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px rgb(121, 34, 34);
-            backdrop-filter: blur(8px);
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 5px 15px;
-            border-radius: 15px;
-            box-shadow: 0 0 8px 1px rgb(78, 7, 7);
-            background-color: #b8cbf650;
-            backdrop-filter: blur(4px);
-        }
-        h1, h2 {
-            color: rgb(255, 55, 0);
+            padding: 20px;
         }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
-            color:black;
-            font-weight: bold;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: rgba(240, 255, 255, 0.229);
-            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(35px);
-            padding: 10px;
-            color: black;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px green;
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: green;
-            text-align: center;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+        .sub-branch p {
+            color: #e6e6e6;
         }
         .sub-branch ul {
             list-style-type: none;
             padding: 0;
-            margin: 0;
         }
         .sub-branch ul li {
-            margin-bottom: 10px;
-            cursor: pointer;
-            position: relative;
+            background-color: #333333;
             padding: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid greenyellow;
-            font-weight: bold;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         .sub-branch ul li:hover {
-            background-color: greenyellow;
-            color: rgb(243, 0, 0);
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .sub-branch ul li::before {
-            content: '>';
-            color: #ff0505;
-            font-size: 1.4rem;
-            margin-right: 10px;
+            background-color: #ff9900;
+            color: #000000;
         }
         .tooltip {
             display: none;
             position: absolute;
-            left: 70%;
-            top: -60px; /* Position above the list item */
-            transform: translateX(-50%);
-            background-color: greenyellow;
-            color: black;
-            font-weight: bold;
+            background-color: #ff9900;
+            color: #000000;
             padding: 10px;
             border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            width: 250px;
-            text-align: center;
             font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
+            text-align: center;
             z-index: 100;
             opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: opacity 0.3s ease;
         }
         .sub-branch ul li:hover .tooltip {
             display: block;
@@ -119,35 +92,10 @@
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
-            }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+                padding: 10px;
             }
             .tooltip {
-                width: 200px;
-                top: -50px; /* Adjusted for smaller screens */
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
-            }
-            .tooltip {
-                width: 300px;
-                top: -70px; /* Adjusted for smaller screens */
+                width: 150px;
             }
         }
     </style>
@@ -158,80 +106,64 @@
     </header>
     <div class="container">
         <h2>Career Opportunities in Behavioral Economics</h2>
-        <p>Behavioral economics studies how psychological, emotional, and social factors affect economic decisions. Below are some key areas in behavioral economics and the associated career opportunities:</p>
+        <p>Explore key areas in behavioral economics and the associated career opportunities:</p>
         
         <div class="sub-branch">
-            <h3>Consumer Behavior and Market Research</h3>
-            <p>Behavioral economists analyze how consumers make purchasing decisions, helping companies optimize their marketing strategies.</p>
+            <h3>Research and Academia</h3>
+            <p>Focusing on studying human decision-making behaviors and contributing to economic theory.</p>
             <ul>
                 <li>
-                    Behavioral Market Analyst
-                    <div class="tooltip">Studying consumer purchasing habits to improve product marketing and design.</div>
+                    Behavioral Economist
+                    <div class="tooltip">Researching how psychological, social, and emotional factors affect economic decisions.</div>
                 </li>
                 <li>
-                    Consumer Psychologist
-                    <div class="tooltip">Analyzing how emotions and cognitive biases affect consumer behavior.</div>
-                </li>
-                <li>
-                    Brand Strategist
-                    <div class="tooltip">Developing marketing strategies that influence consumer decision-making processes.</div>
+                    University Professor
+                    <div class="tooltip">Teaching behavioral economics and conducting research to expand the field.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Policy and Government Advisory</h3>
-            <p>Behavioral economists work with governments to design policies that take human behavior into account to improve societal outcomes.</p>
+            <h3>Public Policy and Government</h3>
+            <p>Applying behavioral insights to design and implement policies that guide public behavior.</p>
             <ul>
                 <li>
-                    Public Policy Advisor
-                    <div class="tooltip">Designing policies to "nudge" citizens toward healthier or more sustainable behaviors.</div>
+                    Policy Advisor
+                    <div class="tooltip">Working with governments to create policies that improve public welfare using behavioral insights.</div>
                 </li>
                 <li>
-                    Behavioral Scientist in Government
-                    <div class="tooltip">Using behavioral insights to improve the effectiveness of government initiatives and programs.</div>
-                </li>
-                <li>
-                    Social Policy Consultant
-                    <div class="tooltip">Advising on programs to reduce inequality, increase public health, and improve welfare systems.</div>
+                    Nudge Unit Analyst
+                    <div class="tooltip">Developing strategies to subtly influence behavior for the betterment of society, using behavioral economics principles.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Corporate and Organizational Roles</h3>
-            <p>Corporations increasingly use behavioral economics to optimize internal processes, improve employee performance, and enhance product development.</p>
+            <h3>Market Research and Consumer Behavior</h3>
+            <p>Helping companies understand consumer behavior to create better products and marketing strategies.</p>
             <ul>
                 <li>
-                    Behavioral Insights Consultant
-                    <div class="tooltip">Providing companies with insights on improving employee productivity and consumer satisfaction.</div>
+                    Consumer Behavior Analyst
+                    <div class="tooltip">Studying how consumers make purchasing decisions and providing insights to shape product development and marketing.</div>
                 </li>
                 <li>
-                    HR Specialist in Organizational Behavior
-                    <div class="tooltip">Helping companies design work environments that motivate employees and increase efficiency.</div>
-                </li>
-                <li>
-                    Product Development Analyst
-                    <div class="tooltip">Analyzing consumer behavior to inform the development of new products and services.</div>
+                    Behavioral Data Scientist
+                    <div class="tooltip">Analyzing large datasets to identify trends and patterns in consumer behavior.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Academic and Research Roles</h3>
-            <p>In academic roles, behavioral economists conduct research and develop theories on how human behavior impacts economic decision-making.</p>
+            <h3>Financial Services</h3>
+            <p>Using behavioral economics to improve financial decision-making for individuals and institutions.</p>
             <ul>
                 <li>
-                    Behavioral Economist Researcher
-                    <div class="tooltip">Studying cognitive biases and how they influence economic decisions.</div>
+                    Behavioral Finance Specialist
+                    <div class="tooltip">Advising financial firms on how to leverage behavioral insights to improve investment and savings behavior.</div>
                 </li>
                 <li>
-                    University Professor in Behavioral Economics
-                    <div class="tooltip">Teaching students about behavioral economics while conducting research in the field.</div>
-                </li>
-                <li>
-                    Research Fellow
-                    <div class="tooltip">Working at research institutions or think tanks to explore economic behavior and offer insights to businesses and policymakers.</div>
+                    Financial Planner
+                    <div class="tooltip">Helping clients make informed financial decisions by taking into account behavioral biases.</div>
                 </li>
             </ul>
         </div>

@@ -3,149 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Path in Psychology</title>
+    <title>Psychology Career Path Guidance</title>
     <style>
-       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            background-image: url('https://thumbs.dreamstime.com/b/psychology-concept-human-head-silhouette-psychotherapy-mental-disorder-treatment-psychology-concept-human-head-silhouette-314438656.jpg');
-            color: rgb(230, 230, 230);
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
             background-size: cover;
-            background-repeat: no-repeat;
+            background-position: center;
             background-attachment: fixed;
         }
-        .header{
-            background-color:rgba(0, 0, 0, 0.469);
-        }
-        h2{
-            text-align: center ;
-            background-color:rgba(128, 128, 128, 0.503);
-        }
-        
-        h1{
+        header {
+            background-color: #333;
+            color: orange;
+            padding: 10px 0;
             text-align: center;
-            color: #ffffff;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0 0 8px 1px black;
         }
-
-        ul {
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
+        }
+        h1 {
+            color: orange;
+        }
+        h2 {
+            color: orange;
+            background-color: #333;
+            text-align: center;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
+        }
+        p {
+            margin: 15px 0;
+            font-weight: bold;
+            color: #b3b3b3;
+        }
+        .sub-branch {
+            background-color: #333;
+            box-shadow: 0 0 8px 1px #000;
+            padding: 10px;
+            color: orange;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .sub-branch h3 {
+            color: orange;
+            text-align: center;
+        }
+        .sub-branch ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
-
-        li {
-            background-color: #f5d2a1;
-            margin: 10px;
-            padding: 15px;
-            font-size: 18px;
-            color: #333;
-            border-radius: 8px;
-            position: relative;
-            transition: background-color 0.3s ease;
-        }
-
-        li:hover {
-            background-color: #d9a679;
+        .sub-branch ul li {
+            margin-bottom: 10px;
             cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #ff9900;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
         }
-
-        .popup-box {
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff9900;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
             display: none;
             position: absolute;
-            top: 100%;
-            left: 50%;
+            left: 70%;
+            top: -60px; 
             transform: translateX(-50%);
-            width: 300px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
+            background-color: #ff9900;
+            color: black;
             padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            z-index: 10;
-            text-align: left;
-            font-size: 14px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
-
-        li:hover .popup-box {
+        .sub-branch ul li:hover .tooltip {
             display: block;
+            opacity: 1;
         }
-        
-        /* Backdrop effect for the popup */
-        .popup-box::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-width: 10px;
-            border-style: solid;
-            border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            .sub-branch ul {
+                padding-left: 0;
+            }
+            .sub-branch ul li {
+                margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
+            }
         }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 5px;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+            .sub-branch {
+                padding: 5px;
+            }
+            .sub-branch ul li {
+                font-size: 0.875rem;
+            }
+            .tooltip {
+                width: 300px;
+                top: -70px;
+            }
         }
     </style>
 </head>
 <body>
-    <div>
-        <div class="header">
-            <h1>Career Path in Psychology</h1>
-        </div>
-        <div class="container">
-            
-            <h2>Explore Various Fields in Psychology</h2>
+    <header>
+        <h1>Psychology Career Path Guidance</h1>
+    </header>
+    <div class="container">
+        <h2>Career Opportunities in Psychology</h2>
+        <p>Psychology is the scientific study of behavior and mental processes. Careers in psychology span across clinical practice, research, education, and beyond. Here are some key areas and related career opportunities:</p>
+        
+        <div class="sub-branch">
+            <h3>Clinical Psychology</h3>
+            <p>Clinical psychologists diagnose and treat mental, emotional, and behavioral disorders. Careers in this field typically involve one-on-one or group therapy, assessments, and interventions.</p>
             <ul>
                 <li>
-                    Clinical Psychology
-                    <div class="popup-box">
-                        Clinical psychologists diagnose and treat mental, emotional, and behavioral disorders. They use psychological techniques to help patients manage conditions like anxiety, depression, and more.
-                    </div>
+                    Clinical Psychologist
+                    <div class="tooltip">Diagnosing and treating mental health disorders through therapy and counseling.</div>
                 </li>
                 <li>
-                    Cognitive Psychology
-                    <div class="popup-box">
-                        Cognitive psychologists study how people understand, think, and remember information. They focus on mental processes such as perception, memory, reasoning, and problem-solving.
-                    </div>
+                    Counseling Psychologist
+                    <div class="tooltip">Providing therapy to help individuals deal with life stressors and personal development.</div>
                 </li>
                 <li>
-                    Developmental Psychology
-                    <div class="popup-box">
-                        Developmental psychologists study the psychological development of individuals throughout their lives. This can include children, adolescents, adults, and the elderly.
-                    </div>
-                </li>
-                <li>
-                    Forensic Psychology
-                    <div class="popup-box">
-                        Forensic psychologists apply psychological principles to legal matters, often working in criminal justice or law enforcement settings.
-                    </div>
-                </li>
-                <li>
-                    Health Psychology
-                    <div class="popup-box">
-                        Health psychologists study the psychological and behavioral processes in health, illness, and healthcare. They work to promote healthy living and improve patient outcomes.
-                    </div>
-                </li>
-                <li>
-                    Industrial-Organizational Psychology
-                    <div class="popup-box">
-                        Industrial-organizational psychologists apply psychological principles to workplace environments, focusing on improving productivity, employee well-being, and organizational success.
-                    </div>
-                </li>
-                <li>
-                    Neuropsychology
-                    <div class="popup-box">
-                        Neuropsychologists study the relationship between the brain and behavior, often working with patients who have experienced brain injuries or neurological disorders.
-                    </div>
+                    Psychiatric Technician
+                    <div class="tooltip">Assisting mental health professionals in providing care for individuals with psychological disorders.</div>
                 </li>
             </ul>
         </div>
 
+        <div class="sub-branch">
+            <h3>Research and Academia</h3>
+            <p>Psychologists in research and academic settings focus on understanding human behavior and applying findings to various fields. These careers involve teaching, conducting studies, and publishing research.</p>
+            <ul>
+                <li>
+                    Research Psychologist
+                    <div class="tooltip">Conducting scientific research on human behavior and mental processes.</div>
+                </li>
+                <li>
+                    University Professor
+                    <div class="tooltip">Teaching psychology courses at the university level and conducting research.</div>
+                </li>
+                <li>
+                    Behavioral Scientist
+                    <div class="tooltip">Studying human behavior to influence public policies, education, and healthcare.</div>
+                </li>
+            </ul>
+        </div>
 
+        <div class="sub-branch">
+            <h3>Industrial-Organizational Psychology</h3>
+            <p>Industrial-organizational psychologists apply psychological principles to the workplace to improve employee well-being and organizational performance.</p>
+            <ul>
+                <li>
+                    Human Resources Specialist
+                    <div class="tooltip">Applying psychological principles to improve recruitment, training, and employee relations.</div>
+                </li>
+                <li>
+                    Organizational Development Consultant
+                    <div class="tooltip">Helping organizations improve productivity, employee satisfaction, and workplace culture.</div>
+                </li>
+                <li>
+                    Talent Management Specialist
+                    <div class="tooltip">Assessing and developing employee talent through psychological evaluations and training programs.</div>
+                </li>
+            </ul>
+        </div>
 
+        <div class="sub-branch">
+            <h3>Forensic Psychology</h3>
+            <p>Forensic psychologists work at the intersection of psychology and the legal system. They often provide expert testimony, work in correctional facilities, or assist law enforcement agencies.</p>
+            <ul>
+                <li>
+                    Forensic Psychologist
+                    <div class="tooltip">Evaluating individuals in legal cases and providing expert testimony in court.</div>
+                </li>
+                <li>
+                    Correctional Counselor
+                    <div class="tooltip">Providing counseling and rehabilitation services to inmates in correctional facilities.</div>
+                </li>
+                <li>
+                    Criminal Profiler
+                    <div class="tooltip">Analyzing criminal behavior to help law enforcement solve cases and prevent future crimes.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

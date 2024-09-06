@@ -3,67 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Path in Illustration</title>
+    <title>Illustration Career Path Guidance</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.601);
-            color: white;
-            padding: 5px;
+            background-color: #333;
+            color: orange;
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-bottom:10px;
-            box-shadow: 0px 0px 15px 1px black;
+            box-shadow: 0 0 8px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-            box-shadow: 0px 0px 15px 1px black;
-            border-radius: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
+        }
+        h1 {
+            color: orange;
         }
         h2 {
-            color: black;
-        }
-        h2 {
+            color: orange;
+            background-color: #333;
             text-align: center;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
         }
         p {
             margin: 15px 0;
+            font-weight: bold;
+            color: #b3b3b3;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            /* box-shadow: 0px 0px 15px 1px black; */
-            backdrop-filter: blur(0px);
+            background-color: #333;
+            box-shadow: 0 0 8px 1px #000;
             padding: 10px;
-            color: black;
+            color: orange;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: orange;
             text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #ff9900;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff9900;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 70%;
+            top: -60px; 
+            transform: translateX(-50%);
+            background-color: #ff9900;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -74,6 +124,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -89,24 +143,94 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px;
+            }
         }
-            </style>
+    </style>
 </head>
 <body>
     <header>
-        <h1>Illustration Career Path</h1>
+        <h1>Illustration Career Path Guidance</h1>
     </header>
     <div class="container">
+        <h2>Career Opportunities in Illustration</h2>
+        <p>A career in illustration allows you to bring ideas and stories to life visually. Careers in this field can span various industries including publishing, entertainment, advertising, and more. Here are some key areas and related career opportunities:</p>
+        
         <div class="sub-branch">
-            <h2>About Illustration</h2>
-            <p>Illustration involves creating visual images to represent ideas, tell stories, or enhance content. Illustrators use various techniques and tools to create work for books, magazines, advertisements, digital media, and more.</p>
-            <h2>Career Opportunities</h2>
+            <h3>Editorial and Publishing</h3>
+            <p>Illustrators in this field create visual content for books, magazines, newspapers, and other publications. This field involves a strong understanding of storytelling through images.</p>
             <ul>
-                <li>Illustrator</li>
-                <li>Children's Book Illustrator</li>
-                <li>Editorial Illustrator</li>
-                <li>Concept Artist</li>
-                <li>Freelance Illustrator</li>
+                <li>
+                    Book Illustrator
+                    <div class="tooltip">Creating artwork for children's books, novels, and educational publications.</div>
+                </li>
+                <li>
+                    Magazine Illustrator
+                    <div class="tooltip">Designing illustrations that accompany articles, editorials, and features.</div>
+                </li>
+                <li>
+                    Comic Artist
+                    <div class="tooltip">Creating visual narratives in the form of comics or graphic novels.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Entertainment Industry</h3>
+            <p>Illustrators in the entertainment industry work on films, animations, video games, and more, often creating concept art, character designs, and storyboards.</p>
+            <ul>
+                <li>
+                    Concept Artist
+                    <div class="tooltip">Designing characters, environments, and objects for films, TV shows, and video games.</div>
+                </li>
+                <li>
+                    Storyboard Artist
+                    <div class="tooltip">Creating visual storyboards that help guide directors and animators.</div>
+                </li>
+                <li>
+                    Character Designer
+                    <div class="tooltip">Developing characters with unique personalities and visual traits for various media.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Advertising and Marketing</h3>
+            <p>Illustrators in advertising and marketing create visual content for brands, including digital campaigns, print advertisements, and packaging design.</p>
+            <ul>
+                <li>
+                    Advertising Illustrator
+                    <div class="tooltip">Creating visuals for advertising campaigns in print, digital, and broadcast media.</div>
+                </li>
+                <li>
+                    Packaging Designer
+                    <div class="tooltip">Designing product packaging that attracts consumers and communicates brand identity.</div>
+                </li>
+                <li>
+                    Brand Illustrator
+                    <div class="tooltip">Developing illustrations that enhance brand storytelling and engagement.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Freelance and Commission Work</h3>
+            <p>Freelance illustrators work independently, offering their services to various clients and taking on commissioned work across different industries.</p>
+            <ul>
+                <li>
+                    Freelance Illustrator
+                    <div class="tooltip">Working with clients on a project-by-project basis, creating illustrations for various uses.</div>
+                </li>
+                <li>
+                    Commissioned Artist
+                    <div class="tooltip">Producing custom artwork for individuals, companies, or organizations.</div>
+                </li>
+                <li>
+                    Illustrator for Hire
+                    <div class="tooltip">Offering illustration services for a variety of creative projects.</div>
+                </li>
             </ul>
         </div>
     </div>

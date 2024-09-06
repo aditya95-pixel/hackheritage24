@@ -3,109 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Path in Graphic Design</title>
+    <title>Graphic Design Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.601);
-            color: white;
-            padding: 5px;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            margin-bottom:10px;
-            box-shadow: 0px 0px 15px 1px black;
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-            box-shadow: 0px 0px 15px 1px black;
-            border-radius: 10px;
+            padding: 20px;
         }
         h2 {
-            color: black;
-        }
-        h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            /* box-shadow: 0px 0px 15px 1px black; */
-            backdrop-filter: blur(0px);
-            padding: 10px;
-            color: black;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: black;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+        .sub-branch p {
+            color: #e6e6e6;
+        }
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sub-branch ul li {
+            background-color: #333333;
+            padding: 10px;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000000;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: black;
+            color: orange;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
             text-align: center;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .engg {
-            color: black;
-        }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 10px;
             }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+            .tooltip {
+                width: 150px;
             }
         }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
-            }
-        }            </style>
+    </style>
 </head>
 <body>
     <header>
-        <h1>Graphic Design Career Path</h1>
+        <h1>Graphic Design Career Path Guidance</h1>
     </header>
     <div class="container">
+        <h2>Career Opportunities in Graphic Design</h2>
+        <p>Graphic design involves creating visual content to communicate messages. Here are key areas and their career paths in graphic design:</p>
+        
         <div class="sub-branch">
-            <h2>About Graphic Design</h2>
-            <p>Graphic Design is the art of creating visual content to communicate messages. Designers use typography, imagery, color, and layout techniques to create various forms of media, including branding, advertisements, websites, and product packaging.</p>
-            <h2>Career Opportunities</h2>
+            <h3>Branding and Identity Design</h3>
+            <p>Professionals in this field create visual identities for brands, including logos, typography, and color schemes.</p>
             <ul>
-                <li>Graphic Designer</li>
-                <li>Brand Identity Designer</li>
-                <li>UI/UX Designer</li>
-                <li>Art Director</li>
-                <li>Illustrator</li>
+                <li>
+                    Logo Designer
+                    <div class="tooltip">Creating memorable logos that visually represent a brand’s identity.</div>
+                </li>
+                <li>
+                    Brand Identity Designer
+                    <div class="tooltip">Crafting comprehensive brand identity systems, including logo, color palette, and typography.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Web and User Interface (UI) Design</h3>
+            <p>Professionals in UI design focus on creating visually appealing and functional interfaces for websites and apps.</p>
+            <ul>
+                <li>
+                    Web Designer
+                    <div class="tooltip">Designing visually attractive and user-friendly websites.</div>
+                </li>
+                <li>
+                    UI/UX Designer
+                    <div class="tooltip">Enhancing user experience by optimizing visual elements and interface functionality.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Print and Publication Design</h3>
+            <p>Print designers create visuals for physical formats like magazines, brochures, and books.</p>
+            <ul>
+                <li>
+                    Layout Designer
+                    <div class="tooltip">Arranging text and images in print publications for optimal readability and design flow.</div>
+                </li>
+                <li>
+                    Packaging Designer
+                    <div class="tooltip">Designing product packaging that is both functional and visually appealing.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Motion Graphics</h3>
+            <p>Motion graphics designers create animated content for videos, advertisements, and digital platforms.</p>
+            <ul>
+                <li>
+                    Motion Designer
+                    <div class="tooltip">Designing dynamic visual elements using animation and special effects.</div>
+                </li>
+                <li>
+                    Video Editor
+                    <div class="tooltip">Editing video content by adding visual effects, transitions, and motion graphics.</div>
+                </li>
             </ul>
         </div>
     </div>

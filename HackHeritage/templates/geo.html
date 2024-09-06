@@ -5,132 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geography Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('https://thumbs.dreamstime.com/b/vintage-compass-lies-ancient-world-map-still-life-31239815.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.774);
-            color: white;
-            padding: 15px;
-            /* display: block; */
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            margin-bottom: 10px;
-            box-shadow: 0px 0px 15px 1px black;
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            box-shadow: 0px 0px 15px 3px rgb(0, 0, 0);
-            border-radius: 10px;
-            background-color: rgba(123, 125, 0, 0.326);
-            color: white;
-            backdrop-filter: blur(2px);
         }
-        .container h2 {
-            color: white;
+        h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            backdrop-filter: blur(10px);
-            padding: 15px;
-            color: black;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: black;
-            text-align: center;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+        .sub-branch p {
+            color: #e6e6e6;
         }
         .sub-branch ul {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
         }
         .sub-branch ul li {
-            position: relative;
+            background-color: #333333;
             padding: 10px;
-            cursor: pointer;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
             margin-bottom: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .sub-branch ul li::before {
-            content: '>';
-            color: rgb(255, 0, 0);
-            position: absolute;
-            left: 0;
-            font-size: 1rem;
-            line-height: 1.5;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         .sub-branch ul li:hover {
-            background-color: rgba(255, 255, 255, 0.7);
-            color: rgb(255, 0, 0);
+            background-color: #ff9900;
+            color: #000000;
         }
-        .popup-box {
+        .tooltip {
             display: none;
             position: absolute;
-            left: 50%;
-            top: -250px;
-            transform: translateX(-50%);
-            background-color: rgb(0, 26, 255);
-            color: white;
+            background-color: #ff9900;
+            color: #000000;
             padding: 10px;
-            border-radius: 8px;
-            width: 250px;
-            text-align: left;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
+            text-align: center;
+            z-index: 100;
             opacity: 0;
-            visibility: hidden;
+            transition: opacity 0.3s ease;
         }
-        .sub-branch ul li:hover .popup-box {
+        .sub-branch ul li:hover .tooltip {
             display: block;
             opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(10px);
         }
         @media (max-width: 768px) {
             .container {
-                padding: 15px;
-            }
-            .sub-branch ul li {
-                padding: 8px;
-            }
-            .popup-box {
-                width: 200px;
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
                 padding: 10px;
             }
-            .sub-branch {
-                padding: 10px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
-            }
-            .popup-box {
-                width: 180px;
+            .tooltip {
+                width: 150px;
             }
         }
     </style>
@@ -140,46 +105,65 @@
         <h1>Geography Career Path Guidance</h1>
     </header>
     <div class="container">
-        <h2>About Geography</h2>
-        <p>Geography is the study of places and the relationships between people and their environments. It covers physical properties of the Earth's surface and the human societies spread across it, and it also examines how human culture interacts with the natural environment.</p>
+        <h2>Career Opportunities in Geography</h2>
+        <p>Explore key areas in geography and the associated career opportunities:</p>
         
         <div class="sub-branch">
-            <h3>Career Opportunities</h3>
+            <h3>Urban and Regional Planning</h3>
+            <p>Professionals in this field help develop and manage urban spaces and regions for effective and sustainable use.</p>
             <ul>
                 <li>
                     Urban Planner
-                    <div class="popup-box">
-                        <h4>Urban Planner</h4>
-                        <p>Urban planners develop plans and programs for land use in urban areas, focusing on the development and growth of cities and communities.</p>
-                    </div>
+                    <div class="tooltip">Designing and planning urban spaces, ensuring effective land use and sustainability.</div>
+                </li>
+                <li>
+                    Regional Planner
+                    <div class="tooltip">Planning and managing the development of large geographic areas like regions and provinces.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Geographic Information Systems (GIS)</h3>
+            <p>GIS professionals work with spatial data and maps to analyze, interpret, and present geographic information.</p>
+            <ul>
+                <li>
+                    GIS Analyst
+                    <div class="tooltip">Analyzing geographic data using GIS technology to assist in decision-making.</div>
                 </li>
                 <li>
                     Cartographer
-                    <div class="popup-box">
-                        <h4>Cartographer</h4>
-                        <p>Cartographers create maps and geographic data to assist in navigation, planning, and understanding spatial relationships.</p>
-                    </div>
+                    <div class="tooltip">Designing and creating maps to represent spatial data and geographical information.</div>
                 </li>
-                <li>
-                    Geospatial Analyst
-                    <div class="popup-box">
-                        <h4>Geospatial Analyst</h4>
-                        <p>Geospatial analysts use geographic information systems (GIS) to analyze spatial data and solve problems related to geography and location.</p>
-                    </div>
-                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Environmental Geography</h3>
+            <p>Environmental geographers study the interactions between humans and the natural environment.</p>
+            <ul>
                 <li>
                     Environmental Consultant
-                    <div class="popup-box">
-                        <h4>Environmental Consultant</h4>
-                        <p>Environmental consultants assess and provide advice on environmental issues, including pollution, resource management, and regulatory compliance.</p>
-                    </div>
+                    <div class="tooltip">Advising organizations on environmental impact and sustainability practices.</div>
                 </li>
                 <li>
-                    Geographer
-                    <div class="popup-box">
-                        <h4>Geographer</h4>
-                        <p>Geographers study the Earth's landscapes, environments, and the relationships between people and their environments to understand spatial patterns and processes.</p>
-                    </div>
+                    Conservation Specialist
+                    <div class="tooltip">Working to protect natural habitats and resources through conservation efforts.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Physical Geography</h3>
+            <p>Physical geographers focus on studying the Earth's natural features, including landforms, climates, and ecosystems.</p>
+            <ul>
+                <li>
+                    Climatologist
+                    <div class="tooltip">Studying and predicting weather patterns and climate change.</div>
+                </li>
+                <li>
+                    Geomorphologist
+                    <div class="tooltip">Analyzing the Earth's surface and the processes that shape it, such as erosion and tectonic activity.</div>
                 </li>
             </ul>
         </div>

@@ -8,52 +8,52 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: azure;
+            background-color: #000; /* Dark background */
             color: white;
             margin: 0;
             padding: 0;
-            background-image: url('https://www.accurate.in/blog/wp-content/uploads/2021/06/ai.jpg');
+            /* background-image: url('https://www.accurate.in/blog/wp-content/uploads/2021/06/ai.jpg'); */
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 64, 85, 0.714);
-            color: white;
-            padding: 5px 0;
+            /* background-color: #ff6f00; Pornhub orange */
+            color: #fff;
+            border-bottom: solid 2px orange;
+            padding: 10px 0;
             text-align: center;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            box-shadow: 0 0 8px 1px white;
+            /* border-bottom-left-radius: 10px; */
+            /* border-bottom-right-radius: 10px; */
+            box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.5);
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background-color: transparent;
+            background-color: rgba(0, 0, 0, 0.7); /* Darker background for the content area */
             border-radius: 10px;
             backdrop-filter: blur(5px);
-            box-shadow: 0 0 8px 1px white;
+            box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.5);
         }
         h1, h2 {
-            color: rgb(255, 255, 255);
+            color: orange; /* Pornhub orange */
         }
         p {
             margin: 10px 0;
             line-height: 1.6;
         }
         .sub-section {
-            background-color: rgba(8, 66, 159, 0.475);
-            box-shadow: 0 0 8px 1px white;
+            background-color: rgba(0, 0, 0, 0.8); /* Darker background for sub-sections */
+            box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.5);
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
-            backdrop-filter: blur(50px);
             position: relative;
         }
         .sub-section h3 {
-            color: white;
+            color: orange; /* Pornhub orange */
         }
         ul {
             padding-left: 20px;
@@ -64,30 +64,33 @@
             padding-left: 20px;
             cursor: pointer;
             margin-bottom: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            box-shadow: 0 0 4px 2px rgba(247, 178, 128, 0.6);
         }
         .sub-section ul li:before {
             content: '>';
-            color: rgb(255, 0, 0);
+            color: orange; /* Pornhub orange */
             position: absolute;
             left: 0;
             font-size: 1.3rem;
             line-height: 1.5;
         }
         .sub-section ul li:hover {
-            color: rgb(255, 0, 0);
-            background-color: #ffffff;
+            color: orange; /* Pornhub orange */
+            background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
         }
         .popup-box {
             display: none;
             position: absolute;
-            left: 40%;
-            top: -200px; /* Adjusted to move popup box upwards */
-            background-color: rgb(13, 0, 111); /* Light Yellow */
-            color: rgb(255, 255, 255);
+            left: 50%;
+            top: -150px; /* Adjusted to move popup box upwards */
+            transform: translateX(-50%);
+            background-color: #222; /* Dark background for popup */
+            color: orange;
             padding: 10px;
             border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-            width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+            width: 250px;
             z-index: 1; /* Ensure it's above other elements */
             transition: opacity 0.3s ease, transform 0.3s ease;
             transform: translateY(10px); /* Initial position for smooth transition */
@@ -109,8 +112,8 @@
                 padding: 10px;
             }
             .popup-box {
-                width: 250px;
-                top: -200px; /* Adjusted for smaller screens */
+                width: 200px;
+                top: -100px; /* Adjusted for smaller screens */
             }
         }
         @media (max-width: 576px) {
@@ -130,8 +133,8 @@
                 font-size: 1.25rem;
             }
             .popup-box {
-                width: 180px;
-                top: -200px; /* Adjusted for smaller screens */
+                width: 150px;
+                top: -80px; /* Adjusted for smaller screens */
             }
         }
     </style>

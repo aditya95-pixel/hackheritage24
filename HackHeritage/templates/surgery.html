@@ -9,47 +9,42 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            color: #333;
+            color: #fff;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://scopeblog.stanford.edu/wp-content/uploads/2021/10/AdobeStock_254314831-scaled-1152x578-2.jpeg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
+            background-color: #000;
         }
 
         header {
-            background-color: rgba(255, 255, 255, 0.8);
-            color: #333;
+            background-color: #1a1a1a;
+            color: #fff;
             padding: 20px 0;
             text-align: center;
-            border-bottom: 2px solid #FFB74D;
+            border-bottom: 2px solid #FF9900;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-            border-radius: 10px;
         }
 
         header h1 {
             margin: 0;
             font-size: 2.5rem;
             font-weight: 700;
-            color: #D84315;
+            color: #FF9900;
         }
 
         .container {
             max-width: 1200px;
             margin: 40px auto;
             padding: 20px;
-            background-color: transparent;
-            backdrop-filter: blur(2px);
-            border-radius: 15px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
         }
 
         h2 {
             text-align: center;
             font-size: 2rem;
-            color: #ffffff;
+            color: #FF9900;
             margin-bottom: 20px;
             font-weight: 600;
         }
@@ -57,56 +52,40 @@
         p {
             margin: 15px 0;
             font-size: 1.1rem;
-            color: #ffffff;
+            color: #fff;
         }
-
+        
         .sub-section {
-            background-color: #FFF3E0;
-            border: 1px solid #FFB74D;
+            background-color: #333;
+            border: 1px solid #FF9900;
             padding: 20px;
-            color: #333;
+            color: #fff;
+            box-shadow: 0px 4px 10px orange;
             border-radius: 10px;
             margin-bottom: 30px;
-            transition: transform 0.2s ease, box-shadow 0.1s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .sub-section:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.5);
         }
 
         .sub-section h3 {
             font-size: 1.5rem;
-            color: #D84315;
+            color: #FF9900;
             text-align: center;
+            
             margin-bottom: 15px;
             font-weight: 600;
         }
-
-        .general-surgery {
-            background-color: #ff8c006c;
-            border: 1px solid #FF6F00;
-        }
-
-        .cardiothoracic-surgery {
-            background-color: #1e8fff92;
-            border: 1px solid #1c85eea4;
-        }
-
-        .neurosurgery {
-            background-color: #32cd32b6;
-            border: 1px solid #28A745;
-        }
-
-        .orthopedic-surgery {
-            background-color: #7d91f6cb;
-            border: 1px solid #E6007E;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        .sub-section  {
+            font-size: 1.5rem;
+            color: #FF9900;
+            text-align: center;
+            
+            margin-bottom: 15px;
+            font-weight: 600;
         }
 
         .procedure-item {
@@ -114,36 +93,39 @@
             padding-left: 15px;
             cursor: pointer;
             transition: color 0.3s ease;
+            font-size: 1.1rem;
         }
 
         .procedure-item:before {
             content: '>';
-            color: #fe4108;
+            color: #FF9900;
             position: absolute;
+    
             left: 0;
             font-size: 1.3rem;
         }
 
         .procedure-item:hover {
-            color: #D84315;
+            color: white;
         }
 
         .procedure-details {
             display: none;
             position: absolute;
-            left: 15px;
-            top: 25px;
-            background-color: #f2dab3;
-            color: #333;
+            left: 50%;
+            top: -150px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: orange;
+            box-shadow: 0 0 12px 1px orange;
             padding: 10px;
             border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
             width: 250px;
             z-index: 1;
         }
 
         .procedure-item:hover .procedure-details {
             display: block;
+            color: orange;
         }
 
         @media (max-width: 768px) {
@@ -157,7 +139,8 @@
 
             .procedure-details {
                 width: 200px;
-                top: 30px;
+                top: -150px;
+                left: 50%;
             }
         }
 
@@ -172,8 +155,8 @@
 
             .procedure-details {
                 width: 200px;
-                top: 30px;
-                left: 0;
+                top: -150px;
+                left: 50%;
             }
         }
     </style>
@@ -269,11 +252,11 @@
                 </li>
                 <li class="procedure-item">
                     Spinal Surgery
-                    <span class="procedure-details">Surgical procedures to treat spinal disorders, including herniated discs and scoliosis.</span>
+                    <span class="procedure-details">Surgery to correct spinal deformities or relieve pain caused by spinal conditions.</span>
                 </li>
                 <li class="procedure-item">
-                    Fracture Repair
-                    <span class="procedure-details">Surgical intervention to fix broken bones and restore their normal alignment and function.</span>
+                    Bone Fracture Repair
+                    <span class="procedure-details">Surgical intervention to align and stabilize broken bones, often using metal rods, screws, or plates.</span>
                 </li>
             </ul>
         </div>

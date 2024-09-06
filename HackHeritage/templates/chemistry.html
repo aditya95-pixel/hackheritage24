@@ -3,189 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemistry Research Career Path Guidance</title>
+    <title>Chemistry Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('https://www.imperial.ac.uk/ImageCropToolT4/imageTool/uploaded-images/newseventsimage_1537198485721_mainnews2012_x1.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.519);
-            color: white;
-            padding: 10px auto;
-            max-width: 1200px;
-            margin: 10px auto;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            box-shadow: 0px 0px 15px 1px white;
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-        }
-        h1, h2 {
-            color: white;
+            padding: 20px;
         }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: transparent;
-            box-shadow: 0px 0px 15px 1px rgb(147, 221, 243);
-            backdrop-filter: blur(3px);
-            padding: 10px;
-            color: white;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
-            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .sub-branch:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.5);
-            transition: all 0.3s ease;
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
-        .popup-box {
-            position: absolute;
-            left: 50%;
-            top: -200px;
-            /* bottom: -10px; */
-            transform: translateX(-50%);
-            background-color: rgb(0, 0, 0);
-            padding: 15px;
-            border-radius: 10px;
-            width: 150px auto;
-            /* height: 250px ; */
-            text-align: left;
-            box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
-            color: white;
-            z-index: 10;
-        }
-        .popup-box h4 {
+        .sub-branch h3 {
+            color: #ff9900;
             margin-bottom: 10px;
-            font-size: 1.1rem;
-            color: #f7f7f7;
         }
-        .popup-box p {
-            font-size: 0.9rem;
+        .sub-branch p {
+            color: #e6e6e6;
+        }
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sub-branch ul li {
+            background-color: #333333;
+            padding: 10px;
+            border-left: 4px solid #ff9900;
             color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        .popup-box li {
-            font-size: 0.9rem;
-            color: #ff0000;
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000000;
         }
-        .sub-branch:hover .popup-box {
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: black;
+            color: orange;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
+            text-align: center;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
             opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(10px);
-            /* color: rgb(105, 0, 0); */
-        }
-        .sub-branch:hover{
-            color: #8b0000;
-            /* opacity: 1; */
-            /* visibility: visible; */
-            /* transform: translateX(-50%) translateY(10px); */
-            /* color: rgb(105, 0, 0); */
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 10px;
             }
-            .popup-box {
-                width: 90%;
-                top: -300px;
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .popup-box {
-                width: 95%;
-                top: -300px;
+            .tooltip {
+                width: 150px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Chemistry Research Career Path Guidance</h1>
+        <h1>Chemistry Career Path Guidance</h1>
     </header>
     <div class="container">
-        <h2>Career Pathways in Chemistry Research</h2>
-        <p>Research in chemistry opens up a range of exciting career paths. Below are some key research areas and the career opportunities they offer:</p>
+        <h2>Career Opportunities in Chemistry</h2>
+        <p>Explore key areas in Chemistry and associated career opportunities:</p>
         
         <div class="sub-branch">
-            <h3>Organic Chemistry Research</h3>
-            <div class="popup-box">
-                <h4>Organic Chemistry Overview</h4>
-                <p>Organic chemistry focuses on the study of carbon-based compounds, with applications in pharmaceuticals, agriculture, and materials science.</p>
-                <ul>
-                    <li>Drug design and discovery</li>
-                    <li>Development of new materials</li>
-                    <li>Sustainable agriculture</li>
-                </ul>
-            </div>
+            <h3>Analytical Chemistry</h3>
+            <p>Focusing on analyzing substances to determine their composition and concentration.</p>
+            <ul>
+                <li>
+                    Analytical Chemist
+                    <div class="tooltip">Using scientific techniques to identify the chemical makeup of substances.</div>
+                </li>
+                <li>
+                    Laboratory Technician
+                    <div class="tooltip">Assisting in the collection and analysis of samples in a lab environment.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Inorganic Chemistry Research</h3>
-            <div class="popup-box">
-                <h4>Inorganic Chemistry Overview</h4>
-                <p>Inorganic chemistry involves the study of metals, minerals, and non-organic compounds, with applications in catalysis, material science, and energy production.</p>
-                <ul>
-                    <li>Advanced materials development</li>
-                    <li>Industrial catalysis</li>
-                    <li>Energy storage and conversion</li>
-                </ul>
-            </div>
+            <h3>Organic Chemistry</h3>
+            <p>Specializing in the structure, properties, and reactions of organic compounds.</p>
+            <ul>
+                <li>
+                    Organic Chemist
+                    <div class="tooltip">Working on the design and synthesis of organic molecules for pharmaceuticals, plastics, and more.</div>
+                </li>
+                <li>
+                    Medicinal Chemist
+                    <div class="tooltip">Researching and developing new drugs by manipulating organic compounds.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Physical Chemistry Research</h3>
-            <div class="popup-box">
-                <h4>Physical Chemistry Overview</h4>
-                <p>Physical chemistry studies the behavior of molecules and atoms in chemical reactions and processes, often applying physics principles.</p>
-                <ul>
-                    <li>Quantum mechanics in chemistry</li>
-                    <li>Surface science and nanotechnology</li>
-                    <li>Thermodynamics and reaction kinetics</li>
-                </ul>
-            </div>
+            <h3>Physical Chemistry</h3>
+            <p>Investigating how matter behaves on a molecular and atomic level, and how chemical reactions occur.</p>
+            <ul>
+                <li>
+                    Physical Chemist
+                    <div class="tooltip">Studying the physical properties of molecules and atoms to develop new materials and products.</div>
+                </li>
+                <li>
+                    Materials Scientist
+                    <div class="tooltip">Creating and improving materials by understanding their chemical properties.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Analytical Chemistry Research</h3>
-            <div class="popup-box">
-                <h4>Analytical Chemistry Overview</h4>
-                <p>Analytical chemistry focuses on identifying, quantifying, and analyzing materials, with applications in forensic science, environmental monitoring, and quality control.</p>
-                <ul>
-                    <li>Development of analytical techniques</li>
-                    <li>Environmental pollution monitoring</li>
-                    <li>Forensic investigations</li>
-                </ul>
-            </div>
+            <h3>Biochemistry</h3>
+            <p>Exploring the chemical processes within and related to living organisms.</p>
+            <ul>
+                <li>
+                    Biochemist
+                    <div class="tooltip">Studying biological molecules and processes to develop new products, medicines, and therapies.</div>
+                </li>
+                <li>
+                    Toxicologist
+                    <div class="tooltip">Assessing the effects of chemicals on living organisms to ensure safety and efficacy.</div>
+                </li>
+            </ul>
         </div>
     </div>
 </body>

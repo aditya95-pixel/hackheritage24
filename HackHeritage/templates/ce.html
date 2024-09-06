@@ -8,62 +8,58 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: rgb(255, 255, 255);
+            background-color: #111;
+            color: #fff;
             margin: 0;
             padding: 0;
-            background-image: url('https://dc-mkt-prod.cloud.bosch.tech/us/media/industries/civil_engineering/images_2/backdrop_combined_images-2_copy_960x432.jpg');
-            background-repeat: no-repeat;
+            background-image: none;
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color:rgba(0, 0, 0, 0.642);
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            border-bottom: solid 1px white;
-            /* color: white; */
-            padding: 10px 0;
+            background-color: #000;
+            border-bottom: solid 1px orange;
+            padding: 20px 0;
             text-align: center;
-            box-shadow: 0 0 15px 1px whitesmoke;
+            box-shadow: 0 0 15px 1px #000;
+        }
+        header h1 {
+            color: #FF9900;
+            font-weight: 700;
+            text-transform: uppercase;
         }
         .container {
-            min-height: 760px;
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background-color: rgba(245, 245, 245, 0.267);
+            background-color: #1c1c1c;
             border-radius: 8px;
-            backdrop-filter: blur(5px);
-            box-shadow: 0px 0px 15px 1px black;
-        }
-        h1 {
-            color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 15px 1px #000;
         }
         h2 {
-            color: black;
+            color: #FF9900;
+            font-size: 1.8rem;
+            font-weight: 600;
         }
         p {
             margin: 10px 0;
             line-height: 1.6;
+            color: #ddd;
         }
         .sub-section {
-            /* background-color: ; */
-            box-shadow: 0px 0px 15px 1px black;
+            background-color: #222;
+            box-shadow: 0 4px 12px rgba(247, 178, 128, 0.6);
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
-            backdrop-filter: blur(5px);
             position: relative;
-            overflow: visible;
             cursor: pointer;
-            text-align: center;
+            color: orange;
+            transition: all 0.3s ease;
         }
         .sub-section:hover {
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: #333;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
-            color: rgb(142, 4, 4);
+            color: #FF9900;
             transition: all 0.3s ease;
         }
         .popup-box {
@@ -71,7 +67,7 @@
             left: 50%;
             top: -290px;
             transform: translateX(-50%);
-            background-color: rgb(255, 255, 255);
+            background-color: #1c1c1c;
             padding: 15px;
             border-radius: 8px;
             width: 80%;
@@ -80,23 +76,37 @@
             opacity: 0;
             visibility: hidden;
             transition: all 0.4s ease;
-            color: black;
+            color: #fff;
             z-index: 10;
         }
         .popup-box h4 {
             margin-bottom: 10px;
             font-size: 1.1rem;
-            color: #333;
+            color: #FF9900;
         }
         .popup-box p {
             font-size: 0.9rem;
-            color: #555;
+            color: #ccc;
         }
         .sub-section:hover .popup-box {
             opacity: 1;
             visibility: visible;
-            color: red;
             transform: translateX(-50%) translateY(10px);
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            box-shadow: 0 4px 12px rgba(247, 178, 128, 0.6);
+        }
+        ul li {
+            color: #ddd;
+            margin-bottom: 5px;
+            box-shadow: 0 4px 12px rgba(247, 178, 128, 0.6);
+        }
+        ul li::before {
+            content: '• ';
+            color: #FF9900;
+            font-weight: bold;
         }
         @media (max-width: 768px) {
             .container {
@@ -112,7 +122,7 @@
                 padding: 0 5px;
             }
             h2 {
-                font-size: 1.25rem;
+                font-size: 1.5rem;
             }
             .popup-box {
                 width: 95%;

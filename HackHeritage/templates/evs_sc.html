@@ -8,98 +8,103 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: rgb(251, 251, 251);
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://metamind.academy/wp-content/uploads/2024/03/Evs.png.webp');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(2, 141, 2, 0.536);
-            color: rgb(255, 255, 255);
-            padding: 10px 0;
+            background-color: #000000;
+            color: orange;
+            padding: 20px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
+            font-size: 24px;
+            font-weight: 700;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 15px;
-            background-color: #7df1005d;
+            background-color: #333333;
             border-radius: 10px;
-            box-shadow: 0 0 8px 1px rgb(0, 0, 0);
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.7);
         }
-        h1, h2 {
-            color: white;
+        h2 {
+            color: #ffffff;
         }
         h2 {
             text-align: center;
+            font-size: 28px;
+            font-weight: 600;
         }
         p {
             margin: 15px 0;
-            color: white;
+            color: #ffffff;
         }
         .sub-branch {
             background-color: transparent;
-            backdrop-filter: blur(0px);
-            box-shadow: 0 0 8px 1px rgb(0, 0, 0);
-            padding: 10px;
-            color: rgb(0, 13, 198);
-            border-radius: 10px;
+            padding: 15px;
+            color: #ff8c00;
+            border-bottom: 1px solid #ff8c00;
             margin-bottom: 20px;
             position: relative;
         }
         .sub-branch h3 {
-            color: white;
-            text-align: center;
+            color: #ff8c00;
+            text-align: left;
+            font-size: 22px;
         }
         .sub-branch ul {
             padding-left: 20px;
+            margin-top: 10px;
         }
         .sub-branch ul li {
             position: relative;
             padding-left: 20px;
+            color: orange;
             cursor: pointer;
             transition: color 0.3s ease;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 2px rgba(247, 178, 128, 0.6);
+
+            font-size: 18px;
         }
         .sub-branch ul li:before {
             content: '>';
-            color: rgb(255, 0, 0);
+            color: #ff8c00;
             position: absolute;
             left: 0;
             font-size: 1.3rem;
             line-height: 1.5;
         }
         .sub-branch ul li:hover {
-            color: red; /* Change color on hover */
+            color: white;
         }
         .sub-branch ul li:hover:before {
-            color: red; /* Change color of the arrow on hover */
+            color: #ffffff;
         }
         .sub-branch ul li .popup-box {
             display: none;
             position: absolute;
             left: 30px;
-            top: -100px; /* Positioned below the hover line */
-            background-color: rgb(0, 149, 25); /* Light background with slight transparency */
-            color: #ffffff;
+            top: -100px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: orange;
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
             width: 250px;
-            z-index: 1; /* Ensure it's above other elements */
+            z-index: 10;
             transition: opacity 0.3s ease, transform 0.3s ease;
+            font-size: 14px;
         }
         .sub-branch ul li:hover .popup-box {
             display: block;
             opacity: 1;
-            transform: translateY(0); /* No vertical movement */
+            transform: translateY(0);
         }
         @media (max-width: 768px) {
             .container {
@@ -108,12 +113,9 @@
             .sub-branch ul {
                 padding-left: 0;
             }
-            .sub-branch ul li {
-                margin-bottom: 10px;
-            }
             .popup-box {
                 width: 200px;
-                top: 40px; /* Adjusted for smaller screens */
+                top: 40px;
             }
         }
         @media (max-width: 576px) {
@@ -121,7 +123,7 @@
                 padding: 0 5px;
             }
             h2 {
-                font-size: 1.25rem;
+                font-size: 20px;
             }
             .sub-branch {
                 padding: 5px;
@@ -131,91 +133,91 @@
             }
             .popup-box {
                 width: 180px;
-                top: 40px; /* Adjusted for smaller screens */
+                top: 40px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Environmental Science Research Career Path Guidance</h1>
+        Environmental Science Research Career Path Guidance
     </header>
     <div class="container">
         <h2>Career Opportunities in Environmental Science Research</h2>
-        <p>Environmental Science research offers diverse career paths that focus on addressing environmental challenges and promoting sustainability. Below are key research areas and career opportunities available in this field:</p>
+        <p>Explore key research areas and career paths in environmental science that focus on sustainability and addressing environmental challenges.</p>
         
         <div class="sub-branch">
             <h3>Ecology and Biodiversity</h3>
-            <p>Research in ecology and biodiversity involves studying ecosystems and species interactions. Careers in this area include roles in conservation, research, and environmental management.</p>
+            <p>Careers in conservation, research, and environmental management.</p>
             <ul>
                 <li>
-                    <strong>Ecologist:</strong>
-                    <span class="popup-box">Investigating ecosystem dynamics and species conservation strategies.</span>
+                    <strong>Ecologist</strong>
+                    <span class="popup-box">Investigates ecosystem dynamics and species conservation.</span>
                 </li>
                 <li>
-                    <strong>Wildlife Biologist:</strong>
-                    <span class="popup-box">Studying animal behavior and working on species protection initiatives.</span>
+                    <strong>Wildlife Biologist</strong>
+                    <span class="popup-box">Studies animal behavior and species protection.</span>
                 </li>
                 <li>
-                    <strong>Conservation Scientist:</strong>
-                    <span class="popup-box">Developing and implementing habitat restoration projects.</span>
+                    <strong>Conservation Scientist</strong>
+                    <span class="popup-box">Develops and implements habitat restoration projects.</span>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Climate Change Research</h3>
-            <p>Climate change research focuses on understanding and mitigating the impacts of climate change. Career opportunities include roles in climate science, policy development, and environmental consulting.</p>
+            <p>Focuses on understanding and mitigating the effects of climate change.</p>
             <ul>
                 <li>
-                    <strong>Climate Scientist:</strong>
-                    <span class="popup-box">Conducting research on climate patterns and impacts.</span>
+                    <strong>Climate Scientist</strong>
+                    <span class="popup-box">Researches climate patterns and impacts.</span>
                 </li>
                 <li>
-                    <strong>Environmental Policy Analyst:</strong>
-                    <span class="popup-box">Developing policies to address climate change challenges.</span>
+                    <strong>Environmental Policy Analyst</strong>
+                    <span class="popup-box">Develops policies to address climate change.</span>
                 </li>
                 <li>
-                    <strong>Sustainability Consultant:</strong>
-                    <span class="popup-box">Advising organizations on climate adaptation and mitigation strategies.</span>
+                    <strong>Sustainability Consultant</strong>
+                    <span class="popup-box">Advises organizations on climate mitigation strategies.</span>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Environmental Policy and Management</h3>
-            <p>Research in environmental policy and management involves creating and enforcing regulations to protect the environment. Careers in this area focus on policy development, regulatory compliance, and sustainability planning.</p>
+            <p>Careers focusing on policy development, regulatory compliance, and sustainability planning.</p>
             <ul>
                 <li>
-                    <strong>Environmental Policy Advisor:</strong>
-                    <span class="popup-box">Crafting policies and regulations to enhance environmental protection.</span>
+                    <strong>Environmental Policy Advisor</strong>
+                    <span class="popup-box">Crafts policies and regulations for environmental protection.</span>
                 </li>
                 <li>
-                    <strong>Regulatory Affairs Specialist:</strong>
-                    <span class="popup-box">Ensuring compliance with environmental laws and regulations.</span>
+                    <strong>Regulatory Affairs Specialist</strong>
+                    <span class="popup-box">Ensures compliance with environmental laws.</span>
                 </li>
                 <li>
-                    <strong>Sustainability Manager:</strong>
-                    <span class="popup-box">Overseeing sustainability initiatives within organizations or agencies.</span>
+                    <strong>Sustainability Manager</strong>
+                    <span class="popup-box">Oversees sustainability initiatives in organizations.</span>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Environmental Health Research</h3>
-            <p>Environmental health research examines how environmental factors affect human health. Career paths include roles in public health research, environmental health assessment, and hazard management.</p>
+            <p>Careers examining how environmental factors affect human health.</p>
             <ul>
                 <li>
-                    <strong>Environmental Health Scientist:</strong>
-                    <span class="popup-box">Investigating the links between environmental exposures and health outcomes.</span>
+                    <strong>Environmental Health Scientist</strong>
+                    <span class="popup-box">Investigates links between environmental exposures and health outcomes.</span>
                 </li>
                 <li>
-                    <strong>Public Health Researcher:</strong>
-                    <span class="popup-box">Studying the impact of environmental factors on public health.</span>
+                    <strong>Public Health Researcher</strong>
+                    <span class="popup-box">Studies the impact of environmental factors on public health.</span>
                 </li>
                 <li>
-                    <strong>Hazardous Materials Specialist:</strong>
-                    <span class="popup-box">Managing and mitigating risks associated with hazardous substances.</span>
+                    <strong>Hazardous Materials Specialist</strong>
+                    <span class="popup-box">Manages risks associated with hazardous substances.</span>
                 </li>
             </ul>
         </div>

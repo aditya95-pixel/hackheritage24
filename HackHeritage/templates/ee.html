@@ -8,117 +8,109 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: rgb(255, 255, 255);
+            background-color: hsl(0, 0%, 12%);
+            color: orange;
             margin: 0;
             padding: 0;
-            background-image: url('https://t4.ftcdn.net/jpg/02/73/14/83/240_F_273148317_YmBx5JLlEYj547Vo2htOc8KYQSNz55VT.jpg');
+            /* background-image: url('https://t4.ftcdn.net/jpg/02/73/14/83/240_F_273148317_YmBx5JLlEYj547Vo2htOc8KYQSNz55VT.jpg'); */
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(2, 2, 103, 0.787);
-            color: white;
-            padding: 5px;
-            margin-bottom: 29px;
+            background-color: #000;
+            color: orange;
+            padding: 15px;
             text-align: center;
-            border-bottom-right-radius: 10px;
+            border-bottom: 2px solid    orange;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
             border-bottom-left-radius: 10px;
-            border-bottom: solid 1px whitesmoke;
-            box-shadow: 0 0 8px 1px whitesmoke;
+            border-bottom-right-radius: 10px;
         }
         .container {
-            max-width: 2000px;
-            margin: 50px;
+            max-width: 1200px;
+            margin: 50px auto;
             padding: 40px;
-            background-color: transparent;
-            border-radius: 8px;
-            backdrop-filter: blur(4px);
-            border: solid white;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            left: 50%;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
         }
-        h1, h2 {
-            color: white;
+    h2 {
+            color: #f5f5f5;
         }
         p {
             margin: 10px 0;
             line-height: 1.6;
         }
         .sub-section {
-            background-color: rgba(0, 63, 209, 0.334);
-            color: aqua;
+            background-color: rgba(0, 0, 0, 0.7); /* Deep orange similar to Pornhub */
+            color: orange;
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 0 8px 1px whitesmoke;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
             position: relative;
+            box-shadow: 0 0 8px orange;
         }
         .sub-section h3 {
-            color: rgb(255, 255, 255);
+            color: orange;
             cursor: pointer;
-            position: relative;
-        }
-        .sub-section h3:hover{
-            color: rgb(255, 0, 0);
+            transition: color 0.3s ease;
 
+        }
+        .sub-section h3:hover {
+            color: white   ; /* Bright orange on hover */
         }
         .sub-section p {
             display: none;
             position: absolute;
-            left: 190px;
-            top: -170px; /* Position the content box below the text */
-            background-color: rgb(2, 20, 63);
-            color: white;
+            left: 0;
+            top: -100px; /* Position the content box below the text */
+            background-color: #333; /* Dark background for popup */
+            color: orange;
             padding: 10px;
             border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-            width: 250px;
-            z-index: 1; /* Ensure it's above other elements */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            z-index: 1;
             transition: opacity 0.3s ease, transform 0.3s ease;
-            transform: translateY(10px); /* Initial position for smooth transition */
-            opacity: 0; /* Initially hidden */
+            transform: translateY(10px);
+            opacity: 0;
+            border:solid 1px orange;
+            box-shadow: 0 0 8px orange;
+
         }
-        .sub-section h3:hover + p {
+        .sub-section h3:hover ~ p {
             display: block;
             opacity: 1;
-            transform: translateY(0); /* Smooth vertical movement */
+            transform: translateY(0);
         }
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
             }
-            ul {
-                padding-left: 15px;
-            }
-            .sub-section {
-                padding: 10px;
-            }
             .sub-section p {
-                width: 90%;
+                width: calc(100% - 20px);
             }
         }
         @media (max-width: 576px) {
             .container {
                 padding: 10px;
             }
-            ul {
-                padding-left: 10px;
-            }
             .sub-section {
-                padding: 8px;
+                padding: 10px;
+            }
+            .sub-section p {
+                width: calc(100% - 20px);
             }
             h2 {
                 font-size: 1.5rem;
             }
             .sub-section h3 {
                 font-size: 1.25rem;
-            }
-            .sub-section p {
-                width: 80%;
             }
         }
     </style>

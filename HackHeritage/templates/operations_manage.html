@@ -8,49 +8,52 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://media.licdn.com/dms/image/D4D12AQHDaG259ebQLg/article-cover_image-shrink_720_1280/0/1683636306895?e=2147483647&v=beta&t=7Kg4ZAJQctm-N0BGD6by7cqyPq6eMphIySnvTdiH5tY');
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(3, 3, 98, 0.337);
-            color: white;
+            background-color: #333;
+            color: orange;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
+            box-shadow: 0 0 8px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 5px 15px;
             border-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            background-color: #b8cbf650;
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
         }
-        h1, h2 {
-            color: rgb(255, 255, 255);
+        h1 {
+            color: orange;
         }
         h2 {
+            color: orange;
+            background-color: #333;
             text-align: center;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
         }
         p {
             margin: 15px 0;
+            font-weight: bold;
+            color: #b3b3b3;
         }
         .sub-branch {
-            background-color: transparent;
-            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(25px);
+            background-color: #333;
+            box-shadow: 0 0 8px 1px #000;
             padding: 10px;
-            color: white;
+            color: orange;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
@@ -61,7 +64,7 @@
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: rgb(255, 179, 0);
+            color: orange;
             text-align: center;
         }
         .sub-branch ul {
@@ -75,25 +78,28 @@
             position: relative;
             padding: 10px;
             transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid #40bdf8;
+            border-left: 4px solid #ff9900;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
         }
         .sub-branch ul li:hover {
-            background-color: #40bdf8;
+            background-color: #ff9900;
             color: #000;
         }
         .sub-branch ul li::before {
             content: '>';
-            color: #ff0505;
+            color: #ff9900;
             font-size: 1.4rem;
             margin-right: 10px;
         }
         .tooltip {
             display: none;
             position: absolute;
-            left: 85%;
-            top: -60px;
+            left: 70%;
+            top: -60px; 
             transform: translateX(-50%);
-            background-color: #e3d90c;
+            background-color: #ff9900;
             color: black;
             padding: 10px;
             border-radius: 5px;
@@ -150,80 +156,80 @@
     </header>
     <div class="container">
         <h2>Career Opportunities in Operations Management</h2>
-        <p>Operations Management focuses on optimizing processes, improving efficiency, and ensuring that organizations function smoothly. This field offers a variety of career opportunities in industries such as manufacturing, logistics, and consulting.</p>
+        <p>A career in operations management involves overseeing and improving business operations to ensure efficiency, quality, and productivity. It requires strong organizational skills, problem-solving, and leadership. Here are some key areas and related career opportunities:</p>
         
         <div class="sub-branch">
             <h3>Supply Chain Management</h3>
-            <p>Supply Chain Management involves coordinating the flow of goods and services from suppliers to customers, ensuring efficient and cost-effective processes. Careers in this area include roles in logistics, procurement, and operations analysis.</p>
+            <p>Supply chain management focuses on coordinating the production, shipment, and distribution of products. This area requires skills in logistics, negotiation, and planning.</p>
             <ul>
                 <li>
                     Supply Chain Manager
-                    <div class="tooltip">Overseeing the end-to-end supply chain operations, from procurement to delivery.</div>
+                    <div class="tooltip">Overseeing the entire supply chain process, from sourcing materials to delivering finished goods.</div>
+                </li>
+                <li>
+                    Procurement Manager
+                    <div class="tooltip">Handling the purchasing of goods and services necessary for production and operations.</div>
                 </li>
                 <li>
                     Logistics Coordinator
-                    <div class="tooltip">Managing the transportation and distribution of goods efficiently.</div>
-                </li>
-                <li>
-                    Operations Analyst
-                    <div class="tooltip">Analyzing and improving supply chain processes to enhance performance.</div>
+                    <div class="tooltip">Managing the transportation and delivery of goods, ensuring timely and efficient shipments.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Quality Management</h3>
-            <p>Quality Management focuses on maintaining and improving the quality of products and services through systematic processes. This area provides career opportunities in quality assurance, quality control, and process improvement.</p>
-            <ul>
-                <li>
-                    Quality Assurance Manager
-                    <div class="tooltip">Ensuring that products and services meet required quality standards.</div>
-                </li>
-                <li>
-                    Quality Control Inspector
-                    <div class="tooltip">Inspecting and testing products to maintain consistent quality.</div>
-                </li>
-                <li>
-                    Process Improvement Specialist
-                    <div class="tooltip">Analyzing and improving operational processes to boost quality and efficiency.</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Operations Strategy</h3>
-            <p>Operations Strategy involves planning and implementing operational activities that align with organizational goals. Careers in this field include roles in strategic planning, consulting, and operations leadership.</p>
+            <h3>Production and Operations Management</h3>
+            <p>This area involves managing the production process and ensuring that operations run smoothly. Key skills include process improvement and resource management.</p>
             <ul>
                 <li>
                     Operations Manager
-                    <div class="tooltip">Overseeing day-to-day operations and ensuring alignment with strategic goals.</div>
+                    <div class="tooltip">Overseeing day-to-day operations and ensuring the efficient use of resources and labor.</div>
                 </li>
                 <li>
-                    Operations Consultant
-                    <div class="tooltip">Advising organizations on improving operations and implementing best practices.</div>
+                    Production Manager
+                    <div class="tooltip">Managing the production process to ensure products are manufactured efficiently and meet quality standards.</div>
                 </li>
                 <li>
-                    Process Manager
-                    <div class="tooltip">Managing and optimizing business processes to improve efficiency and output.</div>
+                    Process Improvement Specialist
+                    <div class="tooltip">Identifying areas for improvement and implementing strategies to enhance operational efficiency.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Quality Assurance and Control</h3>
+            <p>Quality assurance and control careers focus on ensuring that products meet specific standards and are free of defects. This requires attention to detail and analytical skills.</p>
+            <ul>
+                <li>
+                    Quality Assurance Manager
+                    <div class="tooltip">Overseeing testing and inspection processes to ensure products meet quality standards.</div>
+                </li>
+                <li>
+                    Quality Control Analyst
+                    <div class="tooltip">Testing products during various stages of production to identify and address defects.</div>
+                </li>
+                <li>
+                    Compliance Officer
+                    <div class="tooltip">Ensuring that company operations and products comply with industry regulations and standards.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>Project Management</h3>
-            <p>Project Management involves planning, executing, and closing projects within specific timeframes and budgets. Careers in this area include roles in project coordination, risk management, and operations leadership.</p>
+            <p>Project management in operations involves planning, executing, and overseeing specific projects within the company. Strong leadership and organizational skills are essential.</p>
             <ul>
                 <li>
                     Project Manager
-                    <div class="tooltip">Leading and managing projects to ensure they meet deadlines and goals.</div>
+                    <div class="tooltip">Planning and overseeing projects to ensure they are completed on time and within budget.</div>
+                </li>
+                <li>
+                    Operations Consultant
+                    <div class="tooltip">Providing expertise and advice to improve operational efficiency and solve complex challenges.</div>
                 </li>
                 <li>
                     Risk Manager
-                    <div class="tooltip">Identifying and mitigating risks to ensure successful project completion.</div>
-                </li>
-                <li>
-                    Operations Director
-                    <div class="tooltip">Providing leadership and direction to ensure successful project execution.</div>
+                    <div class="tooltip">Identifying and mitigating risks that could impact project timelines and overall operations.</div>
                 </li>
             </ul>
         </div>

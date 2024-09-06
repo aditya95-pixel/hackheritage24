@@ -2,220 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Finance</title>
+    <title>Personal Finance Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: rgb(249, 249, 249);
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('https://navi.com/blog/wp-content/uploads/2022/06/personal-finance.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(255, 255, 255, 0.584);
-            color: rgb(253, 253, 253);
-            padding: 10px 0;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-            background-color: #ffffff5b;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 10px;
-        }
-        .container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            padding: 20px;
         }
         h2 {
-            color: rgb(255, 255, 255);
-        }
-        h2 {
+            color: #ff9900;
             text-align: center;
-        }
-        .sub-branch h3{
-            color: black;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.515);
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(2px);
-            padding: 10px;
-            color: black;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
-            transition: box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .sub-branch:hover {
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: rgb(255, 255, 255);
-            text-align: center;
+            color: #ff9900;
+            margin-bottom: 10px;
         }
-        ul {
+        .sub-branch p {
+            color: #e6e6e6;
+        }
+        .sub-branch ul {
             list-style-type: none;
             padding: 0;
         }
-        ul li {
-            margin-bottom: 10px;
-            position: relative;
+        .sub-branch ul li {
+            background-color: #333333;
             padding: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid #FF5733;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        ul li:hover {
-            background-color: #FF5733;
-            color: white;
-        }
-        ul li::before {
-            content: '>';
-            color: #FF5733;
-            font-size: 1.4rem;
-            margin-right: 10px;
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000000;
         }
         .tooltip {
             display: none;
             position: absolute;
-            left: 40%;
-            top: -60px;
-            transform: translateX(-50%);
-            background-color: #333;
-            color: #fff;
+            background-color: #ff9900;
+            color: #000000;
             padding: 10px;
             border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            width: 250px;
-            text-align: center;
             font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
+            text-align: center;
             z-index: 100;
             opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: opacity 0.3s ease;
         }
-        ul li:hover .tooltip {
+        .sub-branch ul li:hover .tooltip {
             display: block;
             opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
-            }
-            ul {
-                padding-left: 0;
-            }
-            ul li {
-                margin-bottom: 10px;
+                padding: 10px;
             }
             .tooltip {
-                width: 200px;
-                top: -50px;
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            ul li {
-                font-size: 0.875rem;
-            }
-            .tooltip {
-                width: 300px;
-                top: -70px;
+                width: 150px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Personal Finance</h1>
-        <p>Master the Art of Managing Your Personal Finances</p>
+        <h1>Personal Finance Career Path Guidance</h1>
     </header>
-
     <div class="container">
-        <h2>Introduction to Personal Finance</h2>
-        <p>
-            Personal finance involves managing your money, including saving, investing, budgeting, and planning for the future. It encompasses all the financial decisions and activities of an individual or household. Effective personal finance management is crucial for financial security and achieving long-term financial goals.
-        </p>
-
+        <h2>Career Opportunities in Personal Finance</h2>
+        <p>Explore key areas in personal finance and associated career opportunities:</p>
+        
         <div class="sub-branch">
-            <h3>1. Key Components of Personal Finance</h3>
+            <h3>Financial Planning</h3>
+            <p>Helping individuals manage their finances to achieve their life goals.</p>
             <ul>
                 <li>
-                    <span class="engg">Budgeting:</span> 
-                    <div class="tooltip">Planning how to allocate your income towards expenses, savings, and investments.</div>
+                    Financial Advisor
+                    <div class="tooltip">Guiding clients in managing their personal finances, investments, and savings.</div>
                 </li>
                 <li>
-                    <span class="engg">Saving:</span> 
-                    <div class="tooltip">Setting aside a portion of your income for future needs or emergencies.</div>
-                </li>
-                <li>
-                    <span class="engg">Investing:</span> 
-                    <div class="tooltip">Growing your wealth by purchasing assets such as stocks, bonds, or real estate.</div>
+                    Retirement Planner
+                    <div class="tooltip">Creating strategies to ensure clients have enough savings to retire comfortably.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>2. Personal Finance Strategies</h3>
+            <h3>Investment Management</h3>
+            <p>Helping individuals grow their wealth through smart investment strategies.</p>
             <ul>
                 <li>
-                    <span class="engg">Debt Management:</span> 
-                    <div class="tooltip">Strategies to reduce and manage debt, including credit card debt and loans.</div>
+                    Portfolio Manager
+                    <div class="tooltip">Managing clients' investment portfolios to meet their financial objectives.</div>
                 </li>
                 <li>
-                    <span class="engg">Retirement Planning:</span> 
-                    <div class="tooltip">Planning for financial independence after retirement through savings and investments.</div>
-                </li>
-                <li>
-                    <span class="engg">Insurance:</span> 
-                    <div class="tooltip">Protecting yourself and your assets from unforeseen events through various insurance policies.</div>
+                    Wealth Manager
+                    <div class="tooltip">Providing high-net-worth individuals with comprehensive financial advice and investment strategies.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>3. Financial Planning Tips</h3>
+            <h3>Tax Planning</h3>
+            <p>Assisting individuals in minimizing tax liabilities and maximizing returns.</p>
             <ul>
                 <li>
-                    <span class="engg">Create an Emergency Fund:</span> 
-                    <div class="tooltip">Save at least three to six months' worth of expenses for unexpected events.</div>
+                    Tax Consultant
+                    <div class="tooltip">Advising clients on tax-efficient strategies to reduce their tax burden.</div>
                 </li>
                 <li>
-                    <span class="engg">Set Financial Goals:</span> 
-                    <div class="tooltip">Define short-term, medium-term, and long-term financial goals to guide your spending and savings.</div>
-                </li>
-                <li>
-                    <span class="engg">Diversify Investments:</span> 
-                    <div class="tooltip">Spread your investments across different asset classes to minimize risk.</div>
+                    Certified Public Accountant (CPA)
+                    <div class="tooltip">Helping individuals with tax preparation, filing, and compliance with tax laws.</div>
                 </li>
             </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>4. Conclusion</h3>
-            <p>
-                Personal finance management is essential for financial well-being. By understanding key components like budgeting, saving, investing, and risk management, individuals can achieve financial independence and security.
-            </p>
         </div>
     </div>
 </body>

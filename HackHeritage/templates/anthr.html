@@ -3,67 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Path in Anthropology</title>
+    <title>Anthropology Career Path Guidance</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.601);
-            color: white;
-            padding: 5px;
+            background-color: #333;
+            color: orange;
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-bottom:10px;
-            box-shadow: 0px 0px 15px 1px black;
+            box-shadow: 0 0 8px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 20px;
-            box-shadow: 0px 0px 15px 1px black;
-            border-radius: 10px;
-            position: center;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
+        }
+        h1 {
+            color: orange;
         }
         h2 {
-            color: black;
-        }
-        h2 {
+            color: orange;
+            background-color: #333;
             text-align: center;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
         }
         p {
             margin: 15px 0;
+            font-weight: bold;
+            color: #b3b3b3;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            backdrop-filter: blur(0px);
+            background-color: #333;
+            box-shadow: 0 0 8px 1px #000;
             padding: 10px;
-            color: black;
+            color: orange;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: orange;
             text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #ff9900;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff9900;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 70%;
+            top: -60px; 
+            transform: translateX(-50%);
+            background-color: #ff9900;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -74,6 +124,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -89,27 +143,96 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Anthropology Career Path</h1>
+        <h1>Anthropology Career Path Guidance</h1>
     </header>
     <div class="container">
+        <h2>Career Opportunities in Anthropology</h2>
+        <p>A career in anthropology involves understanding human societies, cultures, and their development across time. Careers in this field span academia, cultural resource management, health services, and more. Here are some key areas and related career opportunities:</p>
+        
         <div class="sub-branch">
-            <h2>About Anthropology</h2>
-            <p>Anthropology is the study of human societies, cultures, and their development. It explores human behavior, cultural norms, and societal evolution, drawing from disciplines such as archaeology, linguistics, and biology.</p>
-            <h2>Career Opportunities</h2>
+            <h3>Academic Research</h3>
+            <p>Careers in academic research focus on studying human societies, cultures, and their histories. This often involves teaching, publishing research, and contributing to academic discourse.</p>
             <ul>
-                <li>Cultural Anthropologist</li>
-                <li>Archaeologist</li>
-                <li>Museum Curator</li>
-                <li>Forensic Anthropologist</li>
-                <li>Academic Researcher</li>
+                <li>
+                    Anthropological Researcher
+                    <div class="tooltip">Conducting fieldwork and research on human societies, cultures, and histories.</div>
+                </li>
+                <li>
+                    University Professor
+                    <div class="tooltip">Teaching anthropology courses at the university level and conducting research.</div>
+                </li>
+                <li>
+                    Research Fellow
+                    <div class="tooltip">Collaborating on academic projects and contributing to the advancement of anthropological knowledge.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Cultural Resource Management</h3>
+            <p>Careers in cultural resource management involve preserving and protecting cultural heritage, artifacts, and sites, often in collaboration with public and private sectors.</p>
+            <ul>
+                <li>
+                    Archaeologist
+                    <div class="tooltip">Excavating and studying material remains to understand past human activities.</div>
+                </li>
+                <li>
+                    Museum Curator
+                    <div class="tooltip">Managing collections of artifacts and cultural objects in museums.</div>
+                </li>
+                <li>
+                    Heritage Consultant
+                    <div class="tooltip">Advising organizations on preserving and promoting cultural heritage.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Health and Social Services</h3>
+            <p>Careers in health and social services use anthropological insights to address health issues and support communities, often working in public health, social work, or medical anthropology.</p>
+            <ul>
+                <li>
+                    Medical Anthropologist
+                    <div class="tooltip">Studying the cultural factors that influence health, illness, and healthcare systems.</div>
+                </li>
+                <li>
+                    Public Health Specialist
+                    <div class="tooltip">Using anthropological insights to inform public health policies and practices.</div>
+                </li>
+                <li>
+                    Social Worker
+                    <div class="tooltip">Supporting communities by addressing social and cultural issues that affect well-being.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Public Policy and Advocacy</h3>
+            <p>Careers in public policy and advocacy involve applying anthropological knowledge to inform policies that address social, cultural, and environmental challenges.</p>
+            <ul>
+                <li>
+                    Policy Advisor
+                    <div class="tooltip">Advising governments and organizations on policies that consider cultural and social factors.</div>
+                </li>
+                <li>
+                    Advocacy Coordinator
+                    <div class="tooltip">Leading initiatives that address social and cultural issues through advocacy and policy changes.</div>
+                </li>
+                <li>
+                    Environmental Anthropologist
+                    <div class="tooltip">Examining the relationships between humans and their environment to inform policy decisions.</div>
+                </li>
             </ul>
         </div>
     </div>
 </body>
 </html>
-

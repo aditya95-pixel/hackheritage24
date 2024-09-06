@@ -5,166 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mechanical Engineering Career Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: azure;
-            color: white;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://snu.edu.in/site/assets/files/10461/close-up-metallic-equipment-part-turning-factory-generated-by-ai.1600x0.webp');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000; /* Black background for dark theme */
+    color: rgb(255, 166, 0); /* White text color */
+    margin: 0;
+    padding: 0;
+    /* background-image: url('https://snu.edu.in/site/assets/files/10461/close-up-metallic-equipment-part-turning-factory-generated-by-ai.1600x0.webp'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-        header {
-            background-color: rgba(218, 165, 32, 0.498);
-            border-bottom-right-radius: 10px;
-            border-bottom-left-radius: 10px;
-            color: rgb(255, 255, 255);
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 0 8px 1px rgb(255, 255, 255);
-        }
+header {
+    background-color:black; /* Bright orange with some transparency */
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: rgb(255, 166, 0);
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: solid 2px orange;
 
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: transparent;
-            border-radius: 8px;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 0 8px 1px rgb(0, 0, 0);
-        }
+    box-shadow: 0 0 8px 1px orange; /* Orange shadow */
+}
 
-        h1, h2 {
-            color: white;
-        }
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+    border-radius: 8px;
+    backdrop-filter: blur(10px); /* Increased blur for a more distinct look */
+    box-shadow: 0 0 8px 1px orange; /* Orange shadow */
+}
+h2 {
+    color: white; /* Bright orange color for headings */
+}
 
-        p {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
 
-        .sub-section {
-            background-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 8px 1px rgb(182, 182, 182);
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            backdrop-filter: blur(60px);
-            position: relative;
-        }
+.sub-section {
+    background-color: black; /* Light orange background */
+    box-shadow: 0 0 8px 1px orange; /* Orange shadow */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);
+    position: relative;
+}
 
-        .sub-section h3 {
-            color: white;
-        }
+.sub-section h3 {
+    color: white; /* Bright orange for sub-section headers */
+}
 
-        ul {
-            padding-left: 20px;
-        }
+ul {
+    padding-left: 20px;
+}
 
-        .sub-section ul li {
-            position: relative;
-            padding-left: 20px;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
+.sub-section ul li {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 1px 1px orange;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
 
-        .sub-section ul li:before {
-            content: '>';
-            color: white;
-            position: absolute;
-            left: 0;
-            font-size: 1.3rem;
-            line-height: 1.5;
-        }
+.sub-section ul li:before {
+    content: '>';
+    color: white; /* Bright orange */
+    position: absolute;
+    left: 0;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
 
-        .sub-section ul li:hover {
-            color: rgb(250, 74, 74); /* Light Yellow */
-        }
+.sub-section ul li:hover {
+    color:orange; /* Bright orange */
+    background-color: rgba(255, 87, 34, 0.1); /* Slight orange background on hover */
+}
 
-        .sub-section ul li:hover:before {
-            color: rgb(246, 47, 47); /* Light Yellow */
-        }
+.sub-section ul li:hover:before {
+    color: white; /* Bright orange */
+}
 
-        .sub-section ul li .popup-box {
-            display: none;
-            position: absolute;
-            left: 120px;
-            top: -140px; /* Positioned below the hover line */
-            background-color: rgb(249, 199, 62); /* Light Yellow */
-            color: rgb(0, 0, 0);
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-            width: 200px;
-            z-index: 1; /* Ensure it's above other elements */
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
+.sub-section ul li .popup-box {
+    display: none;
+    position: absolute;
+    left: 120px;
+    top: -140px;
+    border: solid 1px orange; /* Positioned below the hover line */
+    background-color: black; /* Bright orange */
+    color: orange; /* Black text */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    width: 200px;
+    z-index: 1; /* Ensure it's above other elements */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-        .sub-section ul li:hover .popup-box {
-            display: block;
-            opacity: 1;
-            transform: translateY(0); /* No vertical movement */
-        }
+.sub-section ul li:hover .popup-box {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* No vertical movement */
+}
 
-        .sub-section ul li .popup-content {
-            display: none; /* Hide the content */
-        }
+.sub-section ul li .popup-content {
+    display: none; /* Hide the content */
+}
 
-        .sub-section ul li:hover .popup-content {
-            display: none; /* Ensure content is hidden on hover */
-        }
+.sub-section ul li:hover .popup-content {
+    display: none; /* Ensure content is hidden on hover */
+}
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
 
-            ul {
-                padding-left: 15px;
-            }
+    ul {
+        padding-left: 15px;
+    }
 
-            .sub-section {
-                padding: 10px;
-            }
+    .sub-section {
+        padding: 10px;
+    }
 
-            .popup-box {
-                width: 200px;
-                top: 40px; /* Adjusted for smaller screens */
-            }
-        }
+    .popup-box {
+        width: 200px;
+        top: 40px; /* Adjusted for smaller screens */
+    }
+}
 
-        @media (max-width: 576px) {
-            .container {
-                padding: 10px;
-            }
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
 
-            ul {
-                padding-left: 10px;
-            }
+    ul {
+        padding-left: 10px;
+    }
 
-            .sub-section {
-                padding: 8px;
-            }
+    .sub-section {
+        padding: 8px;
+    }
 
-            h2 {
-                font-size: 1.5rem;
-            }
+    h2 {
+        font-size: 1.5rem;
+    }
 
-            .sub-section h3 {
-                font-size: 1.25rem;
-            }
+    .sub-section h3 {
+        font-size: 1.25rem;
+    }
 
-            .popup-box {
-                width: 180px;
-                top: 40px; /* Adjusted for smaller screens */
-            }
-        }
+    .popup-box {
+        width: 180px;
+        top: 40px; /* Adjusted for smaller screens */
+    }
+}
+
 
     </style>
 </head>

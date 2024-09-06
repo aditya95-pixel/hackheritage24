@@ -5,110 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auditing Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('https://www.kanakkupillai.com/learn/wp-content/uploads/2023/11/Audits-for-Private-Limited-Companies.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(3, 3, 98, 0.337);
-            color: white;
-            padding: 10px 0;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px black;
-            backdrop-filter: blur(5px);
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 5px 15px;
-            border-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            background-color: #b8cbf650;
-        }
-        h1, h2 {
-            color: rgb(255, 255, 255);
+            padding: 20px;
         }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
-            font-weight: bold;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: transparent;
-            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: white;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: rgb(0, 255, 229);
-            text-align: center;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+        .sub-branch p {
+            color: #e6e6e6;
         }
         .sub-branch ul {
             list-style-type: none;
             padding: 0;
-            margin: 0;
         }
         .sub-branch ul li {
-            margin-bottom: 10px;
-            cursor: pointer;
-            position: relative;
+            background-color: #333333;
             padding: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid #40bdf8;
-            font-weight: bold;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         .sub-branch ul li:hover {
-            background-color: #40bdf8;
-            color: #000;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-        .sub-branch ul li::before {
-            content: '>';
-            color: #ff0505;
-            font-size: 1.4rem;
-            margin-right: 10px;
+            background-color: #ff9900;
+            color: #000000;
         }
         .tooltip {
             display: none;
             position: absolute;
-            left: 70%;
-            top: -60px; /* Position above the list item */
-            transform: translateX(-50%);
-            background-color: #030563;
-            color: #ffffff;
+            background-color: black;
+            color: orange;
             padding: 10px;
             border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            width: 250px;
-            text-align: center;
             font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
+            text-align: center;
             z-index: 100;
             opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: opacity 0.3s ease;
         }
         .sub-branch ul li:hover .tooltip {
             display: block;
@@ -116,35 +92,10 @@
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
-            }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+                padding: 10px;
             }
             .tooltip {
-                width: 200px;
-                top: -50px; /* Adjusted for smaller screens */
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
-            }
-            .tooltip {
-                width: 300px;
-                top: -70px; /* Adjusted for smaller screens */
+                width: 150px;
             }
         }
     </style>
@@ -155,73 +106,52 @@
     </header>
     <div class="container">
         <h2>Career Opportunities in Auditing</h2>
-        <p>Auditing provides critical insights into financial reporting and compliance. Careers in auditing involve evaluating financial records and systems to ensure accuracy and transparency. Here are the key areas of auditing and related career opportunities:</p>
+        <p>Auditing involves examining financial records to ensure accuracy and compliance with laws and regulations. Below are key areas in auditing and associated career opportunities:</p>
         
         <div class="sub-branch">
             <h3>Internal Auditing</h3>
-            <p>Internal auditors assess an organization's internal controls and processes. Careers in this field focus on improving operational efficiency and compliance within organizations.</p>
+            <p>Internal auditors help organizations improve their operations and ensure compliance with internal policies.</p>
             <ul>
                 <li>
                     Internal Auditor
-                    <div class="tooltip">Reviewing and assessing internal financial and operational systems.</div>
+                    <div class="tooltip">Assessing and evaluating the efficiency of internal controls, risk management, and governance processes.</div>
                 </li>
                 <li>
-                    Compliance Officer
-                    <div class="tooltip">Ensuring that the organization complies with external regulations and internal policies.</div>
-                </li>
-                <li>
-                    Risk Manager
-                    <div class="tooltip">Identifying and mitigating financial risks within an organization.</div>
+                    Risk and Compliance Auditor
+                    <div class="tooltip">Ensuring that an organization complies with relevant laws, regulations, and internal policies.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
             <h3>External Auditing</h3>
-            <p>External auditors provide independent verification of an organization’s financial statements. This ensures the accuracy and fairness of financial reporting to stakeholders.</p>
+            <p>External auditors examine the financial records of organizations to ensure compliance with regulatory standards.</p>
             <ul>
                 <li>
                     External Auditor
-                    <div class="tooltip">Conducting independent audits of company financial statements.</div>
+                    <div class="tooltip">Conducting independent audits of financial statements to ensure accuracy and compliance.</div>
                 </li>
+                <li>
+                    Assurance Consultant
+                    <div class="tooltip">Providing assurance services to clients by verifying the reliability of their financial information.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Forensic Auditing</h3>
+            <p>Forensic auditors investigate financial discrepancies and fraud, often assisting in legal proceedings.</p>
+            <ul>
                 <li>
                     Forensic Auditor
-                    <div class="tooltip">Investigating financial discrepancies and fraud.</div>
+                    <div class="tooltip">Investigating financial records to detect fraud and financial misconduct.</div>
                 </li>
                 <li>
-                    Tax Auditor
-                    <div class="tooltip">Ensuring compliance with tax regulations through thorough audits.</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>IT Auditing</h3>
-            <p>IT auditors evaluate an organization's technological infrastructure and data security. Careers in this area focus on ensuring that IT systems are secure, reliable, and comply with regulations.</p>
-            <ul>
-                <li>
-                    IT Auditor
-                    <div class="tooltip">Assessing the security and efficiency of information technology systems.</div>
-                </li>
-                <li>
-                    Cybersecurity Auditor
-                    <div class="tooltip">Ensuring that systems are protected against cybersecurity threats.</div>
-                </li>
-                <li>
-                    Data Privacy Officer
-                    <div class="tooltip">Monitoring and ensuring compliance with data protection laws and policies.</div>
+                    Fraud Examiner
+                    <div class="tooltip">Specializing in uncovering fraudulent activities and ensuring the organization is protected from financial losses.</div>
                 </li>
             </ul>
         </div>
-
-        <div class="sub-branch">
-            <h3>Environmental Auditing</h3>
-            <p>Environmental auditors assess the impact of organizational practices on the environment. Careers in this area ensure that businesses comply with environmental regulations and strive toward sustainability.</p>
-            <ul>
-                <li>
-                    Environmental Auditor
-                    <div class="tooltip">Evaluating an organization's compliance with environmental laws and regulations.</div>
-                </li>
-                <li>
-                    Sustainability Consultant
-                    <div class="tooltip">Advising companies on how to adopt eco-friendly and sustainable
+    </div>
+</body>
+</html>

@@ -3,68 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World of Literature</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <title>Literature Career Path Guidance</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.601);
-            color: white;
-            padding: 5px;
+            background-color: #333;
+            color: orange;
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-bottom:10px;
-            box-shadow: 0px 0px 15px 1px black;
+            box-shadow: 0 0 8px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-            box-shadow: 0px 0px 15px 1px black;
-            border-radius: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
+        }
+        h1 {
+            color:orange;
         }
         h2 {
-            color: black;
-        }
-        h2 {
+            color: orange;
+            background-color: #333;
             text-align: center;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
         }
         p {
             margin: 15px 0;
+            font-weight: bold;
+            color: #b3b3b3;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            box-shadow: 0px 0px 15px 1px black;
-            backdrop-filter: blur(0px);
+            background-color: #333;
+            box-shadow:  0 0 8px 1px #000;
             padding: 10px;
-            color: black;
+            color:orange;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: orange;
             text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #ff9900;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff9900;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 70%;
+            top: -60px; 
+            transform: translateX(-50%);
+            background-color: #ff9900;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -75,6 +124,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -90,41 +143,95 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>The World of Literature</h1>
-        <p>A Journey through the Written Word</p>
+        <h1>Literature Career Path Guidance</h1>
     </header>
-
     <div class="container">
-        <h2>Genres of Literature</h2>
-
+        <h2>Career Opportunities in Literature</h2>
+        <p>A career in literature offers numerous opportunities for those passionate about reading, writing, and understanding literary works. From publishing to academia, here are key areas for literature enthusiasts:</p>
+        
         <div class="sub-branch">
-            <h3>Fiction</h3>
-            <p>Fiction literature includes stories that are created from the imagination, often involving invented characters and events. Famous works of fiction include novels, short stories, and novellas.</p>
+            <h3>Writing and Publishing</h3>
+            <p>Careers in writing and publishing involve creating content for books, magazines, websites, and more. Professionals in this area often work as authors, editors, and literary agents.</p>
+            <ul>
+                <li>
+                    Author
+                    <div class="tooltip">Writing fiction, non-fiction, poetry, or other literary works.</div>
+                </li>
+                <li>
+                    Editor
+                    <div class="tooltip">Reviewing and refining written content for publication.</div>
+                </li>
+                <li>
+                    Literary Agent
+                    <div class="tooltip">Representing authors and negotiating publishing deals.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Poetry</h3>
-            <p>Poetry is a form of literary expression that uses rhythmic and often figurative language. It typically relies on meter, rhyme, and evocative word choice to convey emotions and ideas.</p>
+            <h3>Academia and Teaching</h3>
+            <p>Academia involves teaching literature, conducting research, and contributing to scholarly discussions. Professionals in this field often teach at the high school or university level.</p>
+            <ul>
+                <li>
+                    University Professor
+                    <div class="tooltip">Teaching literature and conducting research at the university level.</div>
+                </li>
+                <li>
+                    High School Teacher
+                    <div class="tooltip">Teaching literature and language arts to high school students.</div>
+                </li>
+                <li>
+                    Literary Scholar
+                    <div class="tooltip">Researching and publishing academic work on literary topics.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Drama</h3>
-            <p>Drama literature focuses on plays and theatrical works. It is written with the intention of being performed, and it includes famous works ranging from tragedies to comedies.</p>
+            <h3>Media and Journalism</h3>
+            <p>Literature graduates can work in media and journalism, where writing, editing, and reporting skills are essential. This area includes careers in journalism, content creation, and media production.</p>
+            <ul>
+                <li>
+                    Journalist
+                    <div class="tooltip">Reporting on current events and writing articles for print and digital media.</div>
+                </li>
+                <li>
+                    Content Creator
+                    <div class="tooltip">Developing written and multimedia content for various platforms.</div>
+                </li>
+                <li>
+                    Copywriter
+                    <div class="tooltip">Writing persuasive and engaging content for marketing and advertising.</div>
+                </li>
+            </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Non-Fiction</h3>
-            <p>Non-fiction literature is based on factual information and real events. This genre includes biographies, essays, journals, and historical works.</p>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Folklore and Mythology</h3>
-            <p>Folklore and mythology encompass traditional stories, customs, and legends passed down through generations. These stories often explain natural phenomena or cultural beliefs.</p>
+            <h3>Nonprofit and Government</h3>
+            <p>Professionals in the nonprofit and government sectors contribute to educational and cultural projects, working to promote literacy, arts, and culture through public programs.</p>
+            <ul>
+                <li>
+                    Grant Writer
+                    <div class="tooltip">Writing proposals to secure funding for literary and cultural initiatives.</div>
+                </li>
+                <li>
+                    Program Coordinator
+                    <div class="tooltip">Managing literary or cultural programs and events for organizations.</div>
+                </li>
+                <li>
+                    Cultural Advisor
+                    <div class="tooltip">Advising on cultural and literary projects within the public sector.</div>
+                </li>
+            </ul>
         </div>
     </div>
 </body>

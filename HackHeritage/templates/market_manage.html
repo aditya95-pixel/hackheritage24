@@ -8,53 +8,52 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://lh5.googleusercontent.com/2QI3TdnA0CdY3-7stL7wog64RRqxxaJUYcT5ojweV2WQj3vFOT0nC0DbqsMIFhULGDWYIP1bxUvwqOCO91v7NrCmGjXKWf_F4aELYoaKDpkQ6jMZVNeNEEwnk4pOAhNaYK1vNEFM38aMynjEslEUlfr5nbhlFc0vAalTzW-6QZeoXDhALPIMKYhZ9sfagVCbdJr_Aw'); /* Replace with a relevant image */
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(240, 255, 255, 0.495);
-            color: white;
+            background-color: #333;
+            color: orange;
             padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px orange;
-            backdrop-filter: blur(8px);
+            box-shadow: 0 0 8px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 5px 15px;
             border-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            background-color: #b8cbf66e;
-            backdrop-filter: blur(4px);
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
         }
-        h1, h2 {
-            color: rgb(0, 21, 107);
+        h1 {
+            color: orange;
         }
         h2 {
+            color: orange;
+            background-color: #333;
             text-align: center;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
         }
         p {
             margin: 15px 0;
-            color:black;
             font-weight: bold;
+            color: #b3b3b3;
         }
         .sub-branch {
-            background-color: transparent;
-            box-shadow: 0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(25px);
+            background-color: #333;
+            box-shadow: 0 0 8px 1px #000;
             padding: 10px;
-            color: black;
+            color: orange;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
@@ -62,10 +61,10 @@
         }
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px orange;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: rgb(0, 21, 107);
+            color: orange;
             text-align: center;
         }
         .sub-branch ul {
@@ -79,18 +78,18 @@
             position: relative;
             padding: 10px;
             transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid rgb(0, 21, 107);
+            border-left: 4px solid #ff9900;
             font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
         }
         .sub-branch ul li:hover {
-            background-color: rgb(0, 21, 107);
-            color: rgb(243, 97, 0);
-            font-weight: bold;
-            text-decoration: underline;
+            background-color: #ff9900;
+            color: #000;
         }
         .sub-branch ul li::before {
             content: '>';
-            color: #ff0505;
+            color: #ff9900;
             font-size: 1.4rem;
             margin-right: 10px;
         }
@@ -98,11 +97,10 @@
             display: none;
             position: absolute;
             left: 70%;
-            top: -60px;
+            top: -60px; 
             transform: translateX(-50%);
-            background-color: rgb(0, 21, 107);
-            color: azure;
-            font-weight: bold;
+            background-color: #ff9900;
+            color: black;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -158,80 +156,80 @@
     </header>
     <div class="container">
         <h2>Career Opportunities in Marketing Management</h2>
-        <p>Marketing Management offers diverse career paths in industries such as advertising, digital marketing, market research, and brand management. Explore some of the key areas and associated roles below:</p>
+        <p>A career in marketing management offers a variety of opportunities for those interested in strategic planning, market research, and creative branding. Careers in this field involve understanding consumer behavior, product positioning, and promotional strategies. Here are some key areas and related career opportunities:</p>
         
         <div class="sub-branch">
-            <h3>Digital Marketing</h3>
-            <p>Digital Marketing focuses on online strategies such as SEO, social media, and content marketing to promote products or services.</p>
+            <h3>Strategic Marketing</h3>
+            <p>Careers in strategic marketing focus on planning and executing marketing strategies that align with business goals. These roles involve market research, competitor analysis, and long-term marketing plans.</p>
             <ul>
                 <li>
+                    Marketing Manager
+                    <div class="tooltip">Overseeing marketing strategies, campaigns, and team management to drive business growth.</div>
+                </li>
+                <li>
+                    Market Research Analyst
+                    <div class="tooltip">Analyzing market trends and consumer behavior to inform marketing decisions.</div>
+                </li>
+                <li>
+                    Brand Manager
+                    <div class="tooltip">Managing and maintaining the identity, positioning, and reputation of a brand.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Digital Marketing</h3>
+            <p>Careers in digital marketing involve promoting products or services through online channels, including social media, email marketing, and search engine optimization (SEO).</p>
+            <ul>
+                <li>
+                    Digital Marketing Specialist
+                    <div class="tooltip">Creating and executing digital marketing campaigns across various online platforms.</div>
+                </li>
+                <li>
                     SEO Specialist
-                    <div class="tooltip">Optimizing websites to rank higher in search engine results.</div>
+                    <div class="tooltip">Optimizing websites to improve search engine rankings and organic traffic.</div>
                 </li>
                 <li>
                     Social Media Manager
-                    <div class="tooltip">Managing brand presence and engagement on social media platforms.</div>
-                </li>
-                <li>
-                    Content Strategist
-                    <div class="tooltip">Developing content strategies that align with marketing goals.</div>
+                    <div class="tooltip">Managing a brand's social media presence, creating content, and engaging with followers.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Market Research</h3>
-            <p>Market Research involves gathering and analyzing consumer data to help companies make informed business decisions.</p>
+            <h3>Advertising and Promotions</h3>
+            <p>Careers in advertising and promotions focus on creating and implementing advertising campaigns that target specific audiences through various media channels.</p>
             <ul>
-                <li>
-                    Market Analyst
-                    <div class="tooltip">Analyzing market trends and consumer behavior.</div>
-                </li>
-                <li>
-                    Research Executive
-                    <div class="tooltip">Conducting surveys and focus groups to gather consumer insights.</div>
-                </li>
-                <li>
-                    Data Analyst
-                    <div class="tooltip">Interpreting large datasets to inform marketing strategies.</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Brand Management</h3>
-            <p>Brand Management focuses on building and maintaining the public image of a brand.</p>
-            <ul>
-                <li>
-                    Brand Manager
-                    <div class="tooltip">Developing strategies to enhance brand visibility and reputation.</div>
-                </li>
-                <li>
-                    Product Manager
-                    <div class="tooltip">Overseeing product development and marketing strategies.</div>
-                </li>
                 <li>
                     Advertising Manager
-                    <div class="tooltip">Creating advertising campaigns to promote products and services.</div>
+                    <div class="tooltip">Leading advertising campaigns across multiple platforms to generate brand awareness.</div>
+                </li>
+                <li>
+                    Media Planner
+                    <div class="tooltip">Planning and buying media space for advertising campaigns to reach target audiences.</div>
+                </li>
+                <li>
+                    Promotions Coordinator
+                    <div class="tooltip">Coordinating promotional events, contests, and offers to boost product sales and customer engagement.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Sales and Distribution</h3>
-            <p>Sales and Distribution ensure that products reach customers efficiently, while managing client relationships.</p>
+            <h3>Public Relations</h3>
+            <p>Careers in public relations involve managing the reputation and image of a company or organization through communication and media relations.</p>
             <ul>
                 <li>
-                    Sales Manager
-                    <div class="tooltip">Leading sales teams to meet revenue targets.</div>
+                    Public Relations Specialist
+                    <div class="tooltip">Managing communication between a company and the public, including media outreach and press releases.</div>
                 </li>
                 <li>
-                    Distribution Manager
-                    <div class="tooltip">Overseeing the distribution process to ensure timely product delivery.</div>
+                    Communications Manager
+                    <div class="tooltip">Developing internal and external communication strategies to enhance brand image.</div>
                 </li>
                 <li>
-                    Key Account Manager
-                    <div class="tooltip">Managing relationships with key clients and ensuring customer satisfaction.</div>
+                    Crisis Management Consultant
+                    <div class="tooltip">Helping organizations handle and respond to public relations crises and reputational damage.</div>
                 </li>
             </ul>
         </div>

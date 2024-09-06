@@ -109,6 +109,12 @@ def logout():
     session.pop('username', None)
     flash("You have been logged out.")
     return redirect(url_for('login'))
+@app.route('/exams')
+def exams():
+    return render_template('exams.html')
+@app.route('/reco')
+def reco():
+    return render_template('reco.html')
 @app.route('/high')
 def high():
     return render_template('highpayingjobs.html')

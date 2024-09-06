@@ -3,216 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategic Management</title>
+    <title>Strategic Management Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #000000;
-            color: #333;
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://img.freepik.com/premium-photo/corporate-management-strategy-solution-branding-digital-picture-ai-generated-art_853163-10287.jpg'); /* Ensure the path is correct */
-
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-
         header {
-            background-color: rgba(255, 255, 255, 0.45);
-            color: #ffffff;
-            padding: 20px 0;
+            background-color: #333;
+            color: orange;
+            padding: 10px 0;
             text-align: center;
-            box-shadow: 0px 0px 9px 2px rgba(255, 255, 255, 0.4);
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0 0 8px 1px black;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #ffffff;
-        }
-
         .container {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.347);
+            margin: 20px auto;
+            padding: 5px 15px;
             border-radius: 15px;
-            box-shadow: 0 0 8px 1px rgb(252, 252, 252);
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
         }
-
+        h1 {
+            color: orange;
+        }
         h2 {
+            color: orange;
+            background-color: #333;
             text-align: center;
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 20px;
-            font-weight: 600;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
         }
-
         p {
             margin: 15px 0;
-            font-size: 1.1rem;
-            color: #555;
+            font-weight: bold;
+            color: #b3b3b3;
         }
-
         .sub-branch {
-            background-color: #fff3e090;
-            box-shadow: 0 0 8px 1px rgb(156, 156, 156);
-            padding: 30px;
-            margin: 10px;
-            color: #333;
+            background-color: #333;
+            box-shadow: 0 0 8px 1px #000;
+            padding: 10px;
+            color: orange;
             border-radius: 10px;
-            margin-bottom: 30px;
-            transition: transform 0.2s ease, box-shadow 0.1s ease;
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
-
         .sub-branch h3 {
-            font-size: 1.5rem;
-            color: #D84315;
+            color: orange;
             text-align: center;
-            margin-bottom: 15px;
-
         }
-
         .sub-branch ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
-
-        .sub-branch li {
-            position: relative;
-            padding: auto;
-            margin-bottom: auto;
-            background-color: #FFFFFF;
-            border: 1px solid #FFB74D;
-            border-radius: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+        .sub-branch ul li {
+            margin-bottom: 10px;
             cursor: pointer;
-            overflow: hidden;
-        }
-
-        .sub-branch li:hover {
-            background-color: #FFB74D;
-            color: #FFFFFF;
-        }
-
-        .sub-branch li:hover .details {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .details {
-            opacity: 0;
-            visibility: hidden;
-            position: absolute;
-            left: 0;
-            bottom: -100px; /* Hide below the item initially */
-            background-color: #FF7043;
-            color: #FFFFFF;
+            position: relative;
             padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-            width: calc(100% - 20px);
-            transition: opacity 0.3s ease, visibility 0.3s ease, bottom 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #ff9900;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
         }
-
-        .sub-branch li:hover .details {
-            bottom: 100%; /* Move it to the position visible above the item */
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000;
         }
-
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff9900;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 70%;
+            top: -60px; 
+            transform: translateX(-50%);
+            background-color: #ff9900;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
+        }
         @media (max-width: 768px) {
             .container {
-                padding: 15px;
+                padding: 0 10px;
             }
-
-            header h1 {
-                font-size: 2rem;
+            .sub-branch ul {
+                padding-left: 0;
             }
-
-            h2 {
-                font-size: 1.5rem;
+            .sub-branch ul li {
+                margin-bottom: 10px;
             }
-
-            .sub-branch {
-                padding: 15px;
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
-
         @media (max-width: 576px) {
             .container {
-                padding: 10px;
+                padding: 0 5px;
             }
-
-            header h1 {
-                font-size: 1.75rem;
-            }
-
             h2 {
                 font-size: 1.25rem;
             }
-
             .sub-branch {
-                padding: 10px;
+                padding: 5px;
+            }
+            .sub-branch ul li {
+                font-size: 0.875rem;
+            }
+            .tooltip {
+                width: 300px;
+                top: -70px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Strategic Management</h1>
+        <h1>Strategic Management Career Path Guidance</h1>
     </header>
     <div class="container">
-        <section class="sub-branch">
-            <h2>Introduction to Strategic Management</h2>
-            <p>Strategic Management involves the formulation and implementation of major goals and initiatives taken by a company's top management based on considerations of resources and an assessment of the internal and external environments in which the organization competes. It provides a roadmap for achieving organizational objectives and gaining a competitive advantage.</p>
-        </section>
-        <section class="sub-branch">
-            <h2>Key Functions of Strategic Management</h2>
+        <h2>Career Opportunities in Strategic Management</h2>
+        <p>Strategic management careers involve guiding the direction of organizations by developing, implementing, and evaluating cross-functional decisions that align with long-term goals. Here are key areas and career opportunities in strategic management:</p>
+        
+        <div class="sub-branch">
+            <h3>Corporate Strategy</h3>
+            <p>Corporate strategy roles focus on long-term business planning, mergers and acquisitions, and growth strategies to ensure the organization stays competitive and profitable.</p>
             <ul>
                 <li>
-                    <h3>Strategic Planning</h3>
-                    <p>Defining the organization's vision, mission, and goals. Developing strategies to achieve these goals based on internal strengths and weaknesses, and external opportunities and threats.</p>
-                    <span class="details">Defining the vision, mission, and goals for the organization. Developing strategies based on internal and external analysis.</span>
+                    Chief Strategy Officer (CSO)
+                    <div class="tooltip">Oversees the organization's strategic planning and decision-making processes.</div>
                 </li>
                 <li>
-                    <h3>Strategy Implementation</h3>
-                    <p>Executing the strategies by allocating resources, setting up structures, and ensuring that all parts of the organization are aligned with strategic objectives.</p>
-                    <span class="details">Executing strategies by allocating resources, setting up structures, and ensuring alignment with objectives.</span>
+                    Business Development Manager
+                    <div class="tooltip">Identifies growth opportunities, partnerships, and business ventures to expand market reach.</div>
                 </li>
                 <li>
-                    <h3>Strategy Evaluation</h3>
-                    <p>Monitoring and assessing the effectiveness of the implemented strategies. Making adjustments as needed to respond to changes in the internal and external environment.</p>
-                    <span class="details">Monitoring and assessing strategies' effectiveness. Adjusting as necessary based on environmental changes.</span>
-                </li>
-                <li>
-                    <h3>Competitive Analysis</h3>
-                    <p>Analyzing competitors to understand their strategies, strengths, and weaknesses. Using this information to refine one's own strategic approach.</p>
-                    <span class="details">Analyzing competitors to understand their strategies and weaknesses to refine one's own approach.</span>
-                </li>
-                <li>
-                    <h3>Resource Management</h3>
-                    <p>Managing resources effectively to support strategic objectives. This includes financial, human, and physical resources.</p>
-                    <span class="details">Managing resources including financial, human, and physical to support strategic objectives.</span>
+                    Mergers & Acquisitions Analyst
+                    <div class="tooltip">Analyzes and supports corporate transactions such as mergers, acquisitions, and joint ventures.</div>
                 </li>
             </ul>
-        </section>
-        <section class="sub-branch">
-            <h2>Importance of Strategic Management</h2>
-            <p>Strategic Management is critical for the long-term success and sustainability of any organization. It helps in setting clear objectives, aligning resources and efforts, adapting to changes, and ensuring a competitive edge. By proactively managing strategies, organizations can navigate challenges, seize opportunities, and achieve their vision and mission.</p>
-        </section>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Operations Strategy</h3>
+            <p>Operations strategy professionals focus on improving the efficiency and effectiveness of business operations while aligning them with overall business goals.</p>
+            <ul>
+                <li>
+                    Operations Manager
+                    <div class="tooltip">Oversees the day-to-day operations and ensures they are efficient and aligned with strategic goals.</div>
+                </li>
+                <li>
+                    Supply Chain Analyst
+                    <div class="tooltip">Optimizes supply chain processes to improve production, distribution, and cost-efficiency.</div>
+                </li>
+                <li>
+                    Process Improvement Consultant
+                    <div class="tooltip">Advises businesses on how to enhance operational processes and improve overall efficiency.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Financial Strategy</h3>
+            <p>Financial strategists focus on developing financial plans and strategies that align with business objectives, optimizing resource allocation and investment opportunities.</p>
+            <ul>
+                <li>
+                    Chief Financial Officer (CFO)
+                    <div class="tooltip">Manages the company’s finances, ensuring long-term financial health and stability.</div>
+                </li>
+                <li>
+                    Financial Analyst
+                    <div class="tooltip">Analyzes financial data and market trends to help organizations make informed investment decisions.</div>
+                </li>
+                <li>
+                    Investment Strategist
+                    <div class="tooltip">Develops investment strategies to grow the organization's capital and mitigate risk.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Human Capital Strategy</h3>
+            <p>Human capital strategy professionals focus on aligning talent management and workforce planning with long-term business objectives.</p>
+            <ul>
+                <li>
+                    Human Resources Manager
+                    <div class="tooltip">Oversees the strategic management of people and culture within an organization.</div>
+                </li>
+                <li>
+                    Talent Acquisition Specialist
+                    <div class="tooltip">Identifies and recruits top talent to align with the company's strategic goals.</div>
+                </li>
+                <li>
+                    Organizational Development Consultant
+                    <div class="tooltip">Advises companies on strategies for developing a productive, competitive workforce.</div>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

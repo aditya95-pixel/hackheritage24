@@ -5,113 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taxation Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('https://life.futuregenerali.in/media/jzkjo1y2/double-taxation.webp');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(133, 125, 79, 0.219);
-            color: white;
-            padding: 10px 0;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            backdrop-filter: blur(8px);
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 5px 15px;
-            border-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            background-color: #b8cbf650;
-            backdrop-filter: blur(4px);
-        }
-        h1, h2 {
-            color: rgb(0, 21, 107);
+            padding: 20px;
         }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
-            color:black;
-            font-weight: bold;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: rgba(255, 166, 0, 0.123);
-            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: black;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px orange;
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: rgb(0, 21, 107);
-            text-align: center;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+        .sub-branch p {
+            color: #e6e6e6;
         }
         .sub-branch ul {
             list-style-type: none;
             padding: 0;
-            margin: 0;
         }
         .sub-branch ul li {
-            margin-bottom: 10px;
-            cursor: pointer;
-            position: relative;
+            background-color: #333333;
             padding: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid #00ffd9;
-            font-weight: bold;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         .sub-branch ul li:hover {
-            background-color: #00ffd9;
-            color: rgb(243, 97, 0);
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .sub-branch ul li::before {
-            content: '>';
-            color: #ff0505;
-            font-size: 1.4rem;
-            margin-right: 10px;
+            background-color: #ff9900;
+            color: #000000;
         }
         .tooltip {
             display: none;
             position: absolute;
-            left: 70%;
-            top: -60px; /* Position above the list item */
-            transform: translateX(-50%);
-            background-color: #00ffd9;
-            color: black;
-            font-weight: bold;
+            background-color: black;
+            color: orange;
             padding: 10px;
             border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            width: 250px;
-            text-align: center;
             font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
+            text-align: center;
             z-index: 100;
             opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: opacity 0.3s ease;
         }
         .sub-branch ul li:hover .tooltip {
             display: block;
@@ -119,35 +92,10 @@
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
-            }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+                padding: 10px;
             }
             .tooltip {
-                width: 200px;
-                top: -50px; /* Adjusted for smaller screens */
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
-            }
-            .tooltip {
-                width: 300px;
-                top: -70px; /* Adjusted for smaller screens */
+                width: 150px;
             }
         }
     </style>
@@ -158,80 +106,64 @@
     </header>
     <div class="container">
         <h2>Career Opportunities in Taxation</h2>
-        <p>Taxation is a specialized field that offers a range of career opportunities in government, corporate, and consulting sectors. Below are some key areas of taxation and the associated career options:</p>
+        <p>Explore key areas in taxation and associated career opportunities:</p>
         
         <div class="sub-branch">
-            <h3>Corporate Taxation</h3>
-            <p>Corporate Taxation deals with the tax obligations of businesses, ensuring compliance with tax laws and regulations. Careers in this area include roles in corporate finance, legal departments, and accounting firms.</p>
+            <h3>Tax Advisory</h3>
+            <p>Providing expert advice on tax strategies, compliance, and planning.</p>
             <ul>
-                <li>
-                    Tax Consultant
-                    <div class="tooltip">Advising businesses on tax-saving strategies and ensuring compliance.</div>
-                </li>
-                <li>
-                    Corporate Tax Advisor
-                    <div class="tooltip">Providing expert guidance on corporate tax matters and financial planning.</div>
-                </li>
-                <li>
-                    Tax Analyst
-                    <div class="tooltip">Analyzing corporate financials to ensure accurate tax reporting.</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Personal Taxation</h3>
-            <p>Personal Taxation focuses on the tax liabilities of individuals, helping them manage tax filings, exemptions, and deductions. This field offers opportunities in tax advisory firms, government agencies, and private practice.</p>
-            <ul>
-                <li>
-                    Tax Preparer
-                    <div class="tooltip">Assisting individuals in preparing and filing tax returns.</div>
-                </li>
                 <li>
                     Tax Advisor
-                    <div class="tooltip">Offering personalized advice on income tax management and savings.</div>
+                    <div class="tooltip">Advising individuals and businesses on tax-saving strategies and compliance with tax laws.</div>
                 </li>
                 <li>
-                    Wealth Manager
-                    <div class="tooltip">Helping clients with tax-efficient wealth and estate planning strategies.</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Indirect Taxation</h3>
-            <p>Indirect Taxation covers areas like Goods and Services Tax (GST), excise duty, and customs. Professionals in this area work in government bodies, consultancy firms, and multinational corporations.</p>
-            <ul>
-                <li>
-                    GST Specialist
-                    <div class="tooltip">Managing compliance and advisory related to GST laws.</div>
-                </li>
-                <li>
-                    Customs Officer
-                    <div class="tooltip">Ensuring the legal collection of duties and taxes on imported goods.</div>
-                </li>
-                <li>
-                    Excise Tax Officer
-                    <div class="tooltip">Overseeing the taxation of goods produced domestically.</div>
+                    Tax Planner
+                    <div class="tooltip">Helping clients plan for future taxes and optimize their financial plans to minimize liabilities.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Tax Policy and Research</h3>
-            <p>Tax Policy and Research involves analyzing the impact of tax laws and policies, working with government agencies, think tanks, and academic institutions to shape tax policy.</p>
+            <h3>Tax Compliance</h3>
+            <p>Ensuring that individuals and organizations adhere to tax laws and regulations.</p>
             <ul>
                 <li>
-                    Tax Policy Analyst
-                    <div class="tooltip">Researching and advising on changes to tax laws and their economic impacts.</div>
+                    Tax Compliance Officer
+                    <div class="tooltip">Ensuring clients are compliant with local, national, and international tax laws and filing requirements.</div>
                 </li>
                 <li>
-                    Government Tax Consultant
-                    <div class="tooltip">Providing expert guidance on the implementation of tax reforms.</div>
+                    Tax Auditor
+                    <div class="tooltip">Reviewing tax filings and financial statements to ensure accuracy and legal compliance.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Corporate Taxation</h3>
+            <p>Handling the taxation aspects of corporations, including tax planning and compliance.</p>
+            <ul>
+                <li>
+                    Corporate Tax Consultant
+                    <div class="tooltip">Advising corporations on tax-efficient structures and strategies for minimizing corporate tax burdens.</div>
                 </li>
                 <li>
-                    Academic Researcher
-                    <div class="tooltip">Conducting in-depth research on taxation policies and their social implications.</div>
+                    Transfer Pricing Specialist
+                    <div class="tooltip">Specializing in setting and documenting prices for transactions between related legal entities within a corporation.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>International Taxation</h3>
+            <p>Focusing on tax regulations and strategies that apply to cross-border transactions and multinational entities.</p>
+            <ul>
+                <li>
+                    International Tax Advisor
+                    <div class="tooltip">Assisting businesses in managing their tax liabilities across different jurisdictions.</div>
+                </li>
+                <li>
+                    Expatriate Tax Advisor
+                    <div class="tooltip">Helping expatriates navigate tax obligations in their home country and abroad.</div>
                 </li>
             </ul>
         </div>

@@ -8,36 +8,37 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
+            background-color: #000000;
             color: white;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://img.freepik.com/free-vector/mathematical-geometric-background-vector-gradient-blue-education-remix_53876-114100.jpg?t=st=1725267041~exp=1725270641~hmac=fe97bdaf579142ba0a642e134dcd42e7b0206bf53db80c7d6832571546a5e14f&w=1800');
+            /* background-image: url('https://img.freepik.com/free-vector/mathematical-geometric-background-vector-gradient-blue-education-remix_53876-114100.jpg?t=st=1725267041~exp=1725270641~hmac=fe97bdaf579142ba0a642e134dcd42e7b0206bf53db80c7d6832571546a5e14f&w=1800'); */
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(3, 3, 98, 0.337);
-            color: white;
-            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-bottom: solid 1px orange;
+            color: orange;
+            padding: 15px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
+            box-shadow: 0 0 8px 1px rgba(255, 165, 0, 0.5);
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 5px 15px;
+            padding: 20px;
             border-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            background-color: #b8cbf650;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 8px 1px rgba(255, 165, 0, 0.5);
         }
-        h1, h2 {
-            color: rgb(255, 255, 255);
+        h2 {
+            color: orange;
         }
         h2 {
             text-align: center;
@@ -46,10 +47,10 @@
             margin: 15px 0;
         }
         .sub-branch {
-            background-color: transparent;
-            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(25px);
-            padding: 10px;
+            background-color: #1c1c1c;
+            box-shadow: 0 0 8px 1px rgba(255, 165, 0, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 15px;
             color: white;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -58,16 +59,19 @@
         }
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.7);
         }
         .sub-branch h3 {
-            color: rgb(0, 21, 107);
+            color: orange;
             text-align: center;
+            margin-bottom: 10px;
+            
         }
         .sub-branch ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            
         }
         .sub-branch ul li {
             margin-bottom: 10px;
@@ -75,26 +79,28 @@
             position: relative;
             padding: 10px;
             transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid #40bdf8;
+            border-left: 4px solid orange;
+            box-shadow: 0px 8px 12px orange;
+
         }
         .sub-branch ul li:hover {
-            background-color: #40bdf8;
+            background-color: orange;
             color: #000;
         }
         .sub-branch ul li::before {
             content: '>';
-            color: #ff0505;
+            color: orange;
             font-size: 1.4rem;
             margin-right: 10px;
         }
         .tooltip {
             display: none;
             position: absolute;
-            left: 40%;
+            left: 50%;
             top: -60px; /* Position above the list item */
             transform: translateX(-50%);
-            background-color: #030563;
-            color: #ffffff;
+            background-color: #000;
+            color: orange;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -111,13 +117,10 @@
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 10px;
             }
             .sub-branch ul {
                 padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
             }
             .tooltip {
                 width: 200px;
@@ -126,7 +129,7 @@
         }
         @media (max-width: 576px) {
             .container {
-                padding: 0 5px;
+                padding: 5px;
             }
             h2 {
                 font-size: 1.25rem;

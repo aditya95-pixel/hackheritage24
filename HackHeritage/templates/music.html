@@ -3,67 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Path in Music</title>
+    <title>Music Career Path Guidance</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.601);
-            color: white;
-            padding: 5px;
+            background-color: #333;
+            color: orange;
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-bottom:10px;
-            box-shadow: 0px 0px 15px 1px black;
+            box-shadow: 0 0 8px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-            box-shadow: 0px 0px 15px 1px black;
-            border-radius: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
+        }
+        h1 {
+            color: orange;
         }
         h2 {
-            color: black;
-        }
-        h2 {
+            color: orange;
+            background-color: #333;
             text-align: center;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
         }
         p {
             margin: 15px 0;
+            font-weight: bold;
+            color: #b3b3b3;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            /* box-shadow: 0px 0px 15px 1px black; */
-            backdrop-filter: blur(0px);
+            background-color: #333;
+            box-shadow: 0 0 8px 1px #000;
             padding: 10px;
-            color: black;
+            color: orange;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: orange;
             text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #ff9900;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff9900;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 70%;
+            top: -60px; 
+            transform: translateX(-50%);
+            background-color: #ff9900;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -74,6 +124,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -89,24 +143,94 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px;
+            }
         }
-        </style>
+    </style>
 </head>
 <body>
     <header>
-        <h1>Music Career Path</h1>
+        <h1>Music Career Path Guidance</h1>
     </header>
     <div class="container">
+        <h2>Career Opportunities in Music</h2>
+        <p>A career in music offers diverse opportunities for those passionate about creating, performing, and managing music. Careers in music involve creativity, technical skills, and collaboration. Here are some key areas and related career opportunities:</p>
+        
         <div class="sub-branch">
-            <h2>About Music</h2>
-            <p>Music is an art form and cultural activity whose medium is sound. General definitions of music include common elements such as pitch, rhythm, dynamics, and the sonic qualities of timbre and texture. It is a vital part of human culture and expression.</p>
-            <h2>Career Opportunities</h2>
+            <h3>Performance</h3>
+            <p>Careers in performance involve playing instruments, singing, and entertaining audiences. This field requires skill, stage presence, and dedication to the craft.</p>
             <ul>
-                <li>Musician</li>
-                <li>Music Composer</li>
-                <li>Music Producer</li>
-                <li>Sound Engineer</li>
-                <li>Music Teacher</li>
+                <li>
+                    Musician
+                    <div class="tooltip">Performing with various instruments or vocals in live settings or recordings.</div>
+                </li>
+                <li>
+                    Singer
+                    <div class="tooltip">Performing vocal music across different genres and venues.</div>
+                </li>
+                <li>
+                    Composer
+                    <div class="tooltip">Creating original music compositions for various media and performances.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Music Production</h3>
+            <p>Careers in music production focus on recording, mixing, and producing music. This field involves working with artists to create polished recordings and manage sound quality.</p>
+            <ul>
+                <li>
+                    Music Producer
+                    <div class="tooltip">Overseeing and managing the recording and production of music projects.</div>
+                </li>
+                <li>
+                    Sound Engineer
+                    <div class="tooltip">Handling technical aspects of recording, mixing, and mastering music.</div>
+                </li>
+                <li>
+                    Audio Technician
+                    <div class="tooltip">Setting up and operating audio equipment for live performances and recordings.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Music Education</h3>
+            <p>Careers in music education involve teaching music theory, performance, and appreciation. This field focuses on nurturing the next generation of musicians and music lovers.</p>
+            <ul>
+                <li>
+                    Music Teacher
+                    <div class="tooltip">Teaching music theory, instruments, and vocal techniques to students of all ages.</div>
+                </li>
+                <li>
+                    Private Instructor
+                    <div class="tooltip">Offering one-on-one music lessons and personalized instruction.</div>
+                </li>
+                <li>
+                    Music Director
+                    <div class="tooltip">Leading and coordinating musical groups or educational programs.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Music Industry and Management</h3>
+            <p>Careers in the music industry and management involve handling the business aspects of music, including marketing, promotion, and artist management.</p>
+            <ul>
+                <li>
+                    Artist Manager
+                    <div class="tooltip">Managing the career and public image of musicians and performers.</div>
+                </li>
+                <li>
+                    Music Marketing Specialist
+                    <div class="tooltip">Developing and executing marketing strategies for music releases and events.</div>
+                </li>
+                <li>
+                    Booking Agent
+                    <div class="tooltip">Arranging and managing live performances and tours for artists.</div>
+                </li>
             </ul>
         </div>
     </div>

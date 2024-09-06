@@ -3,67 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Path in Film and Television</title>
+    <title>Film and Television Career Path Guidance</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.601);
-            color: white;
-            padding: 5px;
+            background-color: #333;
+            color: orange;
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-bottom:10px;
-            box-shadow: 0px 0px 15px 1px black;
+            box-shadow: 0 0 8px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-            box-shadow: 0px 0px 15px 1px black;
-            border-radius: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
+        }
+        h1 {
+            color: orange;
         }
         h2 {
-            color: black;
-        }
-        h2 {
+            color: orange;
+            background-color: #333;
             text-align: center;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
         }
         p {
             margin: 15px 0;
+            font-weight: bold;
+            color: #b3b3b3;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            /* box-shadow: 0px 0px 15px 1px black; */
-            backdrop-filter: blur(0px);
+            background-color: #333;
+            box-shadow: 0 0 8px 1px #000;
             padding: 10px;
-            color: black;
+            color: orange;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: orange;
             text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #ff9900;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff9900;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 70%;
+            top: -60px; 
+            transform: translateX(-50%);
+            background-color: #ff9900;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -74,6 +124,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -89,24 +143,94 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px;
+            }
         }
-        </style>
+    </style>
 </head>
 <body>
     <header>
-        <h1>Film and Television Career Path</h1>
+        <h1>Film and Television Career Path Guidance</h1>
     </header>
     <div class="container">
+        <h2>Career Opportunities in Film and Television</h2>
+        <p>A career in film and television offers a diverse range of opportunities for those interested in creating and producing visual content. Careers in this field involve creativity, technical skills, and storytelling. Here are some key areas and related career opportunities:</p>
+        
         <div class="sub-branch">
-            <h2>About Film and Television</h2>
-            <p>Film and Television are forms of visual storytelling that involve creating and presenting content to an audience. They include a wide range of genres and styles, from documentaries to dramas, and are a major part of the entertainment industry.</p>
-            <h2>Career Opportunities</h2>
+            <h3>Production and Direction</h3>
+            <p>Careers in production and direction focus on overseeing and guiding the creation of film and television projects. This includes managing various aspects of production, from pre-production to post-production.</p>
             <ul>
-                <li>Film Director</li>
-                <li>Television Producer</li>
-                <li>Screenwriter</li>
-                <li>Cinematographer</li>
-                <li>Film Editor</li>
+                <li>
+                    Director
+                    <div class="tooltip">Guiding the creative vision and overseeing the production of film and television projects.</div>
+                </li>
+                <li>
+                    Producer
+                    <div class="tooltip">Managing the financial and logistical aspects of film and television productions.</div>
+                </li>
+                <li>
+                    Production Assistant
+                    <div class="tooltip">Assisting with various tasks on set to support the production process.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Screenwriting and Storytelling</h3>
+            <p>Careers in screenwriting and storytelling involve creating scripts and narratives for film and television. This field requires strong writing skills and an understanding of story structure.</p>
+            <ul>
+                <li>
+                    Screenwriter
+                    <div class="tooltip">Writing scripts and developing stories for film and television.</div>
+                </li>
+                <li>
+                    Story Editor
+                    <div class="tooltip">Reviewing and refining scripts to enhance storytelling and character development.</div>
+                </li>
+                <li>
+                    Script Consultant
+                    <div class="tooltip">Providing feedback and advice on scripts and story development.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Acting and Performance</h3>
+            <p>Careers in acting and performance involve portraying characters and bringing stories to life on screen. This field requires talent, training, and a strong stage presence.</p>
+            <ul>
+                <li>
+                    Actor
+                    <div class="tooltip">Portraying characters in films, television shows, and other media.</div>
+                </li>
+                <li>
+                    Voice Actor
+                    <div class="tooltip">Providing voices for animated characters, commercials, and other projects.</div>
+                </li>
+                <li>
+                    Stunt Performer
+                    <div class="tooltip">Performing stunts and action sequences for film and television.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Technical and Post-Production</h3>
+            <p>Careers in technical and post-production involve working with the technical aspects of film and television production, including editing, sound, and visual effects.</p>
+            <ul>
+                <li>
+                    Film Editor
+                    <div class="tooltip">Editing film and television footage to create the final product.</div>
+                </li>
+                <li>
+                    Sound Designer
+                    <div class="tooltip">Creating and manipulating sound effects and audio for film and television.</div>
+                </li>
+                <li>
+                    Visual Effects Artist
+                    <div class="tooltip">Creating visual effects and animations for film and television projects.</div>
+                </li>
             </ul>
         </div>
     </div>

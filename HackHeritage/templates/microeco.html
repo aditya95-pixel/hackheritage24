@@ -5,112 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microeconomics Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('https://media.geeksforgeeks.org/wp-content/uploads/20230526171911/MICROECONOMICS-copy.webp'); /* Change to a relevant image */
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(164, 160, 86, 0.337);
-            color: white;
-            padding: 10px 0;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px rgba(190, 161, 41, 0.745);
-            backdrop-filter: blur(8px);
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 5px 15px;
-            border-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            background-color: #aaac6d50;
-        }
-        h1, h2 {
-            color: rgb(255, 234, 0);
+            padding: 20px;
         }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
-            color:black;
-            font-weight: bold;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: transparent;
-            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: black;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgb(255, 238, 0);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: rgb(255, 94, 0);
-            text-align: center;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+        .sub-branch p {
+            color: #e6e6e6;
         }
         .sub-branch ul {
             list-style-type: none;
             padding: 0;
-            margin: 0;
         }
         .sub-branch ul li {
-            margin-bottom: 10px;
-            cursor: pointer;
-            position: relative;
+            background-color: #333333;
             padding: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid #f2ff00;
-            font-weight: bold;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         .sub-branch ul li:hover {
-            background-color: #f2ff00;
-            color: rgb(243, 97, 0);
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .sub-branch ul li::before {
-            content: '>';
-            color: #ff0505;
-            font-size: 1.4rem;
-            margin-right: 10px;
+            background-color: #ff9900;
+            color: #000000;
         }
         .tooltip {
             display: none;
             position: absolute;
-            left: 70%;
-            top: -60px;
-            transform: translateX(-50%);
-            background-color: #f2ff00;
-            color: black;
-            font-weight: bold;
+            background-color: black;
+            color: orange;
             padding: 10px;
             border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            width: 250px;
-            text-align: center;
             font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
+            text-align: center;
             z-index: 100;
             opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: opacity 0.3s ease;
         }
         .sub-branch ul li:hover .tooltip {
             display: block;
@@ -118,35 +92,10 @@
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
-            }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+                padding: 10px;
             }
             .tooltip {
-                width: 200px;
-                top: -50px;
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
-            }
-            .tooltip {
-                width: 300px;
-                top: -70px;
+                width: 150px;
             }
         }
     </style>
@@ -157,61 +106,64 @@
     </header>
     <div class="container">
         <h2>Career Opportunities in Microeconomics</h2>
-        <p>Microeconomics studies the behavior of individuals and firms in making decisions regarding the allocation of resources. Here are some career options within the field:</p>
+        <p>Microeconomics studies individual decision-making processes, market mechanisms, and resource allocation. Below are key areas in microeconomics and their associated career opportunities:</p>
         
         <div class="sub-branch">
-            <h3>Economic Consultancy</h3>
-            <p>Economic consultancy focuses on advising businesses, governments, and organizations on economic policies, market strategies, and competition. Careers in this area include:</p>
+            <h3>Market Analyst</h3>
+            <p>Market analysts study consumer behaviors and market trends to provide insights for business decisions.</p>
             <ul>
                 <li>
-                    Economic Consultant
-                    <div class="tooltip">Advising clients on microeconomic issues like pricing strategies and market analysis.</div>
+                    Consumer Behavior Analyst
+                    <div class="tooltip">Analyzing purchasing habits and preferences to help businesses make informed marketing decisions.</div>
                 </li>
                 <li>
-                    Market Research Analyst
-                    <div class="tooltip">Analyzing market trends and consumer preferences to inform business decisions.</div>
-                </li>
-                <li>
-                    Competition Analyst
-                    <div class="tooltip">Studying market competition and antitrust issues to ensure fair market practices.</div>
+                    Pricing Analyst
+                    <div class="tooltip">Determining optimal pricing strategies by analyzing market conditions, demand, and competitors.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Public Policy and Regulation</h3>
-            <p>Microeconomists work with governments to design and implement policies that affect markets, consumers, and businesses. Career paths include:</p>
+            <h3>Economic Consultant</h3>
+            <p>Economic consultants provide advice on business strategies, policy development, and market dynamics.</p>
+            <ul>
+                <li>
+                    Business Consultant
+                    <div class="tooltip">Advising companies on economic trends, market conditions, and competitive positioning.</div>
+                </li>
+                <li>
+                    Policy Advisor
+                    <div class="tooltip">Providing insights on economic policy impacts on businesses or governmental operations.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Financial Analyst</h3>
+            <p>Financial analysts assess financial data to help individuals or organizations make investment decisions.</p>
+            <ul>
+                <li>
+                    Investment Analyst
+                    <div class="tooltip">Evaluating financial statements and market trends to advise on investment opportunities.</div>
+                </li>
+                <li>
+                    Risk Analyst
+                    <div class="tooltip">Identifying financial risks and proposing strategies to mitigate them for businesses and individuals.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Public Policy</h3>
+            <p>Public policy experts analyze and advise on policies related to markets, regulations, and economics.</p>
             <ul>
                 <li>
                     Policy Analyst
-                    <div class="tooltip">Analyzing the impact of government policies on markets and consumers.</div>
+                    <div class="tooltip">Researching and evaluating the effectiveness of public policies and their impact on markets.</div>
                 </li>
                 <li>
-                    Regulatory Affairs Specialist
-                    <div class="tooltip">Ensuring compliance with government regulations and advising on policy changes.</div>
-                </li>
-                <li>
-                    Economic Policy Advisor
-                    <div class="tooltip">Advising government officials on microeconomic policies and regulations.</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Academia and Research</h3>
-            <p>Many microeconomists pursue careers in academia, conducting research and teaching economics at universities. Career paths include:</p>
-            <ul>
-                <li>
-                    Professor of Economics
-                    <div class="tooltip">Teaching microeconomic theory and conducting research at academic institutions.</div>
-                </li>
-                <li>
-                    Economic Researcher
-                    <div class="tooltip">Conducting in-depth research on microeconomic principles and their real-world applications.</div>
-                </li>
-                <li>
-                    Academic Advisor
-                    <div class="tooltip">Helping students navigate their studies in economics and pursue relevant careers.</div>
+                    Regulatory Economist
+                    <div class="tooltip">Examining the impact of government regulations on industries and providing policy recommendations.</div>
                 </li>
             </ul>
         </div>

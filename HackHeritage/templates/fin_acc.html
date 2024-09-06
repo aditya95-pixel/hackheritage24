@@ -5,108 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Accounting Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('https://media.licdn.com/dms/image/D4D12AQHzhnR0bhloPw/article-cover_image-shrink_720_1280/0/1704722726564?e=2147483647&v=beta&t=QBtcb8zep4SdoAlivcQneLmrcOSH7VYhLnZ456oMdY0');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(98, 77, 3, 0.633);
-            color: black;
-            padding: 10px 0;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            backdrop-filter: blur(10px);
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 5px 15px;
-            border-radius: 15px;
-            box-shadow: 0 0 8px 1px whitesmoke;
-            background-color: #b8cbf650;
-        }
-        h1, h2 {
-            color: black
+            padding: 20px;
         }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
-            color:black;
-            font-weight: bold;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: transparent;
-            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(25px);
-            padding: 10px;
-            color: black;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: rgb(0, 21, 107);
-            text-align: center;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+        .sub-branch p {
+            color: #e6e6e6;
         }
         .sub-branch ul {
             list-style-type: none;
             padding: 0;
-            margin: 0;
         }
         .sub-branch ul li {
-            margin-bottom: 10px;
-            cursor: pointer;
-            position: relative;
+            background-color: #333333;
             padding: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid #40bdf8;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         .sub-branch ul li:hover {
-            background-color: #40bdf8;
-            color: #000;
-        }
-        .sub-branch ul li::before {
-            content: '>';
-            color: #ff0505;
-            font-size: 1.4rem;
-            margin-right: 10px;
+            background-color: #ff9900;
+            color: #000000;
         }
         .tooltip {
             display: none;
             position: absolute;
-            left: 70%;
-            top: -60px; /* Position above the list item */
-            transform: translateX(-50%);
-            background-color: #030563;
-            color: #ffffff;
+            background-color: black;
+            color: orange;
             padding: 10px;
             border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            width: 250px;
-            text-align: center;
             font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
+            text-align: center;
             z-index: 100;
             opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: opacity 0.3s ease;
         }
         .sub-branch ul li:hover .tooltip {
             display: block;
@@ -114,35 +92,10 @@
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
-            }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+                padding: 10px;
             }
             .tooltip {
-                width: 200px;
-                top: -50px; /* Adjusted for smaller screens */
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
-            }
-            .tooltip {
-                width: 300px;
-                top: -70px; /* Adjusted for smaller screens */
+                width: 150px;
             }
         }
     </style>
@@ -153,80 +106,49 @@
     </header>
     <div class="container">
         <h2>Career Opportunities in Financial Accounting</h2>
-        <p>Financial Accounting plays a vital role in recording, summarizing, and presenting financial data. Here are key areas in financial accounting and the related career opportunities:</p>
+        <p>Explore key areas in financial accounting and the associated career opportunities:</p>
         
         <div class="sub-branch">
-            <h3>Auditing</h3>
-            <p>Auditing involves examining financial records and ensuring accuracy and compliance with regulations. Careers in this area include roles in auditing firms, corporations, and government agencies.</p>
+            <h3>Public Accounting</h3>
+            <p>Public accountants provide auditing, tax, and consulting services to a variety of clients.</p>
             <ul>
                 <li>
-                    Internal Auditor
-                    <div class="tooltip">Assessing internal controls and risk management processes within organizations.</div>
+                    Certified Public Accountant (CPA)
+                    <div class="tooltip">Providing audit, tax, and advisory services to clients across various industries.</div>
                 </li>
                 <li>
-                    External Auditor
-                    <div class="tooltip">Examining financial statements to ensure their accuracy and fairness.</div>
-                </li>
-                <li>
-                    Compliance Officer
-                    <div class="tooltip">Ensuring companies adhere to financial regulations and standards.</div>
+                    Auditor
+                    <div class="tooltip">Examining financial statements to ensure accuracy and compliance with laws and regulations.</div>
                 </li>
             </ul>
         </div>
 
         <div class="sub-branch">
-            <h3>Financial Reporting</h3>
-            <p>Financial Reporting focuses on preparing and presenting financial statements in line with regulatory standards. This area provides opportunities in both private and public sectors.</p>
+            <h3>Corporate Accounting</h3>
+            <p>Corporate accountants handle the financial activities of their organizations, including reporting and analysis.</p>
             <ul>
                 <li>
                     Financial Accountant
-                    <div class="tooltip">Preparing financial reports such as balance sheets, income statements, and cash flows.</div>
+                    <div class="tooltip">Preparing financial statements and ensuring they comply with accounting standards.</div>
                 </li>
                 <li>
-                    Management Accountant
-                    <div class="tooltip">Providing financial insights and reports to assist management in decision-making.</div>
+                    Internal Auditor
+                    <div class="tooltip">Reviewing and improving a company's internal financial processes and controls.</div>
                 </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Tax Accounting</h3>
+            <p>Tax accountants focus on tax compliance, strategy, and planning for businesses and individuals.</p>
+            <ul>
                 <li>
                     Tax Accountant
-                    <div class="tooltip">Preparing and filing tax reports while ensuring compliance with tax laws.</div>
+                    <div class="tooltip">Preparing tax returns and ensuring compliance with tax laws and regulations.</div>
                 </li>
-            </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Cost Accounting</h3>
-            <p>Cost Accounting involves tracking and analyzing production costs and operational efficiency. Careers in this field include roles in manufacturing and corporate finance departments.</p>
-            <ul>
-                <li>
-                    Cost Analyst
-                    <div class="tooltip">Monitoring and evaluating the costs of products and services.</div>
-                </li>
-                <li>
-                    Budget Analyst
-                    <div class="tooltip">Analyzing and preparing budget reports to guide financial planning.</div>
-                </li>
-                <li>
-                    Financial Analyst
-                    <div class="tooltip">Providing insights on cost management to enhance business profitability.</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Taxation</h3>
-            <p>Taxation focuses on compliance with tax regulations and strategic tax planning. Careers in taxation can be found in accounting firms, corporations, and government agencies.</p>
-            <ul>
                 <li>
                     Tax Consultant
-                    <div class="tooltip">Advising clients on tax planning and compliance strategies.</div>
-                </li>
-                <li>
-                    Corporate Tax Analyst
-                    <div class="tooltip">Managing and optimizing corporate tax obligations and compliance.</div>
-                </li>
-                <li>
-                    Tax Examiner
-                    <div class="tooltip">Ensuring compliance with tax laws by examining financial documents.</div>
+                    <div class="tooltip">Advising clients on tax-saving strategies and compliance with local and international tax laws.</div>
                 </li>
             </ul>
         </div>

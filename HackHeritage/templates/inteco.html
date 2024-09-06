@@ -5,113 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>International Economics Career Path Guidance</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: #181818;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-image: url('https://blogassets.leverageedu.com/blog/wp-content/uploads/2020/09/24193824/International-Economics.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
         header {
-            background-color: rgba(98, 24, 3, 0.145);
-            color: white;
-            padding: 10px 0;
+            background-color: #333333;
+            padding: 20px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            box-shadow: 0 0 8px 1px rgb(121, 34, 34);
-            backdrop-filter: blur(8px);
+        }
+        header h1 {
+            color: #ff9900;
+            font-size: 2rem;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 5px 15px;
-            border-radius: 15px;
-            box-shadow: 0 0 8px 1px rgb(78, 7, 7);
-            background-color: #b8cbf650;
-            backdrop-filter: blur(4px);
-        }
-        h1, h2 {
-            color: rgb(255, 55, 0);
+            padding: 20px;
         }
         h2 {
+            color: #ff9900;
             text-align: center;
+            margin-bottom: 20px;
         }
         p {
-            margin: 15px 0;
-            color:black;
-            font-weight: bold;
+            color: #e6e6e6;
         }
         .sub-branch {
-            background-color: rgba(240, 255, 255, 0.229);
-            box-shadow:  0 0 8px 1px rgb(0, 0, 0);
-            backdrop-filter: blur(35px);
-            padding: 10px;
-            color: black;
+            background-color: #222222;
+            padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .sub-branch:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 20px green;
+            box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.7);
         }
         .sub-branch h3 {
-            color: green;
-            text-align: center;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+        .sub-branch p {
+            color: #e6e6e6;
         }
         .sub-branch ul {
             list-style-type: none;
             padding: 0;
-            margin: 0;
         }
         .sub-branch ul li {
-            margin-bottom: 10px;
-            cursor: pointer;
-            position: relative;
+            background-color: #333333;
             padding: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-left: 4px solid orange;
-            font-weight: bold;
+            border-left: 4px solid #ff9900;
+            color: #ffffff;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px 1px rgba(247,178,128,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         .sub-branch ul li:hover {
-            background-color: orange;
-            color: rgb(243, 0, 0);
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .sub-branch ul li::before {
-            content: '>';
-            color: #ff0505;
-            font-size: 1.4rem;
-            margin-right: 10px;
+            background-color: #ff9900;
+            color: #000000;
         }
         .tooltip {
             display: none;
             position: absolute;
-            left: 70%;
-            top: -60px;
-            transform: translateX(-50%);
-            background-color: orange;
-            color: black;
-            font-weight: bold;
+            background-color: #ff9900;
+            color: #000000;
             padding: 10px;
             border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            width: 250px;
-            text-align: center;
             font-size: 0.875rem;
+            width: 200px;
+            left: 60%;
+            text-align: center;
             z-index: 100;
             opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: opacity 0.3s ease;
         }
         .sub-branch ul li:hover .tooltip {
             display: block;
@@ -119,35 +92,10 @@
         }
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
-            }
-            .sub-branch ul {
-                padding-left: 0;
-            }
-            .sub-branch ul li {
-                margin-bottom: 10px;
+                padding: 10px;
             }
             .tooltip {
-                width: 200px;
-                top: -50px;
-            }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 5px;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            .sub-branch {
-                padding: 5px;
-            }
-            .sub-branch ul li {
-                font-size: 0.875rem;
-            }
-            .tooltip {
-                width: 300px;
-                top: -70px;
+                width: 150px;
             }
         }
     </style>
@@ -158,80 +106,64 @@
     </header>
     <div class="container">
         <h2>Career Opportunities in International Economics</h2>
-        <p>International Economics focuses on the global trade system, international financial relations, and economic policies that influence global markets. Below are key areas and career opportunities in international economics:</p>
+        <p>Explore key areas in International Economics and associated career opportunities:</p>
         
         <div class="sub-branch">
-            <h3>International Trade and Development</h3>
-            <p>Economists in this field study trade policies and economic development strategies. Career opportunities are available in organizations like the World Trade Organization (WTO), development agencies, and international banks.</p>
+            <h3>Trade and Policy Analysis</h3>
+            <p>Analyzing international trade policies and their impact on economies.</p>
             <ul>
                 <li>
-                    Trade Policy Analyst
-                    <div class="tooltip">Analyzing trade agreements and policies to promote fair trade and economic development.</div>
-                </li>
-                <li>
-                    International Development Economist
-                    <div class="tooltip">Working with international organizations to promote sustainable development and economic growth in developing countries.</div>
-                </li>
-                <li>
-                    Economic Affairs Officer
-                    <div class="tooltip">Advising governments and institutions on economic policy, international trade regulations, and global markets.</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Global Financial Markets</h3>
-            <p>Economists in global financial markets focus on analyzing international currencies, exchange rates, and global financial stability. Positions are available in multinational corporations, investment banks, and global financial institutions.</p>
-            <ul>
-                <li>
-                    International Financial Analyst
-                    <div class="tooltip">Evaluating international financial markets, exchange rates, and global economic trends to guide investment decisions.</div>
-                </li>
-                <li>
-                    Currency Analyst
-                    <div class="tooltip">Specializing in foreign exchange markets, predicting currency fluctuations and trends.</div>
-                </li>
-                <li>
-                    International Risk Consultant
-                    <div class="tooltip">Advising on managing risks associated with international trade, currency fluctuations, and political instability.</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>International Organizations and Think Tanks</h3>
-            <p>Professionals in this area work with global institutions like the International Monetary Fund (IMF), the World Bank, or regional development banks to address international economic challenges.</p>
-            <ul>
-                <li>
-                    IMF Economist
-                    <div class="tooltip">Developing global financial strategies and providing economic analysis for member countries.</div>
-                </li>
-                <li>
-                    World Bank Development Specialist
-                    <div class="tooltip">Focusing on economic development projects in countries and regions with financial challenges.</div>
-                </li>
-                <li>
-                    Economic Researcher in Think Tanks
-                    <div class="tooltip">Conducting research on global economic issues and publishing reports that influence international policies.</div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="sub-branch">
-            <h3>Academia and Research</h3>
-            <p>In the academic and research sphere, economists develop theories, conduct studies, and contribute to the knowledge base in international economics. Opportunities are available in universities, research institutes, and policy think tanks.</p>
-            <ul>
-                <li>
-                    International Economics Professor
-                    <div class="tooltip">Teaching international economics and conducting research on global economic policies and systems.</div>
-                </li>
-                <li>
-                    Research Fellow
-                    <div class="tooltip">Working in research institutions to study international economic phenomena and policy implications.</div>
+                    Trade Analyst
+                    <div class="tooltip">Researching and analyzing global trade policies, tariffs, and economic impacts on trade relations.</div>
                 </li>
                 <li>
                     Policy Advisor
-                    <div class="tooltip">Advising governments and international organizations on trade policies, global finance, and economic development.</div>
+                    <div class="tooltip">Providing advice on international economic policies, trade agreements, and their impact on the global economy.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Global Finance and Economics</h3>
+            <p>Focusing on the financial relationships between nations, including foreign exchange and international investments.</p>
+            <ul>
+                <li>
+                    International Economist
+                    <div class="tooltip">Studying the effects of international markets and financial systems on the global economy.</div>
+                </li>
+                <li>
+                    Foreign Exchange Analyst
+                    <div class="tooltip">Analyzing global currency markets and advising on foreign exchange investment strategies.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>International Development</h3>
+            <p>Helping develop strategies for economic growth in emerging economies.</p>
+            <ul>
+                <li>
+                    Development Economist
+                    <div class="tooltip">Researching economic growth factors and advising on policies to foster development in emerging economies.</div>
+                </li>
+                <li>
+                    International Aid Officer
+                    <div class="tooltip">Working with global organizations to manage economic aid and improve conditions in developing nations.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Global Trade Consulting</h3>
+            <p>Helping businesses and governments navigate the complexities of international trade regulations and policies.</p>
+            <ul>
+                <li>
+                    International Trade Consultant
+                    <div class="tooltip">Advising businesses and governments on trade laws, policies, and strategies to maximize benefits from international trade.</div>
+                </li>
+                <li>
+                    Customs Compliance Specialist
+                    <div class="tooltip">Ensuring businesses adhere to international customs regulations and laws while importing or exporting goods.</div>
                 </li>
             </ul>
         </div>

@@ -3,67 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Path in Sculpture</title>
+    <title>Sculpture Career Path Guidance</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: rgb(237, 206, 165);
-            color: black;
+            background-color: #181818;
+            color: orange;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-image: url('https://pub.mdpi-res.com/img/journals/humanities-logo-social.png?8600e93ff98dbf14');
-            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.601);
-            color: white;
-            padding: 5px;
+            background-color: #333;
+            color: orange;
+            padding: 10px 0;
             text-align: center;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-bottom:10px;
-            box-shadow: 0px 0px 15px 1px black;
+            box-shadow: 0 0 8px 1px black;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 0 15px;
-            box-shadow: 0px 0px 15px 1px black;
-            border-radius: 10px;
+            padding: 5px 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 8px 1px #333;
+            background-color: #222;
+        }
+        h1 {
+            color: orange;
         }
         h2 {
-            color: black;
-        }
-        h2 {
+            color: orange;
+            background-color: #333;
             text-align: center;
+            border-radius: 40px 10px 40px 10px;
+            padding: 10px;
         }
         p {
             margin: 15px 0;
+            font-weight: bold;
+            color: #b3b3b3;
         }
         .sub-branch {
-            background-color: rgba(255, 255, 255, 0.56);
-            /* box-shadow: 0px 0px 15px 1px black; */
-            backdrop-filter: blur(0px);
+            background-color: #333;
+            box-shadow: 0 0 8px 1px #000;
             padding: 10px;
-            color: black;
+            color: orange;
             border-radius: 10px;
             margin-bottom: 20px;
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sub-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
         }
         .sub-branch h3 {
-            color: black;
+            color: orange;
             text-align: center;
         }
-        .engg {
-            color: black;
+        .sub-branch ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .engg:hover {
-            color: red;
+        .sub-branch ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-left: 4px solid #ff9900;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 15px 1px rgba(247, 178, 128,0.6);
+        }
+        .sub-branch ul li:hover {
+            background-color: #ff9900;
+            color: #000;
+        }
+        .sub-branch ul li::before {
+            content: '>';
+            color: #ff9900;
+            font-size: 1.4rem;
+            margin-right: 10px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 70%;
+            top: -60px; 
+            transform: translateX(-50%);
+            background-color: #ff9900;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            font-size: 0.875rem;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .sub-branch ul li:hover .tooltip {
+            display: block;
+            opacity: 1;
         }
         @media (max-width: 768px) {
             .container {
@@ -74,6 +124,10 @@
             }
             .sub-branch ul li {
                 margin-bottom: 10px;
+            }
+            .tooltip {
+                width: 200px;
+                top: -50px;
             }
         }
         @media (max-width: 576px) {
@@ -89,24 +143,94 @@
             .sub-branch ul li {
                 font-size: 0.875rem;
             }
+            .tooltip {
+                width: 300px;
+                top: -70px;
+            }
         }
-            </style>
+    </style>
 </head>
 <body>
     <header>
-        <h1>Sculpture Career Path</h1>
+        <h1>Sculpture Career Path Guidance</h1>
     </header>
     <div class="container">
+        <h2>Career Opportunities in Sculpture</h2>
+        <p>A career in sculpture offers a wide range of creative opportunities, from fine arts to commercial sculpture work. This field requires strong artistic skills, an understanding of materials, and technical expertise. Here are some key areas and related career opportunities:</p>
+        
         <div class="sub-branch">
-            <h2>About Sculpture</h2>
-            <p>Sculpture is an artistic practice that involves creating three-dimensional works of art using materials like clay, stone, metal, or wood. Sculptors bring ideas to life in physical forms, often producing pieces for public spaces, galleries, and private collections.</p>
-            <h2>Career Opportunities</h2>
+            <h3>Fine Art Sculpture</h3>
+            <p>Fine art sculptors create expressive and conceptual pieces that are often displayed in galleries and exhibitions. These works can range from traditional sculptures to experimental and modern styles.</p>
             <ul>
-                <li>Fine Sculptor</li>
-                <li>Art Conservator</li>
-                <li>Public Artist</li>
-                <li>Exhibition Designer</li>
-                <li>Art Educator</li>
+                <li>
+                    Freelance Sculptor
+                    <div class="tooltip">Creating sculptures independently, often for galleries, collectors, or public installations.</div>
+                </li>
+                <li>
+                    Commissioned Artist
+                    <div class="tooltip">Creating sculptures based on requests from clients, including private collectors, businesses, and public organizations.</div>
+                </li>
+                <li>
+                    Public Art Sculptor
+                    <div class="tooltip">Designing and creating large-scale sculptures for public spaces, such as parks, plazas, or buildings.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Commercial Sculpture</h3>
+            <p>Commercial sculptors work on projects that are intended for practical or decorative purposes, such as creating models for films, architecture, or even product design.</p>
+            <ul>
+                <li>
+                    Model Maker
+                    <div class="tooltip">Crafting models and sculptures for films, television, or architectural projects.</div>
+                </li>
+                <li>
+                    Prop Sculptor
+                    <div class="tooltip">Designing and sculpting props and set pieces for films, theater productions, and television shows.</div>
+                </li>
+                <li>
+                    Industrial Sculptor
+                    <div class="tooltip">Working in the design and creation of products, including furniture, toys, or consumer goods.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Restoration and Conservation</h3>
+            <p>Restorers and conservators work to preserve, repair, and maintain sculptures, whether they are ancient, classical, or modern pieces.</p>
+            <ul>
+                <li>
+                    Art Conservator
+                    <div class="tooltip">Restoring and preserving historical sculptures and artifacts in museums or private collections.</div>
+                </li>
+                <li>
+                    Sculpture Restorer
+                    <div class="tooltip">Specializing in the repair and conservation of sculptures that have been damaged or deteriorated over time.</div>
+                </li>
+                <li>
+                    Museum Technician
+                    <div class="tooltip">Handling and maintaining sculptures and other artworks in museum settings.</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-branch">
+            <h3>Teaching and Education</h3>
+            <p>Sculptors can also share their expertise through teaching and educational roles, whether in art schools, universities, or community programs.</p>
+            <ul>
+                <li>
+                    Art Instructor
+                    <div class="tooltip">Teaching sculpture techniques and principles to students in art schools, universities, or community classes.</div>
+                </li>
+                <li>
+                    Workshop Leader
+                    <div class="tooltip">Conducting workshops and seminars to teach sculpture to beginners or experienced artists.</div>
+                </li>
+                <li>
+                    Art Therapy Facilitator
+                    <div class="tooltip">Using sculpture as a therapeutic medium in settings such as hospitals, care centers, or community programs.</div>
+                </li>
             </ul>
         </div>
     </div>
