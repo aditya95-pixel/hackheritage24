@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studies Recommendation</title>
+    <title>Studify</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
@@ -82,7 +82,7 @@
             max-width: 1000px;
             border-radius: 12px;
             box-shadow: 0px 5px 25px black;
-            backdrop-filter: blur(2px);
+            backdrop-filter: blur(0px);
             text-align: center;
             font-weight: bold;
             color: black;
@@ -151,6 +151,19 @@
             transform: translateY(0);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
         }
+        h1{
+            text-align: center;
+            padding:10px auto;
+            margin:10px auto;
+            color:white;
+            max-width:400px;
+            position: relative;
+            left:0%;
+            border-radius:10px 25px 10px 25px;
+            border:solid 2px white;
+            background: linear-gradient(45deg,black,rgb(133, 130, 130));
+
+        }
         @media (max-width: 500px) {
             .container {
                 padding: 40px 30px;
@@ -171,7 +184,6 @@
 </head>
 <body>
     <!-- Floating Particles -->
-   
     <div class="particles">
         <i></i>
         <i></i>
@@ -182,7 +194,9 @@
     </div>
 
     <!-- Main Content -->
+   
     <div class="container">
+        <h1>STUDIFY</h1>
         <h2>Welcome to our Best Studies Recommendation System</h2>
         <p>This recommendation system aims to assist university students in selecting the most suitable studies and courses based on their academic performance, interests, and career aspirations.</p>
         <p>Click the button below to get recommendations:</p>
