@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Recommendation System</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
             background-color: black;
@@ -79,77 +79,56 @@
     </style>
 </head>
 <body>
-
-<div class="container">
-    <h1>Career Recommendation System</h1>
-    <div class="form-group">
-        <label for="interest">Select Your Interest:</label>
-        <select id="interest">
-            <option value="">--Choose an Interest--</option>
-            <option value="science">Science</option>
-            <option value="math">Mathematics</option>
-            <option value="art">Art & Design</option>
-            <option value="technology">Technology</option>
-            <option value="literature">Literature</option>
-            <option value="business">Business</option>
-        </select>
+    <div class="container">
+        <h1>Career Recommendation System</h1>
+        <div class="form-group">
+            <label for="interest">Select Your Interest:</label>
+            <select id="interest">
+                <option value="">--Choose an Interest--</option>
+                <option value="science">Science</option>
+                <option value="math">Mathematics</option>
+                <option value="art">Art & Design</option>
+                <option value="technology">Technology</option>
+                <option value="literature">Literature</option>
+                <option value="business">Business</option>
+            </select>
+        </div>
+        <button onclick="recommendCareer()">Get Career Recommendations</button>
+        <div class="results" id="results">
+            <!-- Career suggestions will appear here -->
+        </div>
     </div>
-    <button onclick="recommendCareer()">Get Career Recommendations</button>
 
-    <div class="results" id="results">
-        <!-- Career suggestions will appear here -->
-    </div>
-</div>
+    <script>
+        function recommendCareer() {
+            const interest = document.getElementById('interest').value;
+            const resultsDiv = document.getElementById('results');
+            
+            // Clear previous results
+            resultsDiv.innerHTML = '';
 
-<script>
-    function recommendCareer() {
-        const interest = document.getElementById('interest').value;
-        const resultsDiv = document.getElementById('results');
-        let recommendations = [];
-
-        // Clear previous results
-        resultsDiv.innerHTML = '';
-
-        // Career recommendation based on selected interest
-        switch(interest) {
-            case 'science':
-                recommendations = ['Biologist', 'Chemist', 'Physicist', 'Environmental Scientist', 'Doctor', 'Microbiologist', 'Geneticist', 'Astronomer'];
-                break;
-            case 'math':
-                recommendations = ['Mathematician', 'Statistician', 'Data Analyst', 'Economist', 'Engineer', 'Actuary', 'Operations Research Analyst', 'Cryptographer'];
-                break;
-            case 'art':
-                recommendations = ['Graphic Designer', 'Animator', 'Fashion Designer', 'Architect', 'Art Director', 'Photographer', 'Interior Designer', 'Illustrator'];
-                break;
-            case 'technology':
-                recommendations = ['Software Developer', 'Web Developer', 'Data Scientist', 'Cybersecurity Expert', 'AI Engineer', 'Network Administrator', 'Robotics Engineer', 'Cloud Architect'];
-                break;
-            case 'literature':
-                recommendations = ['Journalist', 'Author', 'Editor', 'Content Writer', 'Librarian', 'Translator', 'Public Relations Specialist', 'Copywriter'];
-                break;
-            case 'business':
-                recommendations = ['Entrepreneur', 'Marketing Manager', 'Financial Analyst', 'Human Resources Manager', 'Consultant', 'Project Manager', 'Investment Banker', 'Sales Manager'];
-                break;
-            default:
-                recommendations = ['Please select an interest to get recommendations.'];
+            if (interest) {
+                fetch(`/get-careers?interest=${interest}`)
+                    .then(response => response.json())
+                    .then(recommendations => {
+                        if (recommendations.length > 0) {
+                            const careerList = document.createElement('ul');
+                            careerList.className = 'career-list';
+                            recommendations.forEach(career => {
+                                const listItem = document.createElement('li');
+                                listItem.textContent = career;
+                                careerList.appendChild(listItem);
+                            });
+                            resultsDiv.innerHTML = '<h3>Recommended Careers:</h3>';
+                            resultsDiv.appendChild(careerList);
+                        } else {
+                            resultsDiv.innerHTML = '<p>No recommendations available for the selected interest.</p>';
+                        }
+                    });
+            } else {
+                resultsDiv.innerHTML = '<p>Please select an interest.</p>';
+            }
         }
-
-        // Display the recommendations
-        if (recommendations.length > 0 && interest !== '') {
-            const careerList = document.createElement('ul');
-            careerList.className = 'career-list';
-            recommendations.forEach(career => {
-                const listItem = document.createElement('li');
-                listItem.textContent = career;
-                careerList.appendChild(listItem);
-            });
-            resultsDiv.innerHTML = '<h3>Recommended Careers:</h3>';
-            resultsDiv.appendChild(careerList);
-        } else {
-            resultsDiv.innerHTML = '<p>Please select an interest.</p>';
-        }
-    }
-</script>
-
+    </script>
 </body>
 </html>
