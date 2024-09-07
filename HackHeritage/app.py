@@ -109,6 +109,9 @@ def logout():
     session.pop('username', None)
     flash("You have been logged out.")
     return redirect(url_for('login'))
+@app.route('/aptitude')
+def aptitude():
+    return render_template('aptitude.html')
 @app.route('/courses')
 def courses():
     return render_template('courses.html')
