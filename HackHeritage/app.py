@@ -1,5 +1,5 @@
 # load packages==============================================================
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask import Flask, render_template, request, redirect, url_for, session, flash,jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 import pickle
 import numpy as np
@@ -54,7 +54,7 @@ def Recommendations(gender, part_time_job, absence_days, extracurricular_activit
 @app.route('/')
 def home():
     if 'username' in session:
-        return render_template('home.html')
+        return render_template('home.html',username=session['username'])
     else:
         return redirect(url_for('login'))
 
@@ -121,6 +121,22 @@ def exams():
 @app.route('/reco')
 def reco():
     return render_template('reco.html')
+@app.route('/get-careers', methods=['GET'])
+def get_careers():
+    interest = request.args.get('interest')
+    conn = sqlite3.connect('career_recommendations.db')
+    cursor = conn.cursor()
+    # Fetch careers for the given interest
+    cursor.execute('SELECT careers FROM career_recommendations WHERE interest = ?', (interest,))
+    result = cursor.fetchone()
+    conn.close()
+
+    if result:
+        careers = result[0].split(', ')
+        return jsonify(careers)
+    else:
+        return jsonify([])
+
 @app.route('/high')
 def high():
     return render_template('highpayingjobs.html')
