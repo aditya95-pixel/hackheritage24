@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aptitude Test for Class 10 Students</title>
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: black;
+      margin: 0;
+      padding: 20px;
+      color:#ff9900;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    section {
+      margin: 20px auto;
+      padding: 20px;
+      background-color: black;
+      border:2px solid #ff9900;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      color: #ff9900;
+      background-color: black;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: white;
+    }
+
+    #results {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aptitude Test for Class 10 Students</h1>
+
+  <!-- Verbal Reasoning Section -->
+  <section id="verbal">
+    <h2>Verbal Reasoning</h2>
+    <form id="verbalForm">
+      <label>Question 1: Which of the following is a synonym of 'Innovative'?</label>
+      <div>
+        <input type="radio" name="q1" value="a"> Traditional
+        <input type="radio" name="q1" value="b"> Creative
+        <input type="radio" name="q1" value="c"> Ordinary
+      </div>
+      <label>Question 2: Fill in the blank: She _____ her homework before going to the party.</label>
+      <div>
+        <input type="radio" name="q2" value="a"> finished
+        <input type="radio" name="q2" value="b"> finishing
+        <input type="radio" name="q2" value="c"> finish
+      </div>
+      <button type="button" onclick="submitVerbal()">Submit Section</button>
+    </form>
+  </section>
+
+  <!-- Numerical Reasoning Section -->
+  <section id="numerical">
+    <h2>Numerical Reasoning</h2>
+    <form id="numericalForm">
+      <label>Question 1: Solve for x: 3x + 7 = 22</label>
+      <div>
+        <input type="radio" name="q3" value="a"> x = 4
+        <input type="radio" name="q3" value="b"> x = 5
+        <input type="radio" name="q3" value="c"> x = 6
+      </div>
+      <label>Question 2: What is the area of a circle with radius 7?</label>
+      <div>
+        <input type="radio" name="q4" value="a"> 144 cm²
+        <input type="radio" name="q4" value="b"> 154 cm²
+        <input type="radio" name="q4" value="c"> 162 cm²
+      </div>
+      <button type="button" onclick="submitNumerical()">Submit Section</button>
+    </form>
+  </section>
+
+  <!-- Logical Reasoning Section -->
+  <section id="logical">
+    <h2>Logical Reasoning</h2>
+    <form id="logicalForm">
+      <label>Question 1: What comes next in the series? 2, 4, 8, 16, ___</label>
+      <div>
+        <input type="radio" name="q5" value="a"> 24
+        <input type="radio" name="q5" value="b"> 32
+        <input type="radio" name="q5" value="c"> 64
+      </div>
+      <label>Question 2: If all roses are flowers and some flowers fade, then which of the following is true?</label>
+      <div>
+        <input type="radio" name="q6" value="a"> All roses fade
+        <input type="radio" name="q6" value="b"> Some roses fade
+        <input type="radio" name="q6" value="c"> Some flowers fade
+      </div>
+      <button type="button" onclick="submitLogical()">Submit Section</button>
+    </form>
+  </section>
+
+  <!-- Career Interest Section -->
+  <section id="careerInterest">
+    <h2>Career Interest</h2>
+    <form id="careerForm">
+      <label>Question 1: Which subject do you enjoy the most?</label>
+      <div>
+        <input type="radio" name="q7" value="a"> Science
+        <input type="radio" name="q7" value="b"> Arts
+        <input type="radio" name="q7" value="c"> Commerce
+      </div>
+      <label>Question 2: Which activity do you find most enjoyable?</label>
+      <div>
+        <input type="radio" name="q8" value="a"> Solving math problems
+        <input type="radio" name="q8" value="b"> Drawing or painting
+        <input type="radio" name="q8" value="c"> Learning about business or economics
+      </div>
+      <button type="button" onclick="submitCareerInterest()">Submit Section</button>
+    </form>
+  </section>
+
+  <button type="button" onclick="calculateResults()">Finish Test</button>
+
+  <div id="results"></div>
+
+  <script>
+    // Initialize score variables
+let verbalScore = 0;
+let numericalScore = 0;
+let logicalScore = 0;
+let careerInterest = "";
+
+// Function to check if a question is answered
+function isAnswered(form, questionName) {
+  return form[questionName] && form[questionName].value !== '';
+}
+
+// Submit Verbal Reasoning Section
+function submitVerbal() {
+  const verbalForm = document.getElementById("verbalForm");
+
+  // Check if both questions are answered
+  if (!isAnswered(verbalForm, 'q1') || !isAnswered(verbalForm, 'q2')) {
+    alert("Please answer all verbal reasoning questions.");
+    return;
+  }
+
+  const answer1 = verbalForm.q1.value;
+  const answer2 = verbalForm.q2.value;
+
+  if (answer1 === 'b') {
+    verbalScore += 10; // Adjust scoring if needed
+  }
+  if (answer2 === 'a') {
+    verbalScore += 10; // Adjust scoring if needed
+  }
+
+  alert("Verbal section submitted!");
+}
+
+// Submit Numerical Reasoning Section
+function submitNumerical() {
+  const numericalForm = document.getElementById("numericalForm");
+
+  // Check if both questions are answered
+  if (!isAnswered(numericalForm, 'q3') || !isAnswered(numericalForm, 'q4')) {
+    alert("Please answer all numerical reasoning questions.");
+    return;
+  }
+
+  const answer3 = numericalForm.q3.value;
+  const answer4 = numericalForm.q4.value;
+
+  if (answer3 === 'b') {
+    numericalScore += 10; // Adjust scoring if needed
+  }
+  if (answer4 === 'b') {
+    numericalScore += 10; // Adjust scoring if needed
+  }
+
+  alert("Numerical section submitted!");
+}
+
+// Submit Logical Reasoning Section
+function submitLogical() {
+  const logicalForm = document.getElementById("logicalForm");
+
+  // Check if both questions are answered
+  if (!isAnswered(logicalForm, 'q5') || !isAnswered(logicalForm, 'q6')) {
+    alert("Please answer all logical reasoning questions.");
+    return;
+  }
+
+  const answer5 = logicalForm.q5.value;
+  const answer6 = logicalForm.q6.value;
+
+  if (answer5 === 'b') {
+    logicalScore += 10; // Adjust scoring if needed
+  }
+  if (answer6 === 'b') {
+    logicalScore += 10; // Adjust scoring if needed
+  }
+
+  alert("Logical section submitted!");
+}
+
+// Submit Career Interest Section
+function submitCareerInterest() {
+  const careerForm = document.getElementById("careerForm");
+
+  // Check if both questions are answered
+  if (!isAnswered(careerForm, 'q7') || !isAnswered(careerForm, 'q8')) {
+    alert("Please answer all career interest questions.");
+    return;
+  }
+
+  careerInterest = careerForm.q7.value + " - " + careerForm.q8.value;
+  alert("Career interest section submitted!");
+}
+
+// Calculate total results
+function calculateResults() {
+  const totalScore = verbalScore + numericalScore + logicalScore;
+  let recommendation = "";
+  const interests = careerInterest.split(" - ");
+
+  if (totalScore >= 20) { // Adjust thresholds if needed
+    if (interests[0].includes("a")) {
+      recommendation = "Recommended career path: Engineering, Medicine, or Research";
+    } else if (interests[0].includes("b")) {
+      recommendation = "Recommended career path: Humanities, Fine Arts, or Literature";
+    } else if (interests[0].includes("c")) {
+      recommendation = "Recommended career path: Business, Finance, or Economics";
+    } else {
+      recommendation = "Explore different fields based on your interests.";
+    }
+  } else {
+    recommendation = "Consider exploring different career fields to find your passion.";
+  }
+
+  // Display results
+  document.getElementById("results").innerHTML = `
+    <h2>Test Results</h2>
+    <p>Total Score: ${totalScore}</p>
+    <p>${recommendation}</p>
+  `;
+}
+
+  </script>
+</body>
+</html>
