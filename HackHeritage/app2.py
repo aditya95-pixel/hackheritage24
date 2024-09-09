@@ -30,6 +30,7 @@ cursor.executemany('''
     INSERT INTO career_recommendations (interest, careers)
     VALUES (?, ?)
 ''', career_data)
+cursor.execute('select * from career_recommendations')
 
 # Commit and close the connection
 conn.commit()

@@ -120,7 +120,8 @@ def exams():
     return render_template('exams.html')
 @app.route('/reco')
 def reco():
-    return render_template('reco.html')
+    if 'username' in session:
+        return render_template('reco.html',username=session['username'])
 @app.route('/get-careers', methods=['GET'])
 def get_careers():
     interest = request.args.get('interest')
@@ -148,7 +149,8 @@ def career_graph():
     return render_template('career_graph.html')
 @app.route('/recommend')
 def recommend():
-    return render_template('recommend.html')
+    if 'username' in session:
+        return render_template('recommend.html',username=session['username'])
 
 @app.route('/science')
 def science():

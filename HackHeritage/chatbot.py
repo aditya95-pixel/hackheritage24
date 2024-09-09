@@ -5,6 +5,8 @@ from decouple import config
 import speech_recognition as sr
 from gtts import gTTS
 import os
+import requests
+from bs4 import BeautifulSoup
 
 # Configure the API key for Gemini 1.5 Flash
 GOOGLE_API_KEY = config('GOOGLE_API_KEY')
@@ -25,7 +27,7 @@ def generate_response(prompt, context):
 
 # Function to convert text to speech and play it
 def text_to_speech(text):
-    text=text.replace("*", "")
+    text = text.replace("*", "")
     tts = gTTS(text=text, lang='en')
     tts.save("response.mp3")
     return "response.mp3"
@@ -43,10 +45,28 @@ def recognize_speech():
     except sr.RequestError:
         return "Sorry, the service is unavailable."
 
-# Configure the Streamlit page
-st.set_page_config(page_title="Voice-Enabled Chatbot", page_icon="🤖", layout="centered")
+# Simple web scraper function
+def scrape_url(url):
+    try:
+        response = requests.get(url)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        paragraphs = soup.find_all('p')
+        return " ".join([p.get_text() for p in paragraphs])
+    except Exception as e:
+        return f"Failed to scrape the URL {url}: {str(e)}"
 
-st.title("🤖 AI Chatbot")
+# Function to retrieve data and integrate it into context
+def retrieve_and_integrate_data(urls):
+    retrieved_content = ""
+    for url in urls:
+        scraped_data = scrape_url(url)
+        retrieved_content += scraped_data + "\n"
+    return retrieved_content
+
+# Configure the Streamlit page
+st.set_page_config(page_title="Voice-Enabled RAG Chatbot", page_icon="🤖", layout="centered")
+
+st.title("🤖 AI Chatbot with RAG")
 
 # Initialize or retrieve chat history from session state
 if "messages" not in st.session_state:
@@ -63,6 +83,14 @@ for message in st.session_state.messages:
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
+
+# Allow users to input URLs for RAG
+urls=['https://www.allenoverseas.com/blog/career-options-after-10th-which-stream-to-choose/','https://www.mindgroom.com/career-counselling-after-10th/west-bengal/']
+
+# Retrieve content from the provided URLs and integrate into context
+if urls:
+    retrieved_content = retrieve_and_integrate_data(urls)
+    context += f"Retrieved Content: {retrieved_content}\n"
 
 # Choice between written and voice prompts
 input_method = st.radio("Choose your input method:", ("Text Input", "Voice Input"))
@@ -84,7 +112,7 @@ if input_method == "Text Input":
                 full_response += response_chunk
                 message_placeholder.markdown(full_response + "▌")
             message_placeholder.markdown(full_response)
-        
+
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": full_response})
 
