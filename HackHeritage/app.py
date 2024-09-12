@@ -109,9 +109,65 @@ def logout():
     session.pop('username', None)
     flash("You have been logged out.")
     return redirect(url_for('login'))
-@app.route('/aptitude')
+
+import google.generativeai as genai
+from decouple import config
+GOOGLE_API_KEY = config('GOOGLE_API_KEY')
+genai.configure(api_key=GOOGLE_API_KEY)
+model = genai.GenerativeModel('gemini-1.5-flash')
+
+# Function to generate aptitude questions using Gemini AI
+def generate_gemini_questions():
+    full_prompt = "Generate 5 aptitude questions for class 10 students separated by two newlines full response in plain text."
+    response = model.generate_content(full_prompt)
+    if response and response.candidates:
+        # Get the text content from the first candidate's first part
+        content_text = response.candidates[0].content.parts[0].text
+        # Split the content into different questions (assuming they are separated by double newlines)
+        questions = content_text.split('\n\n')
+    else:
+        questions = ["No questions were generated. Please try again."]
+    
+    return questions
+
+# Function to evaluate answers using Gemini AI
+def evaluate_apt_answers(questions,answers):
+    prompt = " ".join(questions)+"Evaluate the following answers and provide the answers separated by newline full response in plain text also grade the answers\n"
+    for idx, answer in enumerate(answers, start=1):
+        prompt += f"Q{idx}: {answer}\n"
+    # Send prompt to Gemini AI for evaluation
+    response = model.generate_content(prompt)
+    
+    # Extract evaluation from the response
+    if response and response.candidates:
+        evaluation = response.candidates[0].content.parts[0].text.strip()
+        evaluation=evaluation.split('\n')
+    else:
+        evaluation = "Evaluation could not be processed. Please try again."
+
+    return evaluation
+
+@app.route('/aptitude', methods=['GET', 'POST'])
 def aptitude():
-    return render_template('aptitude.html')
+    # Generate questions
+    questions = generate_gemini_questions()
+    
+    if request.method == 'POST':
+        # Get the answers submitted by the user
+        answers = request.form.getlist('answers')
+
+        # Evaluate the answers
+        evaluation = evaluate_apt_answers(questions,answers)
+
+        # Display evaluation results in the template
+        return render_template('aptitude_results.html', evaluation=evaluation)
+    
+    # Display the questions on the form if the method is GET
+    return render_template('aptitude.html', questions=questions)
+
+@app.route('/apt_res')
+def apt_res():
+    return ('aptitude_results.html')
 @app.route('/courses')
 def courses():
     return render_template('courses.html')
