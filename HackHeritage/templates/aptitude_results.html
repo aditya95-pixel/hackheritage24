@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aptitude Test for Class 10 Students</title>
+  <title>Aptitude Test Results</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -25,19 +25,9 @@
       max-width: 600px;
     }
 
-    label {
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      color: #ff9900;
-      background-color: black;
-      border: 1px solid #ff9900;
-      border-radius: 4px;
+    p {
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     button {
@@ -47,26 +37,25 @@
       border: none;
       cursor: pointer;
       font-weight: bold;
+      display: block;
+      margin: 0 auto;
     }
 
     button:hover {
       background-color: white;
     }
-
   </style>
 </head>
 <body>
-  <h1>Aptitude Test for Class 10 Students</h1>
+  <h1>Aptitude Test Results</h1>
 
-  <form method="POST">
-    <section id="questions">
-      <h2>Answer the following questions:</h2>
-      {% for question in questions %}
-        <label>{{ question }}</label>
-        <input type="text" name="answers" required>
-      {% endfor %}
-    </section>
-    <button type="submit">Submit</button>
-  </form>
+  <section id="results">
+    <h2>Evaluation Summary</h2>
+    {% for result in evaluation  %}
+        <label>{{ result }}</label>
+    {% endfor %}
+  </section>
+
+  <button onclick="window.location.href='/aptitude'">Take the Test Again</button>
 </body>
 </html>
