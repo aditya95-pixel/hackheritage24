@@ -73,23 +73,25 @@
                 opacity: 0;
             }
         }
-
+        .header{
+            position: relative;
+            top:-40%;
+        }
         /* Container */
         .container {
             background: rgba(255, 255, 255, 0.1);
             padding: 30px 20px;
-            margin: 30px;
-            max-width: 1000px;
+            max-width: 100%;
+            width:100%;
             border-radius: 12px;
-            box-shadow: 0px 5px 25px black;
-            backdrop-filter: blur(0px);
+            /* box-shadow: 0px 5px 25px black; */
+            /* backdrop-filter: blur(0px); */
             text-align: center;
             font-weight: bold;
             color: black;
             font-size: 1rem;
             position: relative;
-            overflow: hidden;
-            overflow-y: auto; /* Enable vertical scroll */
+            overflow: auto;
             max-height: 90vh; /* Constrain the height to 90% of the viewport */
         }
 
@@ -198,9 +200,12 @@
     </div>
 
     <!-- Main Content -->
-   
-    <div class="container">
+     <div class="header">
         <h1>STUDIFY</h1>
+     </div>
+    
+    <div class="container">
+        
         <h1>Welcome {{ username }}!</h1>
        
         <h2>Welcome to our Best Studies Recommendation System</h2>
