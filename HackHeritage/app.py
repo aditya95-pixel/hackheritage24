@@ -17,7 +17,7 @@ def init_sqlite_db():
 init_sqlite_db()
 # Load the scaler, label encoder, model, and class names=====================
 scaler = pickle.load(open("Models/scaler.pkl", 'rb'))
-model = pickle.load(open("Models/model.pkl", 'rb'))
+model1 = pickle.load(open("Models/model.pkl", 'rb'))
 class_names = ['Lawyer', 'Doctor', 'Government Officer', 'Artist', 'Unknown',
                'Software Engineer', 'Teacher', 'Business Owner', 'Scientist',
                'Banker', 'Writer', 'Accountant', 'Designer',
@@ -44,7 +44,7 @@ def Recommendations(gender, part_time_job, absence_days, extracurricular_activit
     scaled_features = scaler.transform(feature_array)
 
     # Predict using the model
-    probabilities = model.predict_proba(scaled_features)
+    probabilities = model1.predict_proba(scaled_features)
 
     # Get top three predicted classes along with their probabilities
     top_classes_idx = np.argsort(-probabilities[0])[:5]
