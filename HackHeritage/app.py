@@ -5,6 +5,12 @@ import pickle
 import numpy as np
 import sqlite3
 from decouple import config
+import google.generativeai as genai
+from decouple import config
+GOOGLE_API_KEY = config('GOOGLE_API_KEY')
+genai.configure(api_key=GOOGLE_API_KEY)
+model = genai.GenerativeModel('gemini-1.5-flash')
+
 app = Flask(__name__)
 app.secret_key = config("app.secret_key")
 def init_sqlite_db():
@@ -109,12 +115,31 @@ def logout():
     session.pop('username', None)
     flash("You have been logged out.")
     return redirect(url_for('login'))
+@app.route('/location')
+def index():
+    return render_template('location.html')
 
-import google.generativeai as genai
-from decouple import config
-GOOGLE_API_KEY = config('GOOGLE_API_KEY')
-genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel('gemini-1.5-flash')
+# Function to generate educational content (could be institution recommendations, questions, etc.)
+def generate_gemini_content(city,domain):
+    full_prompt = f"Generate a list of 5 good educational institutions for {domain} near the {city}."
+    response = model.generate_content(full_prompt)
+    return response.text
+
+# Route to handle the POST request from the frontend
+@app.route('/generate_questions', methods=['POST'])
+def generate_questions():
+    data = request.get_json()
+    city=data['city']
+    domain = data['domain']
+
+    # Call Gemini API to generate content
+    response = generate_gemini_content(city,domain)
+    # Assuming response contains the label or text in plain format
+    label =response
+    
+    return jsonify({'label': label})
+
+
 
 # Function to generate aptitude questions using Gemini AI
 def generate_gemini_questions():
