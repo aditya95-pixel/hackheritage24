@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Educational Institutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        h2 {
+            text-align: center;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .institution {
+            background-color: #e0f7fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Find Educational Institutions</h2>
+    
+    <label for="city">Enter Your City:</label>
+    <input type="text" id="city" name="city" placeholder="Enter city name" required>
+    
+    <label for="domain">Choose Domain of Interest:</label>
+    <select id="domain" name="domain" required>
+        <option value="Engineering">Engineering</option>
+        <option value="Medical">Medical</option>
+        <option value="Arts">Arts</option>
+        <option value="Commerce">Commerce</option>
+    </select>
+    
+    <button id="findBtn">Find Institutions</button>
+
+    <div class="results" id="results"></div>
+</div>
+
+<script>
+    document.getElementById('findBtn').addEventListener('click', async function() {
+        const city = document.getElementById('city').value;
+        const domain = document.getElementById('domain').value;
+
+        if (!city || !domain) {
+            alert('Please enter both city and domain.');
+            return;
+        }
+
+        // Send the city and domain to the Flask server
+        try {
+            const response = await fetch('/generate_questions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    city: city,
+                    domain: domain
+                })
+            });
+            
+            const data = await response.json();
+            displayResults(data.label);
+        } catch (error) {
+            alert('Error fetching institutions: ' + error.message);
+        }
+    });
+
+    // Function to display results
+    function displayResults(label) {
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = '';
+
+        if (!label) {
+            resultsDiv.innerHTML = '<p>No institutions found</p>';
+            return;
+        }
+
+        const institutionDiv = document.createElement('div');
+        institutionDiv.classList.add('institution');
+        institutionDiv.innerHTML = `
+            <p>${label}</p>
+        `;
+        resultsDiv.appendChild(institutionDiv);
+    }
+</script>
+
+</body>
+</html>
