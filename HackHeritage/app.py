@@ -135,6 +135,9 @@ def generate_questions():
     # Call Gemini API to generate content
     response = generate_gemini_content(city,domain)
     # Assuming response contains the label or text in plain format
+    response=response.replace("**","")
+    response=response.replace("*","")
+    print(response)
     label =response
     
     return jsonify({'label': label})
@@ -165,11 +168,12 @@ def evaluate_apt_answers(questions,answers):
     
     # Extract evaluation from the response
     if response and response.candidates:
-        evaluation = response.candidates[0].content.parts[0].text.strip()
-        evaluation=evaluation.split('\n')
+        evaluation = response.text
     else:
         evaluation = "Evaluation could not be processed. Please try again."
-
+    evaluation=evaluation.replace("**","")
+    evaluation=evaluation.replace("*","")
+    evaluation=evaluation.split('\n')
     return evaluation
 
 @app.route('/aptitude', methods=['GET', 'POST'])

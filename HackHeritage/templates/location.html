@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Educational Institutions</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 20px;
-            background-color: #f9f9f9;
+            background-color:black;
         }
         .container {
             width: 50%;
             margin: auto;
             padding: 20px;
-            background-color: #fff;
+            background-color:black;
+            color:orange;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -24,18 +26,39 @@
             margin: 10px 0;
             border-radius: 5px;
             border: 1px solid #ccc;
+            background-color: transparent;
+            color:orange;
+        }
+        input:hover, select:hover, button:hover {
+            background-color: white;
+            color:black;
+            transition: 0.2s ease-in;
         }
         h2 {
             text-align: center;
         }
         .results {
             margin-top: 20px;
+            background-color: black;
+        }
+        #city::placeholder{
+            color:orange;
+            
         }
         .institution {
             background-color: #e0f7fa;
             padding: 15px;
             margin-bottom: 10px;
             border-radius: 5px;
+        }
+        #findBtn{
+            background-color:black;
+            color:orange;
+        }
+        #findBtn:hover{
+            background-color:white;
+            color:black;
+            transition: 0.2s ease-in;
         }
     </style>
 </head>
@@ -105,6 +128,7 @@
         institutionDiv.innerHTML = `
             <p>${label}</p>
         `;
+        institutionDiv.style.backgroundColor='black';
         resultsDiv.appendChild(institutionDiv);
     }
 </script>
